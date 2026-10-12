@@ -1030,6 +1030,3 @@ Uma tela não carregada pode bloquear outros testes: registrar a ocorrência e m
 - Repositório do aluno: https://github.com/adrianssz/sifit-qa — README consultado. Há um “4.” isolado ao final, que pode ser removido na próxima edição.
 - Sistema: inspeção exploratória pela interface em 12/10/2026.
 - Jam: https://jam.dev/capture e extensão oficial indicada acima.
-
-**Próximo passo prático:** adicionar o inventário ao GitHub, preparar os primeiros casos de login e conferir a extensão Jam. Depois, executar e documentar um caso por vez.
-
