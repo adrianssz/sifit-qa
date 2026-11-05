@@ -446,3 +446,44 @@ Não foi possível avançar para o envio da solicitação. Nenhuma senha foi alt
 ### Bug associado
 
 BUG-ADRIAN-002 — Link Esqueci minha senha sem resposta visível.
+
+---
+
+## C01-CT11 — Atualizar a página autenticada
+
+**Responsável:** Adrian  
+**Data da execução:** 05/11/2026  
+**Tipo:** Sessão  
+**Status:** Aprovado  
+**Sistema:** https://sifitalfa.centrion.com.br/login
+
+### Objetivo
+
+Verificar se a sessão permanece ativa após atualizar a página.
+
+### Pré-condições
+
+- Estar autenticado no sistema.
+- Estar na página inicial.
+
+### Passos
+
+1. Pressionar F5.
+2. Aguardar o carregamento.
+3. Conferir se a área interna permanece acessível.
+
+### Resultado esperado
+
+Manter a sessão ativa, sem solicitar novo login.
+
+### Resultado obtido
+
+A página carregou normalmente e a sessão permaneceu ativa, sem solicitar as credenciais novamente.
+
+### Evidência
+
+[Assistir à gravação no Jam](https://jam.dev/c/d3b0590f-fe36-4b52-98c2-2f0af011e75f)
+
+### Bug associado
+
+Nenhum identificado neste caso.
