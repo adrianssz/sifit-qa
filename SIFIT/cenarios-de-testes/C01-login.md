@@ -130,3 +130,45 @@ O sistema recusou o login e exibiu a mensagem: “O nome de usuário e senha nã
 ### Bug associado
 
 Nenhum identificado neste caso.
+
+---
+
+## C01-CT04 — Login e senha vazios
+
+**Responsável:** Adrian  
+**Data da execução:** 05/11/2026  
+**Tipo:** Negativo  
+**Status:** Reprovado  
+
+### Objetivo
+
+Verificar a validação do login com os dois campos vazios.
+
+### Pré-condições
+
+- Estar na tela de login, sem sessão autenticada.
+
+### Passos
+
+1. Deixar Login e Senha vazios.
+2. Deixar Manter conectado desmarcado.
+3. Clicar em Entrar.
+4. Conferir a resposta do sistema.
+
+### Resultado esperado
+
+Impedir a autenticação e orientar o preenchimento dos campos obrigatórios.
+
+### Resultado obtido
+
+O sistema recusou o login e exibiu: “O nome de usuário e senha não correspondem.”
+
+O bloqueio do acesso funcionou, mas a mensagem não indicou que os campos estavam vazios.
+
+### Evidência
+
+[Assistir à gravação no Jam](https://jam.dev/c/ce9dece8-08fb-4983-8ee3-e6dcc3ee73db)
+
+### Observação
+
+Divergência em relação ao resultado esperado do roteiro. Confirmar a regra de validação antes de consolidar como defeito no relatório de bugs.
