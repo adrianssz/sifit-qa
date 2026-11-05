@@ -260,3 +260,45 @@ O bloqueio do acesso funcionou, mas a mensagem não indicou que o campo Senha es
 ### Observação
 
 Divergência em relação ao resultado esperado do roteiro. Confirmar a regra de validação antes de consolidar como defeito no relatório de bugs.
+
+---
+
+## C01-CT07 — Senha mascarada
+
+**Responsável:** Adrian  
+**Data da execução:** 05/11/2026  
+**Tipo:** Interface  
+**Status:** Aprovado  
+
+### Objetivo
+
+Verificar se os caracteres da senha ficam mascarados.
+
+### Pré-condições
+
+- Estar na tela de login.
+- Deixar o campo Senha vazio antes do teste.
+
+### Passos
+
+1. Clicar no campo Senha.
+2. Digitar a senha fictícia TesteVisual123!.
+3. Observar os caracteres durante a digitação.
+4. Clicar fora do campo.
+5. Conferir se a senha permanece mascarada.
+
+### Resultado esperado
+
+A senha deve permanecer mascarada durante a digitação e após sair do campo.
+
+### Resultado obtido
+
+Os caracteres ficaram mascarados durante a digitação e permaneceram assim após sair do campo.
+
+### Evidência
+
+[Assistir à gravação no Jam](https://jam.dev/c/0f2efdda-4128-4af8-9d28-b364e43d4f88)
+
+### Bug associado
+
+Nenhum identificado neste caso.
