@@ -569,3 +569,45 @@ O sistema solicitou login e não abriu a área interna.
 ### Bug associado
 
 Nenhum identificado neste caso.
+
+---
+
+## C01-CT14 — Identidade exibida após login
+
+**Responsável:** Adrian  
+**Data da execução:** 05/11/2026  
+**Tipo:** Investigação  
+**Status:** Aprovado  
+**Sistema:** https://sifitalfa.centrion.com.br/login
+
+### Objetivo
+
+Conferir se a identidade exibida corresponde à conta de teste utilizada.
+
+### Pré-condições
+
+- Ter credenciais válidas.
+- Conhecer a identidade esperada da conta de teste.
+
+### Passos
+
+1. Preencher as credenciais da conta de teste.
+2. Clicar em Entrar.
+3. Conferir o nome na saudação da página inicial.
+4. Conferir o nome no menu do usuário.
+
+### Resultado esperado
+
+Exibir Jair na saudação e no menu, conforme a identificação esperada da conta de teste.
+
+### Resultado obtido
+
+O sistema exibiu Jair na saudação e no menu do usuário. O responsável pelo teste confirmou que essa é a identificação correta da conta utilizada.
+
+### Evidência
+
+[Assistir à gravação no Jam](https://jam.dev/c/f8525163-dc9d-435f-b34e-bd6ce8447712)
+
+### Bug associado
+
+Nenhum identificado neste caso.
