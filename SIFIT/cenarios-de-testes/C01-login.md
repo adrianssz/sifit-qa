@@ -302,3 +302,51 @@ Os caracteres ficaram mascarados durante a digitação e permaneceram assim apó
 ### Bug associado
 
 Nenhum identificado neste caso.
+
+---
+
+## C01-CT08 — Entrar pelo botão e pela tecla Enter
+
+**Responsável:** Adrian  
+**Data da execução:** 05/11/2026  
+**Tipo:** Interação  
+**Status:** Reprovado  
+
+### Objetivo
+
+Verificar o envio do login pelo botão Entrar e pela tecla Enter.
+
+### Pré-condições
+
+- Estar na tela de login, sem sessão autenticada.
+- Preencher usuário e senha válidos.
+
+### Passos
+
+1. Preencher as credenciais válidas.
+2. Deixar Manter conectado desmarcado.
+3. Manter o foco no campo Senha.
+4. Pressionar Enter no teclado.
+5. Observar a resposta.
+6. Clicar no botão Entrar com os mesmos dados para comparação.
+
+### Resultado esperado
+
+As duas formas de envio devem autenticar a conta e abrir a página inicial.
+
+### Resultado obtido
+
+Ao pressionar Enter no campo Senha, nada aconteceu.
+
+Ao clicar no botão Entrar com os mesmos dados, o login funcionou normalmente.
+
+### Evidências
+
+- [Tentativa pela tecla Enter](https://jam.dev/c/b3b4eead-d508-472e-bef5-e5f861bd4ca4)
+- [Login pelo botão registrado no C01-CT01](https://jam.dev/c/03a7848e-2c13-4a70-b4db-fde9ee100fb8)
+
+A conferência adicional pelo botão, após a tentativa pelo teclado, foi realizada sem nova gravação.
+
+### Bug associado
+
+BUG-ADRIAN-001 — Login não é enviado pela tecla Enter no campo Senha.
