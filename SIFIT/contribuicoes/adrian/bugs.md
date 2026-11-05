@@ -14,7 +14,7 @@ Estar na tela de login com usuário e senha válidos preenchidos.
 
 ### Passos para reproduzir
 
-1. Acessar https://sifit.centrion.com.br/login.
+1. Acessar https://sifitalfa.centrion.com.br/login.
 2. Preencher as credenciais válidas.
 3. Manter o foco no campo Senha.
 4. Pressionar Enter no teclado.
