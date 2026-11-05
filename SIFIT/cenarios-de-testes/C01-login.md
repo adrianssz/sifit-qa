@@ -42,3 +42,48 @@ A correspondência entre a conta utilizada e o nome exibido será verificada sep
 ### Bug associado
 
 Nenhum identificado neste caso.
+
+
+
+---
+
+## C01-CT02 — Login com senha incorreta
+
+**Responsável:** Adrian  
+**Data da execução:** 05/11/2026  
+**Tipo:** Negativo  
+**Status:** Aprovado  
+**Sistema:** https://sifit.centrion.com.br/login
+
+### Objetivo
+
+Verificar se o sistema recusa o acesso com usuário válido e senha incorreta.
+
+### Pré-condições
+
+- Estar na tela de login, sem sessão autenticada.
+- Ter um usuário válido para o teste.
+
+### Passos
+
+1. Preencher Login com o usuário válido.
+2. Preencher Senha com uma senha incorreta.
+3. Deixar Manter conectado desmarcado.
+4. Clicar em Entrar.
+5. Conferir a resposta do sistema.
+
+### Resultado esperado
+
+O sistema deve recusar a autenticação e informar que as credenciais estão incorretas.
+
+### Resultado obtido
+
+O sistema recusou o login e exibiu a mensagem: “O nome de usuário e senha não correspondem.”
+
+### Evidência
+
+[Assistir à gravação no Jam](https://jam.dev/c/631962eb-718e-4bf4-87a1-d122b98c92ca)
+
+### Bug associado
+
+Nenhum identificado neste caso.
