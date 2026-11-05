@@ -528,3 +528,44 @@ Após sair e clicar em Voltar, o sistema permaneceu na tela de login e não reto
 ### Bug associado
 
 Nenhum identificado neste caso.
+
+---
+
+## C01-CT13 — Acesso direto sem sessão
+
+**Responsável:** Adrian  
+**Data da execução:** 05/11/2026  
+**Tipo:** Negativo  
+**Status:** Aprovado  
+**Sistema:** https://sifitalfa.centrion.com.br/login
+
+### Objetivo
+
+Verificar se uma página interna fica protegida quando não há sessão autenticada.
+
+### Pré-condições
+
+- Ter saído da conta pelo botão Sair.
+- Estar sem sessão autenticada.
+
+### Passos
+
+1. Acessar diretamente https://sifitalfa.centrion.com.br/dashboard.
+2. Não informar credenciais.
+3. Aguardar o carregamento e observar o resultado.
+
+### Resultado esperado
+
+Impedir o acesso à área interna e solicitar login.
+
+### Resultado obtido
+
+O sistema solicitou login e não abriu a área interna.
+
+### Evidência
+
+[Assistir à gravação no Jam](https://jam.dev/c/17b5a3e2-388a-467c-b9c8-35fb0bc41172)
+
+### Bug associado
+
+Nenhum identificado neste caso.
