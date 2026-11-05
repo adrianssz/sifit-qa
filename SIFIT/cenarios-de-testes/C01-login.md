@@ -172,3 +172,47 @@ O bloqueio do acesso funcionou, mas a mensagem não indicou que os campos estava
 ### Observação
 
 Divergência em relação ao resultado esperado do roteiro. Confirmar a regra de validação antes de consolidar como defeito no relatório de bugs.
+
+---
+
+## C01-CT05 — Login vazio e senha preenchida
+
+**Responsável:** Adrian  
+**Data da execução:** 05/11/2026  
+**Tipo:** Negativo  
+**Status:** Reprovado  
+
+### Objetivo
+
+Verificar a validação quando apenas o campo Login está vazio.
+
+### Pré-condições
+
+- Estar na tela de login, sem sessão autenticada.
+- Ter a senha válida da conta de teste.
+
+### Passos
+
+1. Deixar Login vazio.
+2. Preencher Senha com a senha válida, mantendo-a mascarada.
+3. Deixar Manter conectado desmarcado.
+4. Clicar em Entrar.
+5. Conferir a resposta do sistema.
+
+### Resultado esperado
+
+Impedir a autenticação e orientar o preenchimento do campo Login.
+
+### Resultado obtido
+
+O sistema recusou o login e exibiu: “O nome de usuário e senha não correspondem.”
+
+O bloqueio do acesso funcionou, mas a mensagem não indicou que o campo Login estava vazio.
+
+### Evidência
+
+[Assistir à gravação no Jam](https://jam.dev/c/e309fabf-e968-418c-91f6-f17a1dd16995)
+
+### Observação
+
+Divergência em relação ao resultado esperado do roteiro. Confirmar a regra de validação antes de consolidar como defeito no relatório de bugs.
