@@ -350,3 +350,56 @@ A conferência adicional pelo botão, após a tentativa pelo teclado, foi realiz
 ### Bug associado
 
 BUG-ADRIAN-001 — Login não é enviado pela tecla Enter no campo Senha.
+
+---
+
+## C01-CT09 — Manter conectado marcado e desmarcado
+
+**Responsável:** Adrian  
+**Data da execução:** 05/11/2026  
+**Tipo:** Sessão  
+**Status:** Pendente de validação da regra  
+**Sistema:** https://sifitalfa.centrion.com.br/login
+
+### Objetivo
+
+Comparar a persistência da sessão após fechar e reabrir o navegador, com Manter conectado marcado e desmarcado.
+
+### Pré-condições
+
+- Ter uma conta válida.
+- Utilizar o mesmo navegador e perfil nas duas condições.
+- Encerrar a sessão anterior antes de preparar cada condição.
+
+### Passos
+
+1. Realizar login com Manter conectado marcado.
+2. Fechar todas as janelas do navegador sem clicar em Sair.
+3. Reabrir o navegador e acessar /dashboard sem informar as credenciais novamente.
+4. Atualizar a página e observar o acesso.
+5. Encerrar a sessão pelo botão Sair.
+6. Realizar novo login com Manter conectado desmarcado.
+7. Repetir o fechamento, a reabertura e o acesso direto a /dashboard.
+8. Atualizar a página e comparar os resultados.
+
+### Resultado esperado
+
+A persistência deve seguir a regra definida para cada opção. A duração da sessão e o efeito de Manter conectado ainda precisam ser confirmados.
+
+### Resultado obtido
+
+A área interna permaneceu acessível após reabrir o navegador nas duas condições, sem informar novamente as credenciais.
+
+O acesso direto a /login exibiu o formulário, mas isso não significou encerramento da sessão: /dashboard continuou acessível.
+
+### Evidências
+
+- [Login com a opção marcada](https://jam.dev/c/f008cbed-2614-4c21-804e-f6232863b168)
+- [Área interna após reabertura — opção marcada](https://jam.dev/c/2e9d0eb7-92fa-469f-9c63-1b4fe0c7dc53)
+- [Área interna após reabertura — opção desmarcada](https://jam.dev/c/d6ebac89-f0cb-445a-a2f5-d85ea2381f0f)
+
+O fechamento e a reabertura do navegador ocorreram fora das gravações.
+
+### Observação
+
+O teste foi executado, mas a conclusão depende da confirmação da regra de sessão. Não foi realizado teste de expiração por tempo. Nenhum defeito foi confirmado neste caso.
