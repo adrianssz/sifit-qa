@@ -487,3 +487,44 @@ A página carregou normalmente e a sessão permaneceu ativa, sem solicitar as cr
 ### Bug associado
 
 Nenhum identificado neste caso.
+
+---
+
+## C01-CT12 — Logout e retorno pelo botão Voltar
+
+**Responsável:** Adrian  
+**Data da execução:** 05/11/2026  
+**Tipo:** Sessão  
+**Status:** Aprovado  
+**Sistema:** https://sifitalfa.centrion.com.br/login
+
+### Objetivo
+
+Verificar se o botão Voltar permite recuperar o acesso após sair da conta.
+
+### Pré-condições
+
+- Estar autenticado no sistema.
+
+### Passos
+
+1. Abrir o menu do usuário e clicar em Sair.
+2. Aguardar a tela de login.
+3. Clicar no botão Voltar do navegador.
+4. Conferir se a área interna volta a ficar acessível.
+
+### Resultado esperado
+
+Manter o acesso à área interna bloqueado após encerrar a sessão.
+
+### Resultado obtido
+
+Após sair e clicar em Voltar, o sistema permaneceu na tela de login e não retornou à área interna.
+
+### Evidência
+
+[Assistir à gravação no Jam](https://jam.dev/c/6026f419-2596-4e46-be61-0dd093845a96)
+
+### Bug associado
+
+Nenhum identificado neste caso.
