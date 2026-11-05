@@ -403,3 +403,46 @@ O fechamento e a reabertura do navegador ocorreram fora das gravações.
 ### Observação
 
 O teste foi executado, mas a conclusão depende da confirmação da regra de sessão. Não foi realizado teste de expiração por tempo. Nenhum defeito foi confirmado neste caso.
+
+---
+
+## C01-CT10 — Abertura da recuperação de senha
+
+**Responsável:** Adrian  
+**Data da execução:** 05/11/2026  
+**Tipo:** Condicional  
+**Status:** Reprovado  
+**Sistema:** https://sifitalfa.centrion.com.br/login
+
+### Objetivo
+
+Verificar se o link Esqueci minha senha abre o fluxo de recuperação ou apresenta orientações.
+
+### Pré-condições
+
+- Estar na tela de login, sem sessão autenticada.
+
+### Passos
+
+1. Clicar em Esqueci minha senha.
+2. Aguardar e observar a resposta da interface.
+
+### Resultado esperado
+
+Abrir o fluxo de recuperação de senha ou apresentar orientações para recuperar o acesso.
+
+### Resultado obtido
+
+Ao clicar em Esqueci minha senha, nada aconteceu. Nenhuma tela ou orientação foi apresentada.
+
+### Evidência
+
+[Assistir à gravação no Jam](https://jam.dev/c/de8511c8-eab7-4b1d-b079-dc9ae6675cc2)
+
+### Limitação
+
+Não foi possível avançar para o envio da solicitação. Nenhuma senha foi alterada.
+
+### Bug associado
+
+BUG-ADRIAN-002 — Link Esqueci minha senha sem resposta visível.
