@@ -87,3 +87,46 @@ O sistema recusou o login e exibiu a mensagem: “O nome de usuário e senha nã
 ### Bug associado
 
 Nenhum identificado neste caso.
+
+---
+
+## C01-CT03 — Login com usuário inexistente
+
+**Responsável:** Adrian  
+**Data da execução:** 05/11/2026  
+**Tipo:** Negativo  
+**Status:** Aprovado  
+**Sistema:** https://sifit.centrion.com.br/login
+
+### Objetivo
+
+Verificar se o sistema recusa o acesso com um usuário não cadastrado.
+
+### Pré-condições
+
+- Estar na tela de login, sem sessão autenticada.
+- Utilizar um usuário de teste não cadastrado.
+
+### Passos
+
+1. Preencher Login com qa_usuario_inexistente_05112026.
+2. Preencher Senha com Teste123!.
+3. Deixar Manter conectado desmarcado.
+4. Clicar em Entrar.
+5. Conferir a resposta do sistema.
+
+### Resultado esperado
+
+O sistema deve recusar a autenticação e informar que as credenciais são inválidas.
+
+### Resultado obtido
+
+O sistema recusou o login e exibiu a mensagem: “O nome de usuário e senha não correspondem.”
+
+### Evidência
+
+[Assistir à gravação no Jam](https://jam.dev/c/eb95bdee-7830-4147-91a0-74cd769562f0)
+
+### Bug associado
+
+Nenhum identificado neste caso.
