@@ -351,3 +351,38 @@ O sino exibiu “Notificações” e abriu essa área. O botão do assistente ex
 ### Bug associado
 
 Nenhum identificado neste caso.
+
+---
+## C02-CT10 — Carregamento e visualização do Dashboard
+
+**Responsável:** Adrian  
+**Data da execução:** 06/11/2026  
+**Tipo:** Interface  
+**Status:** Reprovado  
+**Sistema:** https://sifitalfa.centrion.com.br/login
+
+### Objetivo
+
+Verificar o carregamento do Dashboard e a visibilidade do conteúdo exibido.
+
+### Passos
+
+1. Acessar Dashboard pelo menu lateral.
+2. Aguardar o carregamento.
+3. Conferir a visualização dos títulos no modo claro e no modo escuro.
+
+### Resultado esperado
+
+O Dashboard deve carregar e apresentar seus títulos e conteúdos legíveis nos temas disponíveis.
+
+### Resultado obtido
+
+O Dashboard carregou normalmente. No modo claro, o fundo e os títulos das seleções ficaram brancos, dificultando a leitura. No modo escuro, foi possível visualizar o conteúdo.
+
+### Evidência
+
+[Assistir à gravação no Drive](https://drive.google.com/file/d/1AFljR3BzuDHGxGkq5DXoerL1rxZVN486/view?usp=drive_link)
+
+### Bug associado
+
+Falha visual observada; confirmar e registrar no relatório de bugs.
