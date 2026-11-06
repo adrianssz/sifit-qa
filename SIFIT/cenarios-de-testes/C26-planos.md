@@ -522,3 +522,63 @@ https://jam.dev/c/261ed5e1-f4e4-442e-98c7-153da8de1109
 Bug associado
 
 Nenhum identificado neste caso.
+
+C26-CT10 — Pesquisar e editar plano
+
+Responsável: Fernando Cardoso dos Santos
+Data da execução: 06/11/2026
+Tipo: Positivo
+Status: Aprovado
+Sistema: https://sifitalfa.centrion.com.br/planos
+
+Objetivo
+
+Verificar se o sistema permite pesquisar um plano existente, editar seus dados e manter as alterações salvas.
+
+Pré-condições
+
+Estar autenticado no sistema.
+Ter o plano QA_FERNANDO_RANKING_01 cadastrado.
+Acessar a tela de Planos.
+
+Dados utilizados
+
+Nome original: QA_FERNANDO_RANKING_01
+Novo nome: QA_FERNANDO_EDITADO_01
+Valor original: R$ 200,00
+Novo valor mensal: R$ 250,00
+
+Passos
+
+1. Acessar a tela de Planos.
+2. Informar QA_FERNANDO_RANKING_01 no campo de pesquisa.
+3. Clicar em Buscar.
+4. Abrir o plano pela lupa.
+5. Alterar o nome para QA_FERNANDO_EDITADO_01.
+6. Alterar o valor mensal para R$ 250,00.
+7. Salvar o plano.
+8. Pesquisar pelo novo nome.
+9. Abrir o plano novamente pela lupa.
+10. Conferir o nome e o valor alterados.
+
+Resultado esperado
+
+O sistema deve localizar o plano pesquisado, permitir a edição dos dados e manter as alterações após o salvamento e uma nova consulta.
+
+Resultado obtido
+
+O plano foi localizado pela pesquisa, aberto pela lupa, editado e salvo. Após uma nova pesquisa, o plano permaneceu disponível com os dados alterados. Nenhum erro foi exibido.
+
+Data, navegador e executor
+
+Data: 06/11/2026
+Navegador: Google Chrome
+Executor: Fernando Cardoso dos Santos
+
+Evidência
+
+https://jam.dev/c/b628783c-6eb1-41be-ae7e-1d32dc578d0b
+
+Bug associado
+
+Nenhum identificado neste caso.
