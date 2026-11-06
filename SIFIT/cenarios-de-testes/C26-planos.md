@@ -140,3 +140,56 @@ https://jam.dev/c/6aae4b97-2a12-4590-81eb-8156138a7261
 Bug associado
 
 Nenhum identificado neste caso.
+
+
+
+C26-CT03 — Plano por período fixo
+
+Responsável: Fernando Cardoso dos Santos
+Data da execução: 06/11/2026
+Tipo: Positivo
+Status: Aprovado
+Sistema: https://sifitalfa.centrion.com.br/planos
+
+Objetivo
+
+Verificar se o sistema permite cadastrar um plano por período fixo.
+
+Pré-condições
+
+Estar autenticado no sistema.
+Acessar a tela de Planos.
+Ter o grupo Teste disponível.
+
+Passos
+
+Clicar em Novo Plano.
+Preencher o nome QA_FERNANDO_PERIODO_01.
+Selecionar o grupo Teste.
+Manter o status como Ativo.
+Selecionar Período fixo no campo Cobrança.
+Informar quantidade de 3.
+Manter o período como Mês(es).
+Informar 3 parcelas.
+Informar o valor mensal de R$ 150,00.
+Manter o valor da matrícula como R$ 0,00.
+Manter Tem Personal? como Não.
+Manter Dependentes como 0.
+Clicar em Salvar Plano.
+Atualizar a página e consultar o plano cadastrado.
+
+Resultado esperado
+
+O sistema deve permitir o cadastro do plano por período fixo, mantendo sua duração, parcelas e valor após a atualização da página.
+
+Resultado obtido
+
+O plano foi salvo com sucesso. Após a atualização da página, o registro permaneceu disponível para consulta. Nenhum erro foi exibido.
+
+Evidência
+
+https://jam.dev/c/ffd5d0a7-a1a6-4416-ac9b-32f004e4836c
+
+Bug associado
+
+Nenhum identificado neste caso.
