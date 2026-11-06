@@ -458,3 +458,67 @@ BUG-FERNANDO-001 — Status Inativo exibido incorretamente como Nativo.
 Descrição do bug
 
 Ao alterar um plano para o status Inativo, a listagem exibe o texto “Nativo”. O sistema deveria apresentar o texto “Inativo”.
+
+
+C26-CT09 — Ranking de planos e receita estimada
+
+Responsável: Fernando Cardoso dos Santos
+Data da execução: 06/11/2026
+Tipo: Positivo
+Status: Aprovado
+Sistema: https://sifitalfa.centrion.com.br/planos
+
+Objetivo
+
+Verificar se a tela de Planos apresenta os cards de resumo, o ranking de planos e a receita estimada após o cadastro de um novo plano.
+
+Pré-condições
+
+Estar autenticado no sistema.
+Acessar a tela de Planos.
+Ter o grupo Teste disponível.
+
+Dados utilizados
+
+Nome: QA_FERNANDO_RANKING_01
+Grupo: Teste
+Status: Ativo
+Cobrança: Mensalidade recorrente
+Parcelas: 1
+Valor mensal: R$ 200,00
+Valor de matrícula: R$ 0,00
+Tem Personal?: Não
+Dependentes: 0
+
+Passos
+
+1. Acessar a tela de Planos.
+2. Clicar em Novo Plano.
+3. Preencher os dados do plano.
+4. Salvar o plano.
+5. Atualizar a página.
+6. Conferir os cards Planos, Ativos, Alunos em Planos e Receita Estimada.
+7. Conferir a seção Planos com mais alunos.
+8. Consultar o plano cadastrado.
+
+Resultado esperado
+
+O plano deve ser salvo corretamente e a tela deve apresentar os cards de resumo, a receita estimada e a seção de ranking sem erros.
+
+Resultado obtido
+
+O plano foi salvo com sucesso. Após a atualização, os cards de resumo, a receita estimada e a seção de ranking foram exibidos. Nenhum erro foi apresentado durante a consulta.
+
+Data, navegador e executor
+
+Data: 06/11/2026
+Navegador: Google Chrome
+Executor: Fernando Cardoso dos Santos
+
+Evidência
+
+https://jam.dev/c/261ed5e1-f4e4-442e-98c7-153da8de1109
+
+Bug associado
+
+Nenhum identificado neste caso.
