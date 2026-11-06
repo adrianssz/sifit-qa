@@ -89,3 +89,54 @@ Observações
 O plano de código 58 deve ser preservado para os testes de matrículas e para o caso C47-CT01.
 
 Os casos C26-CT02 a C26-CT12 permanecem Não executado.
+
+
+C26-CT02 — Plano por diária
+
+Responsável: Fernando Cardoso dos Santos
+Data da execução: 06/11/2026
+Tipo: Positivo
+Status: Aprovado
+Sistema: https://sifitalfa.centrion.com.br/planos
+
+Objetivo
+
+Verificar se o sistema permite cadastrar um plano por diária.
+
+Pré-condições
+
+Estar autenticado no sistema.
+Acessar a tela de Planos.
+Ter o grupo Teste disponível.
+
+Passos
+
+Clicar em Novo Plano.
+Preencher o nome QA_FERNANDO_DIARIA_01.
+Selecionar o grupo Teste.
+Manter o status como Ativo.
+Selecionar Diária no campo Cobrança.
+Informar 1 parcela.
+Informar o valor diário de R$ 25,00.
+Manter Dias na matrícula? como Não.
+Manter Tem Personal? como Não.
+Manter Dependentes como 0.
+Clicar em Salvar Plano.
+Atualizar a página.
+Localizar o plano cadastrado e abrir pela lupa.
+
+Resultado esperado
+
+O sistema deve permitir o cadastro do plano diário, exibir o registro na listagem e manter os dados após a atualização da página.
+
+Resultado obtido
+
+O plano diário foi salvo com sucesso e apareceu na listagem. Após a atualização da página, o registro continuou disponível e foi aberto pela ação de consulta. Nenhum erro foi exibido.
+
+Evidência
+
+https://jam.dev/c/6aae4b97-2a12-4590-81eb-8156138a7261
+
+Bug associado
+
+Nenhum identificado neste caso.
