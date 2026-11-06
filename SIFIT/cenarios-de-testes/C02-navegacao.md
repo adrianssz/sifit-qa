@@ -205,3 +205,30 @@ A opção Sair do sistema já foi verificada no C01-CT12. Nenhum dado ou senha f
 ### Bug associado
 
 Nenhum identificado neste caso.
+
+### Verificação complementar — Notificações entre telas
+
+**Data:** 06/11/2026  
+**Situação:** Divergência observada; regra de abrangência das notificações a confirmar.
+
+#### Passos
+
+1. Abrir as notificações na Página Inicial.
+2. Acessar Segurança e abrir novamente o painel.
+3. Retornar à Página Inicial e conferir as notificações.
+
+#### Resultado obtido
+
+Na Página Inicial, o painel apresentou três notificações.
+
+Em Meu perfil e Segurança, o painel apresentou a mensagem “Nada pendente por aqui. Você está em dia.”, com Tudo selecionado.
+
+Ao retornar à Página Inicial, as notificações reapareceram. Nenhum item foi marcado como lido durante a comparação.
+
+#### Evidência
+
+[Comparação entre Página Inicial e Segurança](https://jam.dev/c/0bff9c33-6386-40df-8ae8-ea0f6256ba6f)
+
+#### Observação
+
+Não houve confirmação de exclusão das notificações. É necessário confirmar se o painel deve apresentar os mesmos itens em todas as telas antes de classificar a diferença como defeito.
