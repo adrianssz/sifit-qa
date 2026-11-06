@@ -380,3 +380,81 @@ https://jam.dev/c/58a1c74e-59b1-451d-b083-7681c0415aaf
 Bug associado
 
 Nenhum identificado neste caso.
+
+
+C26-CT08 — Status ativo/inativo
+
+Responsável: Fernando Cardoso dos Santos
+Data da execução: 06/11/2026
+Tipo: Negativo
+Status: Reprovado
+Sistema: https://sifitalfa.centrion.com.br/planos
+
+Objetivo
+
+Verificar se o sistema permite alterar o status de um plano entre Ativo e Inativo e exibe corretamente o status selecionado na listagem.
+
+Pré-condições
+
+Estar autenticado no sistema.
+Acessar a tela de Planos.
+Ter o grupo Teste disponível.
+
+Dados utilizados
+
+Nome: QA_FERNANDO_STATUS_01
+Grupo: Teste
+Cobrança: Mensalidade recorrente
+Parcelas: 1
+Valor mensal: R$ 100,00
+Valor de matrícula: R$ 0,00
+Tem Personal?: Não
+Dependentes: 0
+
+Passos
+
+1. Abrir a tela de Planos.
+2. Clicar em Novo Plano.
+3. Preencher o nome QA_FERNANDO_STATUS_01.
+4. Selecionar o grupo Teste.
+5. Manter o status como Ativo.
+6. Selecionar Mensalidade recorrente.
+7. Informar 1 parcela.
+8. Informar o valor mensal de R$ 100,00.
+9. Informar o valor de matrícula de R$ 0,00.
+10. Manter Tem Personal? como Não.
+11. Manter Dependentes como 0.
+12. Salvar o plano.
+13. Localizar o plano na listagem e abrir pela lupa.
+14. Alterar o status para Inativo.
+15. Salvar novamente.
+16. Pesquisar o plano na listagem.
+17. Conferir o status exibido.
+
+Resultado esperado
+
+O sistema deve permitir alterar o status do plano para Inativo e exibir corretamente o status “Inativo” na listagem.
+
+Resultado obtido
+
+O plano foi criado e o status foi alterado para Inativo. Porém, na listagem, o sistema exibiu o status como “Nativo”, em vez de “Inativo”.
+
+O resultado não corresponde ao esperado.
+
+Data, navegador e executor
+
+Data: 06/11/2026
+Navegador: Google Chrome
+Executor: Fernando Cardoso dos Santos
+
+Evidência
+
+https://jam.dev/c/1288580e-2149-4252-9c9c-03f4f6360eef
+
+Bug associado
+
+BUG-FERNANDO-001 — Status Inativo exibido incorretamente como Nativo.
+
+Descrição do bug
+
+Ao alterar um plano para o status Inativo, a listagem exibe o texto “Nativo”. O sistema deveria apresentar o texto “Inativo”.
