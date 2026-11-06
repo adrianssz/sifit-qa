@@ -39,3 +39,46 @@ A rolagem funcionou normalmente até o final e no retorno ao início. Todas as o
 ### Bug associado
 
 Nenhum identificado neste caso.
+
+---
+
+## C02-CT04 — Alternar tema claro e escuro
+
+**Responsável:** Adrian  
+**Data da execução:** 06/11/2026  
+**Tipo:** Interface  
+**Status:** Aprovado  
+**Sistema:** https://sifitalfa.centrion.com.br/login
+
+### Objetivo
+
+Verificar a alternância dos temas, a legibilidade e a persistência da preferência após atualizar a página.
+
+### Pré-condições
+
+- Estar autenticado no sistema.
+- Ter acesso ao botão de alternância de tema.
+
+### Passos
+
+1. Clicar no botão de sol/lua do menu lateral.
+2. Conferir a legibilidade dos textos, ícones e botões.
+3. Pressionar F5.
+4. Conferir se o tema escolhido permanece.
+5. Alternar novamente para o tema anterior.
+
+### Resultado esperado
+
+Alternar entre os temas mantendo a interface legível e preservar a preferência após atualizar a página.
+
+### Resultado obtido
+
+A alternância funcionou normalmente. Os dois temas ficaram legíveis e o tema escolhido permaneceu após atualizar a página.
+
+### Evidência
+
+[Assistir à gravação no Jam](https://jam.dev/c/1930eb1c-1111-4134-93f5-813ef759960b)
+
+### Bug associado
+
+Nenhum identificado neste caso.
