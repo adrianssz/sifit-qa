@@ -276,3 +276,42 @@ Nenhuma mensagem foi enviada neste teste.
 ### Bug associado
 
 Nenhum identificado neste caso.
+
+---
+## C02-CT08 — Navegação por teclado no formulário de Segurança
+
+**Responsável:** Adrian  
+**Data da execução:** 06/11/2026  
+**Tipo:** Interação  
+**Status:** Aprovado  
+**Sistema:** https://sifitalfa.centrion.com.br/login
+
+### Objetivo
+
+Verificar a navegação por teclado e a validação dos campos obrigatórios no formulário de alteração de senha.
+
+### Pré-condições
+
+Estar autenticado e acessar Jair → Segurança.
+
+### Passos
+
+1. Percorrer os campos e o botão com Tab e Shift+Tab.
+2. Deixar os campos vazios e tentar salvar usando Enter.
+3. Repetir a tentativa clicando em Salvar nova senha com o mouse.
+
+### Resultado esperado
+
+O foco deve percorrer os controles do formulário. O sistema deve impedir o envio com campos obrigatórios vazios e indicar o campo que precisa ser preenchido.
+
+### Resultado obtido
+
+A navegação por teclado funcionou. Tanto com Enter quanto com o clique no botão, o formulário permaneceu na página e exibiu “Preencha este campo.” no campo Senha atual. Nenhuma senha foi alterada.
+
+### Evidência
+
+[Assistir à gravação no Jam](https://jam.dev/c/074ac523-365b-41ba-a86f-91546016fa5c)
+
+### Bug associado
+
+Nenhum identificado neste caso.
