@@ -283,3 +283,52 @@ https://jam.dev/c/0077add8-e8fd-491b-add7-3442d29a63e7
 Bug associado
 
 Nenhum identificado neste caso.
+
+
+C26-CT06 — Personal e função dos professores
+
+Responsável: Fernando Cardoso dos Santos
+Data da execução: 06/11/2026
+Tipo: Interação
+Status: Aprovado
+Sistema: https://sifitalfa.centrion.com.br/planos
+
+Objetivo
+
+Verificar o comportamento dos campos de Personal e função dos professores no cadastro de planos.
+
+Pré-condições
+
+Estar autenticado no sistema.
+Acessar a tela de Planos.
+Ter o grupo Teste disponível.
+
+Passos
+
+Abrir Novo Plano.
+Preencher o nome QA_FERNANDO_PERSONAL_01.
+Selecionar o grupo Teste.
+Manter o status como Ativo.
+Selecionar Mensalidade recorrente.
+Informar 1 parcela e valor mensal de R$ 100,00.
+Selecionar Tem Personal? como Sim.
+Selecionar uma função disponível dos professores.
+Manter Dependentes como 0.
+Salvar o plano.
+Pesquisar o plano e abrir pela lupa.
+
+Resultado esperado
+
+Ao selecionar Personal, o sistema deve disponibilizar a função dos professores e salvar o plano com os dados selecionados.
+
+Resultado obtido
+
+Os campos de Personal e função dos professores foram disponibilizados e selecionados. O plano foi salvo, localizado pela pesquisa e consultado posteriormente sem erro.
+
+Evidência
+
+https://jam.dev/c/73d9290a-1c2a-4ca4-b86d-f28c183b7c51
+
+Bug associado
+
+Nenhum identificado neste caso.
