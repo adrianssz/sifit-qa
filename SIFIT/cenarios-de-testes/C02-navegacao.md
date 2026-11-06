@@ -232,3 +232,47 @@ Ao retornar à Página Inicial, as notificações reapareceram. Nenhum item foi 
 #### Observação
 
 Não houve confirmação de exclusão das notificações. É necessário confirmar se o painel deve apresentar os mesmos itens em todas as telas antes de classificar a diferença como defeito.
+
+---
+
+## C02-CT07 — Abrir e fechar Academy Assistant
+
+**Responsável:** Adrian  
+**Data da execução:** 06/11/2026  
+**Tipo:** Interação  
+**Status:** Aprovado  
+**Sistema:** https://sifitalfa.centrion.com.br/login
+
+### Objetivo
+
+Verificar a abertura e o fechamento do painel do Academy Assistant.
+
+### Pré-condições
+
+- Estar autenticado na Página Inicial.
+
+### Passos
+
+1. Clicar no botão do assistente no canto inferior direito.
+2. Aguardar a abertura do painel.
+3. Conferir sua apresentação.
+4. Fechar o painel.
+5. Observar o retorno à página.
+
+### Resultado esperado
+
+Abrir e fechar o assistente normalmente, sem travar ou prejudicar a navegação.
+
+### Resultado obtido
+
+O painel abriu e fechou normalmente, sem problemas observados no retorno à página.
+
+Nenhuma mensagem foi enviada neste teste.
+
+### Evidência
+
+[Assistir à gravação no Jam](https://jam.dev/c/f3595c46-a026-4f17-aa6e-26c7f90f6df9)
+
+### Bug associado
+
+Nenhum identificado neste caso.
