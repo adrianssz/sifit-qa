@@ -82,3 +82,44 @@ A alternância funcionou normalmente. Os dois temas ficaram legíveis e o tema e
 ### Bug associado
 
 Nenhum identificado neste caso.
+
+---
+
+## C02-CT05 — Abrir e fechar notificações
+
+**Responsável:** Adrian  
+**Data da execução:** 06/11/2026  
+**Tipo:** Interação  
+**Status:** Aprovado  
+**Sistema:** https://sifitalfa.centrion.com.br/login
+
+### Objetivo
+
+Verificar a abertura, a apresentação e o fechamento do painel de notificações.
+
+### Pré-condições
+
+- Estar autenticado no sistema.
+
+### Passos
+
+1. Clicar no sino no canto superior direito.
+2. Aguardar a abertura do painel.
+3. Conferir o conteúdo apresentado.
+4. Clicar fora do painel para fechá-lo.
+
+### Resultado esperado
+
+Abrir e fechar o painel normalmente, exibindo notificações ou uma indicação compreensível de lista vazia.
+
+### Resultado obtido
+
+O painel abriu normalmente, sem problemas na apresentação, e fechou ao clicar fora dele.
+
+### Evidência
+
+[Assistir à gravação no Jam](https://jam.dev/c/d02da9df-b08e-4912-8bf5-cf5abfe3131a)
+
+### Bug associado
+
+Nenhum identificado neste caso.
