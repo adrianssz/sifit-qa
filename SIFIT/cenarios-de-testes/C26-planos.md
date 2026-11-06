@@ -1,0 +1,91 @@
+C26 — Planos
+
+C26-CT01 — Cadastrar plano recorrente
+
+Responsável: Fernando Cardoso dos Santos
+Data da execução: 05/11/2026
+Tipo: Positivo
+Status: Aprovado
+Sistema: https://sifitalfa.centrion.com.br/planos
+
+Objetivo
+
+Verificar se o sistema permite cadastrar um plano recorrente e manter seus dados após a atualização da página.
+
+Pré-condições
+
+Estar autenticado no sistema.
+Acessar a tela de Planos.
+Ter o grupo Teste disponível.
+Utilizar dados fictícios com o prefixo QA_FERNANDO.
+
+Dados utilizados
+
+Nome: QA_FERNANDO_REC_01.
+Grupo: Teste.
+Status: Ativo.
+Cobrança: Mensalidade recorrente.
+Parcelas: 1.
+Valor mensal: R$ 100,00.
+Valor da matrícula: R$ 0,00.
+Tem personal?: Não.
+Dependentes: 0.
+
+Passos
+
+1. Abrir a tela Planos.
+2. Clicar em Novo Plano.
+3. Preencher o nome QA_FERNANDO_REC_01.
+4. Selecionar o grupo Teste.
+5. Manter o status como Ativo.
+6. Selecionar Mensalidade recorrente.
+7. Informar 1 parcela.
+8. Informar o valor mensal de R$ 100,00.
+9. Manter o valor da matrícula em R$ 0,00.
+10. Manter Tem personal? como Não.
+11. Manter Dependentes como 0.
+12. Clicar em Salvar Plano.
+13. Conferir o registro na listagem.
+14. Atualizar a página.
+15. Reabrir o plano pela lupa.
+16. Comparar os dados apresentados com os dados informados.
+
+Resultado esperado
+
+O sistema deve cadastrar o plano recorrente e preservar os dados após atualizar a página e reabrir o cadastro.
+
+Resultado obtido
+
+O plano QA_FERNANDO_REC_01 foi cadastrado com o código 58.
+
+Após atualizar a página e reabrir o cadastro, foram mantidos o nome, o grupo Teste, o status Ativo, a cobrança recorrente, 1 parcela, o valor mensal de R$ 100,00, o valor da matrícula de R$ 0,00, a opção Tem personal? como Não e 0 dependentes.
+
+Status
+
+Aprovado.
+
+Evidência
+
+Parte 1 — preenchimento inicial:
+https://jam.dev/c/63995af9-cfc6-45a0-8759-d3602073fe2f
+
+Parte 2 — salvamento, atualização e reabertura:
+https://jam.dev/c/06959de7-d69a-4a8d-ac1d-ee9b4c560184
+
+A Parte 1 mostra o preenchimento inicial. Na Parte 2, o nome foi ajustado para QA_FERNANDO_REC_01 antes do salvamento. A mesma gravação mostra a atualização da página e a reabertura do plano.
+
+Verificações comuns aplicadas
+
+G01 — Cadastro válido.
+G13 — Persistência após atualizar a página.
+G24 — Conferência entre listagem e formulário.
+
+Bug associado
+
+Nenhum identificado neste caso.
+
+Observações
+
+O plano de código 58 deve ser preservado para os testes de matrículas e para o caso C47-CT01.
+
+Os casos C26-CT02 a C26-CT12 permanecem Não executado.
