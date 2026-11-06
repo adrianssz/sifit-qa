@@ -332,3 +332,51 @@ https://jam.dev/c/73d9290a-1c2a-4ca4-b86d-f28c183b7c51
 Bug associado
 
 Nenhum identificado neste caso.
+
+C26-CT07 — Dependentes de 0 a 6
+
+Responsável: Fernando Cardoso dos Santos
+Data da execução: 06/11/2026
+Tipo: Limite
+Status: Aprovado
+Sistema: https://sifitalfa.centrion.com.br/planos
+
+Objetivo
+
+Verificar se o campo Dependentes disponibiliza opções de 0 a 6 e mantém o valor escolhido.
+
+Pré-condições
+
+Estar autenticado no sistema.
+Acessar a tela de Planos.
+Ter o grupo Teste disponível.
+
+Passos
+
+1. Abrir Novo Plano.
+2. Preencher o nome QA_FERNANDO_DEPENDENTES_01.
+3. Selecionar o grupo Teste.
+4. Manter o status Ativo.
+5. Selecionar Mensalidade recorrente.
+6. Informar 1 parcela e valor mensal de R$ 100,00.
+7. Informar valor de matrícula de R$ 0,00.
+8. Manter Tem Personal? como Não.
+9. Selecionar sequencialmente os dependentes 0, 1, 2, 3, 4, 5 e 6.
+10. Salvar o plano.
+11. Consultar o plano pela busca e pela lupa.
+
+Resultado esperado
+
+O campo deve disponibilizar as opções de 0 a 6, permitir selecionar o limite 6 e manter o valor escolhido no plano.
+
+Resultado obtido
+
+As opções de dependentes foram percorridas no formulário. O plano foi salvo e consultado novamente pela busca e pela lupa, sem erro visível.
+
+Evidência
+
+https://jam.dev/c/58a1c74e-59b1-451d-b083-7681c0415aaf
+
+Bug associado
+
+Nenhum identificado neste caso.
