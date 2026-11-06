@@ -315,3 +315,39 @@ A navegação por teclado funcionou. Tanto com Enter quanto com o clique no bot�
 ### Bug associado
 
 Nenhum identificado neste caso.
+
+---
+## C02-CT09 — Identificação dos botões com ícones
+
+**Responsável:** Adrian  
+**Data da execução:** 06/11/2026  
+**Tipo:** Interface  
+**Status:** Aprovado  
+**Sistema:** https://sifitalfa.centrion.com.br/login
+
+### Objetivo
+
+Verificar se os botões de notificações e do assistente têm identificação e abrem suas respectivas áreas.
+
+### Passos
+
+1. Passar o mouse sobre o sino e conferir o título exibido.
+2. Clicar no sino e conferir se a área de notificações abre.
+3. Passar o mouse sobre o botão do assistente e conferir o título exibido.
+4. Clicar no botão e conferir se o assistente abre.
+
+### Resultado esperado
+
+Os botões devem apresentar identificação ao passar o mouse e abrir suas respectivas áreas ao clicar.
+
+### Resultado obtido
+
+O sino exibiu “Notificações” e abriu essa área. O botão do assistente exibiu “Academy Assistant” e abriu o assistente.
+
+### Evidência
+
+[Assistir à gravação no Jam](https://jam.dev/c/7bc14a99-adf3-469d-9a4e-466badaf2782)
+
+### Bug associado
+
+Nenhum identificado neste caso.
