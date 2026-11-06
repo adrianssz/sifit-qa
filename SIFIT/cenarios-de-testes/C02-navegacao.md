@@ -386,3 +386,44 @@ O Dashboard carregou normalmente. No modo claro, o fundo e os títulos das sele�
 ### Bug associado
 
 Falha visual observada; confirmar e registrar no relatório de bugs.
+
+---
+## C02-CT11 — Redimensionamento e zoom
+
+**Responsável:** Adrian  
+**Data da execução:** 06/11/2026  
+**Tipo:** Interface  
+**Status:** Aprovado  
+**Sistema:** https://sifitalfa.centrion.com.br/login
+
+### Objetivo
+
+Verificar se o menu e o conteúdo da Página Inicial continuam acessíveis ao alterar o zoom e a largura da janela.
+
+### Pré-condições
+
+Estar autenticado na Página Inicial.
+
+### Passos
+
+1. Ampliar o zoom com Ctrl + + duas vezes.
+2. Conferir o acesso ao menu e ao conteúdo.
+3. Retornar ao zoom anterior com Ctrl + - duas vezes.
+4. Reduzir a largura da janela do navegador.
+5. Conferir o ajuste do menu e do conteúdo.
+
+### Resultado esperado
+
+O menu e o conteúdo devem continuar acessíveis nas condições testadas.
+
+### Resultado obtido
+
+O zoom e o redimensionamento funcionaram normalmente. O menu e o conteúdo permaneceram acessíveis, sem problemas observados nas condições testadas.
+
+### Evidência
+
+[Assistir à gravação no Drive](https://drive.google.com/file/d/1NOCufoDX8Ic-3Yg1B45jN352QBT13b-9/view?usp=drive_link)
+
+### Bug associado
+
+Nenhum identificado neste caso.
