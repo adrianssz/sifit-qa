@@ -74,3 +74,44 @@ Nada aconteceu após o clique. Nenhuma tela ou orientação foi apresentada.
 ### Reteste
 
 Ainda não realizado após correção.
+
+---
+
+## BUG-ADRIAN-003 — Destaque do filtro permanece em Tudo
+
+**Caso relacionado:** C02-CT05  
+**Data:** 06/11/2026  
+**Responsável:** Adrian  
+**Severidade sugerida:** Baixa — indicação visual incorreta da seleção.  
+**Status:** Aberto  
+
+### Pré-condições
+
+- Estar autenticado no sistema.
+- Estar com o painel de notificações aberto.
+
+### Passos para reproduzir
+
+1. Clicar em Tudo.
+2. Clicar em Não lidas.
+3. Observar o destaque dos botões.
+
+### Resultado esperado
+
+O destaque visual deve acompanhar o filtro selecionado.
+
+### Resultado obtido
+
+Ao clicar em Não lidas, o destaque azul permaneceu em Tudo.
+
+### Limitação
+
+A lista permaneceu igual, mas todas as notificações exibidas aparentavam estar não lidas. Não foi confirmado se a filtragem dos registros funciona.
+
+### Evidência
+
+[Assistir à gravação no Jam](https://jam.dev/c/1fa7ebe9-51a6-4d06-809d-d0899960ba35)
+
+### Reteste
+
+Ainda não realizado após correção.
