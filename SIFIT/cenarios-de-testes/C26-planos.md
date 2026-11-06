@@ -193,3 +193,50 @@ https://jam.dev/c/ffd5d0a7-a1a6-4416-ac9b-32f004e4836c
 Bug associado
 
 Nenhum identificado neste caso.
+
+C26-CT04 — Nome obrigatório e grupo
+
+Responsável: Fernando Cardoso dos Santos
+Data da execução: 06/11/2026
+Tipo: Negativo
+Status: Aprovado
+Sistema: https://sifitalfa.centrion.com.br/planos
+
+Objetivo
+
+Verificar se o sistema impede o cadastro de um plano sem nome ou sem grupo.
+
+Pré-condições
+
+Estar autenticado no sistema.
+Acessar a tela de Planos.
+
+Passos
+
+Abrir o formulário Novo Plano.
+Deixar o campo Nome vazio.
+Selecionar o grupo Teste.
+Preencher os demais campos válidos.
+Clicar em Salvar Plano.
+Fechar o formulário sem salvar.
+Abrir Novo Plano novamente.
+Informar o nome QA_FERNANDO_SEM_GRUPO_01.
+Deixar o campo Grupo sem seleção.
+Preencher os demais campos válidos.
+Clicar em Salvar Plano.
+
+Resultado esperado
+
+O sistema deve impedir o cadastro quando o nome estiver vazio ou quando o grupo não estiver selecionado.
+
+Resultado obtido
+
+Na primeira tentativa, com o nome vazio, o sistema não salvou o plano e exibiu a mensagem “Erro ao salvar plano”. Na segunda tentativa, com o grupo sem seleção, o sistema exibiu um alerta e também impediu o salvamento. Nenhum plano inválido foi criado.
+
+Evidência
+
+https://jam.dev/c/29cf0588-e14a-466d-9df6-ad7c4d5c720c
+
+Bug associado
+
+Nenhum identificado neste caso.
