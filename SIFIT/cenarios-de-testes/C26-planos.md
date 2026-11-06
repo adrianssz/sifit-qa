@@ -582,3 +582,66 @@ https://jam.dev/c/b628783c-6eb1-41be-ae7e-1d32dc578d0b
 Bug associado
 
 Nenhum identificado neste caso.
+
+
+C26-CT11 — Salvar também na Pagar.me
+
+Responsável: Fernando Cardoso dos Santos
+Data da execução: 06/11/2026
+Tipo: Integração
+Status: Reprovado
+Sistema: https://sifitalfa.centrion.com.br/planos
+
+Objetivo
+
+Verificar se o sistema permite salvar o plano também na Pagar.me durante o cadastro.
+
+Pré-condições
+
+Estar autenticado no sistema.
+Acessar a tela de Planos.
+Ter o grupo Teste disponível.
+
+Dados utilizados
+
+Nome: QA_FERNANDO_PAGARME_01
+Grupo: Teste
+Status: Ativo
+Cobrança: Mensalidade recorrente
+Parcelas: 1
+Valor mensal: R$ 100,00
+Valor de matrícula: R$ 0,00
+Tem Personal?: Não
+Dependentes: 0
+
+Passos
+
+1. Acessar a tela de Planos.
+2. Clicar em Novo Plano.
+3. Preencher os dados do plano.
+4. Clicar em Salvar também na Pagar.me.
+5. Clicar em Salvar Plano.
+6. Conferir a resposta do sistema.
+7. Conferir se o plano aparece na listagem.
+
+Resultado esperado
+
+O sistema deve salvar o plano na Pagar.me e concluir o cadastro sem apresentar erro.
+
+Resultado obtido
+
+O sistema exibiu uma mensagem de erro durante a tentativa de salvar o plano na Pagar.me. Depois, o plano foi salvo localmente no SIFIT, mas a integração com a Pagar.me não foi confirmada.
+
+Data, navegador e executor
+
+Data: 06/11/2026
+Navegador: Google Chrome
+Executor: Fernando Cardoso dos Santos
+
+Evidência
+
+https://jam.dev/c/61d1a78b-21d3-4e6b-8a8c-a634621f5265
+
+Bug associado
+
+BUG-FERNANDO-002 — Erro ao salvar plano na Pagar.me.
