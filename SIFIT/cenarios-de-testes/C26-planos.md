@@ -240,3 +240,46 @@ https://jam.dev/c/29cf0588-e14a-466d-9df6-ad7c4d5c720c
 Bug associado
 
 Nenhum identificado neste caso.
+
+
+C26-CT05 — Parcelas e valores inválidos
+
+Responsável: Fernando Cardoso dos Santos
+Data da execução: 06/11/2026
+Tipo: Limite
+Status: Aprovado
+Sistema: https://sifitalfa.centrion.com.br/planos
+
+Objetivo
+
+Verificar o comportamento do sistema diante de parcelas e valores inválidos.
+
+Pré-condições
+
+Estar autenticado no sistema.
+Acessar a tela de Planos.
+
+Passos
+
+Abrir o formulário Novo Plano.
+Preencher um nome de teste e selecionar o grupo Teste.
+Informar valores inválidos nos campos de parcelas e valores.
+Tentar informar valor negativo no campo de valor mensal.
+Clicar em Salvar Plano após cada tentativa.
+Conferir se o sistema permite ou impede o salvamento.
+
+Resultado esperado
+
+O sistema deve impedir valores inválidos e não criar planos com parcelas ou valores inconsistentes.
+
+Resultado obtido
+
+O campo de valor não permitiu informar o valor negativo de R$ 100,00, mantendo o valor exibido em R$ 0,00. As tentativas inválidas não geraram um novo plano.
+
+Evidência
+
+https://jam.dev/c/0077add8-e8fd-491b-add7-3442d29a63e7
+
+Bug associado
+
+Nenhum identificado neste caso.
