@@ -123,3 +123,35 @@ O painel abriu normalmente, sem problemas na apresentação, e fechou ao clicar 
 ### Bug associado
 
 Nenhum identificado neste caso.
+
+### Verificação complementar — Destaque do filtro Não lidas
+
+**Data:** 06/11/2026  
+**Resultado da verificação complementar:** Reprovado quanto à indicação visual da seleção.
+
+#### Passos
+
+1. Abrir o painel de notificações.
+2. Clicar em Tudo.
+3. Clicar em Não lidas.
+4. Observar o destaque dos botões e a lista.
+
+#### Resultado esperado
+
+O destaque visual deve indicar o filtro selecionado.
+
+#### Resultado obtido
+
+Após clicar em Não lidas, o destaque azul permaneceu em Tudo. A lista também permaneceu igual.
+
+Não foi possível confirmar o funcionamento da filtragem, pois todas as notificações exibidas aparentavam estar não lidas.
+
+#### Evidência complementar
+
+[Assistir à gravação no Jam](https://jam.dev/c/1fa7ebe9-51a6-4d06-809d-d0899960ba35)
+
+#### Ocorrência associada
+
+BUG-ADRIAN-003 — Destaque do filtro permanece em Tudo após clicar em Não lidas.
+
+A abertura e o fechamento do painel continuam aprovados. A falha observada nesta verificação é a indicação visual do filtro.
