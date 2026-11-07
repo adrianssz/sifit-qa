@@ -1,4 +1,65 @@
-# C02 — Navegação e comportamento geral
+## C02-CT01 — Abrir as entradas do menu
+
+**Responsável:** Adrian  
+**Tipo:** Navegação  
+**Status:** Aprovado na abertura das telas
+
+### Objetivo
+
+Verificar se cada opção do menu lateral abre a tela correspondente.
+
+### Passos
+
+1. Acessar a Página Inicial.
+2. Abrir as opções do menu lateral, uma por vez.
+3. Rolar o menu para acessar as opções mais abaixo.
+
+### Resultado esperado
+
+Cada opção deve abrir a tela correspondente.
+
+### Resultado obtido
+
+Todas as telas do menu abriram.
+
+### Falha de navegação observada
+
+Ao clicar em uma opção mais abaixo, a página abriu, mas a rolagem do menu lateral voltou ao topo. Para acessar o próximo item, precisei rolar para baixo de novo.
+
+### Evidência
+
+[Assistir à gravação no Drive](https://drive.google.com/file/d/1lAlZXcNVD5HLZxF79hrz9D4RjABr3jv6/view?usp=drive_link)
+
+---
+
+## C02-CT02 — Título da tela e item selecionado
+
+**Responsável:** Adrian  
+**Tipo:** Interface  
+**Status:** Parcial — títulos conferidos; destaque do menu não confirmado
+
+### Objetivo
+
+Conferir se o título da tela e o destaque no menu correspondem à opção escolhida.
+
+### Passos executados
+
+1. Abrir diferentes opções do menu lateral.
+2. Comparar o nome de cada opção com o título da tela aberta.
+
+### Resultado esperado
+
+O título e o item destacado no menu devem corresponder à tela aberta.
+
+### Resultado obtido
+
+Nas telas que abri, todos os títulos corresponderam às opções escolhidas. O destaque do item no menu ficou pendente de confirmação.
+
+### Evidência
+
+[Assistir à gravação no Drive](https://drive.google.com/file/d/18NnR2aR7gTT-9KZnNPlnYtf_xBuRP2l1/view?usp=drive_link)
+
+---
 
 ## C02-CT03 — Rolagem do menu lateral
 
