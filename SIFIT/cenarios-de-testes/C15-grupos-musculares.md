@@ -95,3 +95,23 @@ Consegui alterar o nome de `teste_adrian_teste` para `teste_adrian` e o tipo de 
 ### Evidência
 
 [Edição e exclusão do grupo](https://drive.google.com/file/d/1jXxYPuCH5lrpjlfVfCvDPpSYfSYhJHhY/view?usp=drive_link)
+
+---
+
+## C15-CT06 — Contadores e paginação
+
+**Status:** Aprovado
+
+### Passos e resultado esperado
+
+1. Conferir o total de grupos e a quantidade de cada classificação.
+2. Com 10 registros por página, avançar para a segunda página.
+3. Alterar para 20 registros por página. Os 15 grupos devem aparecer juntos.
+
+### Resultado obtido
+
+O indicador mostrou 15 grupos, e os contadores por classificação bateram com as listas filtradas. Com 10 registros por página, consegui avançar para a segunda página. Ao selecionar 20 registros por página, os 15 grupos apareceram em uma única página.
+
+### Evidência
+
+[Assistir à gravação no Drive](https://drive.google.com/file/d/1-BSEk7o6rSathpUjO8HQUTAsXCz2tXaN/view?usp=drive_link)
