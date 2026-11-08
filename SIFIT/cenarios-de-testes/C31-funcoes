@@ -1,0 +1,49 @@
+# C31 — Funções
+
+**Responsável:** Adrian  
+**Data da execução:** 08/11/2026  
+**Sistema:** https://sifitalfa.centrion.com.br/login
+
+## C31-CT01 — Cadastrar função válida
+
+**Status:** Aprovado
+
+### Objetivo
+
+Cadastrar uma função e conferir os dados apresentados na lista.
+
+### Resultado esperado
+
+A função deve ser salva com nome, tipo e opções de Personal e Avaliador.
+
+### Resultado obtido
+
+Cadastrei `teste_adrian` com Tipo Interno, Personal Não e Avaliador Não. A função foi criada e listada com o código `11`.
+
+### Evidência
+
+[Gravação do cadastro](https://drive.google.com/file/d/1yM-bwk8OStRqnzC9VjNGr5HvCL0r4OHu/view?usp=drive_link)
+
+---
+
+## C31-CT02 — Nome obrigatório
+
+**Status:** Reprovado quanto ao nome formado só por espaços; duplicidade a confirmar
+
+### Objetivo
+
+Verificar o cadastro com nome vazio, somente espaços e nome repetido.
+
+### Resultado esperado
+
+O sistema deve solicitar um nome quando o campo estiver vazio e recusar um nome formado apenas por espaços. A regra para nomes duplicados precisa ser confirmada.
+
+### Resultado obtido
+
+Com o nome vazio, o sistema solicitou o preenchimento. Com apenas espaços, permitiu criar a função, que ficou com esse conteúdo no nome.
+
+Também permitiu cadastrar novamente `teste_adrian`, nome usado no CT01. O novo registro recebeu o código `13`. Nas tentativas, Personal e Avaliador ficaram em Não. A duplicidade foi observada, mas ainda depende da confirmação da regra para ser classificada como defeito.
+
+### Evidência
+
+[Gravação das validações de nome](https://drive.google.com/file/d/1CsEN8lVcZjGdyDizDMfJREJ_i1tJgryZ/view?usp=drive_link)
