@@ -80,3 +80,41 @@ As buscas por `teste_adrian2` e pelo código `2` retornaram os resultados espera
 ### Evidência
 
 [Pesquisa por nome e código](https://drive.google.com/file/d/1pRowVw885ZHxhOlT_Z2vU1RlIbURIYOz/view?usp=drive_link)
+
+---
+
+## C16-CT05 — Editar, cancelar e excluir
+
+**Status:** Reprovado
+
+### Objetivo
+
+Conferir o cancelamento, a edição e a exclusão de um objetivo de treino de teste.
+
+### Passos
+
+1. Abrir o objetivo `teste_adrian`, código `3`.
+2. Alterar o nome para `teste_adrian_cancelado` e cancelar.
+3. Reabrir o objetivo e conferir o nome.
+4. Alterar o nome para `teste_adrian_editado`, preencher a descrição e salvar.
+5. Reabrir o objetivo e conferir o código, o nome e a descrição.
+6. Tentar excluir o objetivo.
+
+### Resultado esperado
+
+Cancelar deve descartar a alteração. Salvar deve manter o nome e a descrição informados no mesmo registro. A exclusão deve ser concluída ou informar claramente o motivo do bloqueio.
+
+### Resultado obtido
+
+Ao cancelar, a alteração do nome não foi salva. Depois, o nome `teste_adrian_editado` foi salvo e o código `3` permaneceu. A descrição preenchida nas tentativas de edição continuou vazia ao reabrir o registro, repetindo o problema observado nos CT01 e CT03.
+
+Ao tentar excluir, o sistema exibiu “Erro ao deletar Objetivo”. Não foi possível identificar pela mensagem o motivo da falha.
+
+### Evidência
+
+[Assistir à gravação no Drive](https://drive.google.com/file/d/1GApHavxd8CM0Az8u3RxD2aaT4ww8QzLG/view?usp=drive_link)
+
+### Ocorrências para o relatório de bugs
+
+- Descrição não aparece após cadastrar ou editar objetivo — observada nos CT01, CT03 e CT05.
+- Exclusão do objetivo código `3` retornou “Erro ao deletar Objetivo”; verificar se existe algum vínculo que impeça a exclusão.
