@@ -645,3 +645,9 @@ https://jam.dev/c/61d1a78b-21d3-4e6b-8a8c-a634621f5265
 Bug associado
 
 BUG-FERNANDO-002 — Erro ao salvar plano na Pagar.me.
+
+Status: Bloqueado
+
+Justificativa
+
+O teste não foi executado porque não havia plano de teste com aluno vinculado disponível. A execução depende da criação de uma matrícula vinculada a um plano QA_FERNANDO.
