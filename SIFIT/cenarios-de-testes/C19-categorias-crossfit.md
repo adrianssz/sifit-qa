@@ -90,3 +90,33 @@ Localizei a categoria pelo código `5`, alterei o nome para `teste_adrian_cancel
 ### Evidência
 
 [Gravação da edição e do cancelamento](https://drive.google.com/file/d/1jqHEBAUufuykarJlABxseWxDKq90WtJa/view?usp=drive_link)
+
+---
+
+## C19-CT05 — Excluir categoria vinculada
+
+**Status:** Bloqueado — vínculo de teste indisponível
+
+### Objetivo
+
+Verificar o comportamento ao excluir uma categoria vinculada a um exercício de teste.
+
+### Pré-condição
+
+Ter um exercício de teste vinculado à categoria Crossfit criada no CT01.
+
+### Resultado esperado
+
+O sistema deve tratar o vínculo conforme sua regra, sem deixar referências inválidas.
+
+### Resultado obtido
+
+Ao consultar a Biblioteca de exercícios e abrir o formulário de inclusão, encontrei os campos Código, Nome, Imagem e Vídeo. Não havia campo para selecionar uma Categoria Crossfit. Não consegui preparar o vínculo necessário e, por isso, não tentei excluir a categoria de código 5.
+
+### Evidência
+
+Print do formulário de Exercício apresentado durante a inspeção. Vídeo de execução não produzido, pois a pré-condição do teste não foi atendida.
+
+### Pendência
+
+Confirmar se existe outro caminho para vincular exercícios a Categorias Crossfit.
