@@ -396,3 +396,69 @@ https://jam.dev/c/2944fac4-3418-4720-8d9e-82895b95f279
 Bug associado
 
 Nenhum identificado neste caso.
+
+C08-CT07 — CPF do cliente e do responsável
+
+Responsável: Fernando Cardoso dos Santos
+Data da execução: 11/11/2026
+Tipo: Positivo
+Status: Aprovado
+Sistema: https://sifitalfa.centrion.com.br/clientes
+
+Objetivo
+
+Verificar o preenchimento dos campos de CPF do cliente e do responsável.
+
+Requisito relacionado
+
+O sistema deve permitir informar os documentos do cliente e do responsável.
+
+Pré-condições
+
+Estar autenticado no sistema.
+Acessar Clientes.
+Abrir o cadastro de novo cliente.
+
+Dados utilizados
+
+Nome: teste
+Status: Ativo
+Sexo: Masculino
+Data de nascimento: 17/05/1999
+CPF do cliente: 111.111.111-11
+CPF do responsável: 222.222.222-22
+
+Passos
+
+1. Acessar Clientes.
+2. Clicar em Novo Cliente.
+3. Informar os dados obrigatórios.
+4. Informar o CPF do cliente.
+5. Habilitar o cadastro de responsável.
+6. Informar o CPF do responsável.
+7. Clicar em Salvar.
+8. Conferir se o cliente aparece na listagem.
+9. Abrir o registro pela visualização.
+10. Conferir o cadastro realizado.
+
+Resultado esperado
+
+O sistema deve aceitar os CPFs informados, salvar o cliente e permitir sua visualização.
+
+Resultado obtido
+
+Os CPFs foram informados sem bloqueio. O cliente foi salvo com sucesso, apareceu na listagem e foi aberto pela visualização com o ID 414.
+
+Data, navegador e executor
+
+Data: 11/11/2026
+Navegador: Google Chrome
+Executor: Fernando Cardoso dos Santos
+
+Evidência
+
+https://jam.dev/c/f6709cf5-f152-4d1d-b6f3-508799f8313b
+
+Bug associado
+
+Nenhum identificado neste caso.
