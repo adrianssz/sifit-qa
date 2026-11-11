@@ -528,3 +528,68 @@ https://jam.dev/c/65242235-5496-4004-a362-6ae4b7c43c6d
 Bug associado
 
 Nenhum identificado neste caso.
+
+C08-CT09 — Telefone, celular e emergência
+
+Responsável: Fernando Cardoso dos Santos
+Data da execução: 11/11/2026
+Tipo: Positivo
+Status: Aprovado
+Sistema: https://sifitalfa.centrion.com.br/clientes
+
+Objetivo
+
+Verificar se o sistema permite cadastrar telefone fixo, celular e telefone de emergência.
+
+Requisito relacionado
+
+O cadastro deve permitir informar os meios de contato do cliente.
+
+Pré-condições
+
+Estar autenticado no sistema.
+Acessar Clientes.
+Abrir o cadastro de novo cliente.
+
+Dados utilizados
+
+Nome: QA_FERNANDO_CLIENTE_CONTATO_01
+Status: Ativo
+Data de nascimento: 17/05/1995
+Celular: (44) 99812-5510
+Telefone fixo: (44) 3363-5193
+Telefone de emergência: (44) 99999-0000
+
+Passos
+
+1. Acessar Clientes.
+2. Clicar em Novo Cliente.
+3. Informar os dados obrigatórios.
+4. Informar o celular.
+5. Informar o telefone fixo.
+6. Informar o telefone de emergência.
+7. Clicar em Salvar.
+8. Conferir o retorno para a listagem.
+9. Conferir o cadastro realizado.
+
+Resultado esperado
+
+O sistema deve aceitar os três telefones e salvar o cadastro do cliente.
+
+Resultado obtido
+
+Os três telefones foram preenchidos corretamente e o cadastro foi salvo sem mensagem de erro, com retorno para a listagem. A gravação posterior abriu outro registro, portanto o ID específico do novo cliente não foi confirmado na visualização.
+
+Data, navegador e executor
+
+Data: 11/11/2026
+Navegador: Google Chrome
+Executor: Fernando Cardoso dos Santos
+
+Evidência
+
+https://jam.dev/c/3f6903a9-422c-4c97-8d06-9733ce37697b
+
+Bug associado
+
+Nenhum identificado neste caso.
