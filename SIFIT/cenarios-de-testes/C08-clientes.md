@@ -593,3 +593,68 @@ https://jam.dev/c/3f6903a9-422c-4c97-8d06-9733ce37697b
 Bug associado
 
 Nenhum identificado neste caso.
+
+C08-CT10 — E-mail válido e inválido
+
+Responsável: Fernando Cardoso dos Santos
+Data da execução: 11/11/2026
+Tipo: Negativo
+Status: Reprovado
+Sistema: https://sifitalfa.centrion.com.br/clientes
+
+Objetivo
+
+Verificar o comportamento do sistema com e-mail válido e inválido.
+
+Requisito relacionado
+
+O sistema deve aceitar e-mails válidos e informar claramente quando o formato do e-mail for inválido.
+
+Pré-condições
+
+Estar autenticado no sistema.
+Acessar Clientes.
+Abrir o cadastro de novo cliente.
+
+Dados utilizados
+
+Nome: teste
+Status: Ativo
+Data de nascimento: 17/05/1995
+E-mail válido: cardosofernando112@gmail.com
+E-mail inválido: fernando.email.teste
+
+Passos
+
+1. Abrir o cadastro de novo cliente.
+2. Informar os dados obrigatórios.
+3. Informar o e-mail válido.
+4. Clicar em Salvar.
+5. Conferir se o cliente foi salvo e aparece na listagem.
+6. Abrir o registro salvo.
+7. Editar o cadastro.
+8. Substituir o e-mail pelo valor inválido fernando.email.teste.
+9. Clicar em Salvar.
+10. Conferir a resposta do sistema.
+
+Resultado esperado
+
+O sistema deve salvar o e-mail válido. Para o e-mail inválido, deve bloquear o salvamento e exibir uma mensagem clara de validação.
+
+Resultado obtido
+
+O e-mail válido foi salvo com sucesso e o cliente foi visualizado com o ID 411. Ao informar o e-mail inválido, o sistema permaneceu na tela e não exibiu mensagem de erro ou orientação ao usuário.
+
+Data, navegador e executor
+
+Data: 11/11/2026
+Navegador: Google Chrome
+Executor: Fernando Cardoso dos Santos
+
+Evidência
+
+https://jam.dev/c/4deaa5df-8fa5-4351-99d2-d7b67b2cc6df
+
+Bug associado
+
+BUG-FERNANDO-005 — E-mail inválido bloqueia o salvamento sem exibir mensagem de validação.
