@@ -207,3 +207,68 @@ https://jam.dev/c/595853db-69f0-4ec3-aae3-19bef2cd297e
 Bug associado
 
 BUG-FERNANDO-003 — Sistema permite cadastrar cliente com nome contendo somente espaços.
+
+C08-CT04 — Status e sexo não selecionados
+
+Responsável: Fernando Cardoso dos Santos
+Data da execução: 10/11/2026
+Tipo: Negativo
+Status: Aprovado
+Sistema: https://sifitalfa.centrion.com.br/clientes
+
+Objetivo
+
+Verificar se o sistema impede o cadastro quando os campos Status e Sexo não são selecionados.
+
+Requisito relacionado
+
+Os campos Status e Sexo devem ser obrigatórios no cadastro do cliente.
+
+Pré-condições
+
+Estar autenticado no sistema.
+Acessar a tela de Clientes.
+Abrir o formulário de novo cliente.
+
+Dados utilizados
+
+Nome: QA_FERNANDO_CLIENTE_STATUS_01
+Data de nascimento: 17/09/2005
+Status: inicialmente não selecionado
+Sexo: inicialmente não selecionado
+
+Passos
+
+1. Acessar Clientes.
+2. Clicar em Novo Cliente.
+3. Informar o nome QA_FERNANDO_CLIENTE_STATUS_01.
+4. Informar a data de nascimento.
+5. Manter Status e Sexo sem seleção.
+6. Clicar em Salvar.
+7. Conferir a validação apresentada nos campos obrigatórios.
+8. Selecionar as opções necessárias.
+9. Clicar novamente em Salvar.
+10. Conferir o cadastro na listagem.
+11. Abrir o registro pela ação de visualização.
+
+Resultado esperado
+
+O sistema deve impedir o salvamento enquanto Status e Sexo não estiverem selecionados e permitir o cadastro após o preenchimento correto.
+
+Resultado obtido
+
+O sistema destacou os campos obrigatórios quando Status e Sexo não estavam selecionados. Após a seleção das opções, o cliente foi salvo com sucesso, apareceu na listagem e foi aberto pela visualização com o ID 413.
+
+Data, navegador e executor
+
+Data: 10/11/2026
+Navegador: Google Chrome
+Executor: Fernando Cardoso dos Santos
+
+Evidência
+
+https://jam.dev/c/562fa248-d8d2-4764-946c-a2098c597c88
+
+Bug associado
+
+Nenhum identificado neste caso.
