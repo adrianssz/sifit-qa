@@ -332,3 +332,67 @@ https://jam.dev/c/04471001-8a72-4239-b73a-f26df5574a35
 Bug associado
 
 BUG-FERNANDO-004 — Sistema permite cadastrar cliente com data de nascimento futura.
+
+C08-CT06 — Nome com acentos, apóstrofo e hífen
+
+Responsável: Fernando Cardoso dos Santos
+Data da execução: 11/11/2026
+Tipo: Positivo
+Status: Aprovado
+Sistema: https://sifitalfa.centrion.com.br/clientes
+
+Objetivo
+
+Verificar se o sistema aceita e mantém nomes com acentos, apóstrofo e hífen.
+
+Requisito relacionado
+
+O cadastro deve aceitar nomes válidos com caracteres especiais da língua portuguesa.
+
+Pré-condições
+
+Estar autenticado no sistema.
+Acessar Clientes.
+Abrir o cadastro de novo cliente.
+
+Dados utilizados
+
+Nome: QA_FERNANDO João D'Ávila-Silva
+Status: Ativo
+Sexo: Masculino
+Data de nascimento: 09/02/2009
+
+Passos
+
+1. Acessar Clientes.
+2. Clicar em Novo Cliente.
+3. Informar o nome QA_FERNANDO João D'Ávila-Silva.
+4. Selecionar o status Ativo.
+5. Selecionar o sexo Masculino.
+6. Informar a data de nascimento.
+7. Clicar em Salvar.
+8. Conferir se o cliente aparece na listagem.
+9. Abrir o registro pela ação de visualização.
+10. Conferir se o nome foi mantido corretamente.
+
+Resultado esperado
+
+O sistema deve aceitar o nome e mantê-lo exatamente como informado no cadastro e na visualização.
+
+Resultado obtido
+
+O cliente foi salvo com sucesso e apareceu na listagem. O registro foi aberto com o ID 413 e o nome QA_FERNANDO João D'Ávila-Silva foi mantido corretamente.
+
+Data, navegador e executor
+
+Data: 11/11/2026
+Navegador: Google Chrome
+Executor: Fernando Cardoso dos Santos
+
+Evidência
+
+https://jam.dev/c/2944fac4-3418-4720-8d9e-82895b95f279
+
+Bug associado
+
+Nenhum identificado neste caso.
