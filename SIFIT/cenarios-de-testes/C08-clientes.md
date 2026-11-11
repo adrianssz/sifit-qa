@@ -795,3 +795,69 @@ https://jam.dev/c/22b237ee-aa81-472a-86b6-f87caf3c4a76
 Bug associado
 
 Nenhum identificado neste caso.
+
+C08-CT13 — Cadastro de foto válida
+
+Responsável: Fernando Cardoso dos Santos
+Data da execução: 11/11/2026
+Tipo: Positivo
+Status: Aprovado
+Sistema: https://sifitalfa.centrion.com.br/clientes
+
+Objetivo
+
+Verificar se o sistema permite carregar uma foto válida no cadastro do cliente e mantê-la após o salvamento.
+
+Requisito relacionado
+
+Cadastro e manutenção da foto do cliente.
+
+Pré-condições
+
+Estar autenticado no sistema.
+Acessar a tela de Clientes.
+Estar na tela de cadastro de novo cliente.
+Possuir uma imagem válida em formato aceito pelo sistema.
+
+Dados utilizados
+
+Nome: QA_FERNANDO_CLIENTE_FOTO_01
+Status: Ativo
+Sexo: Masculino
+Data de nascimento: 17/05/1995
+Arquivo de imagem válido.
+
+Passos
+
+1. Acessar a tela de Clientes.
+2. Clicar em Novo Cliente.
+3. Preencher os dados obrigatórios.
+4. Clicar na área de inclusão de foto.
+5. Selecionar uma imagem válida.
+6. Conferir a inclusão da foto no formulário.
+7. Clicar em Salvar.
+8. Conferir se o cliente aparece na listagem.
+9. Abrir o cadastro pela ação de visualização.
+10. Conferir se a foto permanece disponível.
+
+Resultado esperado
+
+O sistema deve aceitar a imagem válida, salvar o cliente, exibir o registro na listagem e manter a foto no cadastro.
+
+Resultado obtido
+
+A imagem foi carregada sem erro. O cliente foi salvo com sucesso, apareceu na listagem com o ID 414 e o cadastro foi aberto pela visualização com a foto disponível.
+
+Data, navegador e executor
+
+Data: 11/11/2026
+Navegador: Google Chrome
+Executor: Fernando Cardoso dos Santos
+
+Evidência
+
+https://jam.dev/c/9713dd8f-d038-4479-ab78-a1c442699156
+
+Bug associado
+
+Nenhum identificado neste caso.
