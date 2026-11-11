@@ -988,3 +988,70 @@ https://jam.dev/c/32dfeec8-921c-41e7-9d49-1a6425011559
 Bug associado
 
 Nenhum identificado neste caso.
+
+C08-CT16 — Acesso pelo aplicativo
+
+Responsável: Fernando Cardoso dos Santos
+Data da execução: 11/11/2026
+Tipo: Positivo
+Status: Aprovado
+Sistema: https://sifitalfa.centrion.com.br/clientes
+
+Objetivo
+
+Verificar se o sistema permite cadastrar os dados de acesso do cliente ao aplicativo.
+
+Requisito relacionado
+
+Cadastro de usuário e senha para acesso ao aplicativo.
+
+Pré-condições
+
+Estar autenticado no sistema.
+Acessar a tela de Clientes.
+Estar na tela de cadastro de novo cliente.
+
+Dados utilizados
+
+Nome: QA_FERNANDO_CLIENTE_APP_01
+Status: Ativo
+Sexo: Masculino
+Data de nascimento: 17/05/1995
+Usuário do aplicativo: usuário de teste informado durante a execução
+Senha: senha de teste, mantida em sigilo
+
+Passos
+
+1. Acessar a tela de Clientes.
+2. Clicar em Novo Cliente.
+3. Preencher os dados obrigatórios.
+4. Informar o usuário do aplicativo.
+5. Informar uma senha de teste.
+6. Conferir se a senha permanece mascarada.
+7. Clicar em Salvar.
+8. Conferir se o cliente aparece na listagem.
+9. Abrir o cadastro para edição.
+10. Conferir os campos de acesso do aplicativo.
+11. Salvar novamente o cadastro.
+
+Resultado esperado
+
+O sistema deve salvar o usuário e a senha do aplicativo, mantendo a senha mascarada.
+
+Resultado obtido
+
+O cliente foi salvo com sucesso e apareceu na listagem com o ID 416. O usuário do aplicativo foi preenchido, a senha permaneceu mascarada e o cadastro foi salvo novamente sem erro visível.
+
+Data, navegador e executor
+
+Data: 11/11/2026
+Navegador: Google Chrome
+Executor: Fernando Cardoso dos Santos
+
+Evidência
+
+https://jam.dev/c/188ddd3e-642f-4eaf-b33b-55c7f469fe16
+
+Bug associado
+
+Nenhum identificado neste caso.
