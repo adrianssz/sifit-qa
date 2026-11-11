@@ -728,3 +728,70 @@ https://jam.dev/c/4deaa5df-8fa5-4351-99d2-d7b67b2cc6df
 Bug associado
 
 BUG-FERNANDO-005 — E-mail inválido bloqueia o salvamento sem exibir mensagem de validação.
+
+C08-CT12 — País, estado e cidade
+
+Responsável: Fernando Cardoso dos Santos
+Data da execução: 11/11/2026
+Tipo: Positivo
+Status: Aprovado
+Sistema: https://sifitalfa.centrion.com.br/clientes
+
+Objetivo
+
+Verificar se o sistema permite cadastrar e manter corretamente país, estado e cidade do cliente.
+
+Requisito relacionado
+
+Cadastro de cliente com dados de localização.
+
+Pré-condições
+
+Estar autenticado no sistema.
+Acessar a tela de Clientes.
+Estar na tela de cadastro de novo cliente.
+
+Dados utilizados
+
+Nome: QA_FERNANDO_CLIENTE_LOCALIDADE_01
+Status: Ativo
+Sexo: Masculino
+Data de nascimento: 17/05/1995
+País: Brasil
+Estado: Paraná
+Cidade: Umuarama
+
+Passos
+
+1. Acessar a tela de Clientes.
+2. Clicar em Novo Cliente.
+3. Informar os dados básicos do cliente.
+4. Selecionar o país Brasil.
+5. Selecionar o estado Paraná.
+6. Selecionar a cidade Umuarama.
+7. Clicar em Salvar.
+8. Conferir se o cliente aparece na listagem.
+9. Abrir o cadastro pela ação de visualização.
+10. Editar o cadastro e conferir os campos de localização.
+
+Resultado esperado
+
+O sistema deve salvar o cliente com país, estado e cidade preenchidos, exibir o registro na listagem e manter esses dados ao reabrir o cadastro.
+
+Resultado obtido
+
+O cliente foi salvo com sucesso, apareceu na listagem com o ID 413 e os campos permaneceram preenchidos com Brasil, Paraná e Umuarama ao reabrir o cadastro para edição.
+
+Data, navegador e executor
+
+Data: 11/11/2026
+Navegador: Google Chrome
+Executor: Fernando Cardoso dos Santos
+
+Evidência
+
+https://jam.dev/c/22b237ee-aa81-472a-86b6-f87caf3c4a76
+
+Bug associado
+
+Nenhum identificado neste caso.
