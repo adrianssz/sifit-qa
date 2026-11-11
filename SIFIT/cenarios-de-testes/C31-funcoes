@@ -47,3 +47,69 @@ Também permitiu cadastrar novamente `teste_adrian`, nome usado no CT01. O novo 
 ### Evidência
 
 [Gravação das validações de nome](https://drive.google.com/file/d/1CsEN8lVcZjGdyDizDMfJREJ_i1tJgryZ/view?usp=drive_link)
+
+---
+
+## C31-CT03 — Combinações de Personal e Avaliador
+
+**Status:** Parcial
+
+### Objetivo
+
+Conferir as combinações das opções Personal e Avaliador no cadastro de funções.
+
+### Resultado esperado
+
+O formulário deve permitir configurar as duas opções e salvar a combinação escolhida. A disponibilidade da função nos módulos relacionados deve ser conferida separadamente.
+
+### Resultado obtido
+
+Mostrei as combinações disponíveis no formulário e salvei a função `teste_adrian_personal` com Personal Sim e Avaliador Sim. Não conferi o uso dessa função no cadastro de colaboradores.
+
+### Evidência
+
+[Gravação das opções Personal e Avaliador](https://drive.google.com/file/d/1SNwPZlhAxcDP8N7DArdaUYezsYuNbW7L/view?usp=drive_link)
+
+---
+
+## C31-CT04 — Filtro por tipo e pesquisa
+
+**Status:** Parcial
+
+### Objetivo
+
+Conferir a pesquisa de funções por nome e código e o filtro por tipo.
+
+### Resultado esperado
+
+A lista deve mostrar apenas os registros correspondentes aos critérios informados.
+
+### Resultado obtido
+
+A pesquisa por `teste_adrian` e pelo código `11` retornou os registros esperados. A busca por um termo inexistente não retornou resultados. A lista foi filtrada enquanto eu digitava, sem precisar clicar em Buscar. O filtro por tipo não foi conferido nesta gravação.
+
+### Evidência
+
+[Gravação da pesquisa](https://drive.google.com/file/d/1zTH0kaRGlmu8tz6JxG5ROOemUANAG1QW/view?usp=drive_link)
+
+---
+
+## C31-CT05 — Edição e exclusão com vínculo
+
+**Status:** Impedido pela interface disponível
+
+### Objetivo
+
+Verificar a edição e a exclusão de uma função, especialmente quando houver colaboradores vinculados.
+
+### Resultado esperado
+
+A edição deve salvar as alterações confirmadas, e uma eventual exclusão deve preservar a integridade dos colaboradores vinculados.
+
+### Resultado obtido
+
+Pesquisei a função de código `11` e encontrei apenas as ações Visualizar e Permissões. Em Visualizar, tentei digitar em um campo, mas ele não aceitou alteração. Abri Permissões, mostrei as opções e cliquei em Cancelar, sem salvar mudanças. Como não encontrei ações de editar ou excluir nessa tela, não consegui testar a edição, a exclusão nem o comportamento com vínculo.
+
+### Evidência
+
+[Gravação das ações disponíveis](https://drive.google.com/file/d/1oZEklu0-se0auHJfak__4P7gFzWQlahs/view?usp=drive_link)
