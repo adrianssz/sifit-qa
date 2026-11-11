@@ -115,3 +115,232 @@ A lista permaneceu igual, mas todas as notificações exibidas aparentavam estar
 ### Reteste
 
 Ainda não realizado após correção.
+
+---
+
+## BUG-ADRIAN-004 — Menu lateral volta ao topo após navegar
+
+**Caso relacionado:** C02-CT01  
+**Data do registro:** 11/11/2026  
+**Responsável:** Adrian  
+**Severidade sugerida:** Baixa — exige rolar o menu novamente.  
+**Status:** Aberto
+
+### Passos para reproduzir
+
+1. Rolar o menu lateral até uma opção mais abaixo.
+2. Abrir essa opção.
+3. Observar a posição do menu na página aberta.
+
+### Resultado esperado
+
+Manter a posição da rolagem para facilitar a navegação pelas opções próximas.
+
+### Resultado obtido
+
+A tela abriu, mas a rolagem do menu voltou ao topo. Para acessar a próxima opção, precisei rolar novamente.
+
+### Evidência
+
+[Gravação da navegação pelo menu](https://drive.google.com/file/d/1lAlZXcNVD5HLZxF79hrz9D4RjABr3jv6/view?usp=drive_link)
+
+### Reteste
+
+Ainda não realizado após correção.
+
+---
+
+## BUG-ADRIAN-005 — Títulos do Dashboard ficam ilegíveis no modo claro
+
+**Caso relacionado:** C02-CT10  
+**Data do registro:** 11/11/2026  
+**Responsável:** Adrian  
+**Severidade sugerida:** Média — dificulta a leitura do Dashboard.  
+**Status:** Aberto
+
+### Passos para reproduzir
+
+1. Abrir o Dashboard.
+2. Ativar o modo claro.
+3. Observar os títulos das seleções.
+
+### Resultado esperado
+
+Os títulos devem ter contraste suficiente para serem lidos nos dois temas.
+
+### Resultado obtido
+
+No modo claro, o fundo e os títulos das seleções ficaram brancos, dificultando a leitura. No modo escuro, o conteúdo ficou visível.
+
+### Evidência
+
+[Gravação do Dashboard](https://drive.google.com/file/d/1AFljR3BzuDHGxGkq5DXoerL1rxZVN486/view?usp=drive_link)
+
+### Reteste
+
+Ainda não realizado após correção.
+
+---
+
+## BUG-ADRIAN-006 — Descrição do objetivo não aparece após salvar
+
+**Casos relacionados:** C16-CT01, C16-CT03 e C16-CT05  
+**Data do registro:** 11/11/2026  
+**Responsável:** Adrian  
+**Severidade sugerida:** Média — a descrição informada não fica disponível para consulta.  
+**Status:** Aberto
+
+### Passos para reproduzir
+
+1. Cadastrar ou editar um objetivo de treino preenchendo nome e descrição.
+2. Salvar e conferir o registro na lista.
+3. Atualizar a página ou reabrir o objetivo.
+
+### Resultado esperado
+
+A descrição informada deve continuar disponível após salvar.
+
+### Resultado obtido
+
+O nome foi salvo, mas a lista mostrou “Sem descricao cadastrada”. Na edição, a descrição preenchida também não apareceu ao reabrir o registro. Não foi possível determinar se a descrição deixou de ser salva ou se apenas não está sendo exibida.
+
+### Evidências
+
+- [Cadastro do objetivo](https://drive.google.com/file/d/1e0w_zBlMO0WQR9iCkGAwElR7cHlIaYBH/view?usp=drive_link)
+- [Conferência após atualizar](https://drive.google.com/file/d/14JKoGviD8FEVi4oMXMFok4fDQl3Briqh/view?usp=drive_link)
+- [Edição do objetivo](https://drive.google.com/file/d/1GApHavxd8CM0Az8u3RxD2aaT4ww8QzLG/view?usp=drive_link)
+
+### Reteste
+
+Ainda não realizado após correção.
+
+---
+
+## BUG-ADRIAN-007 — Exclusão de objetivo retorna erro genérico
+
+**Caso relacionado:** C16-CT05  
+**Data do registro:** 11/11/2026  
+**Responsável:** Adrian  
+**Severidade sugerida:** Média — impede a exclusão e não informa o motivo.  
+**Status:** Aberto
+
+### Passos para reproduzir
+
+1. Localizar o objetivo de teste de código `3`.
+2. Clicar para excluir.
+3. Observar a resposta.
+
+### Resultado esperado
+
+Excluir o objetivo, se permitido, ou explicar por que a exclusão foi impedida.
+
+### Resultado obtido
+
+O sistema exibiu “Erro ao deletar Objetivo”. A gravação não permitiu identificar a causa da falha nem confirmar se existia algum vínculo impedindo a exclusão.
+
+### Evidência
+
+[Gravação da tentativa de exclusão](https://drive.google.com/file/d/1GApHavxd8CM0Az8u3RxD2aaT4ww8QzLG/view?usp=drive_link)
+
+### Reteste
+
+Ainda não realizado após correção.
+
+---
+
+## BUG-ADRIAN-008 — Tipo de pagamento é cadastrado sem nome
+
+**Caso relacionado:** C28-CT02  
+**Data do registro:** 11/11/2026  
+**Responsável:** Adrian  
+**Severidade sugerida:** Média — cria um registro sem identificação na lista.  
+**Status:** Aberto
+
+### Passos para reproduzir
+
+1. Abrir o cadastro de tipo de pagamento.
+2. Deixar o campo Nome vazio.
+3. Preencher as demais opções e salvar.
+
+### Resultado esperado
+
+Impedir o cadastro e solicitar o preenchimento do nome.
+
+### Resultado obtido
+
+O sistema permitiu criar o tipo de pagamento e o exibiu na lista com o nome em branco.
+
+### Evidência
+
+[Gravação da validação do nome](https://drive.google.com/file/d/1G8O2uCluE1X8xTlZwecc13MklBRAQk_G/view?usp=drive_link)
+
+### Reteste
+
+Ainda não realizado após correção.
+
+---
+
+## BUG-ADRIAN-009 — Cadastro de bandeira falha com dados de teste
+
+**Casos relacionados:** C29-CT01, C29-CT03 e C29-CT04  
+**Caso impedido pela falha:** C29-CT05  
+**Data do registro:** 11/11/2026  
+**Responsável:** Adrian  
+**Severidade sugerida:** Média — impede o cadastro e os testes que dependem de uma bandeira salva.  
+**Status:** Aberto
+
+### Passos para reproduzir
+
+1. Abrir Bandeiras de Cartão e clicar em Nova Bandeira.
+2. Informar um nome e valores para Taxa Adicional e Taxa Débito.
+3. Clicar em Salvar e conferir a lista, inclusive após atualizar a página.
+
+### Resultado esperado
+
+Salvar e listar a bandeira ou informar claramente qual dado precisa ser corrigido.
+
+### Resultado obtido
+
+As tentativas não produziram uma bandeira na lista. Nas tentativas com parcelas, o sistema exibiu “Erro ao cadastrar bandeira”. O campo Código não permitiu preenchimento na segunda tentativa de cadastro. Sem uma bandeira salva, o C29-CT05 ficou bloqueado.
+
+### Evidências
+
+- [Primeira tentativa de cadastro](https://drive.google.com/file/d/1ZjC4j0QTBqv0LcnX4FkilHu-QBjN-ip2/view?usp=drive_link)
+- [Segunda tentativa de cadastro](https://drive.google.com/file/d/19Eyn8VgUT0nzc18okMBiFx6pcDg9r9JF/view?usp=drive_link)
+- [Tentativa com parcela e mensagem de erro](https://drive.google.com/file/d/1_pX4HVbHz_PdniSM7daCu2OfAdFoNDKg/view?usp=drive_link)
+
+### Reteste
+
+Ainda não realizado após correção.
+
+---
+
+## BUG-ADRIAN-010 — Função aceita nome formado apenas por espaços
+
+**Caso relacionado:** C31-CT02  
+**Data do registro:** 11/11/2026  
+**Responsável:** Adrian  
+**Severidade sugerida:** Baixa — permite cadastrar uma função sem nome legível.  
+**Status:** Aberto
+
+### Passos para reproduzir
+
+1. Abrir o cadastro de função.
+2. Preencher o Nome somente com espaços.
+3. Selecionar as demais opções e salvar.
+
+### Resultado esperado
+
+Tratar espaços como nome vazio e solicitar um nome válido.
+
+### Resultado obtido
+
+O sistema criou a função com o nome formado apenas por espaços.
+
+### Evidência
+
+[Gravação da validação do nome](https://drive.google.com/file/d/1CsEN8lVcZjGdyDizDMfJREJ_i1tJgryZ/view?usp=drive_link)
+
+### Reteste
+
+Ainda não realizado após correção.
