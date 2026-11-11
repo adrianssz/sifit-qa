@@ -1055,3 +1055,68 @@ https://jam.dev/c/188ddd3e-642f-4eaf-b33b-55c7f469fe16
 Bug associado
 
 Nenhum identificado neste caso.
+
+C08-CT17 — Cadastro de responsável
+
+Responsável: Fernando Cardoso dos Santos
+Data da execução: 11/11/2026
+Tipo: Positivo
+Status: Aprovado
+Sistema: https://sifitalfa.centrion.com.br/clientes
+
+Objetivo
+
+Verificar se o sistema permite cadastrar um cliente com os dados do responsável.
+
+Requisito relacionado
+
+Cadastro de cliente com responsável e dados complementares.
+
+Pré-condições
+
+Estar autenticado no sistema.
+Acessar a tela de Clientes.
+Estar na tela de cadastro de novo cliente.
+
+Dados utilizados
+
+Nome do cliente: QA_FERNANDO_CLIENTE_RESP_01
+Data de nascimento: 14/05/1995
+Telefone do responsável: 4491475866
+CPF do responsável: sequência de 1s utilizada no teste.
+Demais dados: preenchidos conforme demonstrado no vídeo.
+
+Passos
+
+1. Acessar a tela de Clientes.
+2. Clicar em Novo Cliente.
+3. Preencher os dados do cliente.
+4. Informar os dados do responsável.
+5. Informar telefone e CPF do responsável.
+6. Clicar em Salvar.
+7. Conferir se o cliente aparece na listagem.
+8. Abrir o cadastro pela ação de visualização.
+9. Acessar a edição do cadastro.
+10. Salvar novamente os dados.
+
+Resultado esperado
+
+O sistema deve salvar o cliente com os dados do responsável, exibir o registro na listagem e permitir sua edição.
+
+Resultado obtido
+
+O cliente foi salvo com sucesso e apareceu na listagem com o ID 417. O cadastro foi aberto, editado e salvo novamente sem erro visível.
+
+Data, navegador e executor
+
+Data: 11/11/2026
+Navegador: Google Chrome
+Executor: Fernando Cardoso dos Santos
+
+Evidência
+
+https://jam.dev/c/8713b1df-afa3-489f-9ce8-12e359281855
+
+Bug associado
+
+Nenhum identificado neste caso.
