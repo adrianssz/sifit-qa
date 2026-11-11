@@ -653,6 +653,76 @@ Executor: Fernando Cardoso dos Santos
 
 Evidência
 
+C08-CT11 — CEP e endereço
+
+Responsável: Fernando Cardoso dos Santos
+Data da execução: 11/11/2026
+Tipo: Positivo
+Status: Aprovado
+Sistema: https://sifitalfa.centrion.com.br/clientes
+
+Objetivo
+
+Verificar se o sistema permite preencher e salvar o CEP e os dados de endereço do cliente.
+
+Requisito relacionado
+
+O cadastro deve permitir informar e manter os dados de localização do cliente.
+
+Pré-condições
+
+Estar autenticado no sistema.
+Acessar Clientes.
+Abrir o cadastro de novo cliente.
+
+Dados utilizados
+
+Nome: QA_FERNANDO_CLIENTE_ENDERECO_01
+Status: Ativo
+CEP: 87485-000
+País: Brasil
+Estado: Paraná
+Cidade: Douradina
+Logradouro: Estrada Pereira 3km
+Número: 0
+Bairro: RURAL
+Complemento: conforme informado no vídeo
+
+Passos
+
+1. Acessar Clientes.
+2. Clicar em Novo Cliente.
+3. Informar os dados obrigatórios.
+4. Informar o CEP.
+5. Preencher país, estado e cidade.
+6. Informar logradouro, número e bairro.
+7. Informar o complemento.
+8. Clicar em Salvar.
+9. Conferir se o cliente aparece na listagem.
+10. Abrir o registro pela visualização.
+11. Acessar a edição e conferir os dados do endereço.
+
+Resultado esperado
+
+O sistema deve salvar o CEP e os dados de endereço e mantê-los no cadastro do cliente.
+
+Resultado obtido
+
+O cliente foi salvo com sucesso, apareceu na listagem com o ID 412 e os dados de endereço foram conferidos na edição do cadastro.
+
+Data, navegador e executor
+
+Data: 11/11/2026
+Navegador: Google Chrome
+Executor: Fernando Cardoso dos Santos
+
+Evidência
+
+https://jam.dev/c/60921b2f-2d26-4c62-8f72-a7f3dc748f6b
+
+Bug associado
+
+Nenhum identificado neste caso.
 https://jam.dev/c/4deaa5df-8fa5-4351-99d2-d7b67b2cc6df
 
 Bug associado
