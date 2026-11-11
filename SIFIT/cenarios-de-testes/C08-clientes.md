@@ -272,3 +272,63 @@ https://jam.dev/c/562fa248-d8d2-4764-946c-a2098c597c88
 Bug associado
 
 Nenhum identificado neste caso.
+
+C08-CT05 — Nascimento vazio, impossível ou futuro
+
+Responsável: Fernando Cardoso dos Santos
+Data da execução: 11/11/2026
+Tipo: Negativo
+Status: Reprovado
+Sistema: https://sifitalfa.centrion.com.br/clientes
+
+Objetivo
+
+Verificar se o sistema valida corretamente datas de nascimento vazias, impossíveis e futuras.
+
+Requisito relacionado
+
+A data de nascimento deve ser válida e não pode ser futura.
+
+Pré-condições
+
+Estar autenticado no sistema.
+Acessar Clientes.
+Abrir o cadastro de novo cliente.
+
+Dados utilizados
+
+Nome: teste
+Status: Ativo
+Sexo: Masculino
+Datas testadas: vazia, 31/02/2000 e 01/01/2030
+
+Passos
+
+1. Abrir o cadastro de novo cliente.
+2. Informar o nome, status e sexo.
+3. Tentar salvar sem informar a data de nascimento.
+4. Informar 31/02/2000 e tentar salvar.
+5. Informar 01/01/2030 e salvar.
+6. Conferir o resultado na listagem e na visualização.
+
+Resultado esperado
+
+O sistema deve bloquear datas vazias, impossíveis e futuras.
+
+Resultado obtido
+
+O sistema bloqueou a data vazia e a data impossível 31/02/2000. Porém, aceitou 01/01/2030 e salvou o cliente, exibindo idade calculada de 4 anos.
+
+Data, navegador e executor
+
+Data: 11/11/2026
+Navegador: Google Chrome
+Executor: Fernando Cardoso dos Santos
+
+Evidência
+
+https://jam.dev/c/04471001-8a72-4239-b73a-f26df5574a35
+
+Bug associado
+
+BUG-FERNANDO-004 — Sistema permite cadastrar cliente com data de nascimento futura.
