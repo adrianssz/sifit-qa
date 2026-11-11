@@ -920,6 +920,69 @@ Executor: Fernando Cardoso dos Santos
 
 Evidência
 
+C08-CT15 — Código do leitor e Sempre Liberado
+
+Responsável: Fernando Cardoso dos Santos
+Data da execução: 11/11/2026
+Tipo: Positivo
+Status: Não executado
+Sistema: https://sifitalfa.centrion.com.br/clientes
+
+Objetivo
+
+Verificar se o sistema permite cadastrar um código de leitor e definir o cliente como Sempre Liberado.
+
+Requisito relacionado
+
+Cadastro de código do leitor e configuração de liberação do cliente.
+
+Pré-condições
+
+Estar autenticado no sistema.
+Acessar a tela de Clientes.
+Estar na tela de cadastro de novo cliente.
+
+Dados utilizados
+
+Nome: conforme informado no vídeo
+Código do leitor: ALER1501
+Sempre Liberado: Não
+
+Passos executados
+
+1. Acessar a tela de Clientes.
+2. Clicar em Novo Cliente.
+3. Preencher os dados obrigatórios.
+4. Informar um código no campo Código do Leitor.
+5. Conferir a opção Sempre Liberado.
+6. Clicar em Salvar.
+7. Abrir o cadastro criado.
+
+Resultado esperado
+
+O sistema deve salvar o código do leitor e manter a opção Sempre Liberado selecionada como Sim.
+
+Resultado obtido
+
+O cliente foi salvo e aberto pela visualização com o ID 415. O código do leitor foi preenchido, porém a opção Sempre Liberado permaneceu como Não. Assim, o cenário completo não foi validado.
+
+Justificativa
+
+O teste não foi concluído porque a opção Sempre Liberado não foi selecionada como Sim durante a execução.
+
+Data, navegador e executor
+
+Data: 11/11/2026
+Navegador: Google Chrome
+Executor: Fernando Cardoso dos Santos
+
+Evidência
+
+https://jam.dev/c/b20307d4-9d03-4da8-9bcc-58d2cd90891c
+
+Bug associado
+
+Nenhum identificado neste caso.
 https://jam.dev/c/32dfeec8-921c-41e7-9d49-1a6425011559
 
 Bug associado
