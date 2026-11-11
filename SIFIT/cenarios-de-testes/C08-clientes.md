@@ -462,3 +462,69 @@ https://jam.dev/c/f6709cf5-f152-4d1d-b6f3-508799f8313b
 Bug associado
 
 Nenhum identificado neste caso.
+
+C08-CT08 — RG e tipo sanguíneo
+
+Responsável: Fernando Cardoso dos Santos
+Data da execução: 11/11/2026
+Tipo: Positivo
+Status: Aprovado
+Sistema: https://sifitalfa.centrion.com.br/clientes
+
+Objetivo
+
+Verificar se o sistema permite informar e salvar o RG e o tipo sanguíneo do cliente.
+
+Requisito relacionado
+
+O cadastro deve permitir registrar documentos e tipo sanguíneo do cliente.
+
+Pré-condições
+
+Estar autenticado no sistema.
+Acessar Clientes.
+Abrir o cadastro de novo cliente.
+
+Dados utilizados
+
+Nome: QA_FERNANDO_CLIENTE_RG_01
+Status: Ativo
+Sexo: Masculino
+Data de nascimento: 17/05/1995
+RG: 123456
+Tipo sanguíneo: O+
+
+Passos
+
+1. Acessar Clientes.
+2. Clicar em Novo Cliente.
+3. Informar os dados obrigatórios.
+4. Informar o RG 123456.
+5. Selecionar o tipo sanguíneo O+.
+6. Clicar em Salvar.
+7. Conferir se o cliente aparece na listagem.
+8. Abrir o registro pela visualização.
+9. Acessar a edição do cadastro.
+10. Conferir o RG e o tipo sanguíneo salvos.
+
+Resultado esperado
+
+O sistema deve salvar o RG e o tipo sanguíneo informados e mantê-los no cadastro do cliente.
+
+Resultado obtido
+
+O cliente foi salvo com sucesso e apareceu na listagem. O registro foi aberto com o ID 415. Na edição, o RG 123456 e o tipo sanguíneo O+ foram exibidos corretamente.
+
+Data, navegador e executor
+
+Data: 11/11/2026
+Navegador: Google Chrome
+Executor: Fernando Cardoso dos Santos
+
+Evidência
+
+https://jam.dev/c/65242235-5496-4004-a362-6ae4b7c43c6d
+
+Bug associado
+
+Nenhum identificado neste caso.
