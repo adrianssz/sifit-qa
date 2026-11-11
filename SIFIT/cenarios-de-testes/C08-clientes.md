@@ -141,3 +141,69 @@ https://jam.dev/c/7605e2b1-3a5f-4ec8-8549-6460aef113b2
 Bug associado
 
 Nenhum identificado neste caso.
+
+C08-CT03 — Nome vazio ou somente espaços
+
+Responsável: Fernando Cardoso dos Santos
+Data da execução: 10/11/2026
+Tipo: Negativo
+Status: Reprovado
+Sistema: https://sifitalfa.centrion.com.br/clientes
+
+Objetivo
+
+Verificar se o sistema impede o cadastro de clientes sem nome ou com nome formado apenas por espaços.
+
+Requisito relacionado
+
+O campo Nome deve ser obrigatório e não deve aceitar somente espaços.
+
+Pré-condições
+
+Estar autenticado no sistema.
+Acessar a tela de Clientes.
+Abrir o formulário de novo cliente.
+
+Dados utilizados
+
+Status: Ativo
+Sexo: Masculino
+Data de nascimento: 14/06/2025
+Nome vazio na primeira tentativa.
+Nome contendo somente espaços na segunda tentativa.
+
+Passos
+
+1. Acessar Clientes.
+2. Clicar em Novo Cliente.
+3. Manter o campo Nome vazio.
+4. Preencher os demais campos obrigatórios.
+5. Clicar em Salvar.
+6. Conferir a mensagem exibida.
+7. Repetir o cadastro informando somente espaços no campo Nome.
+8. Clicar em Salvar novamente.
+9. Conferir o resultado na listagem.
+
+Resultado esperado
+
+O sistema deve impedir as duas tentativas e exigir um nome válido.
+
+Resultado obtido
+
+Na primeira tentativa, com o nome vazio, o sistema exibiu a mensagem “Preencha o nome”.
+
+Na segunda tentativa, com apenas espaços, o sistema permitiu o cadastro e criou o cliente com o ID 412.
+
+Data, navegador e executor
+
+Data: 10/11/2026
+Navegador: Google Chrome
+Executor: Fernando Cardoso dos Santos
+
+Evidência
+
+https://jam.dev/c/595853db-69f0-4ec3-aae3-19bef2cd297e
+
+Bug associado
+
+BUG-FERNANDO-003 — Sistema permite cadastrar cliente com nome contendo somente espaços.
