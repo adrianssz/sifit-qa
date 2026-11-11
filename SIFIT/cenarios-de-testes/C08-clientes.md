@@ -861,3 +861,67 @@ https://jam.dev/c/9713dd8f-d038-4479-ab78-a1c442699156
 Bug associado
 
 Nenhum identificado neste caso.
+
+C08-CT14 — Foto inválida, grande ou cancelada
+
+Responsável: Fernando Cardoso dos Santos
+Data da execução: 11/11/2026
+Tipo: Negativo
+Status: Não executado
+Sistema: https://sifitalfa.centrion.com.br/clientes
+
+Objetivo
+
+Verificar como o sistema reage à tentativa de inclusão de uma foto inválida, muito grande ou cancelada.
+
+Requisito relacionado
+
+Validação da foto do cliente.
+
+Pré-condições
+
+Estar autenticado no sistema.
+Acessar a tela de Clientes.
+Estar na tela de cadastro de novo cliente.
+Possuir um arquivo inválido ou muito grande para o teste.
+
+Dados utilizados
+
+Nome: QA_FERNANDO_CLIENTE_FOTO_INVALIDA_01
+Status: Ativo
+Sexo: Masculino
+Data de nascimento: 07/05/1995
+
+Passos executados
+
+1. Acessar a tela de cadastro de cliente.
+2. Preencher parte dos dados obrigatórios.
+3. Abrir a área de inclusão de foto.
+4. Abrir o seletor de arquivos.
+5. Repetir a tentativa de seleção de arquivo.
+
+Resultado esperado
+
+O sistema deve rejeitar o arquivo inválido ou muito grande, informar o motivo da rejeição ou permitir o cancelamento sem alterar o cadastro.
+
+Resultado obtido
+
+O seletor de arquivos foi aberto, mas nenhuma imagem foi selecionada. A área de foto permaneceu vazia e não foi possível observar a resposta do sistema para um arquivo inválido ou grande.
+
+Justificativa
+
+O teste não foi concluído porque não houve seleção efetiva de um arquivo inválido ou muito grande.
+
+Data, navegador e executor
+
+Data: 11/11/2026
+Navegador: Google Chrome
+Executor: Fernando Cardoso dos Santos
+
+Evidência
+
+https://jam.dev/c/32dfeec8-921c-41e7-9d49-1a6425011559
+
+Bug associado
+
+Nenhum identificado neste caso.
