@@ -1120,3 +1120,70 @@ https://jam.dev/c/8713b1df-afa3-489f-9ce8-12e359281855
 Bug associado
 
 Nenhum identificado neste caso.
+
+C08-CT18 — Estado civil, profissão, observação e complemento
+
+Responsável: Fernando Cardoso dos Santos
+Data da execução: 13/11/2026
+Tipo: Positivo
+Status: Aprovado
+Sistema: https://sifitalfa.centrion.com.br/clientes
+
+Objetivo
+
+Verificar se o sistema permite salvar e visualizar os campos complementares do cliente.
+
+Requisito relacionado
+
+Persistência dos dados complementares do cadastro de cliente.
+
+Pré-condições
+
+Estar autenticado no sistema.
+Acessar a tela de Clientes.
+Estar na tela de cadastro de novo cliente.
+
+Dados utilizados
+
+Cliente de teste com prefixo QA_FERNANDO.
+Estado civil: selecionado conforme demonstrado no vídeo.
+Profissão: Analista de Sistemas.
+Observação: texto de teste colado no campo.
+Complemento: texto de teste informado no cadastro.
+Data de nascimento: 10/05/1995.
+
+Passos
+
+1. Acessar a tela de Clientes.
+2. Clicar em Novo Cliente.
+3. Preencher os campos obrigatórios.
+4. Selecionar o estado civil.
+5. Informar a profissão.
+6. Preencher a observação.
+7. Preencher o complemento.
+8. Clicar em Salvar.
+9. Conferir se o cliente aparece na listagem.
+10. Abrir o cadastro pela ação de visualização.
+11. Conferir os dados complementares exibidos.
+
+Resultado esperado
+
+O sistema deve salvar os campos de estado civil, profissão, observação e complemento, mantendo os dados disponíveis na visualização do cadastro.
+
+Resultado obtido
+
+O cadastro foi salvo com sucesso e apareceu na listagem com o ID 418. O registro foi aberto pela ação de visualização, sem erro visível, com os dados complementares preenchidos no cadastro.
+
+Data, navegador e executor
+
+Data: 13/11/2026
+Navegador: Google Chrome 156.0.8078.80
+Executor: Fernando Cardoso dos Santos
+
+Evidência
+
+https://jam.dev/c/ac1defd2-25e7-4f42-ae96-264c70624f8f
+
+Bug associado
+
+Nenhum identificado neste caso.
