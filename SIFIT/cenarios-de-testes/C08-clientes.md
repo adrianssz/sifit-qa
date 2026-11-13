@@ -1187,3 +1187,148 @@ https://jam.dev/c/ac1defd2-25e7-4f42-ae96-264c70624f8f
 Bug associado
 
 Nenhum identificado neste caso.
+
+C08-CT19 — Filtros da listagem de clientes
+
+Responsável: Fernando Cardoso dos Santos
+Data da execução: 13/11/2026
+Tipo: Funcional
+Status: Reprovado
+Sistema: https://sifitalfa.centrion.com.br/clientes
+
+Objetivo
+
+Verificar o funcionamento dos filtros da listagem de clientes.
+
+Resultado esperado
+
+O sistema deve aplicar corretamente os filtros, incluindo a pesquisa por código, sem apresentar falhas na tela.
+
+Resultado obtido
+
+Os filtros por nome, status, situação e plano foram utilizados. Ao testar a pesquisa por código, a tela ficou branca e a listagem deixou de ser exibida.
+
+Evidência
+
+Vídeo: C08-CT19-filtros-listagem.mp4  
+https://drive.google.com/drive/folders/1WXIX_bcYxrMoYSJwNByS7-DpseLBGiDL
+
+Bug associado
+
+BUG-FERNANDO-006 — Ao pesquisar um cliente por código, o sistema apresenta tela branca.
+
+C08-CT20 — Paginação da listagem de clientes
+
+Responsável: Fernando Cardoso dos Santos
+Data da execução: 13/11/2026
+Tipo: Funcional
+Status: Reprovado
+Sistema: https://sifitalfa.centrion.com.br/clientes
+
+Objetivo
+
+Verificar a navegação entre páginas e a exibição dos registros da listagem de clientes.
+
+Resultado esperado
+
+O sistema deve exibir os clientes correspondentes em cada página da paginação.
+
+Resultado obtido
+
+Ao acessar a página 3 da listagem, com 50 registros por página, a tabela ficou vazia, mesmo existindo 131 clientes cadastrados.
+
+Evidência
+
+Vídeo: C08-CT20-paginacao-clientes.mp4  
+https://drive.google.com/drive/folders/1WXIX_bcYxrMoYSJwNByS7-DpseLBGiDL
+
+Bug associado
+
+BUG-FERNANDO-007 — A página 3 da paginação é exibida sem registros.
+
+C08-CT21 — Visualizar e editar cliente
+
+Responsável: Fernando Cardoso dos Santos
+Data da execução: 13/11/2026
+Tipo: Positivo
+Status: Aprovado
+Sistema: https://sifitalfa.centrion.com.br/clientes
+
+Objetivo
+
+Verificar se o sistema permite visualizar e editar os dados de um cliente.
+
+Resultado esperado
+
+O sistema deve abrir os dados do cliente, permitir a alteração e manter o dado atualizado na listagem.
+
+Resultado obtido
+
+O cliente de código 417 foi visualizado e editado. O nome foi alterado para “Atualização C08-CT21 QA_FERNANDO” e permaneceu atualizado na listagem.
+
+Evidência
+
+Vídeo: C08-CT21-visualizar-editar-cliente.mp4  
+https://drive.google.com/drive/folders/1WXIX_bcYxrMoYSJwNByS7-DpseLBGiDL
+
+Bug associado
+
+Nenhum identificado neste caso.
+
+C08-CT22 — Cancelar exclusão de cliente
+
+Responsável: Fernando Cardoso dos Santos
+Data da execução: 13/11/2026
+Tipo: Negativo
+Status: Aprovado
+Sistema: https://sifitalfa.centrion.com.br/clientes
+
+Objetivo
+
+Verificar se o cancelamento da exclusão mantém o cliente cadastrado.
+
+Resultado esperado
+
+O sistema deve fechar a confirmação de exclusão e preservar o cliente na listagem.
+
+Resultado obtido
+
+A confirmação de exclusão foi aberta e a opção Cancelar foi selecionada. O cliente permaneceu disponível na listagem.
+
+Evidência
+
+Vídeo: C08-CT22-cancelar-exclusao-cliente.mp4  
+https://drive.google.com/drive/folders/1WXIX_bcYxrMoYSJwNByS7-DpseLBGiDL
+
+Bug associado
+
+Nenhum identificado neste caso.
+
+C08-CT23 — Cancelar novo cliente
+
+Responsável: Fernando Cardoso dos Santos
+Data da execução: 13/11/2026
+Tipo: Negativo
+Status: Aprovado
+Sistema: https://sifitalfa.centrion.com.br/clientes
+
+Objetivo
+
+Verificar se cancelar o cadastro de um novo cliente impede a criação do registro.
+
+Resultado esperado
+
+O sistema deve retornar para a listagem sem salvar o novo cliente.
+
+Resultado obtido
+
+O cadastro de um novo cliente foi iniciado e cancelado. Ao retornar para a listagem, nenhum novo registro foi criado.
+
+Evidência
+
+Vídeo: C08-CT23-cancelar-novo-cliente.mp4  
+https://drive.google.com/drive/folders/1WXIX_bcYxrMoYSJwNByS7-DpseLBGiDL
+
+Bug associado
+
+Nenhum identificado neste caso.
