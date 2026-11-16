@@ -5,9 +5,9 @@
 **Sistema:** SIFIT Alfa — https://sifitalfa.centrion.com.br  
 **Fonte:** [Inventário](../../../Invent%C3%A1rio.md) e telas inspecionadas pelo grupo
 
-O grupo não tem documentação oficial de requisitos do SIFIT. Os requisitos abaixo foram derivados do inventário e das telas, e cada RF tem o mesmo número do cenário. O que aparece em "A confirmar" depende de resposta do professor ([seção 8 do planejamento](planejamento.md#8-regras-a-confirmar-com-o-professor)) e não serve de base para reprovar um caso enquanto não for confirmado.
+Não temos documentação oficial de requisitos do SIFIT, então montei os requisitos abaixo a partir do inventário e das telas. Cada RF tem o mesmo número do cenário. Como o professor não definiu regras de negócio, onde faltava regra deixei a premissa que uso para julgar o resultado (detalhes na [seção 8 do planejamento](planejamento.md#8-premissas-adotadas)).
 
-Entre parênteses, o caso que verifica cada funcionalidade.
+Entre parênteses está o caso que testa cada funcionalidade.
 
 ---
 
@@ -30,7 +30,7 @@ Entre parênteses, o caso que verifica cada funcionalidade.
 - Oferecer link de avaliação e demais ações por ícone sem expor dados reais. (C10-CT10)
 - Cancelar e excluir avaliação preservando os registros relacionados. (C10-CT11)
 
-**A confirmar:** campos obrigatórios do agendamento; avaliações simultâneas do mesmo personal ou aluno; faixas e fórmulas das medidas.
+**Premissa:** aluno, personal, data e horário são obrigatórios; o mesmo personal ou aluno não tem duas avaliações no mesmo dia e horário; medidas não aceitam zero, negativo nem valor impossível; IMC = peso ÷ altura².
 
 ---
 
@@ -49,7 +49,7 @@ Entre parênteses, o caso que verifica cada funcionalidade.
 - Apresentar o total de respostas por alternativa. (C37-CT06)
 - Pesquisar e editar enquete já respondida, preservando as respostas e aplicando as restrições de alteração. (C37-CT07)
 
-**A confirmar:** quantidade mínima de alternativas; alternativas repetidas; limite de texto; o que pode mudar depois de haver respostas.  
+**Premissa:** pelo menos duas alternativas, sem repetição; texto acima do limite é barrado com aviso; depois de haver respostas, pergunta e alternativas não mudam sem aviso.  
 **Restrição:** ativar somente com conta controlada do aplicativo, sem exposição a alunos reais.
 
 ---
@@ -70,7 +70,7 @@ Entre parênteses, o caso que verifica cada funcionalidade.
 - Salvar rascunho e concluir, com a transição Pendente/Concluído mantida, se disponível. (C38-CT07)
 - Consultar a ficha concluída com aluno, modelo, data e respostas. (C38-CT08)
 
-**A confirmar:** respostas obrigatórias para concluir a ficha.  
+**Premissa:** a ficha só é concluída com todas as perguntas respondidas, e o complemento de “Se sim, qual?” é obrigatório quando a resposta é Sim.  
 **Restrição:** somente aluno fictício; nenhum dado de saúde real nas evidências.
 
 ---
@@ -91,7 +91,7 @@ Entre parênteses, o caso que verifica cada funcionalidade.
 - Editar modelo já aplicado preservando o histórico das fichas existentes. (C39-CT07)
 - Carregar o montador sem erro e distinguir falha de ausência de perguntas. (C39-CT08)
 
-**A confirmar:** modelo sem perguntas; mesma pergunta duas vezes no modelo; efeito da edição sobre fichas já aplicadas.
+**Premissa:** o modelo precisa de nome e de pelo menos uma pergunta, sem repetir pergunta; editar o modelo não muda as fichas já aplicadas.
 
 ---
 
@@ -109,7 +109,7 @@ Entre parênteses, o caso que verifica cada funcionalidade.
 - Filtrar, editar e inativar, refletindo a disponibilidade para perguntas e modelos. (C40-CT05)
 - Excluir categoria com perguntas vinculadas sem quebrar referências nem perder estrutura indevidamente. (C40-CT06)
 
-**A confirmar:** unicidade do nome; formatos aceitos de cor e ícone.
+**Premissa:** nome único; cor pelo seletor ou pelo código `#RRGGBB`, recusando outro texto; ícone só entre as opções que o sistema exibe.
 
 ---
 
@@ -128,7 +128,7 @@ Entre parênteses, o caso que verifica cada funcionalidade.
 - Inativar pergunta, refletindo a disponibilidade nos modelos e preservando o histórico. (C41-CT06)
 - Pesquisar e editar com carregamento correto, sem erro no servidor. (C41-CT07)
 
-**A confirmar:** se o número define a ordem e deve ser único; se aceita zero ou negativo.
+**Premissa:** o número define a ordem, é inteiro maior que zero e não se repete; saltos na numeração são aceitos.
 
 ---
 

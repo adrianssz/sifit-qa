@@ -38,8 +38,8 @@ Os requisitos estão em [requisitos.md](requisitos.md), como RF10, RF37 a RF43 e
 |---|---|
 | Não executado | Ainda não houve execução gravada. |
 | Aprovado | Todos os critérios do caso, incluindo as verificações Gxx aplicadas nele, foram atendidos. |
-| Reprovado | Um critério confirmado falhou e a falha foi reproduzida; o caso aponta o bug. |
-| Bloqueado | Falta pré-condição externa (acesso, conta controlada, autorização, tela com erro) ou o veredito depende de regra ainda não confirmada. Justificar e registrar o que já foi observado. |
+| Reprovado | Um critério do caso ou uma premissa da seção 8 não foi atendido e a falha foi reproduzida; o caso aponta o bug. |
+| Bloqueado | Falta uma pré-condição externa: acesso, conta controlada, autorização ou tela com erro. Justificar e registrar o que já foi observado. |
 | Não se aplica | O controle ou a regra não existe no sistema; comprovar com print. |
 
 - Executados = Aprovados + Reprovados. Bloqueado e Não se aplica ficam fora dessa soma e nunca contam como aprovação.
@@ -58,9 +58,9 @@ Nada desta etapa conta como execução.
 | P2 | Combinar o cliente `QA_RENAN_CLIENTE_01`: ativo, sem telefone ou e-mail de terceiros, código anotado | Fernando | C38, C10, C47-CT05 |
 | P3 | Confirmar um colaborador com função de personal ou avaliador | Grupo | C10 |
 | P4 | Receber o acesso somente leitura ao banco e o schema real, que o grupo vai enviar. Credenciais não entram no repositório nem nos vídeos | Grupo | C47-CT07 a CT09 |
-| P5 | Pedir conta controlada do aplicativo e confirmar que uma enquete ativa não aparece para alunos reais | Professor | C37-CT05 a CT07 |
-| P6 | Confirmar canais e destinatários das automações e se há configuração restrita a contas de teste | Professor | C42-CT03, CT04 e CT07; C43-CT05 |
-| P7 | Enviar a lista de regras a confirmar (seção 8) | Professor | Casos com regra pendente |
+| P5 | Ver se o cliente de teste consegue entrar no aplicativo e se uma enquete ativa apareceria para alunos reais | Grupo | C37-CT05 a CT07 |
+| P6 | Ver na configuração das automações (C42-CT02, sem ativar) o canal e quem recebe; só seguir se os destinatários forem contas de teste | Renan | C42-CT03, CT04 e CT07; C43-CT05 |
+| P7 | O professor não definiu regras; premissas registradas na seção 8 — concluído | Renan | Casos que dependiam de regra |
 | P8 | Jam na conta de Renan; pasta `SIFIT-QA-Renan` no Drive com acesso do professor conferido; Ferramenta de Captura do Windows para as demais gravações | Renan | Evidências |
 | P9 | Reconhecimento das oito telas, sem salvar nada (detalhes abaixo) | Renan | Roteiros |
 
@@ -139,9 +139,9 @@ Prefixo `QA_RENAN`. Anotar no caso o código gerado de cada registro; as confer�
 | 31 | C10-CT03 | Aluno, personal, data ou hora ausentes | No fim, cancelar e reabrir | G02 G10 G11 G23 | C10-CT03-obrigatorios-ausentes |
 | 32 | C10-CT04 | Data e horário inválidos | — | G05 G06 | C10-CT04-data-horario-invalidos |
 | 33 | C10-CT02 | Agendar avaliação válida | Requer P2 e P3 | G01 G04 G13 G14 | C10-CT02-agendar-avaliacao |
-| 34 | C10-CT05 | Conflito de agenda | Mesmo horário do #33; regra pendente | G08 | C10-CT05-conflito-agenda |
+| 34 | C10-CT05 | Conflito de agenda | Mesmo horário do #33; premissa da seção 8 | G08 | C10-CT05-conflito-agenda |
 | 35 | C10-CT06 | Realizar avaliação de teste | Medidas fictícias | G01 G13 | C10-CT06-realizar-avaliacao |
-| 36 | C10-CT07 | Medidas negativas, zero e fora dos limites | Faixas confirmadas (seção 8) | G05 G06 | C10-CT07-medidas-invalidas |
+| 36 | C10-CT07 | Medidas negativas, zero e fora dos limites | Premissa da seção 8 | G05 G06 | C10-CT07-medidas-invalidas |
 | 37 | C10-CT08 | Salvar, reabrir e editar avaliação | — | G12 G13 | C10-CT08-salvar-reabrir-editar |
 | 38 | C10-CT01 | Buscar por código, nome e status | Requer uma Pendente e uma Realizada | G15 G16 G17 G18 | C10-CT01-buscar-filtrar-status |
 | 39 | C10-CT09 | Imprimir e relatório completo PDF | — | G24 | C10-CT09-imprimir-pdf |
@@ -162,7 +162,7 @@ Prefixo `QA_RENAN`. Anotar no caso o código gerado de cada registro; as confer�
 
 ### Fase 4 — Inteligência & Automação e Resultados IA (gravações 49 a 61)
 
-Primeiro o que só lê. Ativar e executar somente com P6 confirmado por escrito.
+Primeiro o que só lê. Ativar e executar somente depois do P6, e só se os destinatários forem contas de teste.
 
 | # | ID | Caso | Pré-requisito ou observação | Gxx | Vídeo (.mp4) |
 |---:|---|---|---|---|---|
@@ -207,16 +207,18 @@ Pertinentes, mas sem caso próprio. Executar se houver tempo e registrar à part
 - Antes de colar um link: revisar o vídeo (o Jam anexa console e rede), conferir que não há dados reais, senhas, tokens ou dados de saúde reais e confirmar que o professor tem acesso.
 - Anotar em cada execução: data e hora, versão do Chrome, códigos gerados, mensagens exatas e link do vídeo.
 
-## 8. Regras a confirmar com o professor
+## 8. Premissas adotadas
 
-| Cenário | Pergunta |
+O professor não definiu regras de negócio para estes módulos e não há documentação do sistema. Para nenhum caso ficar sem veredito por falta de regra, adotei as premissas abaixo, com base no que é comum nesse tipo de cadastro e no que as outras telas do SIFIT já fazem. Quando o sistema contrariar uma premissa, o caso fica Reprovado e o bug cita a premissa usada.
+
+| Cenário | Premissa |
 |---|---|
-| C40 | O nome da categoria deve ser único? Quais formatos de cor e ícone são aceitos? |
-| C41 | O número define a ordem e deve ser único? Aceita zero ou negativo? |
-| C39 | Pode existir modelo sem perguntas? A mesma pergunta pode entrar duas vezes? Editar um modelo já aplicado deve preservar as fichas antigas? |
-| C38 | Quais respostas são obrigatórias para concluir a ficha? |
-| C10 | Quais campos do agendamento são obrigatórios? Pode haver avaliações simultâneas do mesmo personal ou aluno? Quais faixas e fórmulas valem para as medidas? |
-| C37 | Qual é o mínimo de alternativas? Alternativas repetidas são permitidas? Qual é o limite de texto? O que pode mudar depois de haver respostas? |
+| C40 | Não pode haver duas categorias com o mesmo nome, porque elas ficariam iguais na hora de escolher. A cor aceita o seletor e código hexadecimal `#RRGGBB`; qualquer outro texto é recusado. O ícone só aceita opções que o sistema consegue exibir. |
+| C41 | O número define a ordem de exibição, é inteiro maior que zero e não se repete. Saltos na numeração são aceitos, desde que a ordem siga os números. |
+| C39 | O modelo precisa de nome e de pelo menos uma pergunta, e a mesma pergunta não entra duas vezes. Editar um modelo não muda as fichas já aplicadas. |
+| C38 | A ficha só pode ser concluída com todas as perguntas do modelo respondidas. Em “Se sim, qual?”, o complemento é obrigatório quando a resposta é Sim. |
+| C10 | Aluno, personal, data e horário são obrigatórios. O mesmo personal ou o mesmo aluno não pode ter duas avaliações no mesmo dia e horário. Medidas físicas não aceitam zero nem valor negativo, e valores impossíveis, como 5 m de altura, são recusados ou geram alerta. O IMC é calculado como peso ÷ altura². |
+| C37 | A enquete precisa de pelo menos duas alternativas, sem repetição. Texto acima do limite é barrado com aviso, sem corte silencioso. Depois que há respostas, a pergunta e as alternativas não mudam sem aviso. |
 
 ## 9. Riscos
 
