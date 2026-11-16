@@ -2,13 +2,11 @@
 
 **Responsável:** Renan Oliveira  
 **Sistema:** SIFIT Alfa — https://sifitalfa.centrion.com.br  
-**Requisito:** [RF40 — Categorias de Anamnese](../contribuicoes/renan/requisitos.md#rf40--categorias-de-anamnese)  
-**Base do inventário:** Formulário inspecionado com nome, status, ícone e cor.  
-**Situação:** roteiro preparado; os 6 casos estão Não executados.
+**Requisito:** [RF40 — Categorias de Anamnese](../contribuicoes/renan/requisitos.md#rf40--categorias-de-anamnese)
 
-Os dados são fictícios, com prefixo `QA_RENAN` ([massa de dados](../contribuicoes/renan/planejamento.md#4-massa-de-dados)). Anotar o código de cada categoria criada. Os passos usam os campos citados no inventário; caminho no menu, nomes de botões e tipo do campo de ícone serão ajustados depois do reconhecimento da tela (P9). A ordem de execução é a da seção 5 do planejamento.
+Aqui eu testo o cadastro de categorias de anamnese, que tem nome, status, ícone e cor. Em todos os casos começo a gravação já logado no sistema e uso dados fictícios com o prefixo `QA_RENAN` (lista completa na [massa de dados](../contribuicoes/renan/planejamento.md#4-massa-de-dados)). Sempre anoto o código da categoria criada, para conseguir achar depois.
 
-Em "Resultado esperado", a linha "Inventário" reproduz o texto original do caso e a linha "Critério" detalha como julgar o resultado.
+Os nomes exatos dos botões e o caminho no menu eu ajusto depois de olhar a tela com calma no reconhecimento.
 
 ---
 
@@ -17,62 +15,54 @@ Em "Resultado esperado", a linha "Inventário" reproduz o texto original do caso
 **Requisito:** RF40  
 **Tipo:** Positivo  
 **Status:** Não executado  
-**Ordem de execução:** 1
+**Ordem no planejamento:** 1
 
 ### Objetivo
 
-Verificar se uma categoria com dados válidos é salva com nome, status, ícone e cor e continua igual depois de atualizar a página.
+Ver se consigo cadastrar uma categoria com todos os campos preenchidos e se ela continua igual depois de atualizar a página.
 
 ### Pré-condições
 
-- Estar autenticado no SIFIT Alfa.
-- Pesquisar `QA_RENAN_CAT_01` na listagem e confirmar que ainda não existe.
+Antes de gravar, pesquisar `QA_RENAN_CAT_01` para ter certeza de que ela ainda não existe.
 
 ### Dados utilizados
 
-- Nome: `QA_RENAN_CAT_01 Saúde`
+- Nome: `QA_RENAN_CAT_01 Saúde` (com acento de propósito)
 - Status: Ativo
-- Ícone: o primeiro da lista ou um nome de ícone válido, conforme o campo
+- Ícone: qualquer um disponível
 - Cor: `#2E86C1`
-- Campos opcionais, se houver: vazios
 
 ### Passos
 
-1. Abrir Categorias de Anamnese.
-2. Abrir o cadastro de nova categoria.
-3. Preencher nome, status, ícone e cor com os dados acima, sem preencher campos opcionais.
-4. Clicar duas vezes seguidas em Salvar.
-5. Conferir a mensagem exibida e a listagem; anotar o código da categoria.
-6. Atualizar a página e pesquisar `QA_RENAN_CAT_01`.
-7. Abrir a categoria e comparar cada campo com os dados informados.
+1. Abrir Categorias de Anamnese e clicar para criar uma nova.
+2. Preencher nome, status, ícone e cor. Se tiver algum campo opcional, deixar em branco.
+3. Clicar duas vezes seguidas em Salvar, para ver se o sistema não cria a categoria repetida.
+4. Conferir a mensagem e a lista e anotar o código.
+5. Atualizar a página, pesquisar a categoria e abrir de novo para comparar os dados.
 
 ### Resultado esperado
 
-- Inventário: Salvar nome, status, ícone e cor.
-- Critério: a categoria aparece uma única vez na listagem, com os dados informados, também depois de atualizar a página.
+Salvar nome, status, ícone e cor. A categoria tem que aparecer uma vez só na lista, com o acento de “Saúde” certinho e os mesmos dados depois de atualizar a página.
 
 ### Verificações comuns aplicadas
 
-- G01 — Cadastro válido: dados salvos exatamente como informados, com confirmação.
-- G04 — Opcionais vazios: cadastro aceito sem os campos opcionais.
-- G07 — Acentos: “Saúde” aparece igual na listagem e no formulário.
-- G13 — Persistência: dados mantidos após atualizar a página.
-- G14 — Clique duplo em Salvar: somente uma categoria criada.
+- G01 — Cadastro válido.
+- G04 — Campos opcionais em branco.
+- G07 — Acento preservado.
+- G13 — Dados mantidos depois de atualizar a página.
+- G14 — Clique duplo em Salvar sem duplicar o registro.
 
 ### Resultado obtido
 
-—
+Ainda não executado.
 
-### Data, navegador e executor
-
-- Data e hora: —
-- Navegador: Google Chrome, versão —
-- Executor: Renan Oliveira
+**Data:** —  
+**Navegador:** Google Chrome —  
+**Executor:** Renan Oliveira
 
 ### Evidência
 
-- Vídeo: `C40-CT01-cadastrar-categoria.mp4` — link pendente
-- Prints: —
+Vídeo: `C40-CT01-cadastrar-categoria.mp4` (link quando gravar)
 
 ### Bug associado
 
@@ -85,64 +75,58 @@ Verificar se uma categoria com dados válidos é salva com nome, status, ícone 
 **Requisito:** RF40  
 **Tipo:** Negativo  
 **Status:** Não executado  
-**Ordem de execução:** 4
+**Ordem no planejamento:** 4
 
 ### Objetivo
 
-Verificar se o sistema exige o nome da categoria e como trata um nome já usado.
+Ver se o sistema obriga a preencher o nome da categoria e se ele impede um nome que já existe.
 
 ### Pré-condições
 
-- Estar autenticado no SIFIT Alfa.
-- `QA_RENAN_CAT_01 Saúde` cadastrada em C40-CT01.
+A categoria `QA_RENAN_CAT_01 Saúde` do CT01 já precisa estar cadastrada.
 
 ### Dados utilizados
 
-- Tentativa 1: nome vazio
-- Tentativa 2: nome com três espaços
-- Tentativa 3: nome `QA_RENAN_CAT_01 Saúde`, já cadastrado
-- Cancelamento: nome `QA_RENAN_CAT_CANCELADA`
-- Nas tentativas: status Ativo, ícone e cor válidos
+- 1ª tentativa: nome vazio
+- 2ª tentativa: nome só com espaços
+- 3ª tentativa: `QA_RENAN_CAT_01 Saúde`, que já existe
+- Para cancelar: `QA_RENAN_CAT_CANCELADA`
+- Nas tentativas, status, ícone e cor preenchidos normalmente
 
 ### Passos
 
 1. Abrir o cadastro de nova categoria.
-2. Deixar o nome vazio e preencher os demais campos. Chegar ao botão Salvar com a tecla Tab e acioná-lo pelo teclado. Anotar a mensagem e se o campo com problema é indicado.
-3. Preencher o nome com três espaços e clicar em Salvar.
-4. Preencher o nome `QA_RENAN_CAT_01 Saúde` e clicar em Salvar.
-5. Abrir um novo cadastro, preencher o nome `QA_RENAN_CAT_CANCELADA` e cancelar ou fechar sem salvar.
-6. Abrir o cadastro novamente e conferir se os campos estão vazios.
-7. Pesquisar `QA_RENAN_CAT` e conferir que só existem as categorias salvas de propósito.
+2. Deixar o nome vazio e preencher o resto. Ir até o botão Salvar usando a tecla Tab e apertar Enter, para ver se dá para usar só o teclado.
+3. Tentar salvar com o nome só com espaços.
+4. Tentar salvar com o nome `QA_RENAN_CAT_01 Saúde`.
+5. Abrir um cadastro novo, digitar `QA_RENAN_CAT_CANCELADA` e cancelar sem salvar.
+6. Abrir o cadastro de novo e ver se o formulário volta limpo.
+7. Pesquisar `QA_RENAN_CAT` e conferir que só existem as categorias que eu salvei de propósito.
 
 ### Resultado esperado
 
-- Inventário: Conferir obrigatoriedade e unicidade.
-- Critério: nome vazio ou só com espaços não é salvo e o campo é indicado; nome repetido segue a regra de unicidade; o cadastro cancelado não é salvo nem reaparece ao reabrir.
-- A regra de unicidade ainda está a confirmar (seção 8 do planejamento). Sem resposta, registrar o comportamento observado no nome repetido e manter o caso Bloqueado, a menos que outra parte do caso já o reprove.
+Conferir obrigatoriedade e unicidade. O nome vazio ou só com espaços não pode ser salvo e o sistema precisa mostrar qual campo está errado. O nome repetido também deve ser barrado: como o professor não definiu regra, sigo a premissa da seção 8 do planejamento de que duas categorias com o mesmo nome ficariam iguais na hora de escolher. O cadastro cancelado não pode aparecer na lista nem voltar preenchido.
 
 ### Verificações comuns aplicadas
 
-- G02 — Obrigatórios vazios: nome vazio recusado, com o campo indicado.
-- G03 — Somente espaços: nome só com espaços tratado como vazio.
-- G08 — Duplicidade: nome repetido tratado conforme a regra confirmada.
-- G10 — Cancelar/fechar: cadastro cancelado não é salvo.
-- G11 — Reabrir formulário: formulário volta sem dados antigos.
-- G23 — Teclado, foco e mensagens: Salvar funciona pelo teclado e a mensagem identifica o campo.
+- G02 — Nome obrigatório vazio.
+- G03 — Nome só com espaços.
+- G08 — Nome repetido.
+- G10 — Cancelar sem salvar.
+- G11 — Formulário limpo ao reabrir.
+- G23 — Uso pelo teclado e mensagem indicando o campo.
 
 ### Resultado obtido
 
-—
+Ainda não executado.
 
-### Data, navegador e executor
-
-- Data e hora: —
-- Navegador: Google Chrome, versão —
-- Executor: Renan Oliveira
+**Data:** —  
+**Navegador:** Google Chrome —  
+**Executor:** Renan Oliveira
 
 ### Evidência
 
-- Vídeo: `C40-CT02-nome-vazio-repetido.mp4` — link pendente
-- Prints: —
+Vídeo: `C40-CT02-nome-vazio-repetido.mp4` (link quando gravar)
 
 ### Bug associado
 
@@ -155,58 +139,52 @@ Verificar se o sistema exige o nome da categoria e como trata um nome já usado.
 **Requisito:** RF40  
 **Tipo:** Interação  
 **Status:** Não executado  
-**Ordem de execução:** 2
+**Ordem no planejamento:** 2
 
 ### Objetivo
 
-Verificar se a cor escolhida no seletor e o código de cor ficam sincronizados e se um código inválido é recusado.
+Ver se a cor escolhida no seletor e o código da cor andam juntos e se o sistema recusa um código inválido.
 
 ### Pré-condições
 
-- Estar autenticado no SIFIT Alfa.
-- Pesquisar `QA_RENAN_CAT_02` e confirmar que ainda não existe.
+Pesquisar `QA_RENAN_CAT_02` e confirmar que ela ainda não existe.
 
 ### Dados utilizados
 
 - Nome: `QA_RENAN_CAT_02`
 - Status: Ativo
-- Ícone: um válido
-- Cor pelo seletor: qualquer tom, anotando o código exibido
+- Ícone: qualquer um disponível
 - Código válido: `#1E8449`
 - Códigos inválidos: `#GGGGGG`, `#12345` e `azul`
 
 ### Passos
 
 1. Abrir o cadastro de nova categoria e preencher nome, status e ícone.
-2. Escolher uma cor no seletor e conferir se o código muda para a mesma cor.
-3. Digitar `#1E8449` no código e conferir se o seletor passa a mostrar essa cor.
-4. Digitar cada código inválido e tentar salvar, anotando a resposta do sistema.
-5. Informar `#1E8449` e salvar; anotar o código da categoria. Se alguma tentativa inválida tiver sido salva, registrar e corrigir pela edição.
-6. Atualizar a página, abrir `QA_RENAN_CAT_02` e conferir a cor na listagem e no formulário.
+2. Escolher uma cor no seletor e ver se o código muda junto.
+3. Digitar `#1E8449` no código e ver se o seletor mostra a mesma cor.
+4. Digitar cada código inválido e tentar salvar, anotando o que o sistema responde.
+5. Voltar para `#1E8449` e salvar. Se algum código inválido tiver sido salvo, anotar e corrigir pela edição.
+6. Atualizar a página, abrir a categoria e conferir a cor na lista e no formulário.
 
 ### Resultado esperado
 
-- Inventário: Sincronizar ambos e rejeitar código inválido.
-- Critério: seletor e código mostram sempre a mesma cor; nenhum código inválido é salvo; a categoria fica com `#1E8449`.
+Sincronizar ambos e rejeitar código inválido. O seletor e o código precisam mostrar sempre a mesma cor, nenhum código inválido pode ser salvo e a categoria tem que ficar com `#1E8449`.
 
 ### Verificações comuns aplicadas
 
-- G05 — Formato inválido: códigos inválidos recusados, com orientação para correção.
+- G05 — Código de cor em formato inválido.
 
 ### Resultado obtido
 
-—
+Ainda não executado.
 
-### Data, navegador e executor
-
-- Data e hora: —
-- Navegador: Google Chrome, versão —
-- Executor: Renan Oliveira
+**Data:** —  
+**Navegador:** Google Chrome —  
+**Executor:** Renan Oliveira
 
 ### Evidência
 
-- Vídeo: `C40-CT03-cor-seletor-codigo.mp4` — link pendente
-- Prints: —
+Vídeo: `C40-CT03-cor-seletor-codigo.mp4` (link quando gravar)
 
 ### Bug associado
 
@@ -219,59 +197,53 @@ Verificar se a cor escolhida no seletor e o código de cor ficam sincronizados e
 **Requisito:** RF40  
 **Tipo:** Negativo  
 **Status:** Não executado  
-**Ordem de execução:** 3
+**Ordem no planejamento:** 3
 
 ### Objetivo
 
-Verificar se o ícone escolhido é exibido e como o sistema trata um ícone inválido.
+Ver se o ícone escolhido aparece certo e o que acontece quando tento usar um ícone inválido.
 
 ### Pré-condições
 
-- Estar autenticado no SIFIT Alfa.
-- `QA_RENAN_CAT_02` cadastrada em C40-CT03.
+A categoria `QA_RENAN_CAT_02` do CT03 já precisa estar cadastrada.
 
 ### Dados utilizados
 
-Conforme o tipo do campo de ícone:
+Depende de como o campo funciona:
 
-- Lista: um ícone diferente do atual.
-- Texto: um nome de ícone válido e o nome inexistente `icone_inexistente_qa`.
-- Upload: uma imagem PNG pequena, um arquivo `.txt` e uma imagem grande, de cerca de 10 MB.
+- Se for uma lista: escolher um ícone diferente do atual.
+- Se for texto: um nome de ícone válido e o nome inventado `icone_inexistente_qa`.
+- Se for upload: uma imagem PNG pequena, um arquivo `.txt` e uma imagem grande, de uns 10 MB.
 
 ### Passos
 
-1. Abrir `QA_RENAN_CAT_02` para edição.
-2. Registrar com print como o ícone é informado: lista, texto ou upload.
-3. Informar um ícone válido, salvar e conferir na listagem e no formulário.
-4. Informar o ícone inválido correspondente ao tipo do campo e tentar salvar; anotar a resposta.
-5. Se for upload: trocar a imagem, testar a imagem grande e cancelar a janela de seleção de arquivo.
-6. Atualizar a página e conferir o ícone salvo.
+1. Abrir `QA_RENAN_CAT_02` para editar.
+2. Tirar um print mostrando como o ícone é escolhido.
+3. Escolher um ícone válido, salvar e conferir na lista e no formulário.
+4. Tentar salvar com o ícone inválido, conforme o tipo do campo, e anotar a resposta.
+5. Se for upload, trocar a imagem, testar a imagem grande e cancelar a janela de escolher arquivo.
+6. Atualizar a página e conferir o ícone que ficou salvo.
 
 ### Resultado esperado
 
-- Inventário: Exibir ícone ou tratamento compreensível.
-- Critério: o ícone válido aparece na listagem e no formulário; o inválido é recusado com mensagem compreensível, sem quebrar a tela nem mostrar caminho interno.
-- Se o ícone só puder ser escolhido em lista, não há como informar valor inválido: registrar isso com print e avaliar a exibição do ícone escolhido.
+Exibir ícone ou tratamento compreensível. O ícone válido tem que aparecer na lista e no formulário. O inválido deve ser recusado com uma mensagem que dê para entender, sem quebrar a tela nem mostrar caminho interno do servidor. Se o ícone só puder ser escolhido numa lista, não tem como usar um inválido: registro isso com print e avalio só a exibição.
 
 ### Verificações comuns aplicadas
 
-- G05 — Formato inválido: ícone inválido recusado, com orientação.
-- G22 — Upload: somente se o ícone for enviado como arquivo; caso contrário, Não se aplica, com print.
+- G05 — Ícone em formato inválido.
+- G22 — Upload de arquivo, só se o ícone for enviado como arquivo. Se não for, fica Não se aplica, com print.
 
 ### Resultado obtido
 
-—
+Ainda não executado.
 
-### Data, navegador e executor
-
-- Data e hora: —
-- Navegador: Google Chrome, versão —
-- Executor: Renan Oliveira
+**Data:** —  
+**Navegador:** Google Chrome —  
+**Executor:** Renan Oliveira
 
 ### Evidência
 
-- Vídeo: `C40-CT04-icone-valido-invalido.mp4` — link pendente
-- Prints: —
+Vídeo: `C40-CT04-icone-valido-invalido.mp4` (link quando gravar)
 
 ### Bug associado
 
@@ -284,61 +256,54 @@ Conforme o tipo do campo de ícone:
 **Requisito:** RF40  
 **Tipo:** Integração  
 **Status:** Não executado  
-**Ordem de execução:** 29
+**Ordem no planejamento:** 29
 
 ### Objetivo
 
-Verificar a pesquisa e os filtros de categorias, a edição de uma categoria e o efeito da inativação nas telas de perguntas e modelos.
+Testar a pesquisa e os filtros da lista, editar uma categoria e ver se, depois de inativada, ela some das telas de perguntas e modelos.
 
 ### Pré-condições
 
-- Estar autenticado no SIFIT Alfa.
-- `QA_RENAN_CAT_01 Saúde` e `QA_RENAN_CAT_02` cadastradas.
-- Executar depois da cadeia da anamnese (ordens 5 a 28), para não interferir nos casos anteriores.
+As categorias `QA_RENAN_CAT_01 Saúde` e `QA_RENAN_CAT_02` precisam estar cadastradas. Faço este caso só depois da cadeia da anamnese (ordens 5 a 28), para não atrapalhar os testes anteriores.
 
 ### Dados utilizados
 
-- Pesquisa existente: `QA_RENAN_CAT`
-- Pesquisa inexistente: `QA_RENAN_NAO_EXISTE`
+- Pesquisa que existe: `QA_RENAN_CAT`
+- Pesquisa que não existe: `QA_RENAN_NAO_EXISTE`
 - Edição de `QA_RENAN_CAT_02`: nome `QA_RENAN_CAT_02 Editada` e cor `#AF601A`
-- Inativação: `QA_RENAN_CAT_02 Editada`
 
 ### Passos
 
-1. Pesquisar `QA_RENAN_CAT` e conferir se aparecem as categorias de teste.
-2. Pesquisar `QA_RENAN_NAO_EXISTE` e conferir a resposta de lista vazia.
-3. Aplicar cada filtro disponível, sozinho e junto com a pesquisa; depois limpar os filtros.
-4. Abrir `QA_RENAN_CAT_02`, alterar nome e cor, salvar e reabrir.
-5. Alterar o status para Inativo, salvar e conferir na listagem.
-6. Abrir o cadastro de pergunta e o montador de modelos e verificar se `QA_RENAN_CAT_02 Editada` ainda aparece para seleção ou filtro.
-7. Conferir se `QA_RENAN_CAT_01 Saúde` e as perguntas ligadas a ela continuam disponíveis.
+1. Pesquisar `QA_RENAN_CAT` e ver se aparecem as minhas categorias de teste.
+2. Pesquisar `QA_RENAN_NAO_EXISTE` e ver o que a lista mostra.
+3. Usar cada filtro da lista, sozinho e junto com a pesquisa, e depois limpar.
+4. Abrir `QA_RENAN_CAT_02`, mudar nome e cor, salvar e abrir de novo.
+5. Mudar o status para Inativo, salvar e conferir na lista.
+6. Ir no cadastro de pergunta e no montador de modelos e ver se a categoria inativa ainda aparece para escolher ou filtrar.
+7. Conferir se `QA_RENAN_CAT_01 Saúde` e as perguntas dela continuam normais.
 
 ### Resultado esperado
 
-- Inventário: Conferir disponibilidade para perguntas/modelos.
-- Critério: pesquisa e filtros retornam apenas as categorias correspondentes; lista vazia tem mensagem compreensível; a edição é mantida; a categoria inativa não é oferecida para novas perguntas e modelos, e as demais categorias e perguntas não são afetadas.
+Conferir disponibilidade para perguntas/modelos. A pesquisa e os filtros só podem trazer as categorias certas, e a pesquisa sem resultado precisa mostrar uma mensagem clara. A edição tem que ficar salva. Depois de inativa, a categoria não deve aparecer para novas perguntas e modelos, e as outras categorias e perguntas não podem ser afetadas.
 
 ### Verificações comuns aplicadas
 
-- G12 — Editar registro de teste: alteração mantida ao reabrir.
-- G15 — Pesquisa existente/inexistente: correspondências ou estado vazio compreensível.
-- G16 — Filtros combinados e limpeza: condições respeitadas e consulta restaurada.
-- G20 — Referências e dependências: inativação sem quebrar os vínculos existentes.
+- G12 — Edição salva corretamente.
+- G15 — Pesquisa com e sem resultado.
+- G16 — Filtros combinados e limpeza.
+- G20 — Inativação sem quebrar os vínculos.
 
 ### Resultado obtido
 
-—
+Ainda não executado.
 
-### Data, navegador e executor
-
-- Data e hora: —
-- Navegador: Google Chrome, versão —
-- Executor: Renan Oliveira
+**Data:** —  
+**Navegador:** Google Chrome —  
+**Executor:** Renan Oliveira
 
 ### Evidência
 
-- Vídeo: `C40-CT05-filtro-edicao-inativacao.mp4` — link pendente
-- Prints: —
+Vídeo: `C40-CT05-filtro-edicao-inativacao.mp4` (link quando gravar)
 
 ### Bug associado
 
@@ -351,18 +316,17 @@ Verificar a pesquisa e os filtros de categorias, a edição de uma categoria e o
 **Requisito:** RF40  
 **Tipo:** Condicional  
 **Status:** Não executado  
-**Ordem de execução:** 30
+**Ordem no planejamento:** 30
 
 ### Objetivo
 
-Verificar o que acontece ao excluir uma categoria que tem perguntas vinculadas.
+Ver o que acontece quando tento excluir uma categoria que já tem pergunta ligada a ela.
 
 ### Pré-condições
 
-- Estar autenticado no SIFIT Alfa.
-- `QA_RENAN_CAT_DESC_01` cadastrada e `QA_RENAN_PERG_DESC_01` vinculada a ela, ambas criadas só para este caso.
-- Ação de excluir disponível na listagem de categorias. Sem ela, o caso é Não se aplica, com print.
-- Nenhum outro registro é excluído.
+- Criar antes, só para este teste, a categoria `QA_RENAN_CAT_DESC_01` e a pergunta `QA_RENAN_PERG_DESC_01` ligada a ela.
+- A lista de categorias precisa ter a opção de excluir. Se não tiver, o caso fica Não se aplica, com print.
+- Não excluir nenhum outro registro.
 
 ### Dados utilizados
 
@@ -371,39 +335,34 @@ Verificar o que acontece ao excluir uma categoria que tem perguntas vinculadas.
 
 ### Passos
 
-1. Em Perguntas de Anamnese, conferir que `QA_RENAN_PERG_DESC_01` está ligada a `QA_RENAN_CAT_DESC_01`.
-2. Em Categorias de Anamnese, acionar a exclusão de `QA_RENAN_CAT_DESC_01` e cancelar na confirmação.
-3. Conferir que a categoria continua na listagem.
-4. Acionar a exclusão novamente e confirmar.
-5. Anotar a resposta: exclusão impedida, categoria removida ou outra.
-6. Atualizar a página e conferir a listagem de categorias.
-7. Abrir `QA_RENAN_PERG_DESC_01` e conferir se a pergunta abre sem erro e qual categoria mostra.
+1. Em Perguntas de Anamnese, mostrar que `QA_RENAN_PERG_DESC_01` está ligada a `QA_RENAN_CAT_DESC_01`.
+2. Em Categorias de Anamnese, clicar para excluir `QA_RENAN_CAT_DESC_01` e cancelar na confirmação.
+3. Ver se a categoria continua na lista.
+4. Clicar para excluir de novo e, desta vez, confirmar.
+5. Anotar o que aconteceu: se o sistema impediu, se excluiu ou outra resposta.
+6. Atualizar a página e conferir a lista de categorias.
+7. Abrir `QA_RENAN_PERG_DESC_01` e ver se ela abre sem erro e qual categoria aparece nela.
 
 ### Resultado esperado
 
-- Inventário: Evitar referências quebradas e perda indevida de estrutura.
-- Critério: cancelar mantém a categoria; ao confirmar, o sistema impede a exclusão com mensagem clara ou trata o vínculo sem deixar a pergunta apontando para categoria inexistente e sem apagar a pergunta sem aviso.
-- Se o vínculo com a categoria for feito no modelo, e não na pergunta, os passos serão ajustados com um modelo descartável depois do reconhecimento (P9).
+Evitar referências quebradas e perda indevida de estrutura. Cancelar tem que manter a categoria. Ao confirmar, o sistema deve impedir a exclusão com uma mensagem clara ou resolver o vínculo sem deixar a pergunta ligada a uma categoria que não existe mais, e sem apagar a pergunta junto sem avisar. Se no reconhecimento eu descobrir que a categoria se liga ao modelo e não à pergunta, adapto os passos usando um modelo descartável.
 
 ### Verificações comuns aplicadas
 
-- G19 — Excluir/cancelar exclusão: cancelar preserva o registro; confirmar segue a regra de exclusão.
-- G20 — Referências e dependências: a pergunta vinculada não fica com referência quebrada.
+- G19 — Cancelar e confirmar a exclusão.
+- G20 — Pergunta vinculada sem referência quebrada.
 
 ### Resultado obtido
 
-—
+Ainda não executado.
 
-### Data, navegador e executor
-
-- Data e hora: —
-- Navegador: Google Chrome, versão —
-- Executor: Renan Oliveira
+**Data:** —  
+**Navegador:** Google Chrome —  
+**Executor:** Renan Oliveira
 
 ### Evidência
 
-- Vídeo: `C40-CT06-excluir-categoria-vinculada.mp4` — link pendente
-- Prints: —
+Vídeo: `C40-CT06-excluir-categoria-vinculada.mp4` (link quando gravar)
 
 ### Bug associado
 
