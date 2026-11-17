@@ -1,7 +1,7 @@
 # C41 — Perguntas de Anamnese
 
 **Responsável:** Renan Oliveira  
-**Sistema:** SIFIT Alfa — https://sifitalfa.centrion.com.br  
+**Sistema:** SIFIT — https://sifit.centrion.com.br  
 **Requisito:** [RF41 — Perguntas de Anamnese](../contribuicoes/renan/requisitos.md#rf41--perguntas-de-anamnese)
 
 Aqui eu testo o cadastro de perguntas de anamnese, que tem nome, enunciado, número, status e tipo de resposta. Começo as gravações já logado e uso dados fictícios com o prefixo `QA_RENAN`. As três primeiras perguntas que cadastro aqui vão para o modelo (C39) e para a ficha do aluno (C38), então não posso apagá-las. Se o formulário tiver campo de categoria, uso a `QA_RENAN_CAT_01 Saúde`, criada no C40.

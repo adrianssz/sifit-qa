@@ -1,7 +1,7 @@
 # C40 — Categorias de Anamnese
 
 **Responsável:** Renan Oliveira  
-**Sistema:** SIFIT Alfa — https://sifitalfa.centrion.com.br  
+**Sistema:** SIFIT — https://sifit.centrion.com.br  
 **Requisito:** [RF40 — Categorias de Anamnese](../contribuicoes/renan/requisitos.md#rf40--categorias-de-anamnese)
 
 Aqui eu testo o cadastro de categorias de anamnese, que tem nome, status, ícone e cor. Em todos os casos começo a gravação já logado no sistema e uso dados fictícios com o prefixo `QA_RENAN` (lista completa na [massa de dados](../contribuicoes/renan/planejamento.md#4-massa-de-dados)). Sempre anoto o código da categoria criada, para conseguir achar depois.
@@ -345,7 +345,7 @@ Ver o que acontece quando tento excluir uma categoria que já tem pergunta ligad
 
 ### Resultado esperado
 
-Evitar referências quebradas e perda indevida de estrutura. Cancelar tem que manter a categoria. Ao confirmar, o sistema deve impedir a exclusão com uma mensagem clara ou resolver o vínculo sem deixar a pergunta ligada a uma categoria que não existe mais, e sem apagar a pergunta junto sem avisar. Se no reconhecimento eu descobrir que a categoria se liga ao modelo e não à pergunta, adapto os passos usando um modelo descartável.
+Evitar referências quebradas e perda indevida de estrutura. Cancelar tem que manter a categoria. Ao confirmar, o sistema deve impedir a exclusão com uma mensagem clara ou resolver o vínculo sem deixar a pergunta ligada a uma categoria que não existe mais, e sem apagar a pergunta junto sem avisar. No banco, a tabela de perguntas não tem campo de categoria. Se na tela também não houver jeito de ligar a categoria a uma pergunta ou a um modelo, o caso fica Não se aplica, com print.
 
 ### Verificações comuns aplicadas
 

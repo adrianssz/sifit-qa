@@ -3,7 +3,7 @@
 **Responsável e executor:** Renan Oliveira  
 **Data do planejamento:** 16/11/2026  
 **Base:** [Inventário](../../../Invent%C3%A1rio.md), com IDs e descrições preservados  
-**Ambiente:** SIFIT Alfa — `https://sifitalfa.centrion.com.br`, o mesmo dos registros de Adrian e Fernando  
+**Ambiente:** SIFIT — `https://sifit.centrion.com.br`, o site indicado nos slides do professor e o único com acesso ao banco. Troquei do SIFIT Alfa em 17/11/2026, antes de começar as gravações, porque o banco que recebemos não corresponde ao sifitalfa, onde Adrian e Fernando testaram.  
 **Navegador e sistema operacional:** Google Chrome, com a versão anotada em cada execução; Windows 11  
 **Situação:** os 64 casos estão **Não executados**.
 
@@ -54,10 +54,10 @@ Nada desta etapa conta como execução.
 
 | # | Ação | Com quem | Libera |
 |---|---|---|---|
-| P1 | Ambiente: SIFIT Alfa — concluído em 16/11/2026 | Renan | Todos |
-| P2 | Combinar o cliente `QA_RENAN_CLIENTE_01`: ativo, sem telefone ou e-mail de terceiros, código anotado | Fernando | C38, C10, C47-CT05 |
+| P1 | Ambiente: sifit.centrion.com.br, no lugar do SIFIT Alfa, porque só ele tem banco acessível — concluído em 17/11/2026 | Renan | Todos |
+| P2 | Cadastrar no sifit.centrion o cliente `QA_RENAN_CLIENTE_01` como preparação de dados (não conta no C08) e avisar o Fernando: ativo, sem telefone ou e-mail de terceiros, código anotado. Se anamnese ou avaliação exigirem matrícula, pedir ajuda ao Fernando | Renan e Fernando | C38, C10, C47-CT05 |
 | P3 | Confirmar um colaborador com função de personal ou avaliador | Grupo | C10 |
-| P4 | Receber o acesso somente leitura ao banco e o schema real, que o grupo vai enviar. Credenciais não entram no repositório nem nos vídeos | Grupo | C47-CT07 a CT09 |
+| P4 | Acesso ao banco recebido nos slides do professor e testado em 17/11/2026, só com consultas de leitura. Credenciais não entram no repositório nem nos vídeos — concluído | Renan | C47-CT07 a CT09 |
 | P5 | Ver se o cliente de teste consegue entrar no aplicativo e se uma enquete ativa apareceria para alunos reais | Grupo | C37-CT05 a CT07 |
 | P6 | Ver na configuração das automações (C42-CT02, sem ativar) o canal e quem recebe; só seguir se os destinatários forem contas de teste | Renan | C42-CT03, CT04 e CT07; C43-CT05 |
 | P7 | O professor não definiu regras; premissas registradas na seção 8 — concluído | Renan | Casos que dependiam de regra |
@@ -216,7 +216,7 @@ O professor não definiu regras de negócio para estes módulos e não há docum
 | C40 | Não pode haver duas categorias com o mesmo nome, porque elas ficariam iguais na hora de escolher. A cor aceita o seletor e código hexadecimal `#RRGGBB`; qualquer outro texto é recusado. O ícone só aceita opções que o sistema consegue exibir. |
 | C41 | O número define a ordem de exibição, é inteiro maior que zero e não se repete. Saltos na numeração são aceitos, desde que a ordem siga os números. |
 | C39 | O modelo precisa de nome e de pelo menos uma pergunta, e a mesma pergunta não entra duas vezes. Editar um modelo não muda as fichas já aplicadas. |
-| C38 | A ficha só pode ser concluída com todas as perguntas do modelo respondidas. Em “Se sim, qual?”, o complemento é obrigatório quando a resposta é Sim. |
+| C38 | Vale a obrigatoriedade marcada em cada pergunta do modelo (o banco guarda isso em `modelo_perguntas_anamnese.obrigatoria`): pergunta obrigatória sem resposta impede concluir a ficha, e as não obrigatórias podem ficar em branco. Em “Se sim, qual?”, o complemento é obrigatório quando a resposta é Sim. |
 | C10 | Aluno, personal, data e horário são obrigatórios. O mesmo personal ou o mesmo aluno não pode ter duas avaliações no mesmo dia e horário. Medidas físicas não aceitam zero nem valor negativo, e valores impossíveis, como 5 m de altura, são recusados ou geram alerta. O IMC é calculado como peso ÷ altura². |
 | C37 | A enquete precisa de pelo menos duas alternativas, sem repetição. Texto acima do limite é barrado com aviso, sem corte silencioso. Depois que há respostas, a pergunta e as alternativas não mudam sem aviso. |
 
@@ -225,10 +225,10 @@ O professor não definiu regras de negócio para estes módulos e não há docum
 | Risco | Efeito | Tratamento |
 |---|---|---|
 | Erro no servidor em Perguntas ou Modelos, já visto no inventário | Trava C39, C38 e C47-CT05 | Gravar no Jam, abrir bug e marcar dependentes como Bloqueados |
-| Acesso ao banco não chegar a tempo | C47-CT07 a CT09 Bloqueados | Lembrar o grupo do envio (P4) antes da fase 5 |
+| As tabelas novas da anamnese não têm chave estrangeira no banco | Só o sistema impede vínculo quebrado | Foco do C47-CT09, com registros descartáveis |
 | Automação ou link enviar mensagem a pessoa real | Dano a terceiros | Executar só com P6; cliente sem contatos de terceiros |
 | Enquete ativa visível para alunos reais | Exposição indevida | Salvar inativa; ativar só com P5 |
-| Ambiente compartilhado com os colegas | Alteração de terceiros confundida com resultado | Prefixo, códigos, data e hora em cada caso |
+| Ambiente compartilhado com colegas e alunos de outras turmas | Alteração de terceiros confundida com resultado | Prefixo, códigos, data e hora em cada caso |
 | Cota do Jam acabar antes do 30º vídeo | Troca de ferramenta | Seguir na Ferramenta de Captura com o mesmo padrão de nome |
 
 ## 10. Critérios de saída

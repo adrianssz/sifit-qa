@@ -1,10 +1,10 @@
 # C38 — Fichas de Anamnese
 
 **Responsável:** Renan Oliveira  
-**Sistema:** SIFIT Alfa — https://sifitalfa.centrion.com.br  
+**Sistema:** SIFIT — https://sifit.centrion.com.br  
 **Requisito:** [RF38 — Fichas de Anamnese](../contribuicoes/renan/requisitos.md#rf38--fichas-de-anamnese)
 
-Aqui eu aplico a anamnese no aluno de teste combinado com o Fernando (`QA_RENAN_CLIENTE_01`), usando o modelo `QA_RENAN_MOD_01` do C39. Começo as gravações já logado. Todas as respostas são inventadas e nenhum dado de saúde real aparece nos vídeos. Do CT02 ao CT08 eu sigo uma mesma ficha, na ordem do planejamento, e no fim faço a busca da lista (CT01).
+Aqui eu aplico a anamnese no aluno de teste `QA_RENAN_CLIENTE_01`, que eu mesmo cadastro antes como preparação de dados, usando o modelo `QA_RENAN_MOD_01` do C39. Começo as gravações já logado. Todas as respostas são inventadas e nenhum dado de saúde real aparece nos vídeos. Do CT02 ao CT08 eu sigo uma mesma ficha, na ordem do planejamento, e no fim faço a busca da lista (CT01).
 
 ---
 
@@ -80,7 +80,7 @@ Começar uma anamnese nova e ver se ela fica ligada só ao aluno que escolhi.
 
 ### Pré-condições
 
-O cliente `QA_RENAN_CLIENTE_01` combinado com o Fernando precisa existir, com o código anotado.
+O cliente `QA_RENAN_CLIENTE_01` precisa estar cadastrado (preparação P2 do planejamento), com o código anotado.
 
 ### Dados utilizados
 
@@ -300,20 +300,21 @@ A ficha do CT05 precisa estar aberta. Se a tela não deixar desmarcar uma respos
 
 ### Dados utilizados
 
-- `QA_RENAN_PERG_01`: sem resposta
-- `QA_RENAN_PERG_03`: Sim, com o complemento só com espaços
+- `QA_RENAN_PERG_01` (obrigatória no modelo): sem resposta
+- `QA_RENAN_PERG_02` (não obrigatória): sem resposta
+- `QA_RENAN_PERG_03` (obrigatória): Sim, com o complemento só com espaços
 
 ### Passos
 
-1. Desmarcar a resposta da `QA_RENAN_PERG_01` (ou deixar sem resposta, na segunda ficha).
+1. Desmarcar as respostas da `QA_RENAN_PERG_01` e da `QA_RENAN_PERG_02` (ou deixar sem resposta, na segunda ficha).
 2. Na `QA_RENAN_PERG_03`, marcar Sim e apagar o complemento, deixando só espaços.
 3. Ir até o botão de concluir usando Tab e apertar Enter.
-4. Anotar a mensagem e ver se ela aponta as perguntas que faltam.
+4. Anotar a mensagem e ver se ela aponta só o que é obrigatório e está faltando.
 5. Voltar as respostas para as do CT05 antes de seguir.
 
 ### Resultado esperado
 
-Orientar quais perguntas faltam. Como o professor não definiu regra, sigo a premissa da seção 8 do planejamento: a ficha só pode ser concluída com todas as perguntas respondidas, e o complemento é obrigatório quando a resposta é Sim. O sistema não pode concluir a ficha e precisa mostrar quais perguntas estão faltando.
+Orientar quais perguntas faltam. No modelo, marquei a `QA_RENAN_PERG_01` e a `QA_RENAN_PERG_03` como obrigatórias e a `QA_RENAN_PERG_02` não. O sistema não pode concluir a ficha com pergunta obrigatória em branco e precisa mostrar quais faltam; a não obrigatória pode ficar vazia. Para o complemento só com espaços, sigo a premissa da seção 8 do planejamento: com resposta Sim, ele é obrigatório.
 
 ### Verificações comuns aplicadas
 

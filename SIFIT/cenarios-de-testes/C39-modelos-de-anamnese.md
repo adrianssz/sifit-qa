@@ -1,7 +1,7 @@
 # C39 — Modelos de Anamnese
 
 **Responsável:** Renan Oliveira  
-**Sistema:** SIFIT Alfa — https://sifitalfa.centrion.com.br  
+**Sistema:** SIFIT — https://sifit.centrion.com.br  
 **Requisito:** [RF39 — Modelos de Anamnese](../contribuicoes/renan/requisitos.md#rf39--modelos-de-anamnese)
 
 Aqui eu testo a criação de modelos de anamnese no montador visual, onde escolho as perguntas cadastradas no C41. Começo as gravações já logado e uso dados fictícios com o prefixo `QA_RENAN`. O modelo `QA_RENAN_MOD_01` é o que vou aplicar no aluno de teste no C38, então não posso apagá-lo.
@@ -31,18 +31,19 @@ As perguntas `QA_RENAN_PERG_01` a `_03` precisam estar cadastradas e ativas. Pes
 - Status: Ativo
 - Descrição: “Modelo de teste com três perguntas de saúde.”
 - Perguntas: `QA_RENAN_PERG_01`, `_02` e `_03`, nessa ordem
+- Obrigatórias: `QA_RENAN_PERG_01` e `QA_RENAN_PERG_03`; a `QA_RENAN_PERG_02` fica como não obrigatória (o banco mostra que essa opção existe para cada pergunta do modelo)
 
 ### Passos
 
 1. Abrir Modelos de Anamnese e clicar para criar um novo.
 2. Preencher nome, status e descrição. Se tiver algum campo opcional além desses, deixar em branco.
-3. No montador, adicionar as três perguntas na ordem da lista.
+3. No montador, adicionar as três perguntas na ordem da lista e marcar quais são obrigatórias. Se a opção não aparecer na tela, anotar com print.
 4. Salvar, conferir a mensagem e anotar o código.
-5. Atualizar a página, abrir o modelo e conferir os dados e as perguntas.
+5. Atualizar a página, abrir o modelo e conferir os dados, as perguntas e a obrigatoriedade.
 
 ### Resultado esperado
 
-Salvar nome, status, descrição e perguntas selecionadas. O modelo tem que aparecer na lista com os acentos certos e, ao abrir, mostrar as três perguntas na ordem em que adicionei.
+Salvar nome, status, descrição e perguntas selecionadas. O modelo tem que aparecer na lista com os acentos certos e, ao abrir, mostrar as três perguntas na ordem em que adicionei, com a obrigatoriedade que marquei.
 
 ### Verificações comuns aplicadas
 
@@ -141,7 +142,7 @@ Testar a busca de perguntas e o filtro por categoria dentro do montador.
 
 ### Pré-condições
 
-As perguntas `QA_RENAN_PERG_01` a `_03` e as categorias `QA_RENAN_CAT_01 Saúde` e `QA_RENAN_CAT_02` precisam existir.
+As perguntas `QA_RENAN_PERG_01` a `_03` e as categorias `QA_RENAN_CAT_01 Saúde` e `QA_RENAN_CAT_02` precisam existir. No banco, a tabela de perguntas não tem campo de categoria; se o montador não tiver filtro por categoria, registro com print e avalio só a busca.
 
 ### Dados utilizados
 

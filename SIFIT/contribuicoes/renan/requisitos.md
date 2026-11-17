@@ -2,7 +2,7 @@
 
 **Responsável:** Renan Oliveira  
 **Data:** 16/11/2026  
-**Sistema:** SIFIT Alfa — https://sifitalfa.centrion.com.br  
+**Sistema:** SIFIT — https://sifit.centrion.com.br  
 **Fonte:** [Inventário](../../../Invent%C3%A1rio.md) e telas inspecionadas pelo grupo
 
 Não temos documentação oficial de requisitos do SIFIT, então montei os requisitos abaixo a partir do inventário e das telas. Cada RF tem o mesmo número do cenário. Como o professor não definiu regras de negócio, onde faltava regra deixei a premissa que uso para julgar o resultado (detalhes na [seção 8 do planejamento](planejamento.md#8-premissas-adotadas)).
@@ -70,7 +70,7 @@ Entre parênteses está o caso que testa cada funcionalidade.
 - Salvar rascunho e concluir, com a transição Pendente/Concluído mantida, se disponível. (C38-CT07)
 - Consultar a ficha concluída com aluno, modelo, data e respostas. (C38-CT08)
 
-**Premissa:** a ficha só é concluída com todas as perguntas respondidas, e o complemento de “Se sim, qual?” é obrigatório quando a resposta é Sim.  
+**Premissa:** pergunta marcada como obrigatória no modelo precisa ser respondida para concluir a ficha (o banco guarda isso em `modelo_perguntas_anamnese.obrigatoria`); o complemento de “Se sim, qual?” é obrigatório quando a resposta é Sim.  
 **Restrição:** somente aluno fictício; nenhum dado de saúde real nas evidências.
 
 ---
