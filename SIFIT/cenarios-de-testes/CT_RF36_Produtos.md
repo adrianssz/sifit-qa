@@ -4,7 +4,7 @@
 
 | ID        | DESCRIÇÃO                                                                                                           |
 | --------- | ------------------------------------------------------------------------------------------------------------------- |
-| CT01-CT01 | Verificar se o menu Produtos permite acessar e consultar os produtos cadastrados no sistema SIFIT. |
+| C36-CT01 | Verificar se o menu Produtos permite acessar e consultar os produtos cadastrados no sistema SIFIT. |
 
 | PRÉ-CONDIÇÕES |
 |---|
