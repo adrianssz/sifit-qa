@@ -4,7 +4,7 @@
 
 | ID        | DESCRIÇÃO                                                                                                                     |
 | --------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| CT01-CT01 | Verificar se o menu Configurações permite acessar e consultar as opções de configuração disponíveis no sistema SIFIT. |
+| C01-CT01 | Verificar se o menu Configurações permite acessar e consultar as opções de configuração disponíveis no sistema SIFIT. |
 
 | PRÉ-CONDIÇÕES |
 |---|
