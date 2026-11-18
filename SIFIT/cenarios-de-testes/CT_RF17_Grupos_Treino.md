@@ -1,10 +1,10 @@
- CENÁRIO 15: GRUPOS 
+ CENÁRIO 17: GRUPOS DE TREINO
 
  CASO DE TESTE 01: ACESSAR E CONSULTAR MENU GRUPOS DE TREINO
 
 | ID        | DESCRIÇÃO                                                                                                      |
 | --------- | -------------------------------------------------------------------------------------------------------------- |
-| CT01-CT01 | Verificar se o menu Grupos permite acessar e consultar os grupos disponíveis no sistema SIFIT. |
+| C17-CT01 | Verificar se o menu Grupos permite acessar e consultar os grupos disponíveis no sistema SIFIT. |
 
 | PRÉ-CONDIÇÕES |
 |---|
