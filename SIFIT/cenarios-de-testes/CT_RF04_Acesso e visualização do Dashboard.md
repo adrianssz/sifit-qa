@@ -1,10 +1,10 @@
-Cenário 03: ACESSO E VISUALIZAÇÃO DO DASHBOARD 
+Cenário 04: ACESSO E VISUALIZAÇÃO DO DASHBOARD 
 
 Caso de Teste 01: ACESSO AO DASHBOARD APÓS LOGIN BEM SUCESSO.
 
  | ID |       DESCRIÇÃO                                                              | 
  | ----- | -------------------------------------------------------------------------- |
-| C02-CT01 | Verifique a exibição correta do Dashboard após fazer login com sucesso. |
+| C04-CT01 | Verifique a exibição correta do Dashboard após fazer login com sucesso. |
 
  | PRÉ-CONDIÇÕES |
  | --- |
@@ -26,9 +26,9 @@ https://jam.dev/c/50a641f3-9d77-46e7-8a0f-4d44565c9a6b
 
 Caso de Teste 02: Verificação da exibição dos widgets do Dashboard
 
-| ID | DESCRIÇÃO |
+| ID |         DESCRIÇÃO                                                                |
 | --- |
-| C02-CT02 |	Os widgets padrão devem ser exibidos corretamente no Dashboard. |
+| C04-CT02 |	Os widgets padrão devem ser exibidos corretamente no Dashboard. |
 
 | PRÉ-CONDIÇÕES |
 | --- |
