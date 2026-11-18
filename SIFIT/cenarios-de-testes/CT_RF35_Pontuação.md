@@ -4,7 +4,7 @@
 
 | ID        | DESCRIÇÃO                                                                                                                  |
 | --------- | -------------------------------------------------------------------------------------------------------------------------- |
-| CT01-CT01 | Verificar se o menu Pontuação permite acessar e consultar as informações de pontuação disponíveis no sistema SIFIT. |
+| C35-CT01 | Verificar se o menu Pontuação permite acessar e consultar as informações de pontuação disponíveis no sistema SIFIT. |
 
 | PRÉ-CONDIÇÕES |
 |---|
