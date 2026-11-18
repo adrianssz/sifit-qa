@@ -16,7 +16,7 @@
 | REALIZAR o login no sistema. |
 | ACESSAR o Dashboard. |
 | LOCALIZAR e CLICAR no menu Configurações. |
-| VERIFICAR se a página de Configurações é exibida corretamente. |
+| VERIFICAR se a página  é exibida corretamente. |
 | OBSERVAR as informações apresentadas na tela. |
 | VERIFICAR se existem opções de consulta ou visualização das configurações disponíveis. |
 
