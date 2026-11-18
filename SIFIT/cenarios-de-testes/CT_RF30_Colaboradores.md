@@ -4,7 +4,7 @@ CENÁRIO 30: COLABORADORES
 
 | ID        | DESCRIÇÃO                                                                                                                        |
 | --------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| CT01-CT01 | Verificar se o menu Colaboradores permite acessar e consultar os colaboradores cadastrados no sistema SIFIT. |
+| C30-CT01 | Verificar se o menu Colaboradores permite acessar e consultar os colaboradores cadastrados no sistema SIFIT. |
 
 | PRÉ-CONDIÇÕES |
 |---|
