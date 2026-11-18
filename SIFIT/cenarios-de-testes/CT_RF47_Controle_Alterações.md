@@ -4,7 +4,7 @@
 
 | ID        | DESCRIÇÃO |
 | --------- | --------- |
-| C01-CT47 | Verificar se o ambiente compartilhado permite acompanhar e identificar as alterações realizadas pelos integrantes da equipe no repositório GitHub. |
+| C47-CT01 | Verificar se o ambiente compartilhado permite acompanhar e identificar as alterações realizadas pelos integrantes da equipe no repositório GitHub. |
 
 | PRÉ-CONDIÇÕES |
 |---|
