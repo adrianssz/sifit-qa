@@ -16,7 +16,7 @@
 | REALIZAR o login no sistema. |
 | ACESSAR o Dashboard. |
 | LOCALIZAR e CLICAR no menu Pontuação. |
-| VERIFICAR se a página de Pontuação é exibida corretamente. |
+| VERIFICAR se esta página é exibida corretamente. |
 | OBSERVAR as informações apresentadas na tela. |
 | VERIFICAR se existem opções de consulta ou visualização das informações de pontuação. |
 
