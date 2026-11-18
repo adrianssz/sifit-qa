@@ -16,9 +16,9 @@
 | REALIZAR o login no sistema. |
 | ACESSAR o Dashboard. |
 | LOCALIZAR e CLICAR no menu Grupos. |
-| VERIFICAR se a página de Grupos é exibida corretamente. |
+| VERIFICAR se esta página é exibida de forma correta. |
 | OBSERVAR as informações apresentadas na tela. |
-| VERIFICAR se existem opções de consulta ou visualização dos grupos. |
+| VERIFICAR se existem opções de consulta ou visualização deste menu. |
 
 | CRITÉRIOS DE PROTEÇÃO |
 |---|
