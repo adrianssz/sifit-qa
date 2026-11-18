@@ -16,7 +16,7 @@ CENÁRIO 30: COLABORADORES
 | REALIZAR o login no sistema. |
 | ACESSAR o Dashboard. |
 | LOCALIZAR e CLICAR no menu Colaboradores. |
-| VERIFICAR se a página de Colaboradores é exibida corretamente. |
+| VERIFICAR se a página é exibida 100% correta. |
 | OBSERVAR as informações apresentadas na tela. |
 | VERIFICAR se existem opções de consulta ou visualização dos colaboradores. |
 
