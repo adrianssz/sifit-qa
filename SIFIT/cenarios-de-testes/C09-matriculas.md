@@ -471,3 +471,65 @@ Pasta: https://drive.google.com/drive/folders/1WXIX_bcYxrMoYSJwNByS7-DpseLBGiDL
 ### Bug associado
 
 Nenhum confirmado neste caso.
+
+## C09-CT09 — Meio de pagamento e Pag. Via Sistema
+
+Responsável: Fernando Cardoso dos Santos  
+Data da execução: 18/11/2026  
+Navegador: Google Chrome  
+Tipo: Condicional  
+Status: Não executado  
+Sistema: https://sifitalfa.centrion.com.br/adicionar-matricula
+
+### Objetivo
+
+Verificar o comportamento dos campos Pag. Via Sistema e Tipo Pagamento no cadastro de matrícula.
+
+### Requisito relacionado
+
+Disponibilização dos meios de pagamento e eventuais campos condicionais conforme a opção Pag. Via Sistema. A regra específica precisa ser confirmada.
+
+### Pré-condições
+
+- Estar autenticado no sistema.
+- Acessar o cadastro de matrícula.
+
+### Dados utilizados
+
+- Pag. Via Sistema: Não e Sim.
+- Tipos de pagamento testados: Pix, Boleto no Sistema e Crédito Recorrente.
+
+### Passos executados
+
+1. Abrir o cadastro de matrícula.
+2. Observar o campo Pag. Via Sistema com a opção Não.
+3. Selecionar um tipo de pagamento.
+4. Alterar Pag. Via Sistema para Sim.
+5. Testar as opções de pagamento.
+6. Observar se aparecem novos campos ou mensagens.
+
+### Resultado esperado
+
+Os campos e tipos de pagamento devem se comportar conforme as regras de negócio e da integração.
+
+### Resultado obtido
+
+Ao alternar Pag. Via Sistema entre Não e Sim e testar tipos de pagamento, não foram observados campos adicionais ou mensagens.
+
+A gravação mostra a seleção das opções, sem demonstrar o salvamento da matrícula ou a execução de um pagamento.
+
+### Justificativa
+
+A regra que determina quais campos ou opções devem aparecer ainda precisa ser confirmada. A integração e os efeitos após o salvamento não foram testados.
+
+### Verificação comum
+
+- G09 — Seleções dependentes.
+
+### Evidência
+
+[Assistir ao vídeo do C09-CT09](https://drive.google.com/file/d/1FMn1VZ_Yjy-457mupyOQiOBKvML8gazK/view?usp=drive_link)
+
+### Bug associado
+
+Nenhum confirmado até a verificação da regra.
