@@ -4,7 +4,7 @@
 
 | ID        | DESCRIÇÃO                                                                                                                        |
 | --------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| CT01-CT01 | Verificar se o menu Aplicativo permite acessar e consultar as informações e opções disponíveis no sistema SIFIT. |
+| CT46-CT01 | Verificar se o menu Aplicativo permite acessar e consultar as informações e opções disponíveis no sistema SIFIT. |
 
 | PRÉ-CONDIÇÕES |
 |---|
