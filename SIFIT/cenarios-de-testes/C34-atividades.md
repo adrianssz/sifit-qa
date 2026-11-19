@@ -34,8 +34,8 @@ Gravar também sucessos. Não mostrar credenciais, tokens, conexões ou dados re
 | Status | Aprovado |
 | Data/hora e fuso | 18/11/2026, aproximadamente 23:22–23:23 (America/Sao_Paulo). |
 | Executor real | O assistente Codex operou a interface sob minha solicitação; eu iniciei a gravação de tela Jam. |
-| Ambiente | https://sifit.centrion.com.br/; perfil exibido: Jair; Chrome em Windows. A versão do navegador e a unidade ativa não foram confirmadas. |
-| Vídeo e tempos | Gravação de tela Jam iniciada e encerrada; duração observada de aproximadamente 00:49. Não obtive link de compartilhamento nesta etapa. |
+| Ambiente | https://sifit.centrion.com.br/; perfil exibido: Jair; Chrome 158.0.8127.36 em Windows 11. Unidade ativa não confirmada. |
+| Vídeo e tempos | [Gravação Jam de 53 s](https://jam.dev/c/fd1150c0-707d-4180-9144-96291e954ee2). Busca em 0:32 (POST buscar-atividades status 200); abertura do detalhe em 0:38 (OPTIONS 204 e POST 200); fechamento em 0:44; gravação encerrada em 0:53. Sem áudio/transcrição (microfone desativado). |
 | Prints | Captura da lista filtrada salva localmente como C34-CT01-20261118.jpg; sem link publicado. |
 | Bug associado | Nenhum; o resultado observado atendeu ao critério original. |
 | Fonte da regra / pendências | Critério original do Inventário. Executei somente o cadastro com uma pontuação positiva e descrição; formatos/limites pertencem aos demais casos C34. |
