@@ -102,21 +102,21 @@ Gravar também sucessos. Não mostrar credenciais, tokens, conexões ou dados re
 | Objetivo | Verificar o critério deste caso com dados próprios e evidência rastreável. |
 | Requisito | RF14 |
 | Pré-condições | Sessão/unidade identificadas; dados e referências do roteiro abaixo preparados; regras indispensáveis confirmadas. Se depender de editor, mapear os controles antes de concluir o roteiro. |
-| Dados | Não criei, editei ou excluí grupos ou exercícios. A tela de Grupos Musculares mostrou 4 grupos cadastrados: Bicpes (código 1), Pernas (2), Teste 2 (5) e Peitoral Teste Keltton (6). |
+| Dados | Não criei, editei ou excluí grupos ou exercícios. A tela mostrou 4 grupos cadastrados: Bicpes (código 1), Pernas (2), Teste 2 (5) e Peitoral Teste Keltton (6). Abri Adicionar no grupo Bicpes para mapear o formulário e cancelei sem salvar. |
 | DADO | Que https://sifit.centrion.com.br/grupos-musculares estava acessível na sessão autenticada exibida como Jair. |
-| QUANDO — roteiro | Abri Grupos Musculares e conferi filtros por código, nome e tipo de membro, botão de busca, cadastro e tabela com código, nome, tipo de membro, imagem e ações. Não abri cadastro nem salvei dados; o mapeamento do cadastro de exercício permanece pendente. |
+| QUANDO — roteiro | Abri Grupos Musculares e conferi filtros por código, nome e tipo de membro, botão de busca, cadastro e tabela. Em Exercícios, abri Adicionar no grupo Bicpes; o formulário mostrou Código, Nome obrigatório, campos opcionais para Imagem (JPG/PNG, até 5 MB) e Vídeo (MP4/MOV, até 50 MB), além de Cancelar e Salvar. Cancelei sem salvar dados. |
 | ENTÃO — critério original | Abrir o caminho para grupos musculares e mapear cadastro de exercício quando disponível. |
 | Aceitação | Comparar o obtido com o critério acima e com a regra confirmada registrada; verificar todas as variações aplicáveis. Não presumir texto exato de mensagem. |
 | Verificações comuns propostas | G01, G10, G11, G12 e G13 conforme ações disponíveis; G21 para erro e G23 para teclado/foco/mensagens quando aplicáveis. Identificar aplicação como C14-Gyy-CAMPO e justificar não aplicabilidade. |
-| Resultado obtido | A página carregou e exibiu 4 grupos. A tabela mostrou código, nome, tipo de membro, imagem e ações Visualizar/Deletar; os filtros visíveis foram Código, Nome e Tipo Membro. Não testei a exclusão nem abri o cadastro. |
-| Status | Execução parcial; julgamento pendente: falta mapear o cadastro de exercício e confirmar regras/campos antes de concluir. |
-| Data/hora e fuso | 19/11/2026, aproximadamente 04:20 (America/Sao_Paulo). |
+| Resultado obtido | A página de Grupos Musculares carregou com 4 grupos e filtros Código, Nome e Tipo Membro. Em Exercícios, o formulário Adicionar no grupo Bicpes exibiu Código, Nome obrigatório, Imagem opcional (JPG/PNG, máximo 5 MB) e Vídeo opcional (MP4/MOV, máximo 50 MB); cancelei sem salvar. |
+| Status | Execução parcial; julgamento pendente: mapeei os campos do formulário, mas falta executar o cadastro com dados próprios e confirmar as regras antes de concluir. |
+| Data/hora e fuso | 19/11/2026, aproximadamente 04:20–04:21 (America/Sao_Paulo). |
 | Executor real | Operei a interface com automação assistida nesta sessão autenticada como Jair. |
 | Ambiente | https://sifit.centrion.com.br/grupos-musculares; unidade não confirmada; versão do SIFIT não exposta; navegador interno. |
 | Vídeo e tempos | Não gravei esta inspeção; sem link Jam. |
 | Prints | Não produzidos. |
 | Bug associado | Ainda não confirmei nenhum nesta etapa. |
-| Fonte da regra / pendências | O critério do inventário pede abrir o caminho para grupos musculares e mapear o cadastro de exercício quando disponível. Registrei somente a listagem e os controles visíveis; não concluí o cadastro nem confirmei regras. |
+| Fonte da regra / pendências | O critério do inventário pede abrir o caminho para grupos musculares e mapear o cadastro de exercício. Mapeei a listagem e o formulário de exercício sem gravar dados; falta executar com dados QA_VICTOR e confirmar regras de validação. |
 
 ## C14-CT05 — Pesquisa, filtros e visualização de exercícios
 
