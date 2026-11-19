@@ -1,7 +1,7 @@
 ![C13-CT09 — busca de fichas QA_VICTOR sem resultados](https://github.com/user-attachments/assets/b7a8ea19-d599-491d-833f-cea916fbe378)
 # Resultados dos testes — Meus testes
 
-**Estado:** 2 casos aprovados; 17 aguardam julgamento (incluindo C13-CT10 parcial); 47 casos não iniciados. Concluí cinco execuções de C34 e iniciei C06-CT01, C06-CT04, C06-CT05, C14-CT01, C14-CT04, C14-CT05, C45-CT01, C45-CT02, C18-CT01, C18-CT02 e C18-CT07 e C13-CT09; executei C06-CT02 com julgamento pendente.
+**Estado:** 2 casos aprovados; 17 aguardam julgamento (incluindo C13-CT09 e C13-CT10 parciais); 47 casos não iniciados. Concluí cinco execuções de C34 e iniciei C06-CT01, C06-CT04, C06-CT05, C14-CT01, C14-CT04, C14-CT05, C45-CT01, C45-CT02, C18-CT01, C18-CT02 e C18-CT07 e C13-CT09; executei C06-CT02 com julgamento pendente.
 
 Base: 66 casos — 64 dos módulos e 2 de C47 (CT03 e CT04). [Planejamento](planejamento.md).
 
@@ -88,7 +88,7 @@ Atualizar caso e esta tabela com resultado real, data/hora/fuso, executor, ambie
 
 ## Conclusão atual
 
-Tenho evidência de que C34-CT01 e C34-CT02 atenderam aos critérios registrados. C34-CT03, C34-CT04 e C34-CT05 aguardam confirmação das regras. Executei parcialmente C06-CT01 e C06-CT02. Em C06-CT01, as buscas retornaram vazio; falta validar uma presença conhecida. Em C06-CT02, registrei as datas preenchidas pelos três atalhos; o mês resultou em uma janela de 30 dias, cuja definição precisa ser confirmada. Os intervalos consultados estavam vazios, então a conferência de registros permanece pendente. C06-CT05 também está parcial: falta comparar indicadores com um período que contenha presenças. Os outros 48 casos ainda não foram iniciados; C13-CT10 está parcial após tentativa adicional com Esc e clique fora, que não fechou o modal; falta testar uma ação própria de fechamento. C14-CT04 também está parcial. C18-CT01, C18-CT02 e C18-CT07 também foram iniciados parcialmente; nenhum bug foi confirmado. C45-CT01 e C45-CT02 e C14-CT05 seguem parciais; não confirmei bug.
+Tenho evidência de que C34-CT01 e C34-CT02 atenderam aos critérios registrados. C34-CT03, C34-CT04 e C34-CT05 aguardam confirmação das regras. Executei parcialmente C06-CT01 e C06-CT02. Em C06-CT01, as buscas retornaram vazio; falta validar uma presença conhecida. Em C06-CT02, registrei as datas preenchidas pelos três atalhos; o mês resultou em uma janela de 30 dias, cuja definição precisa ser confirmada. Os intervalos consultados estavam vazios, então a conferência de registros permanece pendente. C06-CT05 também está parcial: falta comparar indicadores com um período que contenha presenças. Os outros 47 casos ainda não foram iniciados. C13-CT09 e C13-CT10 seguem parciais; C13-CT10 aguarda teste de ação própria de fechamento. C14-CT04/CT05, C18-CT01/CT02/CT07 e C45-CT01/CT02 também seguem parciais. Nenhum bug foi confirmado.
 
 
 ## Registro da falha do Jam
@@ -101,4 +101,4 @@ Ao tentar usar o Jam nesta etapa, a extensão não carregou e mostrou “This is
 A captura da tela de Exercícios mostra QA_VICTOR_EXERCICIO_20261119_001 em Bicpes e a contagem exibida no momento da consulta. As variações do caso continuam pendentes. [Ver print e registro no cenário C14](../cenarios-de-testes/C14-exercicios.md#print-do-sifit--c14-ct04).
 ## Atualização — C18-CT07
 Em 19/11/2026, filtrei Turmas por Status: Inativo e acionei Buscar. A tela exibiu “Nenhuma turma encontrada”; os indicadores mostraram 12 turmas, 12 ativas, 4 com personal e 4 com aula experimental. Não alterei dados. Não havia registros inativos para verificar uma correspondência positiva; C18-CT07 permanece parcial, com julgamento pendente e sem bug confirmado. [Print do SIFIT](https://github.com/user-attachments/assets/f22d1404-c5a4-4640-8c80-b05dd8b5905d).
-A atualização acrescenta mais um caso iniciado parcialmente: total provisório de 16 casos aguardando julgamento e 48 ainda não iniciados. Os totais da tabela serão conciliados com as linhas individuais antes da entrega final.
+A atualização acrescenta mais um caso iniciado parcialmente: total consolidado de 17 casos pendentes de julgamento e 47 ainda não iniciados; as contagens foram conciliadas com as linhas individuais.
