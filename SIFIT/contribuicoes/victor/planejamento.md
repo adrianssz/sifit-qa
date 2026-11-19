@@ -6,7 +6,7 @@
 **Sistema de referência:** https://sifit.centrion.com.br/  
 **Versão do sistema, navegador/versão e sistema operacional:** a registrar na execução; não verificados nesta etapa.  
 **Fontes:** [Inventário](../../../Invent%C3%A1rio.md), [requisitos dos meus testes](requisitos.md) e [plano do modelo do professor](https://github.com/Adnyslougansilva/extensao-qa/blob/main/OrangeHRM/2-plano%20de%20testes.md).  
-**Estado inicial:** 71 casos planejados, todos Não executados; nenhuma evidência de execução produzida nesta etapa.
+**Estado inicial:** 66 casos planejados, todos Não executados; nenhuma evidência de execução produzida nesta etapa.
 
 ## 1. Objetivo e escopo
 
@@ -23,12 +23,12 @@ Vou verificar os módulos que ficaram sob minha responsabilidade e registrar os 
 | C20 | SifitBox — Turmas | 7 | Alta | `C20-sifitbox-turmas.md` |
 | C34 | Atividades | 5 | Média | `C34-atividades.md` |
 | C45 | Modelos de Ficha | 6 | Alta | `C45-modelos-de-ficha.md` |
-| C47 | Fluxos integrados e conferência no banco — CT03, CT04 e CT06–CT10 | 7 | Alta | `C47-victor.md` |
-| **Total** | **64 casos de módulos + 7 casos do C47** | **71** | | |
+| C47 | Fluxos integrados — CT03 e CT04 | 2 | Alta | `C47-victor.md` |
+| **Total** | **64 casos de módulos + 2 casos do C47** | **66** | | |
 
 Prioridade Alta indica dependência entre módulos, persistência ou fluxo de presença/treino; a investigação histórica de Exercícios também merece atenção inicial. A prioridade é de planejamento, não severidade de bug.
 
-C47-CT01, C47-CT02 e C47-CT05 ficam como referência de outros módulos, fora das 71 execuções dos meus testes. C47-CT07 a C47-CT10 são aplicados exclusivamente aos meus registros, sem assumir cobertura dos colegas.
+C47-CT01, C47-CT02 e C47-CT05 ficam como referência de outros módulos, fora das 66 execuções dos meus testes. C47-CT06 a C47-CT10 (persistência, banco e ambiente compartilhado) pertencem a outros responsáveis na divisão vigente e não entram na minha contagem.
 
 As alterações no repositório ficam restritas a `SIFIT/contribuicoes/victor/requisitos.md`, `planejamento.md`, `bugs.md`, `resultados.md`, aos dez arquivos de cenário acima e a `SIFIT/3-relatorio-de-bugs.md`. Não editar inventário, README ou arquivos de colegas. O arquivo de C47 de outro integrante não será substituído.
 
@@ -53,7 +53,6 @@ Antes de cada edição, reler a versão atual do arquivo e conferir a main. Cria
 | Dependência | Uso | Situação nesta etapa |
 |---|---|---|
 | Acesso ao SIFIT e identificação do perfil/unidade | Todos os módulos; limitar a cobertura ao perfil realmente disponível. | Não verificado. Não registrar credenciais. |
-| Ambiente correspondente ao banco | Integrações e SELECTs. Usarei https://sifit.centrion.com.br/, conforme o endereço corrigido em 18/11/2026, e verificarei a correspondência do banco antes de comparar dados. | Não verificado. Não misturar evidências de SIFIT e SIFIT Alfa. |
 | Gravação e compartilhamento | Jam para navegador; gravação local/Drive quando necessário. | A conversa anterior relata Workbench instalado e pasta SIFIT-QA-Victor criada; acesso, conteúdo, gravação e permissões não foram verificados nesta etapa. |
 | Cliente e matrícula de teste | Check-in, presença e ficha de treino. | Identificar cliente QA_VICTOR elegível e seus IDs reais; dependência de módulos C08/C09. |
 | Plano de teste | Turmas e elegibilidade. | Confirmar referência válida do C26 sem alterar registros de colegas. |
@@ -61,7 +60,6 @@ Antes de cada edição, reler a versão atual do arquivo e conferir a main. Cria
 | Grupo muscular e biblioteca | Exercício → modelo → ficha. | Dependência do C15 e do carregamento de C14; não presumir biblioteca vazia diante de erro. |
 | Modalidade e turma recorrente | Geração de aulas e fluxo integrado. | Preparar pelos C20-CT01/CT02 com dados próprios. |
 | Câmera/dispositivo e QR controlado | C05-CT08. | Dependência condicional; verificar disponibilidade antes do caso. |
-| Banco de dados de leitura | C47-CT07 a C47-CT09. | Não acessado nesta etapa; confirmar schema real e IDs QA_VICTOR. |
 | Regras de negócio pendentes | Casos listados em requisitos.md. | Registrar fonte e confirmação antes de reprovar comportamento. |
 
 Vou usar referências de outros módulos como pré-condições. Se precisar preparar dados fora dos meus módulos, vou identificar essa preparação e usar registros próprios, preservando os arquivos e registros dos colegas.
@@ -99,7 +97,6 @@ A sequência pode mudar por dependências constatadas; cada pausa preserva o aco
 4. Executar C20 para criar modalidade/recorrência; executar C07 para consultar e gerar aulas controladas. Retomar C20-CT06/CT07 conforme as aulas estiverem disponíveis.
 5. Executar C05 com cliente elegível e C06 para conferir o reflexo da entrada. Avaliar C47-CT03 com a cadeia completa e evidência identificada.
 6. Executar C14, C45 e C13 conforme a biblioteca, os modelos e as fichas forem preparados. Retomar C14-CT06 e C45-CT05 após existir a ficha. Avaliar C47-CT04.
-7. Conferir C47-CT06 a C47-CT10 somente nos registros próprios; aplicar as verificações de banco quando houver acesso correspondente ao ambiente.
 8. Fazer retestes e fechamento, mantendo as tentativas anteriores e registrando limitações.
 
 Os casos C07-CT05/CT06, C13-CT06/CT07, C14-CT04/CT05 e C45-CT02/CT03/CT04 exigem reconhecimento do editor/detalhe antes de um roteiro completo. Sua descrição original será mantida, com controles efetivos documentados depois.
@@ -116,7 +113,7 @@ Casos com múltiplas variações terão sufixos A/B/C e resultado por variação
 
 | Status | Critério |
 |---|---|
-| Não executado | Ainda não houve execução formal documentada; inclui os 71 casos desta etapa. |
+| Não executado | Ainda não houve execução formal documentada; inclui os 66 casos desta etapa. |
 | Aprovado | Execução concluída e evidenciada; todos os critérios confirmados aplicáveis foram atendidos. |
 | Reprovado | Divergência reproduzida contra critério confirmado, com resultado real e evidência. |
 | Bloqueado | Uma dependência, acesso, regra indispensável ou falha de carregamento constatada impede concluir/julgar; registrar motivo e o que foi observado. |
@@ -124,10 +121,10 @@ Casos com múltiplas variações terão sufixos A/B/C e resultado por variação
 
 Tentativa iniciada mas inconclusa deve ser descrita, sem aprovação artificial. Regra desconhecida fica pendente de confirmação; não é bug. Não se aplica não é usado só porque faltou acesso ou dados.
 
-- Base planejada: 71 casos (64 + 7).
+- Base planejada: 66 casos (64 + 2).
 - Execuções concluídas com julgamento: Aprovados + Reprovados.
 - Não executados, Bloqueados e Não se aplica são contados separadamente.
-- Cobertura com julgamento: (Aprovados + Reprovados) ÷ 71. Registrar alterações futuras de escopo antes de mudar o denominador.
+- Cobertura com julgamento: (Aprovados + Reprovados) ÷ 66. Registrar alterações futuras de escopo antes de mudar o denominador.
 - Aprovação entre os julgados: Aprovados ÷ (Aprovados + Reprovados); sem execuções, informar “não calculável”.
 - Variações, tentativas e Gxx têm contagem auxiliar; não criam silenciosamente novos casos principais.
 
@@ -153,11 +150,7 @@ Atualizar `SIFIT/3-relatorio-de-bugs.md` apenas com a contribuição dos meus te
 
 ## 10. Banco, integridade e ambiente compartilhado
 
-Identificar tabelas, colunas e relações a partir do schema real. Conferir somente registros próprios, com consultas de leitura e filtros pelos IDs registrados. Não inventar SQL com nomes de tabelas presumidos; não usar escrita direta no banco.
-
-Em C47-CT08, comparar antes/depois de cancelar uma operação da interface. Em C47-CT09, usar registros descartáveis e a regra confirmada de preservação; a eventual exclusão ocorre pela interface, dentro do caso aplicável, com conferência posterior de leitura.
-
-Registrar horário, unidade e IDs para distinguir alterações de colegas. Mudanças de terceiros não são atribuídas ao teste. Exclusões não podem apagar evidência necessária nem referências de outros integrantes.
+Os casos de banco (C47-CT07 a CT09), persistência (CT06) e alterações de colegas (CT10) não fazem parte da minha divisão vigente de 66 casos. Mantenho apenas o cuidado de usar somente registros QA_VICTOR, sem alterar nem apagar registros ou evidências de outros integrantes.
 
 ## 11. Critérios de entrada, saída e riscos
 
@@ -170,7 +163,6 @@ Registrar horário, unidade e IDs para distinguir alterações de colegas. Mudan
 | Ambiente compartilhado muda durante o caso | Registrar IDs e horários, comparar a mesma unidade e repetir apenas quando necessário. |
 | Dependência indisponível ou tela com erro | Documentar condição e impacto, preservando a distinção entre investigação e bug. |
 | Regra desconhecida | Solicitar confirmação com exemplo concreto; não adotar premissa como requisito obrigatório. |
-| Interface e banco de ambientes diferentes | Verificar a correspondência antes de comparar dados. |
 | Importação ou geração com efeito amplo | Delimitar turma, período e conjunto próprio; só prosseguir com escopo de teste conhecido. |
 | Evidência sem gravação ou link acessível | Registrar a limitação e complementar a evidência, sem inventar vídeo ou conclusão. |
 
@@ -190,3 +182,7 @@ Acessei o painel de https://sifit.centrion.com.br/ com a sessão disponível e f
 - Consegui conectar ao banco informado e consultar sua estrutura, sem escrita. A correspondência com o ambiente da interface ainda precisa ser demonstrada com os mesmos IDs de registros QA_VICTOR; o nome do schema não é prova suficiente.
 
 Meu próximo conjunto será C34 — Atividades, começando pelo cadastro controlado de C34-CT01. Antes de executar, vou iniciar a gravação, registrar ambiente/data/hora, definir os dados QA_VICTOR e confirmar o comportamento esperado. Só vou registrar resultado e evidência depois de executar. Vou parar após esse conjunto para acompanhamento.
+
+## 14. Correção de escopo — 19/11/2026
+
+A divisão vigente substitui a anterior e tem 66 casos: 64 dos módulos C05, C06, C07, C13, C14, C18, C20, C34 e C45, mais C47-CT03 e C47-CT04. Os registros de 18/11/2026 acima citam 71 casos pela divisão anterior; vale o total de 66.

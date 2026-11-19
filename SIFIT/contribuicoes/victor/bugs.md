@@ -12,7 +12,7 @@ O inventário relata erro histórico no carregamento de Exercícios (C14-CT01). 
 
 ## Bloqueios e regras pendentes
 
-As dependências de acesso, banco, QR Code, dados e regras constam em [requisitos](requisitos.md) e [planejamento](planejamento.md). Ainda não tentei executar os casos para constatar bloqueios. Registrar futuramente caso, motivo concreto, data, evidência, condição de liberação e impacto, sem contabilizar como defeito automaticamente.
+As dependências de acesso, QR Code, dados e regras constam em [requisitos](requisitos.md) e [planejamento](planejamento.md). Ainda não tentei executar os casos para constatar bloqueios. Registrar futuramente caso, motivo concreto, data, evidência, condição de liberação e impacto, sem contabilizar como defeito automaticamente.
 
 ## Formato para novos registros
 

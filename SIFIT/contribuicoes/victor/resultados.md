@@ -1,14 +1,14 @@
 # Resultados dos testes — Meus testes
 
-**Estado:** 1 caso aprovado; 70 ainda não executados. Concluí uma execução formal nesta etapa.
+**Estado:** 1 caso aprovado; 65 ainda não executados. Concluí uma execução formal nesta etapa.
 
-Base: 71 casos — 64 dos módulos e 7 de C47 (CT03, CT04, CT06–CT10). [Planejamento](planejamento.md).
+Base: 66 casos — 64 dos módulos e 2 de C47 (CT03 e CT04). [Planejamento](planejamento.md).
 
 | Planejados | Não executados | Aprovados | Reprovados | Bloqueados constatados | Não se aplica |
 |---:|---:|---:|---:|---:|---:|
-| 71 | 70 | 1 | 0 | 0 | 0 |
+| 66 | 65 | 1 | 0 | 0 | 0 |
 
-Cobertura com julgamento: 1/71 = 1,41%. Aprovação entre julgados: 1/1 = 100%. Concluí C34-CT01; as outras 70 execuções permanecem pendentes. As pendências de preparação não foram contabilizadas como bloqueios constatados.
+Cobertura com julgamento: 1/66 = 1,52%. Aprovação entre julgados: 1/1 = 100%. Concluí C34-CT01; as outras 65 execuções permanecem pendentes. As pendências de preparação não foram contabilizadas como bloqueios constatados.
 
 ## Registro por caso
 
@@ -80,11 +80,6 @@ Cobertura com julgamento: 1/71 = 1,41%. Aprovação entre julgados: 1/1 = 100%. 
 | [C45-CT06](../../cenarios-de-testes/C45-modelos-de-ficha.md) | Conferir indicadores | Não executado | Não produzido / não observado. |
 | [C47-CT03](../../cenarios-de-testes/C47-victor.md) | Turma recorrente → aula → check-in → presença | Não executado | Não produzido / não observado. |
 | [C47-CT04](../../cenarios-de-testes/C47-victor.md) | Grupo muscular → exercício → modelo → ficha | Não executado | Não produzido / não observado. |
-| [C47-CT06](../../cenarios-de-testes/C47-victor.md) | Persistência após atualização e novo login | Não executado | Não produzido / não observado. |
-| [C47-CT07](../../cenarios-de-testes/C47-victor.md) | Conferência por SELECT no banco | Não executado | Não produzido / não observado. |
-| [C47-CT08](../../cenarios-de-testes/C47-victor.md) | Cancelar operação e conferir banco | Não executado | Não produzido / não observado. |
-| [C47-CT09](../../cenarios-de-testes/C47-victor.md) | Dependências e exclusões | Não executado | Não produzido / não observado. |
-| [C47-CT10](../../cenarios-de-testes/C47-victor.md) | Alterações de colegas no ambiente compartilhado | Não executado | Não produzido / não observado. |
 
 ## Atualização após execução
 

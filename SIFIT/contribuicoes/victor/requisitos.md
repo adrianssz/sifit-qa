@@ -14,7 +14,7 @@ Organizei os requisitos RFxx abaixo como vínculos de documentação propostos, 
 
 Usei como base a inspeção anterior registrada por Adrian no inventário. Ainda preciso conferir o funcionamento atual nas minhas execuções. Os critérios continuam propostos até que a regra necessária seja confirmada por documentação, orientação do responsável pelo sistema ou configuração observável e registrada.
 
-São 64 casos específicos em C05, C06, C07, C13, C14, C18, C20, C34 e C45. No C47, o recorte operacional dos meus testes abrange CT03, CT04 e CT06 a CT10, aplicado aos meus dados: 7 casos integrados/transversais, totalizando 71 casos planejados. CT01, CT02 e CT05 aparecem somente para preservar a referência do inventário e explicitar a divisão com os outros módulos; não integram a contagem nem a execução dos meus testes. A divisão do C47 pode ser ajustada se houver atribuição expressa diferente do grupo, sem renumerar casos.
+São 64 casos específicos em C05, C06, C07, C13, C14, C18, C20, C34 e C45. No C47, o recorte operacional dos meus testes abrange CT03 e CT04, aplicado aos meus dados: 2 casos integrados, totalizando 66 casos planejados. CT01, CT02 e CT05 aparecem somente para preservar a referência do inventário e explicitar a divisão com os outros módulos; não integram a contagem nem a execução dos meus testes. A divisão do C47 pode ser ajustada se houver atribuição expressa diferente do grupo, sem renumerar casos.
 
 ## 2. Requisitos por cenário
 
@@ -149,7 +149,7 @@ São 64 casos específicos em C05, C06, C07, C13, C14, C18, C20, C34 e C45. No C
 
 **Síntese proposta:** Conferir os fluxos de presença e treino dos meus testes, a persistência e a integridade dos meus dados controlados; conferência no banco somente por leitura autorizada e após identificar o schema real.
 
-**Recorte:** CT03, CT04 e CT06–CT10 nos meus módulos e registros. CT01 (cliente/matrícula/financeiro), CT02 (financeiro/relatórios) e CT05 (anamnese) são referências externas ao meu escopo de execução.
+**Recorte:** CT03 e CT04 nos meus módulos e registros. CT01 (cliente/matrícula/financeiro), CT02 (financeiro/relatórios) e CT05 (anamnese) e CT06 a CT10 (persistência, banco e ambiente compartilhado) são referências externas ao meu escopo de execução.
 
 | ID | Descrição original do inventário | Resultado esperado / critério proposto original | Tipo original |
 |---|---|---|---|
@@ -176,7 +176,6 @@ São 64 casos específicos em C05, C06, C07, C13, C14, C18, C20, C34 e C45. No C
 | Turmas | C18-CT02 a C18-CT04; C18-CT06 a C18-CT09 | Obrigatoriedade, duração, passagem de dia, meses, conflitos, opções condicionais e política de exclusão com vínculos. |
 | Atividades e pontuação | C34-CT02 a C34-CT04 | Ausência versus zero, negativos, decimais, limites e obrigatoriedade; não assumir fórmula ou faixa numérica. |
 | Modelos de ficha | C45-CT02 a C45-CT05 | Campos e ações do editor, título obrigatório, modelo sem exercícios e política de alteração de modelos vinculados. |
-| Banco e ambiente | C47-CT07 a C47-CT09 | Acesso de leitura, schema real e correspondência do banco com o mesmo ambiente e os mesmos IDs de teste da interface. |
 
 A ausência de uma regra permanece uma dúvida documentada. Uma dependência indisponível pode bloquear o caso após a tentativa de preparação; não é automaticamente um bug. O erro de servidor mencionado no inventário em Exercícios é uma investigação histórica a reproduzir, e não um defeito confirmado por mim.
 
