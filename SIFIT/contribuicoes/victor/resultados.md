@@ -1,14 +1,14 @@
 # Resultados dos testes — Meus testes
 
-**Estado:** 2 casos aprovados; 9 aguardam julgamento (3 de C34, 4 de C06, 1 de C14 e 1 de C45); 55 casos não iniciados. Concluí cinco execuções de C34 e iniciei C06-CT01, C06-CT04, C06-CT05, C14-CT01 e C45-CT01; executei C06-CT02 com julgamento pendente.
+**Estado:** 2 casos aprovados; 10 aguardam julgamento (3 de C34, 4 de C06, 2 de C14 e 1 de C45); 54 casos não iniciados. Concluí cinco execuções de C34 e iniciei C06-CT01, C06-CT04, C06-CT05, C14-CT01, C14-CT05 e C45-CT01; executei C06-CT02 com julgamento pendente.
 
 Base: 66 casos — 64 dos módulos e 2 de C47 (CT03 e CT04). [Planejamento](planejamento.md).
 
 | Planejados | Não executados | Aprovados | Julgamento pendente | Reprovados | Bloqueados constatados | Não se aplica |
 |---:|---:|---:|---:|---:|---:|---:|
-| 66 | 55 | 2 | 9 | 0 | 0 | 0 |
+| 66 | 54 | 2 | 10 | 0 | 0 | 0 |
 
-Cobertura com julgamento concluído: 2/66 = 3,03%. Aprovação entre julgados: 2/2 = 100%. Concluí C34-CT01 e C34-CT02; C34-CT03, C34-CT04 e C34-CT05 aguardam confirmação de regra. Executei C06-CT02: Hoje retornou 19/11/2026, Esta semana 13/11–19/11 e Este mês 21/10–19/11 (30 dias), sem presenças nos intervalos. O julgamento aguarda definição de períodos civis ou móveis e dados para comparar. C06-CT01 segue parcial: busquei QA_VICTOR e um texto inexistente, ambos sem resultados; falta validar uma presença conhecida. C06-CT04 segue parcial: o intervalo invertido foi consultado sem aviso visível; faltam as variações vazia/inválida e confirmar a regra. C06-CT05 segue parcial, aguardando comparação com período com presenças. Em C14-CT01, a biblioteca carregou, mas não reproduzi o erro documentado na inspeção-base; a investigação permanece pendente. C45-CT01 também está parcial: consultas por código, título e criador não encontraram registros; falta um modelo próprio para confirmar correspondência positiva. Outros 55 casos não foram iniciados; C45-CT01 foi iniciado parcialmente. Nenhuma pendência foi contada como bug confirmado ou bloqueio constatado.
+Cobertura com julgamento concluído: 2/66 = 3,03%. Aprovação entre julgados: 2/2 = 100%. Concluí C34-CT01 e C34-CT02; C34-CT03, C34-CT04 e C34-CT05 aguardam confirmação de regra. Executei C06-CT02: Hoje retornou 19/11/2026, Esta semana 13/11–19/11 e Este mês 21/10–19/11 (30 dias), sem presenças nos intervalos. O julgamento aguarda definição de períodos civis ou móveis e dados para comparar. C06-CT01 segue parcial: busquei QA_VICTOR e um texto inexistente, ambos sem resultados; falta validar uma presença conhecida. C06-CT04 segue parcial: o intervalo invertido foi consultado sem aviso visível; faltam as variações vazia/inválida e confirmar a regra. C06-CT05 segue parcial, aguardando comparação com período com presenças. Em C14-CT01, a biblioteca carregou, mas não reproduzi o erro documentado na inspeção-base; a investigação permanece pendente. C14-CT05 está parcial: não vi filtros gerais e o detalhe de AA (código 11) mostrou falha ao abrir mídia de vídeo; sem regra confirmada, não abri bug. C45-CT01 também está parcial: consultas por código, título e criador não encontraram registros; falta um modelo próprio para confirmar correspondência positiva. Outros 54 casos não foram iniciados; C45-CT01 e C14-CT05 foram iniciados parcialmente. Nenhuma pendência foi contada como bug confirmado ou bloqueio constatado.
 
 ## Registro por caso
 
@@ -49,7 +49,7 @@ Cobertura com julgamento concluído: 2/66 = 3,03%. Aprovação entre julgados: 2
 | [C14-CT02](../../cenarios-de-testes/C14-exercicios.md) | Importar biblioteca padrão | Não executado | Não produzido / não observado. |
 | [C14-CT03](../../cenarios-de-testes/C14-exercicios.md) | Repetir importação | Não executado | Não produzido / não observado. |
 | [C14-CT04](../../cenarios-de-testes/C14-exercicios.md) | Cadastro manual | Não executado | Não produzido / não observado. |
-| [C14-CT05](../../cenarios-de-testes/C14-exercicios.md) | Pesquisa, filtros e visualização de exercícios | Não executado | Não produzido / não observado. |
+| [C14-CT05](../../cenarios-de-testes/C14-exercicios.md) | Pesquisa, filtros e visualização de exercícios | Execução parcial; julgamento pendente | Não encontrei pesquisa/filtros gerais visíveis; abri a visualização do exercício AA (código 11), que exibiu “Não foi possível abrir a mídia” no vídeo. Fechei sem salvar. Não há regra confirmada para classificar a mídia como bug. [Jam exclusivo, 31 s](https://jam.dev/c/0010fdc5-489a-42a1-82eb-1a9bd38dd537?s=mcp).
 | [C14-CT06](../../cenarios-de-testes/C14-exercicios.md) | Associar exercício à ficha | Não executado | Não produzido / não observado. |
 | [C18-CT01](../../cenarios-de-testes/C18-turmas.md) | Cadastrar turma válida | Não executado | Não produzido / não observado. |
 | [C18-CT02](../../cenarios-de-testes/C18-turmas.md) | Nome, plano e dias ausentes | Não executado | Não produzido / não observado. |
