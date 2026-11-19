@@ -4,7 +4,7 @@
 **Sistema:** SIFIT — https://sifit.centrion.com.br  
 **Requisito:** [RF41 — Perguntas de Anamnese](../contribuicoes/renan/requisitos.md#rf41--perguntas-de-anamnese)
 
-Aqui eu testo o cadastro de perguntas de anamnese, que tem nome, enunciado, número, status e tipo de resposta. Começo já logado e uso dados fictícios com o prefixo `QA_RENAN`. As três primeiras perguntas que cadastro aqui vão para o modelo (C39) e para a ficha do aluno (C38), então não posso apagá-las. Se o formulário tiver campo de categoria, uso a `QA_RENAN_CAT_01 Saúde`, criada no C40.
+Aqui eu testo o cadastro de perguntas de anamnese, que tem nome, enunciado, número, status e tipo de resposta. Começo já logado e uso dados fictícios com o prefixo `QA_RENAN`. As três primeiras perguntas que cadastro aqui vão para o modelo (C39) e para a ficha do aluno (C38), então não posso apagá-las. A tela fica no menu lateral, em Perguntas (endereço `/perguntas-anamnese`). A lista mostra Código, Nome, Pergunta, Tipo e Status, com busca pelos campos Código e Nome (botão Buscar) e filtro de status. O botão “Nova Pergunta” abre o formulário com Código (preenchido pelo sistema), Nome, Status, Pergunta, Número e Tipo Resposta; ele não tem campo de categoria. Em cada linha, a lupa abre a pergunta e o X exclui.
 
 O inventário registrou um “Erro no servidor” nesta tela. Se ele aparecer em qualquer caso, tiro print da mensagem e trato no CT07.
 
@@ -31,14 +31,14 @@ Pesquisar `QA_RENAN_PERG_01` e confirmar que ela ainda não existe. Este caso s�
 - Enunciado: “Você pratica atividade física regularmente?”
 - Número: 1
 - Status: Ativo
-- Tipo de resposta: Sim/Não
+- Tipo Resposta: Sim e Não
 
 ### Passos
 
-1. Abrir Perguntas de Anamnese e clicar para criar uma nova.
+1. Abrir Perguntas e clicar em Nova Pergunta.
 2. Preencher os dados acima, deixando em branco o que for opcional.
-3. Salvar, conferir a mensagem e anotar o código.
-4. Atualizar a página, abrir a pergunta e comparar os dados.
+3. Clicar em Salvar, conferir a mensagem e anotar o código que aparece na lista.
+4. Atualizar a página, buscar pelo nome, abrir pela lupa e comparar os dados.
 5. No C38-CT05, ver na ficha aplicada se a pergunta mostra as opções Sim e Não.
 
 ### Resultado esperado
@@ -92,7 +92,7 @@ Pesquisar `QA_RENAN_PERG_02` e confirmar que ela ainda não existe. Este caso ta
 - Enunciado: “Tem alguma lesão ou dor nas articulações?”
 - Número: 2
 - Status: Ativo
-- Tipo de resposta: Sim/Não/Não Sei
+- Tipo Resposta: Sim, Não e Não Sei
 
 ### Passos
 
@@ -150,7 +150,7 @@ Pesquisar `QA_RENAN_PERG_03` e confirmar que ela ainda não existe. Este caso ta
 - Enunciado: “Toma algum medicamento? Se sim, qual?”
 - Número: 3
 - Status: Ativo
-- Tipo de resposta: Se Sim, qual?
+- Tipo Resposta: Se Sim, qual?
 
 ### Passos
 
@@ -332,7 +332,7 @@ Faço este caso só no fim da cadeia da anamnese. A `QA_RENAN_PERG_02` já preci
 
 ### Passos
 
-1. Abrir `QA_RENAN_PERG_02`, mudar o status para Inativo e salvar.
+1. Abrir a `QA_RENAN_PERG_02` pela lupa, mudar o Status para Inativo e clicar em Salvar.
 2. Atualizar a página e abrir de novo para ver se ficou Inativo.
 3. Começar um modelo novo no montador e ver se a pergunta aparece para ser adicionada. Cancelar sem salvar.
 4. Abrir a ficha concluída do aluno de teste e ver se a resposta da `QA_RENAN_PERG_02` continua lá.
@@ -391,9 +391,9 @@ As perguntas `QA_RENAN_PERG_01` a `_03` já precisam estar cadastradas.
 ### Passos
 
 1. Abrir Perguntas de Anamnese e esperar a lista carregar.
-2. Fazer as três pesquisas e ver o que aparece em cada uma.
+2. Fazer as três pesquisas no campo Nome, clicando em Buscar, e uma pelo campo Código, vendo o que aparece em cada uma.
 3. Se a lista tiver mais de uma página, passar as páginas; se as colunas puderem ser ordenadas, clicar em cada uma.
-4. Abrir a `QA_RENAN_PERG_01`, trocar o enunciado e salvar.
+4. Abrir a `QA_RENAN_PERG_01` pela lupa, trocar o enunciado e clicar em Salvar.
 5. Atualizar a página e abrir de novo para conferir a edição.
 6. Se aparecer “Erro no servidor” em qualquer momento, anotar a mensagem, o horário e a tela, recarregar e tentar mais uma vez.
 
