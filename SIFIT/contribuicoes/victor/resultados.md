@@ -1,14 +1,14 @@
 # Resultados dos testes — Meus testes
 
-**Estado:** 2 casos aprovados; 3 com julgamento pendente de regra; 61 ainda não executados. Concluí cinco execuções; três aguardam julgamento.
+**Estado:** 2 casos aprovados; 3 aguardam julgamento de regra; 1 execução parcial pendente de comparação; 60 casos ainda não iniciados. Concluí cinco execuções de C34 e iniciei parcialmente C06-CT05.
 
 Base: 66 casos — 64 dos módulos e 2 de C47 (CT03 e CT04). [Planejamento](planejamento.md).
 
 | Planejados | Não executados | Aprovados | Julgamento pendente | Reprovados | Bloqueados constatados | Não se aplica |
 |---:|---:|---:|---:|---:|---:|---:|
-| 66 | 61 | 2 | 3 | 0 | 0 | 0 |
+| 66 | 60 | 2 | 4 | 0 | 0 | 0 |
 
-Cobertura com julgamento concluído: 2/66 = 3,03%. Aprovação entre julgados: 2/2 = 100%. Concluí C34-CT01 e C34-CT02; C34-CT03, C34-CT04 e C34-CT05 foram executados e aguardam confirmação de regra; as outras 61 execuções permanecem pendentes. As pendências de preparação não foram contabilizadas como bloqueios constatados.
+Cobertura com julgamento concluído: 2/66 = 3,03%. Aprovação entre julgados: 2/2 = 100%. Concluí C34-CT01 e C34-CT02; C34-CT03, C34-CT04 e C34-CT05 foram executados e aguardam confirmação de regra. Iniciei C06-CT05 e a consulta do intervalo vazio mostrou os indicadores zerados; falta comparar um período com presenças. Outros 60 casos ainda não foram iniciados. As pendências de regra não foram contabilizadas como bloqueios nem bugs confirmados.
 
 ## Registro por caso
 
@@ -27,7 +27,7 @@ Cobertura com julgamento concluído: 2/66 = 3,03%. Aprovação entre julgados: 2
 | [C06-CT02](../../cenarios-de-testes/C06-presencas.md) | Atalhos de período | Não executado | Não produzido / não observado. |
 | [C06-CT03](../../cenarios-de-testes/C06-presencas.md) | Período personalizado | Não executado | Não produzido / não observado. |
 | [C06-CT04](../../cenarios-de-testes/C06-presencas.md) | Datas vazias, inválidas ou invertidas | Não executado | Não produzido / não observado. |
-| [C06-CT05](../../cenarios-de-testes/C06-presencas.md) | Total, alunos distintos, média e dias | Não executado | Não produzido / não observado. |
+| [C06-CT05](../../cenarios-de-testes/C06-presencas.md) | Total, alunos distintos, média e dias | Execução parcial; julgamento pendente | Consulta de 13/11 a 19/11/2026: total 0, alunos distintos 0, média 0, dias no período 7; faltou comparar período com presenças. [Jam C06-CT05](https://jam.dev/c/ba6d7c6f-417b-478e-bdb6-42a2243a0f28?s=mcp). |
 | [C06-CT06](../../cenarios-de-testes/C06-presencas.md) | Check-in refletido na consulta | Não executado | Não produzido / não observado. |
 | [C07-CT01](../../cenarios-de-testes/C07-sifitbox-aulas.md) | Consultar aulas por período | Não executado | Não produzido / não observado. |
 | [C07-CT02](../../cenarios-de-testes/C07-sifitbox-aulas.md) | Período inválido | Não executado | Não produzido / não observado. |
