@@ -168,3 +168,10 @@ Gravar também sucessos. Não mostrar credenciais, tokens, conexões ou dados re
 | Prints | Não produzidos. |
 | Bug associado | Ainda não confirmei nenhum nesta etapa. |
 | Fonte da regra / pendências | Confirmar antes do julgamento; registrar fonte e decisão concreta aqui. |
+
+
+## Print do SIFIT — C06-CT01
+
+Anexei a captura da busca por QA_VICTOR no período de 13/11/2026 a 19/11/2026. A tela exibiu estado vazio; ainda não localizei uma presença conhecida para validar correspondência positiva.
+
+<img width="1920" height="939" alt="clipboard" src="https://github.com/user-attachments/assets/56b022b5-b810-4348-bc0a-93ca2cb7911a" />
