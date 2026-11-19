@@ -88,3 +88,8 @@ Atualizar caso e esta tabela com resultado real, data/hora/fuso, executor, ambie
 ## Conclusão atual
 
 Tenho evidência de que C34-CT01 e C34-CT02 atenderam aos critérios registrados. C34-CT03, C34-CT04 e C34-CT05 aguardam confirmação das regras. Executei parcialmente C06-CT01 e C06-CT02. Em C06-CT01, as buscas retornaram vazio; falta validar uma presença conhecida. Em C06-CT02, registrei as datas preenchidas pelos três atalhos; o mês resultou em uma janela de 30 dias, cuja definição precisa ser confirmada. Os intervalos consultados estavam vazios, então a conferência de registros permanece pendente. C06-CT05 também está parcial: falta comparar indicadores com um período que contenha presenças. Os outros 50 casos ainda não foram iniciados; C13-CT10 está parcial após tentativa adicional com Esc e clique fora, que não fechou o modal; falta testar uma ação própria de fechamento. C14-CT04 também está parcial. C18-CT01 e C18-CT02 também foram iniciados parcialmente; nenhum bug foi confirmado. C45-CT01 e C45-CT02 e C14-CT05 seguem parciais; não confirmei bug.
+
+
+## Registro da falha do Jam
+
+Ao tentar usar o Jam nesta etapa, a extensão não carregou e mostrou “This is taking longer than expected”, solicitando recarga. [Anexei a captura](jam-nao-carrega-20261119.png) no repositório. Usei a captura de tela para documentar a limitação de gravação; isso não é um defeito do SIFIT.
