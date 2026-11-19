@@ -1,20 +1,20 @@
-# Análise de requisitos — Victor
+# Análise de requisitos — Meus testes
 
 **Responsável:** Victor  
 **Data de elaboração:** 18/11/2026  
-**Sistema de referência:** https://sifit.centrion.com.br/login  
+**Sistema de referência:** https://sifitalfa.centrion.com.br  
 **Fonte:** [Inventário do SIFIT](../../../Invent%C3%A1rio.md)  
 **Versão consultada do inventário:** blob `d3885feed1a1909bc57ee56f4041b18facb5b813`, na [revisão 68f918b](https://github.com/adrianssz/sifit-qa/blob/68f918bd39c942c2d3141877724ab8ffac0219d0/Invent%C3%A1rio.md).  
 **Modelo de estrutura:** [Análise de requisitos do professor](https://github.com/Adnyslougansilva/extensao-qa/blob/main/OrangeHRM/1-Analise%20de%20requisitos.md).  
-**Estado:** preparação documental; nenhum teste executado por Victor nesta etapa.
+**Estado:** preparação documental; nenhum teste executado por mim nesta etapa.
 
 ## 1. Fonte, rastreabilidade e limites
 
-Os requisitos RFxx abaixo são vínculos de documentação propostos, com o número do cenário correspondente. Não substituem especificação oficial. As tabelas preservam literalmente os IDs, as descrições, os critérios propostos e os tipos do inventário; as sínteses de cada RF apenas organizam esse conteúdo.
+Organizei os requisitos RFxx abaixo como vínculos de documentação propostos, com o número do cenário correspondente. Não substituem especificação oficial. Preservei nas tabelas os IDs, as descrições, os critérios propostos e os tipos do inventário; as sínteses de cada RF apenas organizam esse conteúdo.
 
-O inventário descreve uma inspeção anterior, realizada por Adrian. Ela não comprova funcionamento atual nem execução de Victor. Os critérios continuam propostos até que a regra necessária seja confirmada por documentação, orientação do responsável pelo sistema ou configuração observável e registrada.
+Usei como base a inspeção anterior registrada por Adrian no inventário. Ainda preciso conferir o funcionamento atual nas minhas execuções. Os critérios continuam propostos até que a regra necessária seja confirmada por documentação, orientação do responsável pelo sistema ou configuração observável e registrada.
 
-São 64 casos específicos em C05, C06, C07, C13, C14, C18, C20, C34 e C45. No C47, o recorte operacional do Victor abrange CT03, CT04 e CT06 a CT10, aplicado aos seus dados: 7 casos integrados/transversais, totalizando 71 casos planejados. CT01, CT02 e CT05 aparecem somente para preservar a referência do inventário e explicitar a divisão com os outros módulos; não integram a contagem nem a execução do Victor. A divisão do C47 pode ser ajustada se houver atribuição expressa diferente do grupo, sem renumerar casos.
+São 64 casos específicos em C05, C06, C07, C13, C14, C18, C20, C34 e C45. No C47, o recorte operacional dos meus testes abrange CT03, CT04 e CT06 a CT10, aplicado aos meus dados: 7 casos integrados/transversais, totalizando 71 casos planejados. CT01, CT02 e CT05 aparecem somente para preservar a referência do inventário e explicitar a divisão com os outros módulos; não integram a contagem nem a execução dos meus testes. A divisão do C47 pode ser ajustada se houver atribuição expressa diferente do grupo, sem renumerar casos.
 
 ## 2. Requisitos por cenário
 
@@ -147,9 +147,9 @@ São 64 casos específicos em C05, C06, C07, C13, C14, C18, C20, C34 e C45. No C
 
 ### RF47 — Fluxos integrados e conferência no banco
 
-**Síntese proposta:** Conferir os fluxos de presença e treino do Victor, a persistência e a integridade de seus dados controlados; conferência no banco somente por leitura autorizada e após identificar o schema real.
+**Síntese proposta:** Conferir os fluxos de presença e treino dos meus testes, a persistência e a integridade dos meus dados controlados; conferência no banco somente por leitura autorizada e após identificar o schema real.
 
-**Recorte:** CT03, CT04 e CT06–CT10 nos módulos e registros do Victor. CT01 (cliente/matrícula/financeiro), CT02 (financeiro/relatórios) e CT05 (anamnese) são referências externas ao seu escopo de execução.
+**Recorte:** CT03, CT04 e CT06–CT10 nos meus módulos e registros. CT01 (cliente/matrícula/financeiro), CT02 (financeiro/relatórios) e CT05 (anamnese) são referências externas ao meu escopo de execução.
 
 | ID | Descrição original do inventário | Resultado esperado / critério proposto original | Tipo original |
 |---|---|---|---|
@@ -178,7 +178,7 @@ São 64 casos específicos em C05, C06, C07, C13, C14, C18, C20, C34 e C45. No C
 | Modelos de ficha | C45-CT02 a C45-CT05 | Campos e ações do editor, título obrigatório, modelo sem exercícios e política de alteração de modelos vinculados. |
 | Banco e ambiente | C47-CT07 a C47-CT09 | Acesso de leitura, schema real e correspondência do banco com o mesmo ambiente e os mesmos IDs de teste da interface. |
 
-A ausência de uma regra permanece uma dúvida documentada. Uma dependência indisponível pode bloquear o caso após a tentativa de preparação; não é automaticamente um bug. O erro de servidor mencionado no inventário em Exercícios é uma investigação histórica a reproduzir, e não um defeito confirmado por Victor.
+A ausência de uma regra permanece uma dúvida documentada. Uma dependência indisponível pode bloquear o caso após a tentativa de preparação; não é automaticamente um bug. O erro de servidor mencionado no inventário em Exercícios é uma investigação histórica a reproduzir, e não um defeito confirmado por mim.
 
 ## 4. Verificações comuns
 
@@ -190,4 +190,4 @@ Na etapa dos roteiros, explicitar a associação de cada Gxx, os dados, as pré-
 
 Toda conclusão exige resultado observado, ambiente real, data/hora, executor e evidência revisada. Teste negativo aprovado significa que a entrada inválida recebeu o tratamento esperado confirmado.
 
-Usar somente dados identificados por `QA_VICTOR`. Credenciais, tokens, strings de conexão e dados pessoais reais não entram em arquivos, mensagens de commit ou evidências. Não copiar os resultados do modelo OrangeHRM nem atribuir ao Victor execuções de colegas.
+Usar somente dados identificados por `QA_VICTOR`. Credenciais, tokens, strings de conexão e dados pessoais reais não entram em arquivos, mensagens de commit ou evidências. Não copiar os resultados do modelo OrangeHRM nem atribuir a mim execuções de colegas.
