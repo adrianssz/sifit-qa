@@ -1,7 +1,7 @@
 # C18 — Turmas — Meus testes
 
 **Responsável:** Victor  
-**Estado:** C18-CT01 e C18-CT02 executados parcialmente, com julgamento pendente; demais casos não executados.  
+**Estado:** C18-CT01, C18-CT02 e C18-CT07 executados parcialmente, com julgamento pendente; demais casos não executados.  
 **Fonte:** [Inventário](../../Invent%C3%A1rio.md), blob `d3885feed1a1909bc57ee56f4041b18facb5b813`.  
 **Requisito:** [RF18](../contribuicoes/victor/requisitos.md).  
 **Registros:** [resultados](../contribuicoes/victor/resultados.md) e [bugs](../contribuicoes/victor/bugs.md).
