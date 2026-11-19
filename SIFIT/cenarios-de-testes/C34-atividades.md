@@ -1,7 +1,7 @@
 # C34 — Atividades — Meus testes
 
 **Responsável:** Victor  
-**Estado:** C34-CT01 e C34-CT02 aprovados; C34-CT03 e C34-CT04 executados com julgamento pendente de regra; C34-CT05 ainda Não executado.
+**Estado:** C34-CT01 e C34-CT02 aprovados; C34-CT03, C34-CT04 e C34-CT05 executados com julgamento pendente de regra.
 **Fonte:** [Inventário](../../Invent%C3%A1rio.md), blob `d3885feed1a1909bc57ee56f4041b18facb5b813`.  
 **Requisito:** [RF34](../contribuicoes/victor/requisitos.md).  
 **Registros:** [resultados](../contribuicoes/victor/resultados.md) e [bugs](../contribuicoes/victor/bugs.md).
@@ -128,18 +128,18 @@ Gravar também sucessos. Não mostrar credenciais, tokens, conexões ou dados re
 | Objetivo | Verificar o critério deste caso com dados próprios e evidência rastreável. |
 | Requisito | RF34 |
 | Pré-condições | Sessão/unidade identificadas; dados e referências do roteiro abaixo preparados; regras indispensáveis confirmadas. Se depender de editor, mapear os controles antes de concluir o roteiro. |
-| Dados | QA_VICTOR_C34_AAAAMMDD_NNN; substituir pela data real e registrar IDs gerados e valores de cada variação antes da execução. |
-| DADO | Que o módulo está acessível e o estado inicial dos registros próprios foi anotado. |
-| QUANDO — roteiro | Pesquisar atividade própria; editar pontuação/descrição e reabrir; conferir indicadores com/sem pontuação e descrição conforme definição. |
+| Dados | Registro próprio QA_VICTOR_ATIVIDADE_20261119_007_LONG, código 17; pontuação original 0, alterada para 10 e restaurada para 0. O código 18, com 90 pontos, já existia e não foi alterado. |
+| DADO | Que o módulo estava acessível; antes do teste, os indicadores mostravam 15 atividades, 8 com pontuação, 7 sem pontuação e 8 com descrição. |
+| QUANDO — roteiro | Pesquisei o registro próprio pelo nome, alterei a pontuação de 0 para 10, salvei e reabri para conferir. Depois restaurei 0 e conferi novamente a lista e os indicadores. |
 | ENTÃO — critério original | Conferir com/sem pontuação e com descrição. |
 | Aceitação | Comparar o obtido com o critério acima e com a regra confirmada registrada; verificar todas as variações aplicáveis. Não presumir texto exato de mensagem. |
 | Verificações comuns propostas | G13, G20 e G24 conforme vínculos acessíveis; G21 para erro e G23 para teclado/foco/mensagens quando aplicáveis. Identificar aplicação como C34-Gyy-CAMPO e justificar não aplicabilidade. |
-| Resultado obtido | Ainda não observei; vou preencher após executar. |
-| Status | Não executado |
-| Data/hora e fuso | Não registrado; preencher na execução. |
-| Executor real | Ainda não registrado; vou informar quem operou a interface e eventual assistência utilizada. |
-| Ambiente | Registrar URL, unidade, versão do sistema se exposta, navegador/versão e SO reais. |
-| Vídeo e tempos | Não produzido. |
+| Resultado obtido | A pesquisa retornou o registro de código 17. Após alterar a pontuação de 0 para 10, a linha mostrou 10 e os indicadores mudaram para 15 total, 9 com pontuação, 6 sem pontuação e 8 com descrição. Ao reabrir, confirmei 10. Nesta leitura, o campo descrição continha 255 caracteres. Restaurei a pontuação para 0; a lista voltou a mostrar “-” e os indicadores retornaram a 15, 8, 7 e 8. Não alterei o código 18. |
+| Status | Executado; julgamento pendente de confirmação da regra do zero e dos indicadores |
+| Data/hora e fuso | 19/11/2026, aproximadamente 01:30–01:33 (America/Sao_Paulo). |
+| Executor real | O assistente Codex operou a interface sob minha solicitação; eu iniciei e encerrei a gravação Jam. |
+| Ambiente | https://sifit.centrion.com.br/atividades; perfil exibido Jair; Chrome 158.0.8127.36 em Windows 11. Unidade ativa não confirmada. |
+| Vídeo e tempos | [Gravação Jam exclusiva de C34-CT05, 2min49s](https://jam.dev/c/a5750574-2ab8-4b46-9d3f-ef2734ceff31?s=mcp). Busca e alteração da pontuação, conferência após reabertura e restauração do valor original. |
 | Prints | Não produzidos. |
-| Bug associado | Ainda não confirmei nenhum nesta etapa. |
-| Fonte da regra / pendências | Confirmar antes do julgamento; registrar fonte e decisão concreta aqui. |
+| Bug associado | Nenhum confirmado; não há regra escrita confirmada para a contagem de pontuação 0 nem para o limite de descrição observado. |
+| Fonte da regra / pendências | Critério original do Inventário: “Conferir com/sem pontuação e com descrição.” A alteração de 0 para 10 e a restauração refletiram nos indicadores. Ainda preciso confirmar se zero deve ser contado como “com pontuação”; a leitura de 255 caracteres também não comprova, sozinha, limite máximo da descrição. |
