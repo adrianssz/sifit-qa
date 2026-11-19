@@ -170,3 +170,8 @@ Gravar também sucessos. Não mostrar credenciais, tokens, conexões ou dados re
 | Bug associado | Ainda não confirmei nenhum nesta etapa. |
 | Fonte da regra / pendências | Confirmar antes do julgamento; registrar fonte e decisão concreta aqui. |
 
+
+
+## Complemento de evidência — C14-CT04
+
+A captura da etapa foi anexada em [jam-nao-carrega-20261119.png](../contribuicoes/victor/jam-nao-carrega-20261119.png). Ao tentar registrar a execução pelo Jam, a extensão não carregou e exibiu “This is taking longer than expected”, pedindo para recarregar. A captura documenta a limitação de gravação; não é um defeito do SIFIT. O cadastro de QA_VICTOR_EXERCICIO_20261119_001 e as contagens descritas acima permanecem com julgamento pendente, pois faltam as variações de validação.
