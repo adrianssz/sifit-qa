@@ -1,0 +1,181 @@
+# Planejamento dos testes — Victor
+
+**Responsável:** Victor  
+**Data de elaboração:** 18/11/2026  
+**Tipo:** testes funcionais manuais  
+**Sistema de referência:** https://sifit.centrion.com.br/login  
+**Versão do sistema, navegador/versão e sistema operacional:** a registrar na execução; não verificados nesta etapa.  
+**Fontes:** [Inventário](../../../Invent%C3%A1rio.md), [requisitos do Victor](requisitos.md) e [plano do modelo do professor](https://github.com/Adnyslougansilva/extensao-qa/blob/main/OrangeHRM/2-plano%20de%20testes.md).  
+**Estado inicial:** 71 casos planejados, todos Não executados; nenhuma evidência de execução produzida nesta etapa.
+
+## 1. Objetivo e escopo
+
+Verificar os módulos atribuídos ao Victor, documentando resultados reais e dependências com rastreabilidade ao inventário. Preservar exatamente os IDs e as descrições dos casos. Os RFxx de requisitos.md seguem o número dos cenários.
+
+| Cenário | Módulo | Casos planejados | Prioridade proposta | Arquivo previsto em SIFIT/cenarios-de-testes/ |
+|---|---|---:|---|---|
+| C05 | Check-in | 9 | Alta | `C05-check-in.md` |
+| C06 | Presenças | 6 | Alta | `C06-presencas.md` |
+| C07 | SifitBox — Aulas | 6 | Alta | `C07-sifitbox-aulas.md` |
+| C13 | Ficha de Treino | 10 | Alta | `C13-ficha-de-treino.md` |
+| C14 | Exercícios | 6 | Alta | `C14-exercicios.md` |
+| C18 | Turmas | 9 | Alta | `C18-turmas.md` |
+| C20 | SifitBox — Turmas | 7 | Alta | `C20-sifitbox-turmas.md` |
+| C34 | Atividades | 5 | Média | `C34-atividades.md` |
+| C45 | Modelos de Ficha | 6 | Alta | `C45-modelos-de-ficha.md` |
+| C47 | Fluxos integrados e conferência no banco — CT03, CT04 e CT06–CT10 | 7 | Alta | `C47-victor.md` |
+| **Total** | **64 casos de módulos + 7 casos do C47** | **71** | | |
+
+Prioridade Alta indica dependência entre módulos, persistência ou fluxo de presença/treino; a investigação histórica de Exercícios também merece atenção inicial. A prioridade é de planejamento, não severidade de bug.
+
+C47-CT01, C47-CT02 e C47-CT05 ficam como referência de outros módulos, fora das 71 execuções do Victor. C47-CT07 a C47-CT10 são aplicados exclusivamente aos registros do Victor, sem assumir cobertura dos colegas.
+
+As alterações no repositório ficam restritas a `SIFIT/contribuicoes/victor/requisitos.md`, `planejamento.md`, `bugs.md`, `resultados.md`, aos dez arquivos de cenário acima e a `SIFIT/3-relatorio-de-bugs.md`. Não editar inventário, README ou arquivos de colegas. O arquivo de C47 de outro integrante não será substituído.
+
+Não incluir carga, exploração de vulnerabilidades, transações reais ou alterações em registros de outras pessoas.
+
+## 2. Etapas e pontos de acompanhamento
+
+| Etapa | Entrega | Ponto de parada |
+|---|---|---|
+| 1 — Preparação documental | Conferir a versão atual, criar requisitos.md e planejamento.md em commits pequenos na main. | Parar após conferir os dois arquivos publicados. |
+| 2 — Roteiros e registros | Criar os dez cenários, bugs.md e resultados.md, sem resultados fictícios; inicializar a seção do Victor no relatório geral se necessário. | Parar com os roteiros disponíveis para revisão, antes de executar. |
+| 3 — Preparação do ambiente | Confirmar ambiente, acesso, gravação, dados e dependências; reconhecer os controles sem concluir casos formais. | Parar antes do primeiro conjunto de testes com gravação. |
+| 4 — Execução por cenário | Executar um conjunto pequeno, revisar evidências, atualizar cenário/bugs/resultados e publicar. | Parar entre cenários ou fluxos importantes. |
+| 5 — Integrações e fechamento | Conferir C47, retestes, links, contagens e limitações reais. | Apresentar conclusão apoiada nas evidências. |
+
+Somente a etapa 1 está sendo entregue nesta revisão. As demais estão planejadas. As datas de execução serão preenchidas quando ocorrerem; não há cronograma realizado presumido.
+
+Antes de cada edição, reler a versão atual do arquivo e conferir a main. Criar arquivos apenas se continuarem ausentes. Em caso de alteração concorrente, reler e reconciliar sem sobrescrever trabalho novo. Após cada commit, conferir os caminhos e o conteúdo publicado.
+
+## 3. Preparação e dependências
+
+| Dependência | Uso | Situação nesta etapa |
+|---|---|---|
+| Acesso ao SIFIT e identificação do perfil/unidade | Todos os módulos; limitar a cobertura ao perfil realmente disponível. | Não verificado. Não registrar credenciais. |
+| Ambiente correspondente ao banco | Integrações e SELECTs. Usar a URL do inventário como referência e verificar a correspondência antes de executar. | Não verificado. Não misturar evidências de SIFIT e SIFIT Alfa. |
+| Gravação e compartilhamento | Jam para navegador; gravação local/Drive quando necessário. | A conversa anterior relata Workbench instalado e pasta SIFIT-QA-Victor criada; acesso, conteúdo, gravação e permissões não foram verificados nesta etapa. |
+| Cliente e matrícula de teste | Check-in, presença e ficha de treino. | Identificar cliente QA_VICTOR elegível e seus IDs reais; dependência de módulos C08/C09. |
+| Plano de teste | Turmas e elegibilidade. | Confirmar referência válida do C26 sem alterar registros de colegas. |
+| Personal e objetivo de treino | Ficha de treino e opções de turma. | Confirmar referências disponíveis de C30/C16. |
+| Grupo muscular e biblioteca | Exercício → modelo → ficha. | Dependência do C15 e do carregamento de C14; não presumir biblioteca vazia diante de erro. |
+| Modalidade e turma recorrente | Geração de aulas e fluxo integrado. | Preparar pelos C20-CT01/CT02 com dados próprios. |
+| Câmera/dispositivo e QR controlado | C05-CT08. | Dependência condicional; verificar disponibilidade antes do caso. |
+| Banco de dados de leitura | C47-CT07 a C47-CT09. | Não acessado nesta etapa; confirmar schema real e IDs QA_VICTOR. |
+| Regras de negócio pendentes | Casos listados em requisitos.md. | Registrar fonte e confirmação antes de reprovar comportamento. |
+
+Referências de outros módulos são pré-condições, não execuções atribuídas ao Victor. Qualquer preparação de dados fora de seus módulos deve ser identificada como preparação e usar registros próprios; não alterar os arquivos ou registros de colegas.
+
+A falta de uma dependência na fase documental não marca automaticamente um caso como Bloqueado. O bloqueio será registrado quando constatado na preparação ou tentativa de execução, com motivo concreto.
+
+## 4. Dados de teste
+
+Usar o padrão `QA_VICTOR_<ENTIDADE>_<AAAAMMDD>_<SEQUENCIA>`. Substituir a data pela data real de preparação e anotar o ID efetivamente gerado. Os nomes abaixo são propostas, não cadastros já realizados.
+
+| Entidade | Exemplo de prefixo | Finalidade |
+|---|---|---|
+| Cliente | QA_VICTOR_CLIENTE | Presença e ficha de treino. |
+| Plano/referência de apoio | QA_VICTOR_PLANO | Apenas se for necessário preparar referência própria. |
+| Turma | QA_VICTOR_TURMA | C18; usar registros separados para edição, inativação e exclusão. |
+| Modalidade | QA_VICTOR_MODALIDADE | C20 e aulas correspondentes. |
+| Turma recorrente | QA_VICTOR_RECORRENCIA | C20 → C07 → C05 → C06. |
+| Grupo muscular/exercício | QA_VICTOR_GRUPO / QA_VICTOR_EXERCICIO | Referências controladas para a cadeia de treino. |
+| Modelo de ficha | QA_VICTOR_MODELO | Modelo original a comparar antes e depois da aplicação. |
+| Ficha | QA_VICTOR_FICHA | Identificação em campo disponível, sem presumir que exista um campo de título. |
+| Atividade | QA_VICTOR_ATIVIDADE | C34 e respectivas validações/indicadores. |
+| Registro descartável | QA_VICTOR_DESCARTAVEL | Cancelamento, exclusão e análise de dependências. |
+
+Quando não houver nome livre, relacionar o ID real ao registro QA_VICTOR de origem. Registrar módulo, código, data/hora, unidade e caso que criou/usou o dado. Não inventar IDs do sistema.
+
+Dados inválidos devem variar um campo por vez. Escolher números válidos e limites somente após confirmar a regra; não presumir que zero, decimal, nome repetido ou horário sobreposto seja proibido. Incluir espaços, acentos e limites de texto onde aplicáveis.
+
+## 5. Sequência proposta de execução
+
+A sequência pode mudar por dependências constatadas; cada pausa preserva o acompanhamento solicitado.
+
+1. Conferir sessão, unidade, ambiente e gravação. Reconhecer Exercícios e o editor de Modelos de Ficha para definir os roteiros dependentes sem inventar controles.
+2. Preparar cliente/matrícula, plano, personal, objetivo e grupo muscular controlados, quando necessários. Registrar os IDs e a origem das referências.
+3. Executar C34 e depois C18, em conjuntos separados, com dados próprios.
+4. Executar C20 para criar modalidade/recorrência; executar C07 para consultar e gerar aulas controladas. Retomar C20-CT06/CT07 conforme as aulas estiverem disponíveis.
+5. Executar C05 com cliente elegível e C06 para conferir o reflexo da entrada. Avaliar C47-CT03 com a cadeia completa e evidência identificada.
+6. Executar C14, C45 e C13 conforme a biblioteca, os modelos e as fichas forem preparados. Retomar C14-CT06 e C45-CT05 após existir a ficha. Avaliar C47-CT04.
+7. Conferir C47-CT06 a C47-CT10 somente nos registros próprios; aplicar as verificações de banco quando houver acesso correspondente ao ambiente.
+8. Fazer retestes e fechamento, mantendo as tentativas anteriores e registrando limitações.
+
+Os casos C07-CT05/CT06, C13-CT06/CT07, C14-CT04/CT05 e C45-CT02/CT03/CT04 exigem reconhecimento do editor/detalhe antes de um roteiro completo. Sua descrição original será mantida, com controles efetivos documentados depois.
+
+## 6. Técnicas e verificações comuns
+
+Aplicar caminho feliz, testes negativos, partição de equivalência, valores limite, transições de status, filtros e conferência cruzada. O reconhecimento exploratório prepara o roteiro e não substitui execução formal.
+
+Usar G01–G24 conforme o inventário: cadastro, campos, formatos/limites, cancelamento, persistência, filtros, navegação, exclusão, dependências, erros e evidências. Na etapa 2, cada cenário listará seus Gxx aplicáveis, sem mudar a descrição original nem inflar a contagem base de 71 casos.
+
+Casos com múltiplas variações terão sufixos A/B/C e resultado por variação. Um caso principal só poderá ser aprovado quando todas as variações aplicáveis e os critérios confirmados tiverem sido verificados. Retestes mantêm o ID original, com número da tentativa/data em campo próprio.
+
+## 7. Status e contagem
+
+| Status | Critério |
+|---|---|
+| Não executado | Ainda não houve execução formal documentada; inclui os 71 casos desta etapa. |
+| Aprovado | Execução concluída e evidenciada; todos os critérios confirmados aplicáveis foram atendidos. |
+| Reprovado | Divergência reproduzida contra critério confirmado, com resultado real e evidência. |
+| Bloqueado | Uma dependência, acesso, regra indispensável ou falha de carregamento constatada impede concluir/julgar; registrar motivo e o que foi observado. |
+| Não se aplica | Recurso ou condição comprovadamente não aplicável ao ambiente/escopo, com justificativa e evidência. |
+
+Tentativa iniciada mas inconclusa deve ser descrita, sem aprovação artificial. Regra desconhecida fica pendente de confirmação; não é bug. Não se aplica não é usado só porque faltou acesso ou dados.
+
+- Base planejada: 71 casos (64 + 7).
+- Execuções concluídas com julgamento: Aprovados + Reprovados.
+- Não executados, Bloqueados e Não se aplica são contados separadamente.
+- Cobertura com julgamento: (Aprovados + Reprovados) ÷ 71. Registrar alterações futuras de escopo antes de mudar o denominador.
+- Aprovação entre os julgados: Aprovados ÷ (Aprovados + Reprovados); sem execuções, informar “não calculável”.
+- Variações, tentativas e Gxx têm contagem auxiliar; não criam silenciosamente novos casos principais.
+
+## 8. Evidências e execução
+
+Cada caso terá objetivo/requisito, descrição original, tipo, pré-condições, dados, passos em DADO/QUANDO/ENTÃO, critérios de aceitação, resultado obtido, status, data/hora com fuso, executor real, navegador/versão, sistema operacional, URL/unidade, vídeo, prints e bug associado quando houver.
+
+Victor é o responsável pelo trabalho. O campo executor deve indicar quem efetivamente operou a interface e a assistência utilizada, sem atribuição fictícia.
+
+Gravar casos aprovados e reprovados. Preferir um vídeo por caso simples; fluxos integrados podem usar vídeo contínuo com tempos inicial/final para cada caso. Usar somente links efetivamente gerados e conferir seu acesso. A pasta SIFIT-QA-Victor pode receber gravações exportadas; não presumir que o compartilhamento já esteja correto.
+
+Revisar vídeos, capturas e eventuais logs antes de publicar: não incluir senhas, tokens, strings de conexão ou dados pessoais reais. Não reproduzir as credenciais do material acadêmico.
+
+Capturas serão armazenadas em local de evidências autorizado e referenciadas por link; este planejamento não amplia os caminhos de arquivos do repositório autorizados.
+
+## 9. Registro de bugs, investigações e bloqueios
+
+Manter em bugs.md somente defeitos confirmados por reprodução e critério fundamentado; usar IDs próprios `BUG-VICTOR-NNN` após conferir duplicidades. Registrar título, caso, pré-condições, passos mínimos, esperado com fonte, obtido, frequência, ambiente, data/hora, severidade justificada, evidências, estado e causa apenas quando demonstrada.
+
+Investigações e bloqueios terão seções separadas, sem numeração de bug confirmado. O erro histórico em Exercícios exige nova observação; não importar como bug de Victor.
+
+Atualizar `SIFIT/3-relatorio-de-bugs.md` apenas com a contribuição do Victor e links rastreáveis, preservando todo conteúdo alheio. Se o relatório ainda estiver ausente, inicializar uma seção claramente identificada, sem afirmar que não há bugs no projeto. Nenhum bug será criado para preencher um modelo.
+
+## 10. Banco, integridade e ambiente compartilhado
+
+Identificar tabelas, colunas e relações a partir do schema real. Conferir somente registros próprios, com consultas de leitura e filtros pelos IDs registrados. Não inventar SQL com nomes de tabelas presumidos; não usar escrita direta no banco.
+
+Em C47-CT08, comparar antes/depois de cancelar uma operação da interface. Em C47-CT09, usar registros descartáveis e a regra confirmada de preservação; a eventual exclusão ocorre pela interface, dentro do caso aplicável, com conferência posterior de leitura.
+
+Registrar horário, unidade e IDs para distinguir alterações de colegas. Mudanças de terceiros não são atribuídas ao teste. Exclusões não podem apagar evidência necessária nem referências de outros integrantes.
+
+## 11. Critérios de entrada, saída e riscos
+
+**Entrada por caso:** roteiro revisado, critérios suficientes para julgamento, ambiente identificado, dados preparados, dependências disponíveis e captura configurada. Se faltar condição, registrar a pendência sem forçar execução.
+
+**Saída:** todos os casos têm estado real; as execuções concluídas têm evidências acessíveis; bloqueios e dúvidas estão explícitos; bugs confirmados e retestes estão vinculados; contagens e links foram conferidos. Casos bloqueados ou não executados impedem declarar cobertura completa.
+
+| Risco | Tratamento |
+|---|---|
+| Ambiente compartilhado muda durante o caso | Registrar IDs e horários, comparar a mesma unidade e repetir apenas quando necessário. |
+| Dependência indisponível ou tela com erro | Documentar condição e impacto, preservando a distinção entre investigação e bug. |
+| Regra desconhecida | Solicitar confirmação com exemplo concreto; não adotar premissa como requisito obrigatório. |
+| Interface e banco de ambientes diferentes | Verificar a correspondência antes de comparar dados. |
+| Importação ou geração com efeito amplo | Delimitar turma, período e conjunto próprio; só prosseguir com escopo de teste conhecido. |
+| Evidência sem gravação ou link acessível | Registrar a limitação e complementar a evidência, sem inventar vídeo ou conclusão. |
+
+## 12. Entregáveis e continuidade
+
+Nesta etapa: requisitos.md e planejamento.md. Próxima etapa: os dez cenários indicados, bugs.md, resultados.md e a contribuição identificada do Victor no relatório geral. Após as execuções: resultados observados, links reais, contagens e conclusão com limitações.
+
+A documentação inicial não certifica o funcionamento do SIFIT.
