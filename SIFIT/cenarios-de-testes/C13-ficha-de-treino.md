@@ -1,7 +1,7 @@
 # C13 — Ficha de Treino — Meus testes
 
 **Responsável:** Victor  
-**Estado:** C13-CT10 executado parcialmente, com julgamento pendente; demais testes não executados.  
+**Estado:** C13-CT09 e C13-CT10 executados parcialmente, com julgamento pendente; demais testes não executados.  
 **Fonte:** [Inventário](../../Invent%C3%A1rio.md), blob `d3885feed1a1909bc57ee56f4041b18facb5b813`.  
 **Requisito:** [RF13](../contribuicoes/victor/requisitos.md).  
 **Registros:** [resultados](../contribuicoes/victor/resultados.md) e [bugs](../contribuicoes/victor/bugs.md).
@@ -273,3 +273,10 @@ Gravar também sucessos. Não mostrar credenciais, tokens, conexões ou dados re
 | Prints | Não produzidos. |
 | Bug associado | Ainda não confirmei nenhum nesta etapa. |
 | Fonte da regra / pendências | Critério original do inventário. A lista estava vazia antes e depois; cancelar fechou o modal sem gerar ficha. Esc e clique fora não fecharam o modal. Falta identificar e testar uma ação de fechar separada, com gravação dessa tentativa; não abri bug. |
+
+
+## Atualização — C13-CT09 (19/11/2026)
+
+Busquei `QA_VICTOR` na listagem de fichas com Status `Todos`. A tela mostrou “Nenhuma ficha encontrada”; os indicadores Fichas cadastradas, Fichas ativas, Vencendo em 7 dias e Inativas/canceladas ficaram em zero. Sem ficha própria, não validei correspondência positiva nem paginação; mantenho o caso parcial, com julgamento pendente e sem bug confirmado.
+
+![C13-CT09 — busca de fichas QA_VICTOR sem resultados](https://github.com/user-attachments/assets/b7a8ea19-d599-491d-833f-cea916fbe378)
