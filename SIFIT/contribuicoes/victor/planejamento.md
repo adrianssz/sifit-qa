@@ -3,7 +3,7 @@
 **Responsável:** Victor  
 **Data de elaboração:** 18/11/2026  
 **Tipo:** testes funcionais manuais  
-**Sistema de referência:** https://sifitalfa.centrion.com.br  
+**Sistema de referência:** https://sifit.centrion.com.br/  
 **Versão do sistema, navegador/versão e sistema operacional:** a registrar na execução; não verificados nesta etapa.  
 **Fontes:** [Inventário](../../../Invent%C3%A1rio.md), [requisitos dos meus testes](requisitos.md) e [plano do modelo do professor](https://github.com/Adnyslougansilva/extensao-qa/blob/main/OrangeHRM/2-plano%20de%20testes.md).  
 **Estado inicial:** 71 casos planejados, todos Não executados; nenhuma evidência de execução produzida nesta etapa.
@@ -53,7 +53,7 @@ Antes de cada edição, reler a versão atual do arquivo e conferir a main. Cria
 | Dependência | Uso | Situação nesta etapa |
 |---|---|---|
 | Acesso ao SIFIT e identificação do perfil/unidade | Todos os módulos; limitar a cobertura ao perfil realmente disponível. | Não verificado. Não registrar credenciais. |
-| Ambiente correspondente ao banco | Integrações e SELECTs. Usarei o SIFIT Alfa, conforme confirmei em 18/11/2026, e verificarei a correspondência do banco antes de comparar dados. | Não verificado. Não misturar evidências de SIFIT e SIFIT Alfa. |
+| Ambiente correspondente ao banco | Integrações e SELECTs. Usarei https://sifit.centrion.com.br/, conforme o endereço corrigido em 18/11/2026, e verificarei a correspondência do banco antes de comparar dados. | Não verificado. Não misturar evidências de SIFIT e SIFIT Alfa. |
 | Gravação e compartilhamento | Jam para navegador; gravação local/Drive quando necessário. | A conversa anterior relata Workbench instalado e pasta SIFIT-QA-Victor criada; acesso, conteúdo, gravação e permissões não foram verificados nesta etapa. |
 | Cliente e matrícula de teste | Check-in, presença e ficha de treino. | Identificar cliente QA_VICTOR elegível e seus IDs reais; dependência de módulos C08/C09. |
 | Plano de teste | Turmas e elegibilidade. | Confirmar referência válida do C26 sem alterar registros de colegas. |
