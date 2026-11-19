@@ -1,16 +1,16 @@
-# Planejamento dos testes — Victor
+# Planejamento dos testes — Meus testes
 
 **Responsável:** Victor  
 **Data de elaboração:** 18/11/2026  
 **Tipo:** testes funcionais manuais  
-**Sistema de referência:** https://sifit.centrion.com.br/login  
+**Sistema de referência:** https://sifitalfa.centrion.com.br  
 **Versão do sistema, navegador/versão e sistema operacional:** a registrar na execução; não verificados nesta etapa.  
-**Fontes:** [Inventário](../../../Invent%C3%A1rio.md), [requisitos do Victor](requisitos.md) e [plano do modelo do professor](https://github.com/Adnyslougansilva/extensao-qa/blob/main/OrangeHRM/2-plano%20de%20testes.md).  
+**Fontes:** [Inventário](../../../Invent%C3%A1rio.md), [requisitos dos meus testes](requisitos.md) e [plano do modelo do professor](https://github.com/Adnyslougansilva/extensao-qa/blob/main/OrangeHRM/2-plano%20de%20testes.md).  
 **Estado inicial:** 71 casos planejados, todos Não executados; nenhuma evidência de execução produzida nesta etapa.
 
 ## 1. Objetivo e escopo
 
-Verificar os módulos atribuídos ao Victor, documentando resultados reais e dependências com rastreabilidade ao inventário. Preservar exatamente os IDs e as descrições dos casos. Os RFxx de requisitos.md seguem o número dos cenários.
+Vou verificar os módulos que ficaram sob minha responsabilidade e registrar os resultados reais e as dependências, mantendo a ligação com o inventário. Preservar exatamente os IDs e as descrições dos casos. Os RFxx de requisitos.md seguem o número dos cenários.
 
 | Cenário | Módulo | Casos planejados | Prioridade proposta | Arquivo previsto em SIFIT/cenarios-de-testes/ |
 |---|---|---:|---|---|
@@ -28,7 +28,7 @@ Verificar os módulos atribuídos ao Victor, documentando resultados reais e dep
 
 Prioridade Alta indica dependência entre módulos, persistência ou fluxo de presença/treino; a investigação histórica de Exercícios também merece atenção inicial. A prioridade é de planejamento, não severidade de bug.
 
-C47-CT01, C47-CT02 e C47-CT05 ficam como referência de outros módulos, fora das 71 execuções do Victor. C47-CT07 a C47-CT10 são aplicados exclusivamente aos registros do Victor, sem assumir cobertura dos colegas.
+C47-CT01, C47-CT02 e C47-CT05 ficam como referência de outros módulos, fora das 71 execuções dos meus testes. C47-CT07 a C47-CT10 são aplicados exclusivamente aos meus registros, sem assumir cobertura dos colegas.
 
 As alterações no repositório ficam restritas a `SIFIT/contribuicoes/victor/requisitos.md`, `planejamento.md`, `bugs.md`, `resultados.md`, aos dez arquivos de cenário acima e a `SIFIT/3-relatorio-de-bugs.md`. Não editar inventário, README ou arquivos de colegas. O arquivo de C47 de outro integrante não será substituído.
 
@@ -39,12 +39,12 @@ Não incluir carga, exploração de vulnerabilidades, transações reais ou alte
 | Etapa | Entrega | Ponto de parada |
 |---|---|---|
 | 1 — Preparação documental | Conferir a versão atual, criar requisitos.md e planejamento.md em commits pequenos na main. | Parar após conferir os dois arquivos publicados. |
-| 2 — Roteiros e registros | Criar os dez cenários, bugs.md e resultados.md, sem resultados fictícios; inicializar a seção do Victor no relatório geral se necessário. | Parar com os roteiros disponíveis para revisão, antes de executar. |
+| 2 — Roteiros e registros | Criar os dez cenários, bugs.md e resultados.md, sem resultados fictícios; inicializar a seção dos meus testes no relatório geral se necessário. | Parar com os roteiros disponíveis para revisão, antes de executar. |
 | 3 — Preparação do ambiente | Confirmar ambiente, acesso, gravação, dados e dependências; reconhecer os controles sem concluir casos formais. | Parar antes do primeiro conjunto de testes com gravação. |
 | 4 — Execução por cenário | Executar um conjunto pequeno, revisar evidências, atualizar cenário/bugs/resultados e publicar. | Parar entre cenários ou fluxos importantes. |
 | 5 — Integrações e fechamento | Conferir C47, retestes, links, contagens e limitações reais. | Apresentar conclusão apoiada nas evidências. |
 
-Somente a etapa 1 está sendo entregue nesta revisão. As demais estão planejadas. As datas de execução serão preenchidas quando ocorrerem; não há cronograma realizado presumido.
+Concluí a etapa 1 e preparei os roteiros e registros da etapa 2. As execuções continuam planejadas. As datas de execução serão preenchidas quando ocorrerem; não há cronograma realizado presumido.
 
 Antes de cada edição, reler a versão atual do arquivo e conferir a main. Criar arquivos apenas se continuarem ausentes. Em caso de alteração concorrente, reler e reconciliar sem sobrescrever trabalho novo. Após cada commit, conferir os caminhos e o conteúdo publicado.
 
@@ -53,7 +53,7 @@ Antes de cada edição, reler a versão atual do arquivo e conferir a main. Cria
 | Dependência | Uso | Situação nesta etapa |
 |---|---|---|
 | Acesso ao SIFIT e identificação do perfil/unidade | Todos os módulos; limitar a cobertura ao perfil realmente disponível. | Não verificado. Não registrar credenciais. |
-| Ambiente correspondente ao banco | Integrações e SELECTs. Usar a URL do inventário como referência e verificar a correspondência antes de executar. | Não verificado. Não misturar evidências de SIFIT e SIFIT Alfa. |
+| Ambiente correspondente ao banco | Integrações e SELECTs. Usarei o SIFIT Alfa, conforme confirmei em 18/11/2026, e verificarei a correspondência do banco antes de comparar dados. | Não verificado. Não misturar evidências de SIFIT e SIFIT Alfa. |
 | Gravação e compartilhamento | Jam para navegador; gravação local/Drive quando necessário. | A conversa anterior relata Workbench instalado e pasta SIFIT-QA-Victor criada; acesso, conteúdo, gravação e permissões não foram verificados nesta etapa. |
 | Cliente e matrícula de teste | Check-in, presença e ficha de treino. | Identificar cliente QA_VICTOR elegível e seus IDs reais; dependência de módulos C08/C09. |
 | Plano de teste | Turmas e elegibilidade. | Confirmar referência válida do C26 sem alterar registros de colegas. |
@@ -64,7 +64,7 @@ Antes de cada edição, reler a versão atual do arquivo e conferir a main. Cria
 | Banco de dados de leitura | C47-CT07 a C47-CT09. | Não acessado nesta etapa; confirmar schema real e IDs QA_VICTOR. |
 | Regras de negócio pendentes | Casos listados em requisitos.md. | Registrar fonte e confirmação antes de reprovar comportamento. |
 
-Referências de outros módulos são pré-condições, não execuções atribuídas ao Victor. Qualquer preparação de dados fora de seus módulos deve ser identificada como preparação e usar registros próprios; não alterar os arquivos ou registros de colegas.
+Vou usar referências de outros módulos como pré-condições. Se precisar preparar dados fora dos meus módulos, vou identificar essa preparação e usar registros próprios, preservando os arquivos e registros dos colegas.
 
 A falta de uma dependência na fase documental não marca automaticamente um caso como Bloqueado. O bloqueio será registrado quando constatado na preparação ou tentativa de execução, com motivo concreto.
 
@@ -135,7 +135,7 @@ Tentativa iniciada mas inconclusa deve ser descrita, sem aprovação artificial.
 
 Cada caso terá objetivo/requisito, descrição original, tipo, pré-condições, dados, passos em DADO/QUANDO/ENTÃO, critérios de aceitação, resultado obtido, status, data/hora com fuso, executor real, navegador/versão, sistema operacional, URL/unidade, vídeo, prints e bug associado quando houver.
 
-Victor é o responsável pelo trabalho. O campo executor deve indicar quem efetivamente operou a interface e a assistência utilizada, sem atribuição fictícia.
+Sou responsável pelo trabalho. Vou registrar no campo executor quem operou a interface e a assistência utilizada.
 
 Gravar casos aprovados e reprovados. Preferir um vídeo por caso simples; fluxos integrados podem usar vídeo contínuo com tempos inicial/final para cada caso. Usar somente links efetivamente gerados e conferir seu acesso. A pasta SIFIT-QA-Victor pode receber gravações exportadas; não presumir que o compartilhamento já esteja correto.
 
@@ -147,9 +147,9 @@ Capturas serão armazenadas em local de evidências autorizado e referenciadas p
 
 Manter em bugs.md somente defeitos confirmados por reprodução e critério fundamentado; usar IDs próprios `BUG-VICTOR-NNN` após conferir duplicidades. Registrar título, caso, pré-condições, passos mínimos, esperado com fonte, obtido, frequência, ambiente, data/hora, severidade justificada, evidências, estado e causa apenas quando demonstrada.
 
-Investigações e bloqueios terão seções separadas, sem numeração de bug confirmado. O erro histórico em Exercícios exige nova observação; não importar como bug de Victor.
+Investigações e bloqueios terão seções separadas, sem numeração de bug confirmado. O erro histórico em Exercícios exige nova observação; não importar como bug dos meus testes.
 
-Atualizar `SIFIT/3-relatorio-de-bugs.md` apenas com a contribuição do Victor e links rastreáveis, preservando todo conteúdo alheio. Se o relatório ainda estiver ausente, inicializar uma seção claramente identificada, sem afirmar que não há bugs no projeto. Nenhum bug será criado para preencher um modelo.
+Atualizar `SIFIT/3-relatorio-de-bugs.md` apenas com a contribuição dos meus testes e links rastreáveis, preservando todo conteúdo alheio. Se o relatório ainda estiver ausente, inicializar uma seção claramente identificada, sem afirmar que não há bugs no projeto. Nenhum bug será criado para preencher um modelo.
 
 ## 10. Banco, integridade e ambiente compartilhado
 
@@ -176,6 +176,6 @@ Registrar horário, unidade e IDs para distinguir alterações de colegas. Mudan
 
 ## 12. Entregáveis e continuidade
 
-Nesta etapa: requisitos.md e planejamento.md. Próxima etapa: os dez cenários indicados, bugs.md, resultados.md e a contribuição identificada do Victor no relatório geral. Após as execuções: resultados observados, links reais, contagens e conclusão com limitações.
+Preparei requisitos.md, planejamento.md, os dez cenários indicados, bugs.md, resultados.md e minha seção no relatório geral. Minha próxima etapa será preparar o ambiente para executar os testes. Após as execuções: resultados observados, links reais, contagens e conclusão com limitações.
 
 A documentação inicial não certifica o funcionamento do SIFIT.
