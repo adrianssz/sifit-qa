@@ -1,14 +1,14 @@
 # C14 — Exercícios — Meus testes
 
 **Responsável:** Victor  
-**Estado:** roteiros iniciais; todos Não executados.  
+**Estado:** C14-CT01 investigado parcialmente, com julgamento pendente; demais casos não executados.  
 **Fonte:** [Inventário](../../Invent%C3%A1rio.md), blob `d3885feed1a1909bc57ee56f4041b18facb5b813`.  
 **Requisito:** [RF14](../contribuicoes/victor/requisitos.md).  
 **Registros:** [resultados](../contribuicoes/victor/resultados.md) e [bugs](../contribuicoes/victor/bugs.md).
 
 ## Preparação e julgamento
 
-Vou usar uma sessão autorizada no ambiente de referência https://sifit.centrion.com.br/, unidade identificada e dados próprios QA_VICTOR. Registrar códigos reais, data de preparação e estado inicial. As dependências e regras pendentes constam no [planejamento](../contribuicoes/victor/planejamento.md). Ainda preciso conferir os controles na tela antes das gravações.
+Vou usar uma sessão autorizada no ambiente de referência https://sifit.centrion.com.br/, unidade identificada e dados próprios QA_VICTOR. Registrar códigos reais, data de preparação e estado inicial. As dependências e regras pendentes constam no [planejamento](../contribuicoes/victor/planejamento.md). Já reconheci a biblioteca; C14-CT01 foi registrado como investigação parcial e gravei o carregamento separadamente.
 
 Antes da gravação, vou reconhecer a tela e completar os campos/limites/ações ainda desconhecidos. Preservar os IDs e descrições abaixo. Cada variação recebe sufixo A/B/C e evidência própria ou intervalo no vídeo. Não aprovar o caso principal com variações pendentes. Critérios do inventário são propostos; confirmar regras necessárias antes de reprovar. Falta de regra ou acesso exige registro de pendência/bloqueio concreto, sem bug confirmado automático.
 
@@ -24,21 +24,21 @@ Gravar também sucessos. Não mostrar credenciais, tokens, conexões ou dados re
 | Objetivo | Verificar o critério deste caso com dados próprios e evidência rastreável. |
 | Requisito | RF14 |
 | Pré-condições | Sessão/unidade identificadas; dados e referências do roteiro abaixo preparados; regras indispensáveis confirmadas. Se depender de editor, mapear os controles antes de concluir o roteiro. |
-| Dados | QA_VICTOR_C14_AAAAMMDD_NNN; substituir pela data real e registrar IDs gerados e valores de cada variação antes da execução. |
-| DADO | Que o módulo está acessível e o estado inicial dos registros próprios foi anotado. |
-| QUANDO — roteiro | Abrir biblioteca e aguardar conclusão do carregamento; registrar estado vazio ou mensagem real; em erro, repetir uma vez e registrar horário/caminho. |
+| Dados | Não criei, editei ou excluí dados. Observei a biblioteca existente, que exibiu 11 exercícios em 4 grupos. |
+| DADO | Que a página https://sifit.centrion.com.br/exercicios estava acessível na sessão autenticada exibida como Jair. |
+| QUANDO — roteiro | Abri a biblioteca de exercícios, aguardei o carregamento e recarreguei a página uma vez; conferi a contagem apresentada. |
 | ENTÃO — critério original | Distinguir biblioteca vazia de falha no servidor; reproduzir erro observado. |
 | Aceitação | Comparar o obtido com o critério acima e com a regra confirmada registrada; verificar todas as variações aplicáveis. Não presumir texto exato de mensagem. |
 | Verificações comuns propostas | G21; G21 para erro e G23 para teclado/foco/mensagens quando aplicáveis. Identificar aplicação como C14-Gyy-CAMPO e justificar não aplicabilidade. |
-| Resultado obtido | Ainda não observei; vou preencher após executar. |
-| Status | Não executado |
-| Data/hora e fuso | Não registrado; preencher na execução. |
-| Executor real | Ainda não registrado; vou informar quem operou a interface e eventual assistência utilizada. |
-| Ambiente | Registrar URL, unidade, versão do sistema se exposta, navegador/versão e SO reais. |
-| Vídeo e tempos | Não produzido. |
+| Resultado obtido | A biblioteca carregou 11 exercícios distribuídos em 4 grupos; após recarregar, a mesma contagem apareceu. Não observei erro de servidor nem mensagem de falha nesta execução. O inventário informa que havia um erro de servidor na inspeção-base, mas não consegui reproduzi-lo nesta sessão; por isso, a investigação não está concluída. |
+| Status | Investigação parcial; julgamento pendente |
+| Data/hora e fuso | 19/11/2026, aproximadamente 03:20–03:22 (America/Sao_Paulo), conforme Jam criado às 06:20 UTC. |
+| Executor real | Operei a interface com automação do assistente Codex, na sessão autenticada exibida como Jair. |
+| Ambiente | https://sifit.centrion.com.br/exercicios; unidade e versão não identificadas; Chrome 157.0.8103.78, Windows 11 (x86), conforme sessão/Jam. |
+| Vídeo e tempos | [Jam C14-CT01](https://jam.dev/c/4ee24160-d9b3-465d-b283-2b3dc4f2ae8f?s=mcp), 24 s; mostra o carregamento/recarregamento da biblioteca. Captura de tela, sem logs de console/rede. |
 | Prints | Não produzidos. |
 | Bug associado | Ainda não confirmei nenhum nesta etapa. |
-| Fonte da regra / pendências | Confirmar antes do julgamento; registrar fonte e decisão concreta aqui. |
+| Fonte da regra / pendências | O critério do inventário é distinguir biblioteca vazia de falha e reproduzir o erro observado na inspeção-base. Nesta execução a biblioteca carregou, então não pude reproduzir nem caracterizar aquele erro. Mantenho a investigação parcial; isso não confirma bug nem correção definitiva. |
 
 ## C14-CT02 — Importar biblioteca padrão
 
