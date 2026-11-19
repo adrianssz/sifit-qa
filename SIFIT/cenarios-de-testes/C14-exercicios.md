@@ -130,19 +130,19 @@ Gravar também sucessos. Não mostrar credenciais, tokens, conexões ou dados re
 | Pré-condições | Sessão/unidade identificadas; dados e referências do roteiro abaixo preparados; regras indispensáveis confirmadas. Se depender de editor, mapear os controles antes de concluir o roteiro. |
 | Dados | A biblioteca exibiu 11 exercícios em 4 grupos. Consultei a visualização do exercício AA (código 11) somente para leitura e fechei sem salvar. |
 | DADO | Que a página de Exercícios estava acessível e a biblioteca mostrava 11 exercícios em 4 grupos; não vi campos gerais de pesquisa ou filtros. |
-| QUANDO — roteiro | Conferi a listagem visível e abri a visualização de AA (código 11); observei os campos do formulário e fechei por Cancelar, sem salvar. Pesquisa/filtro e busca de termo inexistente ficaram sem executar por falta de controles gerais visíveis. |
+| QUANDO — roteiro | Conferi a listagem visível e abri a visualização de AA (código 11); observei os campos do formulário e fechei por Cancelar, sem salvar. Em tentativa complementar, abri Quarkan (código 17), observei Nome e opções de mídia sem prévia visível e fechei por Cancelar. Pesquisa/filtro e busca de termo inexistente ficaram sem executar por falta de controles gerais visíveis. |
 | ENTÃO — critério original | Detalhar os controles que aparecerem com biblioteca carregada. |
 | Aceitação | Comparar o obtido com o critério acima e com a regra confirmada registrada; verificar todas as variações aplicáveis. Não presumir texto exato de mensagem. |
 | Verificações comuns propostas | G01, G10, G11, G12 e G13 conforme ações disponíveis; G21 para erro e G23 para teclado/foco/mensagens quando aplicáveis. Identificar aplicação como C14-Gyy-CAMPO e justificar não aplicabilidade. |
-| Resultado obtido | A tela não apresentou campo geral de pesquisa ou filtro. A ação de visualização abriu o formulário do exercício AA (código 11), com Nome e opções de imagem/vídeo; a seção de vídeo mostrou “Não foi possível abrir a mídia”. Fechei por Cancelar sem alterar o registro. |
+| Resultado obtido | A tela não apresentou campo geral de pesquisa ou filtro. A visualização de AA (código 11) abriu formulário com Nome e opções de imagem/vídeo; a seção de vídeo mostrou “Não foi possível abrir a mídia”. Em Quarkan (código 17), o formulário mostrou Nome e opções de imagem/vídeo, sem prévia visível. Fechei ambos por Cancelar sem salvar ou alterar os registros. |
 | Status | Execução parcial; julgamento pendente: pesquisa e filtros não disponíveis na tela observada; validação da visualização depende de regra/esperado confirmado. |
-| Data/hora e fuso | 19/11/2026, aproximadamente 03:34 (America/Sao_Paulo). |
+| Data/hora e fuso | 19/11/2026, aproximadamente 03:34 e 04:15 (America/Sao_Paulo). |
 | Executor real | Operei a interface com automação assistida nesta sessão autenticada como Jair. |
 | Ambiente | https://sifit.centrion.com.br/exercicios; unidade não confirmada; versão do SIFIT não exposta; Chrome 157.0.8103.78, Windows 11 (x86). |
-| Vídeo e tempos | [Jam exclusivo C14-CT05, 31 s](https://jam.dev/c/0010fdc5-489a-42a1-82eb-1a9bd38dd537?s=mcp); captura de tela, sem logs de console/rede. |
+| Vídeo e tempos | [Jam exclusivo C14-CT05, 31 s](https://jam.dev/c/0010fdc5-489a-42a1-82eb-1a9bd38dd537?s=mcp), da tentativa com AA; a tentativa complementar com Quarkan não foi gravada. Captura de tela, sem logs de console/rede. |
 | Prints | Não produzidos. |
 | Bug associado | Ainda não confirmei nenhum nesta etapa. |
-| Fonte da regra / pendências | O critério do inventário pede detalhar os controles disponíveis. Não observei pesquisa/filtros gerais. A mídia de vídeo não abriu, mas não há critério confirmado sobre mídia nem modelo conhecido para verificar o conteúdo esperado; mantenho a execução parcial e não abri bug. |
+| Fonte da regra / pendências | O critério do inventário pede detalhar os controles disponíveis. Não observei pesquisa/filtros gerais. A mídia de vídeo de AA não abriu; em Quarkan não houve prévia de mídia visível. Não há critério confirmado para esses comportamentos nem modelo conhecido para comparar o conteúdo esperado; mantenho a execução parcial e não abri bug. |
 
 ## C14-CT06 — Associar exercício à ficha
 
