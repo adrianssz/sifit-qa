@@ -180,3 +180,8 @@ A captura da etapa foi anexada em [jam-nao-carrega-20261119.png](../contribuicoe
 ## Esclarecimento da evidência — C14-CT04
 
 A imagem `jam-nao-carrega-20261119.png` comprova somente a falha de carregamento da extensão Jam. Ela não é uma captura do SIFIT. A tela do SIFIT com QA_VICTOR_EXERCICIO_20261119_001 foi conferida novamente em 19/11/2026, mas não consegui anexar a imagem ao repositório; por isso, ainda não há print do SIFIT armazenado neste arquivo. O resultado permanece parcial e sem julgamento final.
+
+
+## Print do SIFIT — C14-CT04
+
+Anexei acima a captura da tela de Exercícios no SIFIT. Ela mostra o registro QA_VICTOR_EXERCICIO_20261119_001 no grupo Bicpes e a contagem exibida. A captura comprova somente o estado observado nesta tela; as variações ainda pendentes mantêm o caso parcial.<img width="1920" height="939" alt="clipboard" src="https://github.com/user-attachments/assets/2ad2a836-c996-4813-bf93-fd0eeb7d2cbe" />
