@@ -1,14 +1,14 @@
 # Resultados dos testes — Meus testes
 
-**Estado:** preparação documental. Ainda não realizei uma execução formal nesta etapa.
+**Estado:** 1 caso aprovado; 70 ainda não executados. Concluí uma execução formal nesta etapa.
 
 Base: 71 casos — 64 dos módulos e 7 de C47 (CT03, CT04, CT06–CT10). [Planejamento](planejamento.md).
 
 | Planejados | Não executados | Aprovados | Reprovados | Bloqueados constatados | Não se aplica |
 |---:|---:|---:|---:|---:|---:|
-| 71 | 71 | 0 | 0 | 0 | 0 |
+| 71 | 70 | 1 | 0 | 0 | 0 |
 
-Cobertura com julgamento: 0/71 = 0%. Aprovação entre julgados: não calculável. Preparei os roteiros, mas ainda não executei os testes. As pendências de preparação não foram contabilizadas como bloqueios constatados.
+Cobertura com julgamento: 1/71 = 1,41%. Aprovação entre julgados: 1/1 = 100%. Concluí C34-CT01; as outras 70 execuções permanecem pendentes. As pendências de preparação não foram contabilizadas como bloqueios constatados.
 
 ## Registro por caso
 
@@ -67,7 +67,7 @@ Cobertura com julgamento: 0/71 = 0%. Aprovação entre julgados: não calculáve
 | [C20-CT05](../../cenarios-de-testes/C20-sifitbox-turmas.md) | Horários inválidos e sobreposição | Não executado | Não produzido / não observado. |
 | [C20-CT06](../../cenarios-de-testes/C20-sifitbox-turmas.md) | Ativar/inativar modalidade e turma | Não executado | Não produzido / não observado. |
 | [C20-CT07](../../cenarios-de-testes/C20-sifitbox-turmas.md) | Gerar aulas a partir da recorrência | Não executado | Não produzido / não observado. |
-| [C34-CT01](../../cenarios-de-testes/C34-atividades.md) | Cadastrar atividade com pontuação | Não executado | Não produzido / não observado. |
+| [C34-CT01](../../cenarios-de-testes/C34-atividades.md) | Cadastrar atividade com pontuação | Aprovado | Código 10; nome QA_VICTOR_ATIVIDADE_20261119_001; pontuação 10; nome, valor e descrição confirmados após busca e reabertura. Detalhes em [C34-CT01](../../cenarios-de-testes/C34-atividades.md#c34-ct01--cadastrar-atividade-com-pontua%C3%A7%C3%A3o). Captura local C34-CT01-20261118.jpg; gravação iniciada durante a execução, sem link de compartilhamento disponível. |
 | [C34-CT02](../../cenarios-de-testes/C34-atividades.md) | Atividade sem pontuação | Não executado | Não produzido / não observado. |
 | [C34-CT03](../../cenarios-de-testes/C34-atividades.md) | Pontuação negativa, decimal ou texto | Não executado | Não produzido / não observado. |
 | [C34-CT04](../../cenarios-de-testes/C34-atividades.md) | Nome vazio e texto longo | Não executado | Não produzido / não observado. |
@@ -92,4 +92,4 @@ Atualizar caso e esta tabela com resultado real, data/hora/fuso, executor, ambie
 
 ## Conclusão atual
 
-Ainda não tenho evidências para concluir sobre o funcionamento dos meus módulos. Na próxima etapa, vou conferir o ambiente e os controles, preparar os dados e a gravação, validar as dependências e executar um conjunto pequeno por vez.
+Tenho evidência de que o cadastro de atividade com pontuação funcionou neste caso. Esse resultado não permite concluir sobre os demais casos, que continuam pendentes.
