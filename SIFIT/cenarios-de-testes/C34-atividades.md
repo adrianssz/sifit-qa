@@ -1,7 +1,7 @@
 # C34 — Atividades — Meus testes
 
 **Responsável:** Victor  
-**Estado:** C34-CT01 e C34-CT02 aprovados; demais casos ainda Não executados.
+**Estado:** C34-CT01 e C34-CT02 aprovados; C34-CT03 executado com julgamento pendente de regra; demais casos ainda Não executados.
 **Fonte:** [Inventário](../../Invent%C3%A1rio.md), blob `d3885feed1a1909bc57ee56f4041b18facb5b813`.  
 **Requisito:** [RF34](../contribuicoes/victor/requisitos.md).  
 **Registros:** [resultados](../contribuicoes/victor/resultados.md) e [bugs](../contribuicoes/victor/bugs.md).
@@ -76,21 +76,21 @@ Gravar também sucessos. Não mostrar credenciais, tokens, conexões ou dados re
 | Objetivo | Verificar o critério deste caso com dados próprios e evidência rastreável. |
 | Requisito | RF34 |
 | Pré-condições | Sessão/unidade identificadas; dados e referências do roteiro abaixo preparados; regras indispensáveis confirmadas. Se depender de editor, mapear os controles antes de concluir o roteiro. |
-| Dados | QA_VICTOR_C34_AAAAMMDD_NNN; substituir pela data real e registrar IDs gerados e valores de cada variação antes da execução. |
-| DADO | Que o módulo está acessível e o estado inicial dos registros próprios foi anotado. |
-| QUANDO — roteiro | Informar pontuação negativa, decimal e texto separadamente; comparar com formato/faixa confirmados. |
+| Dados | QA_VICTOR_ATIVIDADE_20261119_004_NEG (código 13; pontuação -1); QA_VICTOR_ATIVIDADE_20261119_005_DEC (código 14; informei 1.5); QA_VICTOR_ATIVIDADE_20261119_006_TXT (código 15; informei abc). |
+| DADO | Que o módulo Atividades estava acessível e havia 9 atividades, 6 com pontuação, 3 sem pontuação e 6 com descrição antes deste caso. |
+| QUANDO — roteiro | Cadastrei três atividades QA_VICTOR separadas: pontuação -1, valor informado 1.5 e texto abc; salvei e conferi as três na lista e os indicadores. |
 | ENTÃO — critério original | Aplicar regra numérica confirmada. |
 | Aceitação | Comparar o obtido com o critério acima e com a regra confirmada registrada; verificar todas as variações aplicáveis. Não presumir texto exato de mensagem. |
 | Verificações comuns propostas | G02, G03, G05, G06 e G08 conforme campo/regra confirmados; G21 para erro e G23 para teclado/foco/mensagens quando aplicáveis. Identificar aplicação como C34-Gyy-CAMPO e justificar não aplicabilidade. |
-| Resultado obtido | Ainda não observei; vou preencher após executar. |
-| Status | Não executado |
-| Data/hora e fuso | Não registrado; preencher na execução. |
-| Executor real | Ainda não registrado; vou informar quem operou a interface e eventual assistência utilizada. |
-| Ambiente | Registrar URL, unidade, versão do sistema se exposta, navegador/versão e SO reais. |
-| Vídeo e tempos | Não produzido. |
+| Resultado obtido | A atividade 004 foi salva e apareceu com -1 ponto. Informei 1.5 na atividade 005; após salvar, a lista mostrou 1 ponto. Informei abc na atividade 006; o campo aceitou o texto e, após salvar, a lista mostrou sem pontuação. Os indicadores finais foram 12 atividades, 7 com pontuação, 5 sem pontuação e 6 com descrição. Não reabri os registros 004–006. |
+| Status | Executado; julgamento pendente de confirmação da regra |
+| Data/hora e fuso | 19/11/2026, aproximadamente 01:02–01:06 (America/Sao_Paulo). |
+| Executor real | Nesta etapa, o assistente Codex operou a interface sob minha solicitação; eu iniciei e encerrei a gravação Jam. |
+| Ambiente | https://sifit.centrion.com.br/atividades; perfil exibido Jair; Chrome 158.0.8127.36 em Windows 11. Unidade ativa não confirmada. |
+| Vídeo e tempos | [Gravação Jam de 4min19s](https://jam.dev/c/58c5bb4e-0f2c-41e5-aab8-8d25db6080ea?s=mcp). Cadastro 004 (0:15–1:41), 005 (2:09–2:52) e 006 (3:08–3:49); gravação encerrada em 4:18. |
 | Prints | Não produzidos. |
-| Bug associado | Ainda não confirmei nenhum nesta etapa. |
-| Fonte da regra / pendências | Confirmar antes do julgamento; registrar fonte e decisão concreta aqui. |
+| Bug associado | Nenhum confirmado; a regra de aceitação para pontuação negativa, decimal e texto ainda precisa ser confirmada. |
+| Fonte da regra / pendências | Critério original do Inventário: “Aplicar regra numérica confirmada.” A regra para valores negativos, decimais e texto não foi confirmada; aguardo essa definição para julgar o resultado. |
 
 ## C34-CT04 — Nome vazio e texto longo
 
@@ -143,4 +143,3 @@ Gravar também sucessos. Não mostrar credenciais, tokens, conexões ou dados re
 | Prints | Não produzidos. |
 | Bug associado | Ainda não confirmei nenhum nesta etapa. |
 | Fonte da regra / pendências | Confirmar antes do julgamento; registrar fonte e decisão concreta aqui. |
-
