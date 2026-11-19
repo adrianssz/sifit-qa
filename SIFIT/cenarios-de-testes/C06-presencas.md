@@ -1,6 +1,6 @@
 # C06 — Presenças — Meus testes
 
-**Responsável:** Victor; **Estado:** C06-CT01 executado parcialmente, com julgamento pendente; C06-CT02 executado com julgamento pendente; C06-CT04 executado parcialmente, com julgamento pendente; C06-CT05 parcialmente executado; demais casos não executados.  
+**Responsável:** Victor; **Estado:** C06-CT01 executado parcialmente, com julgamento pendente; C06-CT02 executado com julgamento pendente; C06-CT03 executado parcialmente, com julgamento pendente; C06-CT04 executado parcialmente, com julgamento pendente; C06-CT05 parcialmente executado; demais casos não executados.  
 **Fonte:** [Inventário](../../Invent%C3%A1rio.md), blob `d3885feed1a1909bc57ee56f4041b18facb5b813`.  
 **Requisito:** [RF06](../contribuicoes/victor/requisitos.md).  
 **Registros:** [resultados](../contribuicoes/victor/resultados.md) e [bugs](../contribuicoes/victor/bugs.md).
@@ -75,7 +75,7 @@ Gravar também sucessos. Não mostrar credenciais, tokens, conexões ou dados re
 | Objetivo | Verificar o critério deste caso com dados próprios e evidência rastreável. |
 | Requisito | RF06 |
 | Pré-condições | Sessão/unidade identificadas; dados e referências do roteiro abaixo preparados; regras indispensáveis confirmadas. Se depender de editor, mapear os controles antes de concluir o roteiro. |
-| Dados | QA_VICTOR_C06_AAAAMMDD_NNN; substituir pela data real e registrar IDs gerados e valores de cada variação antes da execução. |
+| Dados | QA_VICTOR; intervalo consultado de 17/11/2026 a 19/11/2026. Não criei nem alterei registros. |
 | DADO | Que o módulo está acessível e o estado inicial dos registros próprios foi anotado. |
 | QUANDO — roteiro | Definir intervalo com presenças conhecidas nos dois limites e fora deles; buscar e comparar inclusão conforme regra de horário confirmada. |
 | ENTÃO — critério original | Incluir registros dos limites inicial e final conforme regra de horário. |
@@ -84,7 +84,7 @@ Gravar também sucessos. Não mostrar credenciais, tokens, conexões ou dados re
 | Resultado obtido | Em 19/11/2026, configurei De 17/11/2026 e Até 19/11/2026, busquei QA_VICTOR e a tela exibiu 0 presenças, 0 alunos distintos, média 0 e 3 dias no período. O intervalo foi aplicado sem erro visível; não havia presenças para verificar a inclusão dos limites, então mantenho o julgamento pendente. |
 | Status | Execução parcial; julgamento pendente |
 | Data/hora e fuso | 19/11/2026; horário exato não registrado; America/Sao_Paulo. |
-| Executor real | Ainda não registrado; vou informar quem operou a interface e eventual assistência utilizada. |
+| Executor real | Operei a interface com automação de interface do Codex, na sessão autenticada exibida como Jair. |
 | Ambiente | Registrar URL, unidade, versão do sistema se exposta, navegador/versão e SO reais. |
 | Vídeo e tempos | Não produzido. |
 | Prints | Não produzidos. |
