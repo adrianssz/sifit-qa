@@ -44,7 +44,7 @@ Não incluir carga, exploração de vulnerabilidades, transações reais ou alte
 | 4 — Execução por cenário | Executar um conjunto pequeno, revisar evidências, atualizar cenário/bugs/resultados e publicar. | Parar entre cenários ou fluxos importantes. |
 | 5 — Integrações e fechamento | Conferir C47, retestes, links, contagens e limitações reais. | Apresentar conclusão apoiada nas evidências. |
 
-Concluí a etapa 1 e preparei os roteiros e registros da etapa 2. As execuções continuam planejadas. As datas de execução serão preenchidas quando ocorrerem; não há cronograma realizado presumido.
+Concluí a preparação documental e os roteiros. Até 19/11/2026, registrei cinco execuções de C34 (duas aprovadas e três aguardando regra) e uma execução parcial de C06-CT05, que aguarda comparação com período contendo presenças. Os outros 60 casos seguem não iniciados. Atualizo o status e as evidências em resultados.md; ainda faltam verificações MySQL e fluxos integrados C47.
 
 Antes de cada edição, reler a versão atual do arquivo e conferir a main. Criar arquivos apenas se continuarem ausentes. Em caso de alteração concorrente, reler e reconciliar sem sobrescrever trabalho novo. Após cada commit, conferir os caminhos e o conteúdo publicado.
 
@@ -105,7 +105,7 @@ Os casos C07-CT05/CT06, C13-CT06/CT07, C14-CT04/CT05 e C45-CT02/CT03/CT04 exigem
 
 Aplicar caminho feliz, testes negativos, partição de equivalência, valores limite, transições de status, filtros e conferência cruzada. O reconhecimento exploratório prepara o roteiro e não substitui execução formal.
 
-Usar G01–G24 conforme o inventário: cadastro, campos, formatos/limites, cancelamento, persistência, filtros, navegação, exclusão, dependências, erros e evidências. Na etapa 2, cada cenário listará seus Gxx aplicáveis, sem mudar a descrição original nem inflar a contagem base de 71 casos.
+Usar G01–G24 conforme o inventário: cadastro, campos, formatos/limites, cancelamento, persistência, filtros, navegação, exclusão, dependências, erros e evidências. Cada cenário lista seus Gxx aplicáveis, sem mudar a descrição original nem inflar a contagem base de 66 casos.
 
 Casos com múltiplas variações terão sufixos A/B/C e resultado por variação. Um caso principal só poderá ser aprovado quando todas as variações aplicáveis e os critérios confirmados tiverem sido verificados. Retestes mantêm o ID original, com número da tentativa/data em campo próprio.
 
