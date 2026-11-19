@@ -87,7 +87,7 @@ Prefixo `QA_RENAN`. Anotar no caso o código gerado de cada registro; as confer�
 | `QA_RENAN_CLIENTE_01` | Aluno das anamneses e avaliações (P2) |
 | `QA_RENAN_CAT_FLUXO_01`, `QA_RENAN_PERG_FLUXO_01` e `_02`, `QA_RENAN_MOD_FLUXO_01` | Cadeia nova do fluxo integrado (C47-CT05) |
 | `QA_RENAN_CAT_DESC_01` + `QA_RENAN_PERG_DESC_01` | Descartáveis para exclusão com vínculo (C40-CT06) |
-| `QA_RENAN_CAT_DESC_02` + `QA_RENAN_PERG_DESC_02` | Descartáveis para conferir antes e depois no banco (C47-CT09) |
+| `QA_RENAN_PERG_DESC_02` + `QA_RENAN_MOD_DESC_02` | Descartáveis para conferir no banco o vínculo entre pergunta e modelo (C47-CT09) |
 | `QA_RENAN_ENQ_01` | Enquete válida, salva inativa até liberar P5 |
 | Avaliação extra do cliente de teste | Descartável para cancelar e excluir (C10-CT11) |
 
@@ -188,7 +188,7 @@ Somente `SELECT`, com acesso autorizado, schema real e os códigos QA_RENAN anot
 |---:|---|---|---|---|---|
 | 62 | C47-CT07 | Conferência por SELECT no banco | Requer P4 | G24 | C47-CT07-select-banco |
 | 63 | C47-CT08 | Cancelar operação e conferir banco | Requer P4; contar antes e depois do cancelamento | G10 G13 G24 | C47-CT08-cancelar-conferir-banco |
-| 64 | C47-CT09 | Dependências e exclusões | Requer P4; usa CAT_DESC_02 e PERG_DESC_02 | G19 G20 G24 | C47-CT09-dependencias-exclusoes |
+| 64 | C47-CT09 | Dependências e exclusões | Requer P4; usa PERG_DESC_02 e MOD_DESC_02 | G19 G20 G24 | C47-CT09-dependencias-exclusoes |
 
 ## 6. Verificações complementares
 
