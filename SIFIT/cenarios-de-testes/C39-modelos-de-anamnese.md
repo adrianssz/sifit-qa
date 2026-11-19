@@ -6,6 +6,8 @@
 
 Aqui eu testo a criação de modelos de anamnese no montador visual, onde escolho as perguntas cadastradas no C41. Começo já logado e uso dados fictícios com o prefixo `QA_RENAN`. O modelo `QA_RENAN_MOD_01` é o que vou aplicar no aluno de teste no C38, então não posso apagá-lo.
 
+A tela fica no menu lateral, em Modelos (endereço `/anamnese/modelos`), com os modelos em cartões (Editar, Preview e lixeira). O botão “Novo Modelo” abre a página do montador: Nome do Modelo, Status e Descrição em cima; embaixo, o Montador Visual, com a busca “Buscar pergunta...”, o filtro de categorias, as perguntas disponíveis (botão + em cada uma) e o Modelo atual, onde cada pergunta tem a chave Obrigatória/Opcional e o botão Remover. À direita ficam o Resumo do Modelo (perguntas, obrigatórias e opcionais) e os botões Salvar Modelo e Cancelar.
+
 O inventário registrou um erro de servidor nesta tela. Por isso o primeiro caso que faço é o CT08, que confere se o montador carrega.
 
 ---
@@ -35,11 +37,11 @@ As perguntas `QA_RENAN_PERG_01` a `_03` precisam estar cadastradas e ativas. Pes
 
 ### Passos
 
-1. Abrir Modelos de Anamnese e clicar para criar um novo.
+1. Abrir Modelos e clicar em Novo Modelo.
 2. Preencher nome, status e descrição. Se tiver algum campo opcional além desses, deixar em branco.
-3. No montador, adicionar as três perguntas na ordem da lista e marcar quais são obrigatórias. Se a opção não aparecer na tela, anotar com print.
-4. Salvar, conferir a mensagem e anotar o código.
-5. Atualizar a página, abrir o modelo e conferir os dados, as perguntas e a obrigatoriedade.
+3. No montador, buscar cada pergunta e clicar no + na ordem da lista. No Modelo atual, ligar a chave Obrigatória da `QA_RENAN_PERG_01` e da `QA_RENAN_PERG_03` e conferir o Resumo: 3 perguntas, 2 obrigatórias e 1 opcional.
+4. Clicar em Salvar Modelo e conferir a mensagem.
+5. Atualizar a página, abrir o cartão pelo Editar e conferir os dados, as perguntas e a obrigatoriedade.
 
 ### Resultado esperado
 
@@ -97,7 +99,7 @@ As perguntas de teste do C41 precisam estar cadastradas.
 1. Abrir o cadastro de novo modelo.
 2. Adicionar uma pergunta, deixar o nome vazio e ir até Salvar usando Tab e Enter.
 3. Colocar só espaços no nome e tentar salvar.
-4. Preencher o nome `QA_RENAN_MOD_VAZIO_01`, remover a pergunta e tentar salvar.
+4. Preencher o nome `QA_RENAN_MOD_VAZIO_01`, clicar em Limpar tudo e tentar salvar.
 5. Fechar sem salvar, abrir o cadastro de novo e ver se ele volta limpo.
 6. Pesquisar `QA_RENAN_MOD` e conferir que nenhum modelo inválido foi salvo.
 
@@ -214,8 +216,8 @@ As perguntas de teste do C41 precisam estar cadastradas.
 ### Passos
 
 1. Abrir o cadastro de novo modelo e digitar o nome provisório.
-2. Adicionar as duas perguntas e conferir o montador e o resumo (quantidade e lista).
-3. Remover a `QA_RENAN_PERG_02` e conferir se o montador e o resumo mudam junto.
+2. Adicionar as duas perguntas pelo + e conferir o Modelo atual e o Resumo do Modelo.
+3. Clicar em Remover na `QA_RENAN_PERG_02` e conferir se o Modelo atual e o Resumo mudam junto.
 4. Cancelar sem salvar.
 5. Pesquisar `QA_RENAN_MOD_CANCELADO` e conferir que ele não foi criado.
 
@@ -435,7 +437,7 @@ Nenhum dado novo; só abro o montador.
 
 ### Passos
 
-1. Abrir Modelos de Anamnese e clicar para criar um novo.
+1. Abrir Modelos e clicar em Novo Modelo.
 2. Esperar o montador carregar e ver se as perguntas de teste aparecem.
 3. Se aparecer “Erro no servidor” ou a lista vier vazia, anotar a mensagem, o horário e a tela.
 4. Recarregar a página e tentar abrir o montador mais uma vez.

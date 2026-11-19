@@ -199,6 +199,7 @@ Pertinentes, mas sem caso próprio. Executar se houver tempo e registrar à part
 - Outras Gxx que o reconhecimento revelar, como upload em telas ainda não mapeadas.
 
 ## 7. Evidências
+
 O professor informou que prints bastam. Cada caso é registrado com prints, e o vídeo fica opcional, para o fim.
 
 - Prints da condição inicial, das ações principais e do resultado, normalmente de 2 a 4 por caso, tirados com a Ferramenta de Captura (Win + Shift + S).
@@ -224,6 +225,7 @@ O professor não definiu regras de negócio para estes módulos e não há docum
 
 | Risco | Efeito | Tratamento |
 |---|---|---|
+| Limite de 500 conexões por hora no usuário do banco, que o site e a turma compartilham. Em 19/11 todas as telas deram “Erro no servidor” no mesmo minuto em que o banco recusou conexão por esse limite | Sistema inteiro fora até a hora virar | Testar em horário de pouco uso, manter uma conexão só no Workbench e, se o erro aparecer, anotar o horário (G21) e repetir depois |
 | Erro no servidor em Perguntas ou Modelos, já visto no inventário | Trava C39, C38 e C47-CT05 | Registrar com print, abrir bug e marcar dependentes como Bloqueados |
 | As tabelas novas da anamnese não têm chave estrangeira no banco | Só o sistema impede vínculo quebrado | Foco do C47-CT09, com registros descartáveis |
 | Automação ou link enviar mensagem a pessoa real | Dano a terceiros | Executar só com P6; cliente sem contatos de terceiros |
