@@ -2,7 +2,7 @@
 
 **Responsável:** Victor  
 **Data de elaboração:** 18/11/2026  
-**Sistema de referência:** https://sifitalfa.centrion.com.br  
+**Sistema de referência:** https://sifit.centrion.com.br/  
 **Fonte:** [Inventário do SIFIT](../../../Invent%C3%A1rio.md)  
 **Versão consultada do inventário:** blob `d3885feed1a1909bc57ee56f4041b18facb5b813`, na [revisão 68f918b](https://github.com/adrianssz/sifit-qa/blob/68f918bd39c942c2d3141877724ab8ffac0219d0/Invent%C3%A1rio.md).  
 **Modelo de estrutura:** [Análise de requisitos do professor](https://github.com/Adnyslougansilva/extensao-qa/blob/main/OrangeHRM/1-Analise%20de%20requisitos.md).  
