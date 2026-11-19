@@ -1,14 +1,14 @@
 # C18 — Turmas — Meus testes
 
 **Responsável:** Victor  
-**Estado:** roteiros iniciais; todos Não executados.  
+**Estado:** C18-CT01 executado parcialmente, com julgamento pendente; demais casos não executados.  
 **Fonte:** [Inventário](../../Invent%C3%A1rio.md), blob `d3885feed1a1909bc57ee56f4041b18facb5b813`.  
 **Requisito:** [RF18](../contribuicoes/victor/requisitos.md).  
 **Registros:** [resultados](../contribuicoes/victor/resultados.md) e [bugs](../contribuicoes/victor/bugs.md).
 
 ## Preparação e julgamento
 
-Vou usar uma sessão autorizada no ambiente de referência https://sifit.centrion.com.br/, unidade identificada e dados próprios QA_VICTOR. Registrar códigos reais, data de preparação e estado inicial. As dependências e regras pendentes constam no [planejamento](../contribuicoes/victor/planejamento.md). Ainda preciso conferir os controles na tela antes das gravações.
+Operei a interface com automação assistida nesta sessão autenticada como Jair, em https://sifit.centrion.com.br/turmas. Não confirmei a unidade. Pesquisei QA_VICTOR; a consulta retornou nenhuma turma. Abri o formulário para reconhecer os campos e cancelei sem salvar. Ainda preciso de um plano de teste próprio e da unidade identificada para concluir um cadastro válido.
 
 Antes da gravação, vou reconhecer a tela e completar os campos/limites/ações ainda desconhecidos. Preservar os IDs e descrições abaixo. Cada variação recebe sufixo A/B/C e evidência própria ou intervalo no vídeo. Não aprovar o caso principal com variações pendentes. Critérios do inventário são propostos; confirmar regras necessárias antes de reprovar. Falta de regra ou acesso exige registro de pendência/bloqueio concreto, sem bug confirmado automático.
 
@@ -24,21 +24,21 @@ Gravar também sucessos. Não mostrar credenciais, tokens, conexões ou dados re
 | Objetivo | Verificar o critério deste caso com dados próprios e evidência rastreável. |
 | Requisito | RF18 |
 | Pré-condições | Sessão/unidade identificadas; dados e referências do roteiro abaixo preparados; regras indispensáveis confirmadas. Se depender de editor, mapear os controles antes de concluir o roteiro. |
-| Dados | QA_VICTOR_C18_AAAAMMDD_NNN; substituir pela data real e registrar IDs gerados e valores de cada variação antes da execução. |
-| DADO | Que o módulo está acessível e o estado inicial dos registros próprios foi anotado. |
-| QUANDO — roteiro | Cadastrar turma QA_VICTOR com plano válido, dias e horários compatíveis; salvar e reabrir para comparar todas as opções. |
+| Dados | Pesquisa QA_VICTOR na listagem, sem resultados; nenhum dado de turma foi criado. Não havia plano próprio confirmado. |
+| DADO | Que a listagem de Turmas está acessível e a busca QA_VICTOR não encontrou registros. A unidade não foi confirmada. |
+| QUANDO — roteiro | Abri Cadastrar Turma, observei os campos e cancelei sem salvar, pois não havia plano QA_VICTOR confirmado. |
 | ENTÃO — critério original | Gravar nome, plano, dias, horários e demais opções. |
 | Aceitação | Comparar o obtido com o critério acima e com a regra confirmada registrada; verificar todas as variações aplicáveis. Não presumir texto exato de mensagem. |
 | Verificações comuns propostas | G01, G10, G11, G12 e G13 conforme ações disponíveis; G21 para erro e G23 para teclado/foco/mensagens quando aplicáveis. Identificar aplicação como C18-Gyy-CAMPO e justificar não aplicabilidade. |
-| Resultado obtido | Ainda não observei; vou preencher após executar. |
-| Status | Não executado |
-| Data/hora e fuso | Não registrado; preencher na execução. |
-| Executor real | Ainda não registrado; vou informar quem operou a interface e eventual assistência utilizada. |
-| Ambiente | Registrar URL, unidade, versão do sistema se exposta, navegador/versão e SO reais. |
-| Vídeo e tempos | Não produzido. |
+| Resultado obtido | O formulário exibiu Nome, Status, Plano, Aula Experimental, Tempo (meses), Hora Inicial, Hora Final, Tem Personal e Dias da Semana. Cancelei sem salvar; não encontrei dados QA_VICTOR e não confirmei um plano próprio. |
+| Status | Execução parcial; julgamento pendente até obter plano próprio e confirmar a unidade. |
+| Data/hora e fuso | 19/11/2026, aproximadamente 03:46 (America/Sao_Paulo). |
+| Executor real | Operei a interface com automação assistida nesta sessão autenticada como Jair. |
+| Ambiente | https://sifit.centrion.com.br/turmas; unidade não confirmada; versão do SIFIT não exposta; Chrome 157.0.8103.78, Windows 11 (x86). |
+| Vídeo e tempos | [Jam exclusivo C18-CT01, 24 s](https://jam.dev/c/490a7c3d-2968-4d35-923a-657cc36b3cb1?s=mcp); gravação de tela sem logs. |
 | Prints | Não produzidos. |
 | Bug associado | Ainda não confirmei nenhum nesta etapa. |
-| Fonte da regra / pendências | Confirmar antes do julgamento; registrar fonte e decisão concreta aqui. |
+| Fonte da regra / pendências | Critério original do inventário. A unidade não foi identificada e não encontrei turma nem plano QA_VICTOR; preciso confirmar referência própria para testar o cadastro válido. Não abri bug. |
 
 ## C18-CT02 — Nome, plano e dias ausentes
 
