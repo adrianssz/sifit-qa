@@ -1,7 +1,7 @@
 # C18 — Turmas — Meus testes
 
 **Responsável:** Victor  
-**Estado:** C18-CT01 executado parcialmente, com julgamento pendente; demais casos não executados.  
+**Estado:** C18-CT01 e C18-CT02 executados parcialmente, com julgamento pendente; demais casos não executados.  
 **Fonte:** [Inventário](../../Invent%C3%A1rio.md), blob `d3885feed1a1909bc57ee56f4041b18facb5b813`.  
 **Requisito:** [RF18](../contribuicoes/victor/requisitos.md).  
 **Registros:** [resultados](../contribuicoes/victor/resultados.md) e [bugs](../contribuicoes/victor/bugs.md).
@@ -50,21 +50,21 @@ Gravar também sucessos. Não mostrar credenciais, tokens, conexões ou dados re
 | Objetivo | Verificar o critério deste caso com dados próprios e evidência rastreável. |
 | Requisito | RF18 |
 | Pré-condições | Sessão/unidade identificadas; dados e referências do roteiro abaixo preparados; regras indispensáveis confirmadas. Se depender de editor, mapear os controles antes de concluir o roteiro. |
-| Dados | QA_VICTOR_C18_AAAAMMDD_NNN; substituir pela data real e registrar IDs gerados e valores de cada variação antes da execução. |
-| DADO | Que o módulo está acessível e o estado inicial dos registros próprios foi anotado. |
-| QUANDO — roteiro | Omitir nome, plano e dias separadamente; tentar salvar após confirmar obrigatoriedade de cada campo. |
+| Dados | Pesquisei QA_VICTOR; a listagem não encontrou turmas. Não preenchi dados nem criei registros. |
+| DADO | Que a listagem de Turmas está acessível e a busca QA_VICTOR não encontrou registros. |
+| QUANDO — roteiro | Tentei salvar o formulário totalmente vazio. Depois do aviso, fechei a mensagem e cancelei sem salvar. Não executei separadamente plano e dias ausentes. |
 | ENTÃO — critério original | Validar regras obrigatórias confirmadas. |
 | Aceitação | Comparar o obtido com o critério acima e com a regra confirmada registrada; verificar todas as variações aplicáveis. Não presumir texto exato de mensagem. |
 | Verificações comuns propostas | G02, G03, G05, G06 e G08 conforme campo/regra confirmados; G21 para erro e G23 para teclado/foco/mensagens quando aplicáveis. Identificar aplicação como C18-Gyy-CAMPO e justificar não aplicabilidade. |
-| Resultado obtido | Ainda não observei; vou preencher após executar. |
-| Status | Não executado |
-| Data/hora e fuso | Não registrado; preencher na execução. |
-| Executor real | Ainda não registrado; vou informar quem operou a interface e eventual assistência utilizada. |
-| Ambiente | Registrar URL, unidade, versão do sistema se exposta, navegador/versão e SO reais. |
-| Vídeo e tempos | Não produzido. |
+| Resultado obtido | Ao salvar sem preencher, a tela exibiu “Informe o nome da turma.” Fechei o aviso e cancelei; a contagem da listagem continuou em 12 e não encontrei QA_VICTOR. Verifiquei apenas a variação sem nome; as variações sem plano e sem dias continuam pendentes porque não havia plano próprio confirmado. |
+| Status | Execução parcial; julgamento pendente até executar as variações sem plano e sem dias com dados de teste próprios. |
+| Data/hora e fuso | 19/11/2026, aproximadamente 03:52 (America/Sao_Paulo). |
+| Executor real | Operei a interface com automação assistida nesta sessão autenticada como Jair. |
+| Ambiente | https://sifit.centrion.com.br/turmas; unidade não confirmada; versão do SIFIT não exposta; Chrome 157.0.8103.78, Windows 11 (x86). |
+| Vídeo e tempos | [Jam exclusivo C18-CT02, 23 s](https://jam.dev/c/3ff04937-9bdb-48ac-be36-1bb1e01ca710?s=mcp); gravação de tela sem logs. |
 | Prints | Não produzidos. |
 | Bug associado | Ainda não confirmei nenhum nesta etapa. |
-| Fonte da regra / pendências | Confirmar antes do julgamento; registrar fonte e decisão concreta aqui. |
+| Fonte da regra / pendências | Critério original do inventário. A mensagem observada foi “Informe o nome da turma.”; ainda preciso testar as variações de plano e dias ausentes e confirmar a unidade. Não abri bug. |
 
 ## C18-CT03 — Horário final igual ou anterior ao inicial
 
