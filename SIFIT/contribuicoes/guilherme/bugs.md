@@ -183,3 +183,63 @@ Não repeti o recebimento na conta 1669.
 
 ### Reteste
 Pendente após investigação. Usar outra conta de teste para não alterar o recebimento já registrado na conta 1669.
+
+---
+
+## BUG-GUILHERME-006 — Recebimento parcial não mantém saldo pendente visível
+
+**Caso relacionado:** C11-CT06
+**Data do registro:** 18/11/2026
+**Responsável:** Guilherme
+**Status:** Em análise
+**Execução:** Automatizada pelo Codex com Chrome DevTools MCP.
+
+### Pré-condições
+Conta de teste **1623** com valor original de **R$ 150,00**.
+
+### Passos para reproduzir
+1. Informei **R$ 60,00** em um recebimento da conta 1623.
+2. Selecionei **Manual SIFIT Pix** e o local **Teste**.
+3. Salvei e consultei novamente a conta.
+
+### Resultado esperado
+O sistema deveria registrar R$ 60,00 recebidos e manter R$ 90,00 pendentes.
+
+### Resultado obtido
+O recebimento foi salvo, mas a conta ficou **RECEBIDO**. O detalhe mostrou **R$ 150,00** como valor a receber e **“nao”** em Resíduo. Não consegui confirmar o saldo restante de R$ 90,00.
+
+### Evidência
+[Gravação do C11-CT06 no Jam](https://jam.dev/c/e1e562c4-b9dc-463b-a294-b69be743ace3)
+
+### Reteste
+Pendente em outra conta própria de teste.
+
+---
+
+## BUG-GUILHERME-007 — Filtro Pendente também exibe contas recebidas
+
+**Caso relacionado:** C11-CT10
+**Data do registro:** 18/11/2026
+**Responsável:** Guilherme
+**Status:** Em análise
+**Execução:** Automatizada pelo Codex com Chrome DevTools MCP.
+
+### Pré-condições
+Contas de teste do cliente **QA_GUILHERME_CLIENTE_001**, incluindo as contas **1664** e **1665** com status Recebido.
+
+### Passos para reproduzir
+1. Filtrei o cliente **QA_GUILHERME_CLIENTE_001**.
+2. Selecionei **Vencimento** em novembro e o status **Pendente**.
+3. Consultei os resultados.
+
+### Resultado esperado
+A lista deveria mostrar somente contas que atendem aos filtros selecionados.
+
+### Resultado obtido
+As contas **1664** e **1665** apareceram na lista mesmo estando com status **Recebido**.
+
+### Evidência
+[Gravação do C11-CT10 no Jam](https://jam.dev/c/c304f9a4-4fda-4c25-a3a4-6a2c9625459b)
+
+### Reteste
+Pendente após revisar o comportamento do filtro em dados próprios.

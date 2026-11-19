@@ -198,6 +198,40 @@ Validação completa dependente da correção ou investigação da falha de salv
 
 ---
 
+## C11-CT06 — Recebimento parcial e resíduo
+
+**Responsável:** Guilherme
+**Data da execução:** 18/11/2026
+**Tipo:** Cálculo
+**Status:** Reprovado
+**Sistema:** https://sifitalfa.centrion.com.br/contas-receber
+**Execução:** Automatizada pelo Codex com Chrome DevTools MCP; gravação do Jam iniciada e encerrada manualmente.
+
+### Objetivo
+Quis conferir se um recebimento parcial mantém o saldo restante da conta.
+
+### Pré-condições
+Usei a conta de teste **1623**, no valor original de **R$ 150,00**.
+
+### Passos
+1. Abri a conta 1623 e informei um recebimento de **R$ 60,00**.
+2. Selecionei **Manual SIFIT Pix** e o local **Teste**.
+3. Salvei o recebimento e consultei a conta para conferir valor recebido, status e resíduo.
+
+### Resultado esperado
+O sistema deveria registrar **R$ 60,00 recebidos** e manter **R$ 90,00 pendentes**.
+
+### Resultado obtido
+O recebimento foi salvo, mas a conta passou para **RECEBIDO**. O detalhe continuou apresentando **R$ 150,00** como valor a receber e **“nao”** no campo Resíduo. Não consegui confirmar os **R$ 90,00** restantes.
+
+### Evidência
+[Assistir à gravação no Jam](https://jam.dev/c/e1e562c4-b9dc-463b-a294-b69be743ace3)
+
+### Bug associado
+BUG-GUILHERME-006 — Recebimento parcial não mantém saldo pendente visível.
+
+---
+
 ## C11-CT07 — Recebimento maior que o saldo
 
 **Responsável:** Guilherme  
@@ -320,3 +354,95 @@ A inspeção das opções de Cartão de Crédito ocorreu antes da gravação.
 ### Bugs associados
 - BUG-GUILHERME-004 — Bandeira e parcelas sem opções no recebimento por cartão; a investigar.
 - BUG-GUILHERME-005 — Consulta não confirma o local Teste após o recebimento.
+
+---
+
+## C11-CT10 — Filtros e atalhos de datas
+
+**Responsável:** Guilherme
+**Data da execução:** 18/11/2026
+**Tipo:** Filtro
+**Status:** Reprovado (execução parcial)
+**Sistema:** https://sifitalfa.centrion.com.br/contas-receber
+**Execução:** Automatizada pelo Codex com Chrome DevTools MCP; gravação do Jam iniciada e encerrada manualmente.
+
+### Objetivo
+Quis conferir se as consultas seguem os filtros escolhidos e se os atalhos de datas preenchem os períodos corretos.
+
+### Pré-condições
+Usei contas de teste do cliente **QA_GUILHERME_CLIENTE_001**, incluindo a conta **1623**. As contas **1664** e **1665** já estavam com status **Recebido**.
+
+### Passos
+1. Busquei a conta pelo código **1623** e também um cliente inexistente.
+2. Usei os atalhos de datas e conferi os períodos preenchidos.
+3. Filtrei o cliente **QA_GUILHERME_CLIENTE_001**, com tipo de data **Vencimento** em novembro e status **Pendente**.
+
+### Resultado esperado
+As consultas deveriam respeitar o código, o cliente, o tipo de data, o período e o status selecionados. Os atalhos deveriam preencher os intervalos correspondentes.
+
+### Resultado obtido
+A busca pelo código **1623** funcionou, assim como a busca por cliente inexistente. Os atalhos preencheram corretamente os períodos. Porém, com o filtro de status **Pendente**, apareceram também as contas **1664** e **1665**, ambas com status **Recebido**.
+
+Não consultei o tipo de data **Recebimento** nem fiz a conferência final da conta **1623** nessa gravação. Essas verificações continuam pendentes e não foram consideradas aprovadas.
+
+### Evidência
+[Assistir à gravação no Jam](https://jam.dev/c/c304f9a4-4fda-4c25-a3a4-6a2c9625459b)
+
+### Bug associado
+BUG-GUILHERME-007 — Filtro Pendente também exibe contas recebidas.
+
+---
+
+## C11-CT11 — Entradas, saídas, líquido e pendências
+
+**Responsável:** Guilherme
+**Tipo:** Cálculo
+**Status:** Pendente
+
+### Objetivo
+Conferir se o resumo financeiro corresponde aos registros exibidos no período.
+
+### Pré-condições
+Ter contas de teste `QA_GUILHERME` com valores e situações conhecidos no período escolhido.
+
+### Passos a executar
+1. Consultar as contas no período definido e anotar os registros mostrados.
+2. Comparar entradas, saídas, líquido e pendências com os valores e situações da consulta.
+3. Repetir a conferência com um filtro que permita distinguir o escopo do resumo.
+
+### Resultado esperado
+O resumo e os registros exibidos devem ser conciliáveis para o período e filtros aplicados. Se o resumo usar outro escopo, isso deve estar claro na tela.
+
+### Resultado obtido
+Não executado.
+
+### Evidência
+Pendente.
+
+---
+
+## C11-CT12 — Editar, cancelar e eventual estorno
+
+**Responsável:** Guilherme
+**Tipo:** Condicional
+**Status:** Pendente
+
+### Objetivo
+Identificar as ações disponíveis para uma conta a receber e verificar seus efeitos financeiros quando aplicáveis.
+
+### Pré-condições
+Ter contas descartáveis `QA_GUILHERME` em situações adequadas para cada ação. Confirmar antes quais opções de edição, cancelamento e estorno existem.
+
+### Passos a executar
+1. Abrir uma conta própria e mapear as ações disponíveis.
+2. Executar cada ação permitida apenas em registros de teste, uma vez por cenário.
+3. Consultar a conta e o caixa após a ação para conferir status, valores e eventual movimento de estorno.
+
+### Resultado esperado
+Cada ação disponível deve produzir uma situação coerente na conta e no caixa, sem alterar registros não envolvidos. A regra de estorno deve ser confirmada antes do julgamento.
+
+### Resultado obtido
+Não executado.
+
+### Evidência
+Pendente.
