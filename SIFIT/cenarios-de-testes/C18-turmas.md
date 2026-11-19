@@ -248,3 +248,9 @@ Gravar também sucessos. Não mostrar credenciais, tokens, conexões ou dados re
 | Bug associado | Ainda não confirmei nenhum nesta etapa. |
 | Fonte da regra / pendências | Confirmar antes do julgamento; registrar fonte e decisão concreta aqui. |
 
+
+
+<img width="1920" height="939" alt="clipboard" src="https://github.com/user-attachments/assets/f22d1404-c5a4-4640-8c80-b05dd8b5905d" />
+## Print do SIFIT — C18-CT07
+Filtrei Status: Inativo e acionei Buscar. A tela informou “Nenhuma turma encontrada”; os indicadores exibiram 12 turmas cadastradas, 12 ativas, 4 com personal e 4 com aula experimental. Não encontrei registros inativos para validar o retorno positivo deste filtro. Não alterei dados. Mantenho C18-CT07 como execução parcial, com julgamento pendente e sem bug confirmado.
+Evidência capturada em 19/11/2026 na sessão autenticada exibida como Jair, em https://sifit.centrion.com.br/turmas.
