@@ -175,3 +175,8 @@ Gravar também sucessos. Não mostrar credenciais, tokens, conexões ou dados re
 ## Complemento de evidência — C14-CT04
 
 A captura da etapa foi anexada em [jam-nao-carrega-20261119.png](../contribuicoes/victor/jam-nao-carrega-20261119.png). Ao tentar registrar a execução pelo Jam, a extensão não carregou e exibiu “This is taking longer than expected”, pedindo para recarregar. A captura documenta a limitação de gravação; não é um defeito do SIFIT. O cadastro de QA_VICTOR_EXERCICIO_20261119_001 e as contagens descritas acima permanecem com julgamento pendente, pois faltam as variações de validação.
+
+
+## Esclarecimento da evidência — C14-CT04
+
+A imagem `jam-nao-carrega-20261119.png` comprova somente a falha de carregamento da extensão Jam. Ela não é uma captura do SIFIT. A tela do SIFIT com QA_VICTOR_EXERCICIO_20261119_001 foi conferida novamente em 19/11/2026, mas não consegui anexar a imagem ao repositório; por isso, ainda não há print do SIFIT armazenado neste arquivo. O resultado permanece parcial e sem julgamento final.
