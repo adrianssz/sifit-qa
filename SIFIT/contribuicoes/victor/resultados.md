@@ -1,14 +1,14 @@
 # Resultados dos testes — Meus testes
 
-**Estado:** 2 casos aprovados; 1 com julgamento pendente de regra; 63 ainda não executados. Concluí três execuções, uma sem julgamento concluído.
+**Estado:** 2 casos aprovados; 2 com julgamento pendente de regra; 62 ainda não executados. Concluí quatro execuções, duas sem julgamento concluído.
 
 Base: 66 casos — 64 dos módulos e 2 de C47 (CT03 e CT04). [Planejamento](planejamento.md).
 
 | Planejados | Não executados | Aprovados | Julgamento pendente | Reprovados | Bloqueados constatados | Não se aplica |
 |---:|---:|---:|---:|---:|---:|---:|
-| 66 | 63 | 2 | 1 | 0 | 0 | 0 |
+| 66 | 62 | 2 | 2 | 0 | 0 | 0 |
 
-Cobertura com julgamento concluído: 2/66 = 3,03%. Aprovação entre julgados: 2/2 = 100%. Concluí C34-CT01 e C34-CT02; C34-CT03 foi executado e aguarda confirmação da regra; as outras 63 execuções permanecem pendentes. As pendências de preparação não foram contabilizadas como bloqueios constatados.
+Cobertura com julgamento concluído: 2/66 = 3,03%. Aprovação entre julgados: 2/2 = 100%. Concluí C34-CT01 e C34-CT02; C34-CT03 e C34-CT04 foram executados e aguardam confirmação de regra; as outras 62 execuções permanecem pendentes. As pendências de preparação não foram contabilizadas como bloqueios constatados.
 
 ## Registro por caso
 
@@ -70,7 +70,7 @@ Cobertura com julgamento concluído: 2/66 = 3,03%. Aprovação entre julgados: 2
 | [C34-CT01](../../cenarios-de-testes/C34-atividades.md) | Cadastrar atividade com pontuação | Aprovado | Código 10; nome QA_VICTOR_ATIVIDADE_20261119_001; pontuação 10; nome, valor e descrição confirmados após busca e reabertura. Detalhes em [C34-CT01](../../cenarios-de-testes/C34-atividades.md#c34-ct01--cadastrar-atividade-com-pontua%C3%A7%C3%A3o). Captura local C34-CT01-20261118.jpg; [gravação Jam de 53 s](https://jam.dev/c/fd1150c0-707d-4180-9144-96291e954ee2); registra busca (0:32), abertura do detalhe (0:38), fechamento (0:44) e fim (0:53). |
 | [C34-CT02](../../cenarios-de-testes/C34-atividades.md) | Atividade sem pontuação | Aprovado | Atividade 002 (código 11, pontuação vazia) e atividade 003 (código 12, pontuação 0) salvas sem aviso; a lista mostra "-" nas duas e os indicadores finais (9, 6, 3 e 6) contaram as duas como sem pontuação; ao reabrir a 003, o campo mostrou 0. Regra do zero a confirmar; sem bug confirmado. Gravações Jam: [primeira](https://jam.dev/c/186f9430-ca1d-49e6-b5c8-87ccf1562132) e [segunda, referência](https://jam.dev/c/8d53721f-db47-4ebd-9718-adf69c1e5f05). |
 | [C34-CT03](../../cenarios-de-testes/C34-atividades.md) | Pontuação negativa, decimal ou texto | Julgamento pendente de regra | Observei -1 salvo como -1 ponto; 1.5 informado e exibido como 1 ponto; abc aceito no campo e listado sem pontuação. Indicadores finais: 12 total, 7 com e 5 sem pontuação, 6 com descrição. Regra pendente; nenhum bug confirmado. [Jam, 4min19s](https://jam.dev/c/58c5bb4e-0f2c-41e5-aab8-8d25db6080ea?s=mcp). |
-| [C34-CT04](../../cenarios-de-testes/C34-atividades.md) | Nome vazio e texto longo | Não executado | Não produzido / não observado. |
+| [C34-CT04](../../cenarios-de-testes/C34-atividades.md) | Nome vazio e texto longo | Julgamento pendente de regra | O nome vazio foi salvo com código 16; QA_VICTOR_ATIVIDADE_20261119_007_LONG foi salva com descrição de 1.800 caracteres (código 17). Após os cadastros: 14 atividades, 7 com pontuação, 7 sem e 7 com descrição; ao reabrir o código 17, a descrição estava visível e Pontuação mostrou 0 embora o campo tivesse ficado vazio. Regra e limite pendentes; sem bug confirmado. [Jam exclusivo, 3min15s](https://jam.dev/c/f25eee59-00c4-482b-bf6f-b20c0360d3e3?s=mcp). |
 | [C34-CT05](../../cenarios-de-testes/C34-atividades.md) | Pesquisar, editar e conferir indicadores | Não executado | Não produzido / não observado. |
 | [C45-CT01](../../cenarios-de-testes/C45-modelos-de-ficha.md) | Buscar código, título e criador | Não executado | Não produzido / não observado. |
 | [C45-CT02](../../cenarios-de-testes/C45-modelos-de-ficha.md) | Abrir criação e mapear editor | Não executado | Não produzido / não observado. |
@@ -87,4 +87,4 @@ Atualizar caso e esta tabela com resultado real, data/hora/fuso, executor, ambie
 
 ## Conclusão atual
 
-Tenho evidência de que os cadastros de atividade com pontuação e sem pontuação foram realizados; os resultados de C34-CT01 e C34-CT02 foram registrados. C34-CT03 foi executado, mas aguarda confirmação da regra para julgamento. Os outros 63 casos continuam pendentes.
+Tenho evidência de que C34-CT01 e C34-CT02 atenderam aos critérios registrados. C34-CT03 e C34-CT04 foram executados, mas aguardam confirmação das regras para julgamento. Os outros 62 casos continuam pendentes.
