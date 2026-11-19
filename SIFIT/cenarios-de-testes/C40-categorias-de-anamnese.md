@@ -4,9 +4,7 @@
 **Sistema:** SIFIT — https://sifit.centrion.com.br  
 **Requisito:** [RF40 — Categorias de Anamnese](../contribuicoes/renan/requisitos.md#rf40--categorias-de-anamnese)
 
-Aqui eu testo o cadastro de categorias de anamnese, que tem nome, status, ícone e cor. Em todos os casos começo já logado no sistema e uso dados fictícios com o prefixo `QA_RENAN` (lista completa na [massa de dados](../contribuicoes/renan/planejamento.md#4-massa-de-dados)). Sempre anoto o código da categoria criada, para conseguir achar depois.
-
-Os nomes exatos dos botões e o caminho no menu eu ajusto depois de olhar a tela com calma no reconhecimento.
+Aqui eu testo o cadastro de categorias de anamnese, que tem nome, status, ícone e cor. Em todos os casos começo já logado no sistema e uso dados fictícios com o prefixo `QA_RENAN` (lista completa na [massa de dados](../contribuicoes/renan/planejamento.md#4-massa-de-dados)). A tela fica no menu lateral, em Categorias (endereço `/anamnese/categorias`). Ela mostra as categorias em cartões, com a busca “Buscar categoria...”, o filtro de status e o botão “Nova Categoria”. Os cartões não mostram código, então identifico cada categoria pelo nome. Para editar ou excluir, passo o mouse no cartão e uso o lápis (Editar) ou a lixeira (Excluir).
 
 ---
 
@@ -29,16 +27,16 @@ Antes de começar, pesquisar `QA_RENAN_CAT_01` para ter certeza de que ela ainda
 
 - Nome: `QA_RENAN_CAT_01 Saúde` (com acento de propósito)
 - Status: Ativo
-- Ícone: qualquer um disponível
-- Cor: `#2E86C1`
+- Ícone: o padrão do formulário, `bi-tag`
+- Cor: `#2E86C1`, digitada no campo do código
 
 ### Passos
 
-1. Abrir Categorias de Anamnese e clicar para criar uma nova.
-2. Preencher nome, status, ícone e cor. Se tiver algum campo opcional, deixar em branco.
-3. Clicar duas vezes seguidas em Salvar, para ver se o sistema não cria a categoria repetida.
-4. Conferir a mensagem e a lista e anotar o código.
-5. Atualizar a página, pesquisar a categoria e abrir de novo para comparar os dados.
+1. Abrir Categorias e clicar em Nova Categoria.
+2. Preencher nome, status, ícone e cor.
+3. Clicar duas vezes seguidas em Criar Categoria, para ver se o sistema não cria a categoria repetida.
+4. Conferir se aparece mensagem e pesquisar `QA_RENAN_CAT_01` para ver quantos cartões aparecem.
+5. Atualizar a página, pesquisar de novo, abrir o lápis (Editar) e comparar os dados com o que digitei.
 
 ### Resultado esperado
 
@@ -97,7 +95,7 @@ A categoria `QA_RENAN_CAT_01 Saúde` do CT01 já precisa estar cadastrada.
 ### Passos
 
 1. Abrir o cadastro de nova categoria.
-2. Deixar o nome vazio e preencher o resto. Ir até o botão Salvar usando a tecla Tab e apertar Enter, para ver se dá para usar só o teclado.
+2. Deixar o nome vazio e preencher o resto. Tentar chegar ao botão Criar Categoria usando a tecla Tab e apertar Enter, para ver se dá para usar só o teclado.
 3. Tentar salvar com o nome só com espaços.
 4. Tentar salvar com o nome `QA_RENAN_CAT_01 Saúde`.
 5. Abrir um cadastro novo, digitar `QA_RENAN_CAT_CANCELADA` e cancelar sem salvar.
@@ -161,12 +159,12 @@ Pesquisar `QA_RENAN_CAT_02` e confirmar que ela ainda não existe.
 
 ### Passos
 
-1. Abrir o cadastro de nova categoria e preencher nome, status e ícone.
-2. Escolher uma cor no seletor e ver se o código muda junto.
+1. Clicar em Nova Categoria e preencher nome, status e ícone.
+2. Escolher uma cor no quadrado do seletor e ver se o código ao lado muda junto.
 3. Digitar `#1E8449` no código e ver se o seletor mostra a mesma cor.
 4. Digitar cada código inválido e tentar salvar, anotando o que o sistema responde.
-5. Voltar para `#1E8449` e salvar. Se algum código inválido tiver sido salvo, anotar e corrigir pela edição.
-6. Atualizar a página, abrir a categoria e conferir a cor na lista e no formulário.
+5. Voltar para `#1E8449` e clicar em Criar Categoria. Se algum código inválido tiver sido salvo, anotar e corrigir pelo lápis (Editar).
+6. Atualizar a página, abrir o lápis da categoria e conferir a cor no cartão e no formulário.
 
 ### Resultado esperado
 
@@ -212,29 +210,27 @@ A categoria `QA_RENAN_CAT_02` do CT03 já precisa estar cadastrada.
 
 ### Dados utilizados
 
-Depende de como o campo funciona:
+O campo “Ícone (Bootstrap Icons)” é um texto com o nome do ícone, com atalhos clicáveis embaixo.
 
-- Se for uma lista: escolher um ícone diferente do atual.
-- Se for texto: um nome de ícone válido e o nome inventado `icone_inexistente_qa`.
-- Se for upload: uma imagem PNG pequena, um arquivo `.txt` e uma imagem grande, de uns 10 MB.
+- Ícone válido: clicar no atalho `bi-heart-pulse`.
+- Ícone inválido: digitar o nome inventado `icone_inexistente_qa`.
 
 ### Passos
 
-1. Abrir `QA_RENAN_CAT_02` para editar.
-2. Tirar um print mostrando como o ícone é escolhido.
-3. Escolher um ícone válido, salvar e conferir na lista e no formulário.
-4. Tentar salvar com o ícone inválido, conforme o tipo do campo, e anotar a resposta.
-5. Se for upload, trocar a imagem, testar a imagem grande e cancelar a janela de escolher arquivo.
-6. Atualizar a página e conferir o ícone que ficou salvo.
+1. Passar o mouse no cartão da `QA_RENAN_CAT_02` e clicar no lápis (Editar).
+2. Clicar no atalho `bi-heart-pulse`, salvar e conferir o ícone no cartão e no formulário.
+3. Abrir de novo, digitar `icone_inexistente_qa` no campo do ícone, olhar a pré-visualização e tentar salvar.
+4. Anotar a resposta do sistema.
+5. Atualizar a página e conferir como o cartão ficou.
 
 ### Resultado esperado
 
-Exibir ícone ou tratamento compreensível. O ícone válido tem que aparecer na lista e no formulário. O inválido deve ser recusado com uma mensagem que dê para entender, sem quebrar a tela nem mostrar caminho interno do servidor. Se o ícone só puder ser escolhido numa lista, não tem como usar um inválido: registro isso com print e avalio só a exibição.
+Exibir ícone ou tratamento compreensível. O ícone válido tem que aparecer na lista e no formulário. O inválido deve ser recusado com uma mensagem que dê para entender, sem deixar o cartão sem ícone.
 
 ### Verificações comuns aplicadas
 
 - G05 — Ícone em formato inválido.
-- G22 — Upload de arquivo, só se o ícone for enviado como arquivo. Se não for, fica Não se aplica, com print.
+- G22 — Upload: não existe neste campo, porque o ícone é um nome do Bootstrap Icons. Fica Não se aplica, com print do formulário.
 
 ### Resultado obtido
 
@@ -341,7 +337,7 @@ Ver o que acontece quando tento excluir uma categoria que já tem pergunta ligad
 ### Passos
 
 1. Em Perguntas de Anamnese, mostrar que `QA_RENAN_PERG_DESC_01` está ligada a `QA_RENAN_CAT_DESC_01`.
-2. Em Categorias de Anamnese, clicar para excluir `QA_RENAN_CAT_DESC_01` e cancelar na confirmação.
+2. Em Categorias, passar o mouse no cartão da `QA_RENAN_CAT_DESC_01`, clicar na lixeira (Excluir) e cancelar na confirmação.
 3. Ver se a categoria continua na lista.
 4. Clicar para excluir de novo e, desta vez, confirmar.
 5. Anotar o que aconteceu: se o sistema impediu, se excluiu ou outra resposta.
