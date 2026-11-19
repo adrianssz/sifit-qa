@@ -1,7 +1,7 @@
 # C34 — Atividades — Meus testes
 
 **Responsável:** Victor  
-**Estado:** roteiros iniciais; todos Não executados.  
+**Estado:** C34-CT01 aprovado; demais casos ainda Não executados.
 **Fonte:** [Inventário](../../Invent%C3%A1rio.md), blob `d3885feed1a1909bc57ee56f4041b18facb5b813`.  
 **Requisito:** [RF34](../contribuicoes/victor/requisitos.md).  
 **Registros:** [resultados](../contribuicoes/victor/resultados.md) e [bugs](../contribuicoes/victor/bugs.md).
@@ -24,21 +24,21 @@ Gravar também sucessos. Não mostrar credenciais, tokens, conexões ou dados re
 | Objetivo | Verificar o critério deste caso com dados próprios e evidência rastreável. |
 | Requisito | RF34 |
 | Pré-condições | Sessão/unidade identificadas; dados e referências do roteiro abaixo preparados; regras indispensáveis confirmadas. Se depender de editor, mapear os controles antes de concluir o roteiro. |
-| Dados | QA_VICTOR_C34_AAAAMMDD_NNN; substituir pela data real e registrar IDs gerados e valores de cada variação antes da execução. |
-| DADO | Que o módulo está acessível e o estado inicial dos registros próprios foi anotado. |
-| QUANDO — roteiro | Cadastrar atividade QA_VICTOR com pontuação válida e descrição fictícia; salvar e reabrir. |
+| Dados | Código gerado: 10; nome: QA_VICTOR_ATIVIDADE_20261119_001; pontuação: 10; descrição: “Registro de teste QA_VICTOR para validar cadastro de atividade com pontuação.” |
+| DADO | Que o módulo Atividades estava acessível e havia 6 atividades, 5 com pontuação, 1 sem pontuação e 3 com descrição antes do cadastro. |
+| QUANDO — roteiro | Cadastrei a atividade de teste, salvei, pesquisei pelo nome completo e reabri o registro. |
 | ENTÃO — critério original | Persistir nome, valor e descrição. |
-| Aceitação | Comparar o obtido com o critério acima e com a regra confirmada registrada; verificar todas as variações aplicáveis. Não presumir texto exato de mensagem. |
+| Aceitação | O nome, a pontuação e a descrição persistiram após salvar e reabrir o registro. |
 | Verificações comuns propostas | G01, G10, G11, G12 e G13 conforme ações disponíveis; G21 para erro e G23 para teclado/foco/mensagens quando aplicáveis. Identificar aplicação como C34-Gyy-CAMPO e justificar não aplicabilidade. |
-| Resultado obtido | Ainda não observei; vou preencher após executar. |
-| Status | Não executado |
-| Data/hora e fuso | Não registrado; preencher na execução. |
-| Executor real | Ainda não registrado; vou informar quem operou a interface e eventual assistência utilizada. |
-| Ambiente | Registrar URL, unidade, versão do sistema se exposta, navegador/versão e SO reais. |
-| Vídeo e tempos | Não produzido. |
-| Prints | Não produzidos. |
-| Bug associado | Ainda não confirmei nenhum nesta etapa. |
-| Fonte da regra / pendências | Confirmar antes do julgamento; registrar fonte e decisão concreta aqui. |
+| Resultado obtido | O sistema gerou o código 10. A busca pelo nome completo retornou 1 registro com pontuação 10; ao reabrir o detalhe confirmei o nome, o valor e a descrição completos. |
+| Status | Aprovado |
+| Data/hora e fuso | 18/11/2026, aproximadamente 23:22–23:23 (America/Sao_Paulo). |
+| Executor real | O assistente Codex operou a interface sob minha solicitação; eu iniciei a gravação de tela Jam. |
+| Ambiente | https://sifit.centrion.com.br/; perfil exibido: Jair; Chrome em Windows. A versão do navegador e a unidade ativa não foram confirmadas. |
+| Vídeo e tempos | Gravação de tela Jam iniciada e encerrada; duração observada de aproximadamente 00:49. Não obtive link de compartilhamento nesta etapa. |
+| Prints | Captura da lista filtrada salva localmente como C34-CT01-20261118.jpg; sem link publicado. |
+| Bug associado | Nenhum; o resultado observado atendeu ao critério original. |
+| Fonte da regra / pendências | Critério original do Inventário. Executei somente o cadastro com uma pontuação positiva e descrição; formatos/limites pertencem aos demais casos C34. |
 
 ## C34-CT02 — Atividade sem pontuação
 
