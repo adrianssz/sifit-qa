@@ -179,3 +179,14 @@ Registrar horário, unidade e IDs para distinguir alterações de colegas. Mudan
 Preparei requisitos.md, planejamento.md, os dez cenários indicados, bugs.md, resultados.md e minha seção no relatório geral. Minha próxima etapa será preparar o ambiente para executar os testes. Após as execuções: resultados observados, links reais, contagens e conclusão com limitações.
 
 A documentação inicial não certifica o funcionamento do SIFIT.
+
+## 13. Preparação do ambiente — 18/11/2026
+
+Acessei o painel de https://sifit.centrion.com.br/ com a sessão disponível e fiz somente o reconhecimento das telas abaixo. Não gravei execuções formais nem salvei cadastros nesta preparação; mantenho os 71 casos como Não executados.
+
+- Em Atividades, encontrei pesquisa por Código e Nome, indicadores de total/com pontuação/sem pontuação/com descrição e a ação Nova Atividade. O formulário contém Código, Nome, Pontuação, Descrição, Salvar e Cancelar. Ainda preciso confirmar obrigatoriedade, formatos e limites por execução controlada.
+- Em Exercícios, a biblioteca carregou grupos e exercícios nesta visita. Vi ações Adicionar, Visualizar e Deletar. O erro histórico do inventário não apareceu nesta visita; isso não conclui C14-CT01 nem prova correção definitiva.
+- Em Modelos de Ficha, encontrei busca por Código, Título e Criador. Ao abrir Novo Modelo de Ficha, vi Nome do Modelo, Personal, Cancelar e Criar Modelo. Cancelei sem criar; o editor posterior continua dependente de um modelo próprio.
+- Consegui conectar ao banco informado e consultar sua estrutura, sem escrita. A correspondência com o ambiente da interface ainda precisa ser demonstrada com os mesmos IDs de registros QA_VICTOR; o nome do schema não é prova suficiente.
+
+Meu próximo conjunto será C34 — Atividades, começando pelo cadastro controlado de C34-CT01. Antes de executar, vou iniciar a gravação, registrar ambiente/data/hora, definir os dados QA_VICTOR e confirmar o comportamento esperado. Só vou registrar resultado e evidência depois de executar. Vou parar após esse conjunto para acompanhamento.
