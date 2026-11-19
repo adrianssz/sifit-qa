@@ -1,13 +1,13 @@
 # C06 — Presenças — Meus testes
 
-**Responsável:** Victor; **Estado:** C06-CT02 executado com julgamento pendente; C06-CT04 executado parcialmente, com julgamento pendente; C06-CT05 parcialmente executado; demais casos não executados.  
+**Responsável:** Victor; **Estado:** C06-CT01 executado parcialmente, com julgamento pendente; C06-CT02 executado com julgamento pendente; C06-CT04 executado parcialmente, com julgamento pendente; C06-CT05 parcialmente executado; demais casos não executados.  
 **Fonte:** [Inventário](../../Invent%C3%A1rio.md), blob `d3885feed1a1909bc57ee56f4041b18facb5b813`.  
 **Requisito:** [RF06](../contribuicoes/victor/requisitos.md).  
 **Registros:** [resultados](../contribuicoes/victor/resultados.md) e [bugs](../contribuicoes/victor/bugs.md).
 
 ## Preparação e julgamento
 
-Vou usar uma sessão autorizada no ambiente de referência https://sifit.centrion.com.br/, unidade identificada e dados próprios QA_VICTOR. Registrar códigos reais, data de preparação e estado inicial. As dependências e regras pendentes constam no [planejamento](../contribuicoes/victor/planejamento.md). Já reconheci os filtros de período na tela e gravei C06-CT02 e C06-CT04 separadamente.
+Vou usar uma sessão autorizada no ambiente de referência https://sifit.centrion.com.br/, unidade identificada e dados próprios QA_VICTOR. Registrar códigos reais, data de preparação e estado inicial. As dependências e regras pendentes constam no [planejamento](../contribuicoes/victor/planejamento.md). Já reconheci os filtros de período na tela e gravei C06-CT01, C06-CT02 e C06-CT04 separadamente.
 
 Antes da gravação, vou reconhecer a tela e completar os campos/limites/ações ainda desconhecidos. Preservar os IDs e descrições abaixo. Cada variação recebe sufixo A/B/C e evidência própria ou intervalo no vídeo. Não aprovar o caso principal com variações pendentes. Critérios do inventário são propostos; confirmar regras necessárias antes de reprovar. Falta de regra ou acesso exige registro de pendência/bloqueio concreto, sem bug confirmado automático.
 
@@ -23,21 +23,21 @@ Gravar também sucessos. Não mostrar credenciais, tokens, conexões ou dados re
 | Objetivo | Verificar o critério deste caso com dados próprios e evidência rastreável. |
 | Requisito | RF06 |
 | Pré-condições | Sessão/unidade identificadas; dados e referências do roteiro abaixo preparados; regras indispensáveis confirmadas. Se depender de editor, mapear os controles antes de concluir o roteiro. |
-| Dados | QA_VICTOR_C06_AAAAMMDD_NNN; substituir pela data real e registrar IDs gerados e valores de cada variação antes da execução. |
-| DADO | Que o módulo está acessível e o estado inicial dos registros próprios foi anotado. |
-| QUANDO — roteiro | Buscar cliente QA_VICTOR com presença conhecida; repetir com cliente inexistente e limpar busca. |
+| Dados | Consultei o texto QA_VICTOR e a busca negativa QA_VICTOR_CLIENTE_INEXISTENTE_999; não criei nem alterei registros. |
+| DADO | Que a tela Presenças estava no intervalo 13/11/2026–19/11/2026, sem presenças no estado inicial. |
+| QUANDO — roteiro | Busquei QA_VICTOR, depois QA_VICTOR_CLIENTE_INEXISTENTE_999 e, por fim, limpei a busca. |
 | ENTÃO — critério original | Listar somente presenças correspondentes ou estado vazio. |
 | Aceitação | Comparar o obtido com o critério acima e com a regra confirmada registrada; verificar todas as variações aplicáveis. Não presumir texto exato de mensagem. |
 | Verificações comuns propostas | G15, G16, G17 e G18 se o controle existir; G21 para erro e G23 para teclado/foco/mensagens quando aplicáveis. Identificar aplicação como C06-Gyy-CAMPO e justificar não aplicabilidade. |
-| Resultado obtido | Ainda não observei; vou preencher após executar. |
-| Status | Não executado |
-| Data/hora e fuso | Não registrado; preencher na execução. |
-| Executor real | Ainda não registrado; vou informar quem operou a interface e eventual assistência utilizada. |
-| Ambiente | Registrar URL, unidade, versão do sistema se exposta, navegador/versão e SO reais. |
-| Vídeo e tempos | Não produzido. |
+| Resultado obtido | Na consulta semanal de 13/11/2026 a 19/11/2026, QA_VICTOR e QA_VICTOR_CLIENTE_INEXISTENTE_999 exibiram 0 presenças, total 0, alunos distintos 0, média 0 e 7 dias. A busca vazia também permaneceu sem resultados. O filtro foi consultado sem erro técnico visível. Não localizei um cliente com presença conhecida para concluir a variação positiva; portanto, não consigo confirmar a busca por cliente existente nem fechar o julgamento. |
+| Status | Execução parcial; julgamento pendente |
+| Data/hora e fuso | 19/11/2026, aproximadamente 03:13–03:17 (America/Sao_Paulo), conforme Jam criado às 06:16 UTC. |
+| Executor real | Operei a interface com automação do assistente Codex, na sessão autenticada exibida como Jair. |
+| Ambiente | https://sifit.centrion.com.br/presencas; unidade e versão não identificadas; Chrome 157.0.8103.78, Windows 11 (x86), conforme sessão/Jam. |
+| Vídeo e tempos | [Jam C06-CT01](https://jam.dev/c/9e7c5e4c-0b39-4884-b847-265993fc4194?s=mcp), 28 s; mostra as buscas por QA_VICTOR e cliente inexistente. Captura de tela, sem logs de console/rede. |
 | Prints | Não produzidos. |
 | Bug associado | Ainda não confirmei nenhum nesta etapa. |
-| Fonte da regra / pendências | Confirmar antes do julgamento; registrar fonte e decisão concreta aqui. |
+| Fonte da regra / pendências | O critério original prevê listar presenças correspondentes ou estado vazio. Confirmei estado vazio para as duas buscas, mas não localizei uma presença conhecida para validar correspondência positiva. Julgamento pendente de dados QA_VICTOR elegíveis; sem bug confirmado. |
 
 ## C06-CT02 — Atalhos de período
 
