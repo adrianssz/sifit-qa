@@ -179,9 +179,9 @@ Acessei o painel de https://sifit.centrion.com.br/ com a sessão disponível e f
 - Em Atividades, encontrei pesquisa por Código e Nome, indicadores de total/com pontuação/sem pontuação/com descrição e a ação Nova Atividade. O formulário contém Código, Nome, Pontuação, Descrição, Salvar e Cancelar. Ainda preciso confirmar obrigatoriedade, formatos e limites por execução controlada.
 - Em Exercícios, a biblioteca carregou grupos e exercícios nesta visita. Vi ações Adicionar, Visualizar e Deletar. O erro histórico do inventário não apareceu nesta visita; isso não conclui C14-CT01 nem prova correção definitiva.
 - Em Modelos de Ficha, encontrei busca por Código, Título e Criador. Ao abrir Novo Modelo de Ficha, vi Nome do Modelo, Personal, Cancelar e Criar Modelo. Cancelei sem criar; o editor posterior continua dependente de um modelo próprio.
-- Consegui conectar ao banco informado e consultar sua estrutura, sem escrita. A correspondência com o ambiente da interface ainda precisa ser demonstrada com os mesmos IDs de registros QA_VICTOR; o nome do schema não é prova suficiente.
+- A anotação anterior registra consulta somente de leitura à estrutura do banco, mas não confirma que o cliente era MySQL nem que essa base corresponde à interface SIFIT. A verificação MySQL e a correspondência por IDs QA_VICTOR continuam pendentes; não fiz escrita.
 
-Meu próximo conjunto será C34 — Atividades, começando pelo cadastro controlado de C34-CT01. Antes de executar, vou iniciar a gravação, registrar ambiente/data/hora, definir os dados QA_VICTOR e confirmar o comportamento esperado. Só vou registrar resultado e evidência depois de executar. Vou parar após esse conjunto para acompanhamento.
+Concluí cinco execuções de C34: C34-CT01 e C34-CT02 foram aprovados; C34-CT03, C34-CT04 e C34-CT05 aguardam confirmação de regra. Iniciei C06-CT05 no ambiente de referência; a consulta de 13/11 a 19/11/2026 mostrou total 0, alunos distintos 0, média 0 e 7 dias. Falta comparar com um período que tenha presenças. O próximo passo é preparar essa comparação com dados próprios QA_VICTOR e uma gravação por teste, sem presumir resultado.
 
 ## 14. Correção de escopo — 19/11/2026
 
