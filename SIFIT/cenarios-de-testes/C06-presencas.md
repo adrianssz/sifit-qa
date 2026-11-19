@@ -81,9 +81,9 @@ Gravar também sucessos. Não mostrar credenciais, tokens, conexões ou dados re
 | ENTÃO — critério original | Incluir registros dos limites inicial e final conforme regra de horário. |
 | Aceitação | Comparar o obtido com o critério acima e com a regra confirmada registrada; verificar todas as variações aplicáveis. Não presumir texto exato de mensagem. |
 | Verificações comuns propostas | G02, G03, G05, G06 e G08 conforme campo/regra confirmados; G21 para erro e G23 para teclado/foco/mensagens quando aplicáveis. Identificar aplicação como C06-Gyy-CAMPO e justificar não aplicabilidade. |
-| Resultado obtido | Ainda não observei; vou preencher após executar. |
-| Status | Não executado |
-| Data/hora e fuso | Não registrado; preencher na execução. |
+| Resultado obtido | Em 19/11/2026, configurei De 17/11/2026 e Até 19/11/2026, busquei QA_VICTOR e a tela exibiu 0 presenças, 0 alunos distintos, média 0 e 3 dias no período. O intervalo foi aplicado sem erro visível; não havia presenças para verificar a inclusão dos limites, então mantenho o julgamento pendente. |
+| Status | Execução parcial; julgamento pendente |
+| Data/hora e fuso | 19/11/2026; horário exato não registrado; America/Sao_Paulo. |
 | Executor real | Ainda não registrado; vou informar quem operou a interface e eventual assistência utilizada. |
 | Ambiente | Registrar URL, unidade, versão do sistema se exposta, navegador/versão e SO reais. |
 | Vídeo e tempos | Não produzido. |
@@ -175,3 +175,6 @@ Gravar também sucessos. Não mostrar credenciais, tokens, conexões ou dados re
 Anexei a captura da busca por QA_VICTOR no período de 13/11/2026 a 19/11/2026. A tela exibiu estado vazio; ainda não localizei uma presença conhecida para validar correspondência positiva.
 
 <img width="1920" height="939" alt="clipboard" src="https://github.com/user-attachments/assets/56b022b5-b810-4348-bc0a-93ca2cb7911a" />
+
+
+<img width="1920" height="939" alt="clipboard" src="https://github.com/user-attachments/assets/405170c4-bfcd-4fd0-868e-49ea642cecd0" />
