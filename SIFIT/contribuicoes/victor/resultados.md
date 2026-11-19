@@ -1,14 +1,14 @@
 # Resultados dos testes — Meus testes
 
-**Estado:** 1 caso aprovado; 65 ainda não executados. Concluí uma execução formal nesta etapa.
+**Estado:** 2 casos aprovados; 64 ainda não executados. Concluí duas execuções formais nesta etapa.
 
 Base: 66 casos — 64 dos módulos e 2 de C47 (CT03 e CT04). [Planejamento](planejamento.md).
 
 | Planejados | Não executados | Aprovados | Reprovados | Bloqueados constatados | Não se aplica |
 |---:|---:|---:|---:|---:|---:|
-| 66 | 65 | 1 | 0 | 0 | 0 |
+| 66 | 64 | 2 | 0 | 0 | 0 |
 
-Cobertura com julgamento: 1/66 = 1,52%. Aprovação entre julgados: 1/1 = 100%. Concluí C34-CT01; as outras 65 execuções permanecem pendentes. As pendências de preparação não foram contabilizadas como bloqueios constatados.
+Cobertura com julgamento: 2/66 = 3,03%. Aprovação entre julgados: 2/2 = 100%. Concluí C34-CT01 e C34-CT02; as outras 64 execuções permanecem pendentes. As pendências de preparação não foram contabilizadas como bloqueios constatados.
 
 ## Registro por caso
 
@@ -68,7 +68,7 @@ Cobertura com julgamento: 1/66 = 1,52%. Aprovação entre julgados: 1/1 = 100%. 
 | [C20-CT06](../../cenarios-de-testes/C20-sifitbox-turmas.md) | Ativar/inativar modalidade e turma | Não executado | Não produzido / não observado. |
 | [C20-CT07](../../cenarios-de-testes/C20-sifitbox-turmas.md) | Gerar aulas a partir da recorrência | Não executado | Não produzido / não observado. |
 | [C34-CT01](../../cenarios-de-testes/C34-atividades.md) | Cadastrar atividade com pontuação | Aprovado | Código 10; nome QA_VICTOR_ATIVIDADE_20261119_001; pontuação 10; nome, valor e descrição confirmados após busca e reabertura. Detalhes em [C34-CT01](../../cenarios-de-testes/C34-atividades.md#c34-ct01--cadastrar-atividade-com-pontua%C3%A7%C3%A3o). Captura local C34-CT01-20261118.jpg; [gravação Jam de 53 s](https://jam.dev/c/fd1150c0-707d-4180-9144-96291e954ee2); registra busca (0:32), abertura do detalhe (0:38), fechamento (0:44) e fim (0:53). |
-| [C34-CT02](../../cenarios-de-testes/C34-atividades.md) | Atividade sem pontuação | Não executado | Não produzido / não observado. |
+| [C34-CT02](../../cenarios-de-testes/C34-atividades.md) | Atividade sem pontuação | Aprovado | Atividade 002 (código 11, pontuação vazia) e atividade 003 (código 12, pontuação 0) salvas sem aviso; a lista mostra "-" nas duas e os indicadores finais (9, 6, 3 e 6) contaram as duas como sem pontuação; ao reabrir a 003, o campo mostrou 0. Regra do zero a confirmar; sem bug confirmado. Gravações Jam: [primeira](https://jam.dev/c/186f9430-ca1d-49e6-b5c8-87ccf1562132) e [segunda, referência](https://jam.dev/c/8d53721f-db47-4ebd-9718-adf69c1e5f05). |
 | [C34-CT03](../../cenarios-de-testes/C34-atividades.md) | Pontuação negativa, decimal ou texto | Não executado | Não produzido / não observado. |
 | [C34-CT04](../../cenarios-de-testes/C34-atividades.md) | Nome vazio e texto longo | Não executado | Não produzido / não observado. |
 | [C34-CT05](../../cenarios-de-testes/C34-atividades.md) | Pesquisar, editar e conferir indicadores | Não executado | Não produzido / não observado. |
