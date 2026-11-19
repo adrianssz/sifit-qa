@@ -1,7 +1,7 @@
 # C14 — Exercícios — Meus testes
 
 **Responsável:** Victor  
-**Estado:** C14-CT01 e C14-CT05 investigados parcialmente, com julgamento pendente; demais casos não executados.  
+**Estado:** C14-CT01, C14-CT04 e C14-CT05 investigados parcialmente, com julgamento pendente; demais casos não executados.  
 **Fonte:** [Inventário](../../Invent%C3%A1rio.md), blob `d3885feed1a1909bc57ee56f4041b18facb5b813`.  
 **Requisito:** [RF14](../contribuicoes/victor/requisitos.md).  
 **Registros:** [resultados](../contribuicoes/victor/resultados.md) e [bugs](../contribuicoes/victor/bugs.md).
@@ -102,21 +102,21 @@ Gravar também sucessos. Não mostrar credenciais, tokens, conexões ou dados re
 | Objetivo | Verificar o critério deste caso com dados próprios e evidência rastreável. |
 | Requisito | RF14 |
 | Pré-condições | Sessão/unidade identificadas; dados e referências do roteiro abaixo preparados; regras indispensáveis confirmadas. Se depender de editor, mapear os controles antes de concluir o roteiro. |
-| Dados | QA_VICTOR_C14_AAAAMMDD_NNN; substituir pela data real e registrar IDs gerados e valores de cada variação antes da execução. |
-| DADO | Que o módulo está acessível e o estado inicial dos registros próprios foi anotado. |
-| QUANDO — roteiro | Abrir caminho de cadastro manual e grupos musculares; mapear campos reais de exercício; complementar roteiro com referência própria antes de salvar. |
+| Dados | Não criei, editei ou excluí grupos ou exercícios. A tela de Grupos Musculares mostrou 4 grupos cadastrados: Bicpes (código 1), Pernas (2), Teste 2 (5) e Peitoral Teste Keltton (6). |
+| DADO | Que https://sifit.centrion.com.br/grupos-musculares estava acessível na sessão autenticada exibida como Jair. |
+| QUANDO — roteiro | Abri Grupos Musculares e conferi filtros por código, nome e tipo de membro, botão de busca, cadastro e tabela com código, nome, tipo de membro, imagem e ações. Não abri cadastro nem salvei dados; o mapeamento do cadastro de exercício permanece pendente. |
 | ENTÃO — critério original | Abrir o caminho para grupos musculares e mapear cadastro de exercício quando disponível. |
 | Aceitação | Comparar o obtido com o critério acima e com a regra confirmada registrada; verificar todas as variações aplicáveis. Não presumir texto exato de mensagem. |
 | Verificações comuns propostas | G01, G10, G11, G12 e G13 conforme ações disponíveis; G21 para erro e G23 para teclado/foco/mensagens quando aplicáveis. Identificar aplicação como C14-Gyy-CAMPO e justificar não aplicabilidade. |
-| Resultado obtido | Ainda não observei; vou preencher após executar. |
-| Status | Não executado |
-| Data/hora e fuso | Não registrado; preencher na execução. |
-| Executor real | Ainda não registrado; vou informar quem operou a interface e eventual assistência utilizada. |
-| Ambiente | Registrar URL, unidade, versão do sistema se exposta, navegador/versão e SO reais. |
-| Vídeo e tempos | Não produzido. |
+| Resultado obtido | A página carregou e exibiu 4 grupos. A tabela mostrou código, nome, tipo de membro, imagem e ações Visualizar/Deletar; os filtros visíveis foram Código, Nome e Tipo Membro. Não testei a exclusão nem abri o cadastro. |
+| Status | Execução parcial; julgamento pendente: falta mapear o cadastro de exercício e confirmar regras/campos antes de concluir. |
+| Data/hora e fuso | 19/11/2026, aproximadamente 04:20 (America/Sao_Paulo). |
+| Executor real | Operei a interface com automação assistida nesta sessão autenticada como Jair. |
+| Ambiente | https://sifit.centrion.com.br/grupos-musculares; unidade não confirmada; versão do SIFIT não exposta; navegador interno. |
+| Vídeo e tempos | Não gravei esta inspeção; sem link Jam. |
 | Prints | Não produzidos. |
 | Bug associado | Ainda não confirmei nenhum nesta etapa. |
-| Fonte da regra / pendências | Confirmar antes do julgamento; registrar fonte e decisão concreta aqui. |
+| Fonte da regra / pendências | O critério do inventário pede abrir o caminho para grupos musculares e mapear o cadastro de exercício quando disponível. Registrei somente a listagem e os controles visíveis; não concluí o cadastro nem confirmei regras. |
 
 ## C14-CT05 — Pesquisa, filtros e visualização de exercícios
 
@@ -130,19 +130,19 @@ Gravar também sucessos. Não mostrar credenciais, tokens, conexões ou dados re
 | Pré-condições | Sessão/unidade identificadas; dados e referências do roteiro abaixo preparados; regras indispensáveis confirmadas. Se depender de editor, mapear os controles antes de concluir o roteiro. |
 | Dados | A biblioteca exibiu 11 exercícios em 4 grupos. Consultei a visualização do exercício AA (código 11) somente para leitura e fechei sem salvar. |
 | DADO | Que a página de Exercícios estava acessível e a biblioteca mostrava 11 exercícios em 4 grupos; não vi campos gerais de pesquisa ou filtros. |
-| QUANDO — roteiro | Conferi a listagem visível e abri a visualização de AA (código 11); observei os campos do formulário e fechei por Cancelar, sem salvar. Em tentativa complementar, abri Quarkan (código 17), observei Nome e opções de mídia sem prévia visível e fechei por Cancelar. Pesquisa/filtro e busca de termo inexistente ficaram sem executar por falta de controles gerais visíveis. |
+| QUANDO — roteiro | Conferi a listagem visível e abri a visualização de AA (código 11); observei os campos do formulário e fechei por Cancelar, sem salvar. Pesquisa/filtro e busca de termo inexistente ficaram sem executar por falta de controles gerais visíveis. |
 | ENTÃO — critério original | Detalhar os controles que aparecerem com biblioteca carregada. |
 | Aceitação | Comparar o obtido com o critério acima e com a regra confirmada registrada; verificar todas as variações aplicáveis. Não presumir texto exato de mensagem. |
 | Verificações comuns propostas | G01, G10, G11, G12 e G13 conforme ações disponíveis; G21 para erro e G23 para teclado/foco/mensagens quando aplicáveis. Identificar aplicação como C14-Gyy-CAMPO e justificar não aplicabilidade. |
-| Resultado obtido | A tela não apresentou campo geral de pesquisa ou filtro. A visualização de AA (código 11) abriu formulário com Nome e opções de imagem/vídeo; a seção de vídeo mostrou “Não foi possível abrir a mídia”. Em Quarkan (código 17), o formulário mostrou Nome e opções de imagem/vídeo, sem prévia visível. Fechei ambos por Cancelar sem salvar ou alterar os registros. |
+| Resultado obtido | A tela não apresentou campo geral de pesquisa ou filtro. A ação de visualização abriu o formulário do exercício AA (código 11), com Nome e opções de imagem/vídeo; a seção de vídeo mostrou “Não foi possível abrir a mídia”. Fechei por Cancelar sem alterar o registro. |
 | Status | Execução parcial; julgamento pendente: pesquisa e filtros não disponíveis na tela observada; validação da visualização depende de regra/esperado confirmado. |
-| Data/hora e fuso | 19/11/2026, aproximadamente 03:34 e 04:15 (America/Sao_Paulo). |
+| Data/hora e fuso | 19/11/2026, aproximadamente 03:34 (America/Sao_Paulo). |
 | Executor real | Operei a interface com automação assistida nesta sessão autenticada como Jair. |
 | Ambiente | https://sifit.centrion.com.br/exercicios; unidade não confirmada; versão do SIFIT não exposta; Chrome 157.0.8103.78, Windows 11 (x86). |
-| Vídeo e tempos | [Jam exclusivo C14-CT05, 31 s](https://jam.dev/c/0010fdc5-489a-42a1-82eb-1a9bd38dd537?s=mcp), da tentativa com AA; a tentativa complementar com Quarkan não foi gravada. Captura de tela, sem logs de console/rede. |
+| Vídeo e tempos | [Jam exclusivo C14-CT05, 31 s](https://jam.dev/c/0010fdc5-489a-42a1-82eb-1a9bd38dd537?s=mcp); captura de tela, sem logs de console/rede. |
 | Prints | Não produzidos. |
 | Bug associado | Ainda não confirmei nenhum nesta etapa. |
-| Fonte da regra / pendências | O critério do inventário pede detalhar os controles disponíveis. Não observei pesquisa/filtros gerais. A mídia de vídeo de AA não abriu; em Quarkan não houve prévia de mídia visível. Não há critério confirmado para esses comportamentos nem modelo conhecido para comparar o conteúdo esperado; mantenho a execução parcial e não abri bug. |
+| Fonte da regra / pendências | O critério do inventário pede detalhar os controles disponíveis. Não observei pesquisa/filtros gerais. A mídia de vídeo não abriu, mas não há critério confirmado sobre mídia nem modelo conhecido para verificar o conteúdo esperado; mantenho a execução parcial e não abri bug. |
 
 ## C14-CT06 — Associar exercício à ficha
 
