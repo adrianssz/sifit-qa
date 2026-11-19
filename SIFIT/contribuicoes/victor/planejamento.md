@@ -4,9 +4,9 @@
 **Data de elaboração:** 18/11/2026  
 **Tipo:** testes funcionais manuais  
 **Sistema de referência:** https://sifit.centrion.com.br/  
-**Versão do sistema, navegador/versão e sistema operacional:** a registrar na execução; não verificados nesta etapa.  
-**Fontes:** [Inventário](../../../Invent%C3%A1rio.md), [requisitos dos meus testes](requisitos.md) e [plano do modelo do professor](https://github.com/Adnyslougansilva/extensao-qa/blob/main/OrangeHRM/2-plano%20de%20testes.md).  
-**Estado inicial:** 66 casos planejados, todos Não executados; nenhuma evidência de execução produzida nesta etapa.
+**Versão do sistema, navegador/versão e sistema operacional:** a registrar na execução; não verificados nesta etapa.
+**Fontes:** [Inventário](../../../Invent%C3%A1rio.md), [requisitos dos meus testes](requisitos.md) e [plano do modelo do professor](https://github.com/Adnyslougansilva/extensao-qa/blob/main/OrangeHRM/2-plano%20de%20testes.md).
+**Estado atual:** 66 casos planejados; 2 aprovados, 17 pendentes e 47 não iniciados. Evidências e resultados válidos estão consolidados em [resultados.md](resultados.md); pendências dependentes de dados próprios ou de configuração permanecem sem julgamento.
 
 ## 1. Objetivo e escopo
 
