@@ -87,4 +87,4 @@ Atualizar caso e esta tabela com resultado real, data/hora/fuso, executor, ambie
 
 ## Conclusão atual
 
-Tenho evidência de que C34-CT01 e C34-CT02 atenderam aos critérios registrados. C34-CT03, C34-CT04 e C34-CT05 foram executados, mas aguardam confirmação das regras para julgamento. Os outros 61 casos continuam pendentes.
+Tenho evidência de que C34-CT01 e C34-CT02 atenderam aos critérios registrados. C34-CT03, C34-CT04 e C34-CT05 foram executados, mas aguardam confirmação das regras para julgamento. Iniciei C06-CT05: o intervalo sem registros exibiu total 0, alunos distintos 0, média 0 e 7 dias; falta validar os indicadores com presenças existentes. Os outros 60 casos ainda não foram iniciados.
