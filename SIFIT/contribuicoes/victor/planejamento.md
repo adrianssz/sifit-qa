@@ -44,7 +44,7 @@ Não incluir carga, exploração de vulnerabilidades, transações reais ou alte
 | 4 — Execução por cenário | Executar um conjunto pequeno, revisar evidências, atualizar cenário/bugs/resultados e publicar. | Parar entre cenários ou fluxos importantes. |
 | 5 — Integrações e fechamento | Conferir C47, retestes, links, contagens e limitações reais. | Apresentar conclusão apoiada nas evidências. |
 
-Concluí a preparação documental e os roteiros. Até 19/11/2026, registrei cinco execuções de C34 (duas aprovadas e três aguardando regra) e uma execução parcial de C06-CT05, que aguarda comparação com período contendo presenças. Os outros 60 casos seguem não iniciados. Atualizo o status e as evidências em resultados.md; ainda faltam verificações MySQL e fluxos integrados C47.
+Concluí a preparação documental e os roteiros. Até 19/11/2026, registrei cinco execuções de C34 (duas aprovadas e três aguardando regra), C06-CT02 com julgamento pendente e execuções parciais de C06-CT04 e C06-CT05. O balanço atual é 2 aprovados, 6 pendentes de julgamento e 58 não iniciados, de uma base de 66. Ainda faltam os demais cenários, a verificação MySQL planejada e os fluxos integrados C47.
 
 Antes de cada edição, reler a versão atual do arquivo e conferir a main. Criar arquivos apenas se continuarem ausentes. Em caso de alteração concorrente, reler e reconciliar sem sobrescrever trabalho novo. Após cada commit, conferir os caminhos e o conteúdo publicado.
 
@@ -52,9 +52,9 @@ Antes de cada edição, reler a versão atual do arquivo e conferir a main. Cria
 
 | Dependência | Uso | Situação nesta etapa |
 |---|---|---|
-| Acesso ao SIFIT e identificação do perfil/unidade | Todos os módulos; limitar a cobertura ao perfil realmente disponível. | Não verificado. Não registrar credenciais. |
-| Gravação e compartilhamento | Jam para navegador; gravação local/Drive quando necessário. | A conversa anterior relata Workbench instalado e pasta SIFIT-QA-Victor criada; acesso, conteúdo, gravação e permissões não foram verificados nesta etapa. |
-| Cliente e matrícula de teste | Check-in, presença e ficha de treino. | Identificar cliente QA_VICTOR elegível e seus IDs reais; dependência de módulos C08/C09. |
+| Acesso ao SIFIT e identificação do perfil/unidade | Todos os módulos; limitar a cobertura ao perfil realmente disponível. | Acessei Presenças em https://sifit.centrion.com.br/ na sessão exibida como Jair; a unidade e a versão do sistema não ficaram identificadas. Não registrar credenciais. |
+| Gravação e compartilhamento | Jam para navegador; gravação local/Drive quando necessário. | Gravei C06-CT02 e C06-CT04 individualmente pelo link Jam. Os vídeos são capturas de tela sem logs de console/rede. Gravação foi confirmada nesta sessão; pasta SIFIT-QA-Victor e Workbench ainda não conferidos. |
+| Cliente e matrícula de teste | Check-in, presença e ficha de treino. | Ainda preciso localizar cliente QA_VICTOR elegível e seus IDs; não encontrei presenças nos intervalos consultados. Dependência de módulos C08/C09. |
 | Plano de teste | Turmas e elegibilidade. | Confirmar referência válida do C26 sem alterar registros de colegas. |
 | Personal e objetivo de treino | Ficha de treino e opções de turma. | Confirmar referências disponíveis de C30/C16. |
 | Grupo muscular e biblioteca | Exercício → modelo → ficha. | Dependência do C15 e do carregamento de C14; não presumir biblioteca vazia diante de erro. |
@@ -168,7 +168,7 @@ Os casos de banco (C47-CT07 a CT09), persistência (CT06) e alterações de cole
 
 ## 12. Entregáveis e continuidade
 
-Preparei requisitos.md, planejamento.md, os dez cenários indicados, bugs.md, resultados.md e minha seção no relatório geral. Minha próxima etapa será preparar o ambiente para executar os testes. Após as execuções: resultados observados, links reais, contagens e conclusão com limitações.
+Preparei requisitos.md, planejamento.md, os dez cenários indicados, bugs.md, resultados.md e minha seção no relatório geral. Estou executando os cenários em etapas curtas, com vídeos Jam separados por teste. Após cada execução, atualizo o cenário e resultados com observações reais, link efetivo, contagem e limitações.
 
 A documentação inicial não certifica o funcionamento do SIFIT.
 
@@ -181,8 +181,14 @@ Acessei o painel de https://sifit.centrion.com.br/ com a sessão disponível e f
 - Em Modelos de Ficha, encontrei busca por Código, Título e Criador. Ao abrir Novo Modelo de Ficha, vi Nome do Modelo, Personal, Cancelar e Criar Modelo. Cancelei sem criar; o editor posterior continua dependente de um modelo próprio.
 - A anotação anterior registra consulta somente de leitura à estrutura do banco, mas não confirma que o cliente era MySQL nem que essa base corresponde à interface SIFIT. A verificação MySQL e a correspondência por IDs QA_VICTOR continuam pendentes; não fiz escrita.
 
-Concluí cinco execuções de C34: C34-CT01 e C34-CT02 foram aprovados; C34-CT03, C34-CT04 e C34-CT05 aguardam confirmação de regra. Iniciei C06-CT05 no ambiente de referência; a consulta de 13/11 a 19/11/2026 mostrou total 0, alunos distintos 0, média 0 e 7 dias. Falta comparar com um período que tenha presenças. O próximo passo é preparar essa comparação com dados próprios QA_VICTOR e uma gravação por teste, sem presumir resultado.
+Concluí cinco execuções de C34: C34-CT01 e C34-CT02 foram aprovados; C34-CT03, C34-CT04 e C34-CT05 aguardam confirmação de regra. Iniciei C06-CT05 no ambiente de referência; a consulta de 13/11 a 19/11/2026 mostrou total 0, alunos distintos 0, média 0 e 7 dias. Falta comparar com um período que tenha presenças. Esse registro descreve a etapa de 18/11; a atualização atual de execução está na seção 15.
 
 ## 14. Correção de escopo — 19/11/2026
 
 A divisão vigente substitui a anterior e tem 66 casos: 64 dos módulos C05, C06, C07, C13, C14, C18, C20, C34 e C45, mais C47-CT03 e C47-CT04. Os registros de 18/11/2026 acima citam 71 casos pela divisão anterior; vale o total de 66.
+
+## 15. Atualização da execução — 19/11/2026
+
+Executei C06-CT02 e gravei cada caso em vídeo Jam individual. Os atalhos preencheram Hoje 19/11/2026, Esta semana 13/11–19/11 e Este mês 21/10–19/11; os intervalos consultados estavam vazios e a definição de semana/mês segue pendente. Em C06-CT04, consultei o intervalo invertido 21/10/2026–20/10/2026; a tela terminou a consulta sem mensagem visível de validação, mas não executei as variações vazia e inválida. Mantive os dois casos com julgamento pendente e não declarei bug. C06-CT05 permanece parcial por falta de comparação com presenças existentes.
+
+O resultado consolidado está em resultados.md: 66 planejados, 58 não iniciados, 2 aprovados, 6 com julgamento pendente; nenhum reprovado, bloqueado ou não aplicável. Ainda preciso executar os outros casos, conferir MySQL conforme o escopo autorizado e completar C47.
