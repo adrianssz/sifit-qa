@@ -1,12 +1,12 @@
 # Resultados dos testes — Meus testes
 
-**Estado:** 2 casos aprovados; 15 aguardam julgamento (incluindo C13-CT10 parcial); 49 casos não iniciados. Concluí cinco execuções de C34 e iniciei C06-CT01, C06-CT04, C06-CT05, C14-CT01, C14-CT04, C14-CT05, C45-CT01, C45-CT02, C18-CT01 e C18-CT02; executei C06-CT02 com julgamento pendente.
+**Estado:** 2 casos aprovados; 16 aguardam julgamento (incluindo C13-CT10 parcial); 48 casos não iniciados. Concluí cinco execuções de C34 e iniciei C06-CT01, C06-CT04, C06-CT05, C14-CT01, C14-CT04, C14-CT05, C45-CT01, C45-CT02, C18-CT01 e C18-CT02; executei C06-CT02 com julgamento pendente.
 
 Base: 66 casos — 64 dos módulos e 2 de C47 (CT03 e CT04). [Planejamento](planejamento.md).
 
 | Planejados | Não executados | Aprovados | Julgamento pendente | Reprovados | Bloqueados constatados | Não se aplica |
 |---:|---:|---:|---:|---:|---:|---:|
-| 66 | 49 | 2 | 15 | 0 | 0 | 0 |
+| 66 | 48 | 2 | 16 | 0 | 0 | 0 |
 
 Cobertura com julgamento concluído: 2/66 = 3,03%. Aprovação entre julgados: 2/2 = 100%. Concluí C34-CT01 e C34-CT02; C34-CT03, C34-CT04 e C34-CT05 aguardam confirmação de regra. Executei C06-CT02: Hoje retornou 19/11/2026, Esta semana 13/11–19/11 e Este mês 21/10–19/11 (30 dias), sem presenças nos intervalos. O julgamento aguarda definição de períodos civis ou móveis e dados para comparar. C06-CT01 segue parcial: busquei QA_VICTOR e um texto inexistente, ambos sem resultados; falta validar uma presença conhecida. C06-CT04 segue parcial: o intervalo invertido foi consultado sem aviso visível; faltam as variações vazia/inválida e confirmar a regra. C06-CT05 segue parcial, aguardando comparação com período com presenças. Em C14-CT01, a biblioteca carregou, mas não reproduzi o erro documentado na inspeção-base; a investigação permanece pendente. C14-CT04 está parcial: cadastrei QA_VICTOR_EXERCICIO_20261119_001 em Bicpes; a lista passou de 11 para 12 exercícios e de 6 para 7 em Bicpes. Captura do SIFIT anexada no cenário C14; faltam variações. C14-CT05 está parcial: não vi filtros gerais e o detalhe de AA (código 11) mostrou falha ao abrir mídia de vídeo; sem regra confirmada, não abri bug. C45-CT01 também está parcial: consultas por código, título e criador não encontraram registros; falta um modelo próprio para confirmar correspondência positiva. C45-CT02 está parcial: abri Novo Modelo de Ficha, observei Nome do Modelo e Personal, cancelei sem salvar; o editor completo depende de um modelo próprio. [Jam exclusivo, 35 s](https://jam.dev/c/3afaed3e-9de5-4403-a212-b15a2751ed2c?s=mcp). C18-CT01 está parcial: a busca QA_VICTOR não encontrou turma. Mapeei o formulário Cadastrar Turma e cancelei sem salvar por falta de plano próprio confirmado e unidade identificada. C13-CT10 está parcial: cancelei a ficha sem salvar; a lista permaneceu vazia. Em tentativa posterior, pressionei Esc e cliquei fora; o modal não fechou e a lista seguiu vazia. Falta testar uma ação própria de fechamento e gravá-la. [Jam exclusivo, 19 s](https://jam.dev/c/890e412b-387f-444c-a0b5-0adb6d4847d9?s=mcp). C18-CT02 está parcial: salvei o formulário vazio e a tela pediu o nome da turma. Cancelei sem salvar; a lista permaneceu com 12 turmas, sem QA_VICTOR. As validações sem plano e sem dias ainda não foram conferidas. [Jam exclusivo, 24 s](https://jam.dev/c/490a7c3d-2968-4d35-923a-657cc36b3cb1?s=mcp). Outros 49 casos não foram iniciados; C13-CT10, C45-CT01, C45-CT02, C14-CT05, C18-CT01 e C18-CT02 foram iniciados parcialmente. Nenhuma pendência foi contada como bug confirmado ou bloqueio constatado.
 
@@ -57,7 +57,7 @@ Cobertura com julgamento concluído: 2/66 = 3,03%. Aprovação entre julgados: 2
 | [C18-CT04](../../cenarios-de-testes/C18-turmas.md) | Tempo em meses inválido | Não executado | Não produzido / não observado. |
 | [C18-CT05](../../cenarios-de-testes/C18-turmas.md) | Selecionar vários dias | Não executado | Não produzido / não observado. |
 | [C18-CT06](../../cenarios-de-testes/C18-turmas.md) | Aula experimental e Tem Personal | Não executado | Não produzido / não observado. |
-| [C18-CT07](../../cenarios-de-testes/C18-turmas.md) | Status ativo/inativo e filtros | Não executado | Não produzido / não observado. |
+| [C18-CT07](../../cenarios-de-testes/C18-turmas.md) | Status ativo/inativo e filtros | Execução parcial; julgamento pendente | Filtrei Status: Inativo; não foram encontradas turmas. Sem registro inativo para validar retorno positivo. [Print SIFIT](https://github.com/user-attachments/assets/f22d1404-c5a4-4640-8c80-b05dd8b5905d). |
 | [C18-CT08](../../cenarios-de-testes/C18-turmas.md) | Conflito de turma/horário | Não executado | Não produzido / não observado. |
 | [C18-CT09](../../cenarios-de-testes/C18-turmas.md) | Cancelar, editar e excluir | Não executado | Não produzido / não observado. |
 | [C20-CT01](../../cenarios-de-testes/C20-sifitbox-turmas.md) | Cadastrar modalidade | Não executado | Não produzido / não observado. |
@@ -98,3 +98,6 @@ Ao tentar usar o Jam nesta etapa, a extensão não carregou e mostrou “This is
 ## Print do SIFIT — C14-CT04
 
 A captura da tela de Exercícios mostra QA_VICTOR_EXERCICIO_20261119_001 em Bicpes e a contagem exibida no momento da consulta. As variações do caso continuam pendentes. [Ver print e registro no cenário C14](../cenarios-de-testes/C14-exercicios.md#print-do-sifit--c14-ct04).
+## Atualização — C18-CT07
+Em 19/11/2026, filtrei Turmas por Status: Inativo e acionei Buscar. A tela exibiu “Nenhuma turma encontrada”; os indicadores mostraram 12 turmas, 12 ativas, 4 com personal e 4 com aula experimental. Não alterei dados. Não havia registros inativos para verificar uma correspondência positiva; C18-CT07 permanece parcial, com julgamento pendente e sem bug confirmado. [Print do SIFIT](https://github.com/user-attachments/assets/f22d1404-c5a4-4640-8c80-b05dd8b5905d).
+A atualização acrescenta mais um caso iniciado parcialmente: total provisório de 16 casos aguardando julgamento e 48 ainda não iniciados. Os totais da tabela serão conciliados com as linhas individuais antes da entrega final.
