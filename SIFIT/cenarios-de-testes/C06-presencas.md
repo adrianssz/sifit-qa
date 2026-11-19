@@ -1,7 +1,6 @@
 # C06 — Presenças — Meus testes
 
-**Responsável:** Victor  
-**Estado:** roteiros iniciais; todos Não executados.  
+**Responsável:** Victor; **Estado:** roteiros iniciais; C06-CT05 parcialmente executado, demais casos não executados.  
 **Fonte:** [Inventário](../../Invent%C3%A1rio.md), blob `d3885feed1a1909bc57ee56f4041b18facb5b813`.  
 **Requisito:** [RF06](../contribuicoes/victor/requisitos.md).  
 **Registros:** [resultados](../contribuicoes/victor/resultados.md) e [bugs](../contribuicoes/victor/bugs.md).
@@ -134,12 +133,12 @@ Gravar também sucessos. Não mostrar credenciais, tokens, conexões ou dados re
 | ENTÃO — critério original | Recalcular indicadores corretamente, inclusive em intervalo sem presenças. |
 | Aceitação | Comparar o obtido com o critério acima e com a regra confirmada registrada; verificar todas as variações aplicáveis. Não presumir texto exato de mensagem. |
 | Verificações comuns propostas | G13, G20 e G24 conforme vínculos acessíveis; G21 para erro e G23 para teclado/foco/mensagens quando aplicáveis. Identificar aplicação como C06-Gyy-CAMPO e justificar não aplicabilidade. |
-| Resultado obtido | Ainda não observei; vou preencher após executar. |
-| Status | Não executado |
-| Data/hora e fuso | Não registrado; preencher na execução. |
-| Executor real | Ainda não registrado; vou informar quem operou a interface e eventual assistência utilizada. |
-| Ambiente | Registrar URL, unidade, versão do sistema se exposta, navegador/versão e SO reais. |
-| Vídeo e tempos | Não produzido. |
+| Resultado obtido | Em 19/11/2026, consultei 13/11/2026 a 19/11/2026. A tela mostrou Total no período=0, Alunos distintos=0, Média por dia=0 e Dias no período=7, além de “Nenhuma presença encontrada”. Ainda não comparei com um período com presenças; esta execução cobre apenas o intervalo vazio. |
+| Status | Execução parcial; julgamento pendente |
+| Data/hora e fuso | 19/11/2026, aproximadamente 02:39 (America/Sao_Paulo), conforme horário de criação do Jam. |
+| Executor real | Registrei a observação com apoio de automação de interface (Codex), na sessão autenticada exibida como Jair. |
+| Ambiente | https://sifit.centrion.com.br/presencas; unidade não identificada; versão do sistema, navegador e SO não observados. |
+| Vídeo e tempos | [Captura Jam C06-CT05](https://jam.dev/c/ba6d7c6f-417b-478e-bdb6-42a2243a0f28?s=mcp), duração aproximada de 1min57s. |
 | Prints | Não produzidos. |
 | Bug associado | Ainda não confirmei nenhum nesta etapa. |
 | Fonte da regra / pendências | Confirmar antes do julgamento; registrar fonte e decisão concreta aqui. |
