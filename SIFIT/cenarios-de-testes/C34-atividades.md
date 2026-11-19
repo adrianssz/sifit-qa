@@ -1,7 +1,7 @@
 # C34 — Atividades — Meus testes
 
 **Responsável:** Victor  
-**Estado:** C34-CT01 e C34-CT02 aprovados; C34-CT03 executado com julgamento pendente de regra; demais casos ainda Não executados.
+**Estado:** C34-CT01 e C34-CT02 aprovados; C34-CT03 e C34-CT04 executados com julgamento pendente de regra; C34-CT05 ainda Não executado.
 **Fonte:** [Inventário](../../Invent%C3%A1rio.md), blob `d3885feed1a1909bc57ee56f4041b18facb5b813`.  
 **Requisito:** [RF34](../contribuicoes/victor/requisitos.md).  
 **Registros:** [resultados](../contribuicoes/victor/resultados.md) e [bugs](../contribuicoes/victor/bugs.md).
@@ -101,22 +101,22 @@ Gravar também sucessos. Não mostrar credenciais, tokens, conexões ou dados re
 | Tipo original | Negativo |
 | Objetivo | Verificar o critério deste caso com dados próprios e evidência rastreável. |
 | Requisito | RF34 |
-| Pré-condições | Sessão/unidade identificadas; dados e referências do roteiro abaixo preparados; regras indispensáveis confirmadas. Se depender de editor, mapear os controles antes de concluir o roteiro. |
-| Dados | QA_VICTOR_C34_AAAAMMDD_NNN; substituir pela data real e registrar IDs gerados e valores de cada variação antes da execução. |
-| DADO | Que o módulo está acessível e o estado inicial dos registros próprios foi anotado. |
-| QUANDO — roteiro | Testar nome vazio, espaços e textos no limite e acima do limite confirmado para nome/descrição; separar variações. |
+| Pré-condições | Acesso ao módulo Atividades; registros QA_VICTOR; regra de obrigatoriedade e limites a confirmar antes do julgamento. |
+| Dados | Variação A: nome vazio (código gerado 16). Variação B: QA_VICTOR_ATIVIDADE_20261119_007_LONG (código 17), nome próprio e descrição de 1.800 caracteres; deixei Pontuação vazia. |
+| DADO | Que o módulo Atividades estava acessível e os indicadores iniciais eram 12 atividades, 7 com pontuação, 5 sem pontuação e 6 com descrição. |
+| QUANDO — roteiro | Tentei salvar o formulário com Nome vazio. Em seguida cadastrei QA_VICTOR_ATIVIDADE_20261119_007_LONG com descrição de 1.800 caracteres, pesquisei o registro e o reabri; cancelei o detalhe sem editar. |
 | ENTÃO — critério original | Validar nome e limite da descrição. |
-| Aceitação | Comparar o obtido com o critério acima e com a regra confirmada registrada; verificar todas as variações aplicáveis. Não presumir texto exato de mensagem. |
-| Verificações comuns propostas | G02, G03, G05, G06 e G08 conforme campo/regra confirmados; G21 para erro e G23 para teclado/foco/mensagens quando aplicáveis. Identificar aplicação como C34-Gyy-CAMPO e justificar não aplicabilidade. |
-| Resultado obtido | Ainda não observei; vou preencher após executar. |
-| Status | Não executado |
-| Data/hora e fuso | Não registrado; preencher na execução. |
-| Executor real | Ainda não registrado; vou informar quem operou a interface e eventual assistência utilizada. |
-| Ambiente | Registrar URL, unidade, versão do sistema se exposta, navegador/versão e SO reais. |
-| Vídeo e tempos | Não produzido. |
+| Aceitação | Comparar os resultados observados com a regra de nome e o limite confirmado para descrição; não presumir regra nem tamanho máximo. |
+| Verificações comuns propostas | G02, G03, G05, G06 e G08 conforme regra confirmada; G21 para erro e G23 para teclado/foco/mensagens quando aplicáveis. Identificar aplicação como C34-Gyy-CAMPO e justificar não aplicabilidade. |
+| Resultado obtido | O sistema salvou o formulário com Nome vazio e gerou o código 16, sem exibir aviso; a lista totalizou 13 registros após essa tentativa. A atividade 007, com descrição longa, também foi salva e apareceu na busca sob o código 17. Ao reabrir o detalhe, a descrição informada estava visível; o campo Pontuação mostrou 0 embora eu o tivesse deixado vazio. Os indicadores finais foram 14 atividades, 7 com pontuação, 7 sem pontuação e 7 com descrição. |
+| Status | Executado; julgamento pendente de confirmação da regra de nome e do limite da descrição |
+| Data/hora e fuso | 19/11/2026, aproximadamente 01:20–01:26 (America/Sao_Paulo). |
+| Executor real | O assistente Codex operou a interface sob minha solicitação; eu iniciei e encerrei a gravação Jam. |
+| Ambiente | https://sifit.centrion.com.br/atividades; perfil exibido Jair; Chrome 158.0.8127.36 em Windows 11. Unidade ativa não confirmada. |
+| Vídeo e tempos | [Gravação Jam exclusiva de C34-CT04, 3min15s](https://jam.dev/c/f25eee59-00c4-482b-bf6f-b20c0360d3e3?s=mcp). Nome vazio e salvamento (0:13–0:29); cadastro longo (1:05–1:32); busca (2:00); abertura do detalhe (2:14); conferência do código 17 (2:36); cancelamento (2:59); fim (3:15). |
 | Prints | Não produzidos. |
-| Bug associado | Ainda não confirmei nenhum nesta etapa. |
-| Fonte da regra / pendências | Confirmar antes do julgamento; registrar fonte e decisão concreta aqui. |
+| Bug associado | Nenhum confirmado; a regra para nome vazio e o limite aceito para descrição precisam ser confirmados. |
+| Fonte da regra / pendências | Critério original do Inventário: “Validar nome e limite da descrição.” Não encontrei no inventário o limite numérico nem a regra de obrigatoriedade do nome; aguardo confirmação antes de julgar. |
 
 ## C34-CT05 — Pesquisar, editar e conferir indicadores
 
