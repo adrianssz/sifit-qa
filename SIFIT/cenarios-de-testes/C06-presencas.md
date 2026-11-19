@@ -1,13 +1,13 @@
 # C06 — Presenças — Meus testes
 
-**Responsável:** Victor; **Estado:** C06-CT02 executado com julgamento pendente e C06-CT05 parcialmente executado; demais casos não executados.  
+**Responsável:** Victor; **Estado:** C06-CT02 executado com julgamento pendente; C06-CT04 executado parcialmente, com julgamento pendente; C06-CT05 parcialmente executado; demais casos não executados.  
 **Fonte:** [Inventário](../../Invent%C3%A1rio.md), blob `d3885feed1a1909bc57ee56f4041b18facb5b813`.  
 **Requisito:** [RF06](../contribuicoes/victor/requisitos.md).  
 **Registros:** [resultados](../contribuicoes/victor/resultados.md) e [bugs](../contribuicoes/victor/bugs.md).
 
 ## Preparação e julgamento
 
-Vou usar uma sessão autorizada no ambiente de referência https://sifit.centrion.com.br/, unidade identificada e dados próprios QA_VICTOR. Registrar códigos reais, data de preparação e estado inicial. As dependências e regras pendentes constam no [planejamento](../contribuicoes/victor/planejamento.md). Ainda preciso conferir os controles na tela antes das gravações.
+Vou usar uma sessão autorizada no ambiente de referência https://sifit.centrion.com.br/, unidade identificada e dados próprios QA_VICTOR. Registrar códigos reais, data de preparação e estado inicial. As dependências e regras pendentes constam no [planejamento](../contribuicoes/victor/planejamento.md). Já reconheci os filtros de período na tela e gravei C06-CT02 e C06-CT04 separadamente.
 
 Antes da gravação, vou reconhecer a tela e completar os campos/limites/ações ainda desconhecidos. Preservar os IDs e descrições abaixo. Cada variação recebe sufixo A/B/C e evidência própria ou intervalo no vídeo. Não aprovar o caso principal com variações pendentes. Critérios do inventário são propostos; confirmar regras necessárias antes de reprovar. Falta de regra ou acesso exige registro de pendência/bloqueio concreto, sem bug confirmado automático.
 
@@ -100,22 +100,22 @@ Gravar também sucessos. Não mostrar credenciais, tokens, conexões ou dados re
 | Tipo original | Negativo |
 | Objetivo | Verificar o critério deste caso com dados próprios e evidência rastreável. |
 | Requisito | RF06 |
-| Pré-condições | Sessão/unidade identificadas; dados e referências do roteiro abaixo preparados; regras indispensáveis confirmadas. Se depender de editor, mapear os controles antes de concluir o roteiro. |
-| Dados | QA_VICTOR_C06_AAAAMMDD_NNN; substituir pela data real e registrar IDs gerados e valores de cada variação antes da execução. |
-| DADO | Que o módulo está acessível e o estado inicial dos registros próprios foi anotado. |
-| QUANDO — roteiro | Testar De/Até vazios, datas inválidas quando o controle permitir e início posterior ao fim; registrar validações. |
+| Pré-condições | Sessão/unidade identificadas; intervalo de datas definido; regras indispensáveis confirmadas antes do julgamento. |
+| Dados | Não criei nem alterei registros. Para a variação invertida, usei 21/10/2026 no campo De e 20/10/2026 no campo Até. |
+| DADO | Que o módulo Presenças estava acessível e exibia inicialmente o intervalo de 21/10/2026 a 19/11/2026. |
+| QUANDO — roteiro | Alterei a data Até pelo seletor de calendário para 20/10/2026, deixando o início em 21/10/2026, e acionei Buscar. Não executei as variações de datas vazias ou inválidas. |
 | ENTÃO — critério original | Orientar correção, sem erro técnico. |
 | Aceitação | Comparar o obtido com o critério acima e com a regra confirmada registrada; verificar todas as variações aplicáveis. Não presumir texto exato de mensagem. |
 | Verificações comuns propostas | G02, G03, G05, G06 e G08 conforme campo/regra confirmados; G21 para erro e G23 para teclado/foco/mensagens quando aplicáveis. Identificar aplicação como C06-Gyy-CAMPO e justificar não aplicabilidade. |
-| Resultado obtido | Ainda não observei; vou preencher após executar. |
-| Status | Não executado |
-| Data/hora e fuso | Não registrado; preencher na execução. |
-| Executor real | Ainda não registrado; vou informar quem operou a interface e eventual assistência utilizada. |
-| Ambiente | Registrar URL, unidade, versão do sistema se exposta, navegador/versão e SO reais. |
-| Vídeo e tempos | Não produzido. |
+| Resultado obtido | Em 19/11/2026, consultei o intervalo invertido (De 21/10/2026; Até 20/10/2026). A tela terminou a consulta e manteve os valores informados; continuou exibindo 0 presenças, 0 alunos distintos, média 0, 1 dia no período e “Nenhuma presença encontrada”, sem mensagem de validação ou erro técnico visível. Não testei campos vazios nem data inválida. |
+| Status | Execução parcial; julgamento pendente |
+| Data/hora e fuso | 19/11/2026, aproximadamente 03:06–03:10 (America/Sao_Paulo), conforme gravação Jam criada às 06:08 UTC. |
+| Executor real | Operação da interface feita por automação do assistente Codex, na sessão autenticada exibida como Jair. |
+| Ambiente | https://sifit.centrion.com.br/presencas; unidade e versão do sistema não identificadas; Chrome 157.0.8103.78, Windows 11 (x86), conforme sessão/Jam. |
+| Vídeo e tempos | [Jam C06-CT04](https://jam.dev/c/45aa9710-d82d-4882-b33c-0be67a4c2c79?s=mcp), 1min44s; gravação da consulta com intervalo invertido. Captura de tela, sem logs de console/rede. |
 | Prints | Não produzidos. |
 | Bug associado | Ainda não confirmei nenhum nesta etapa. |
-| Fonte da regra / pendências | Confirmar antes do julgamento; registrar fonte e decisão concreta aqui. |
+| Fonte da regra / pendências | O inventário diz “Orientar correção, sem erro técnico”, mas não define a resposta esperada para intervalo invertido. A consulta terminou sem mensagem de validação aparente; faltam as variações vazia e inválida e a confirmação da regra. Não concluo falha nem bug confirmado. |
 
 ## C06-CT05 — Total, alunos distintos, média e dias
 
