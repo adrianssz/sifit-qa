@@ -1,7 +1,7 @@
 # C45 — Modelos de Ficha — Meus testes
 
 **Responsável:** Victor  
-**Estado:** C45-CT01 executado parcialmente, com julgamento pendente; demais casos não executados.  
+**Estado:** C45-CT01 e C45-CT02 executados parcialmente, com julgamento pendente; demais casos não executados.  
 **Fonte:** [Inventário](../../Invent%C3%A1rio.md), blob `d3885feed1a1909bc57ee56f4041b18facb5b813`.  
 **Requisito:** [RF45](../contribuicoes/victor/requisitos.md).  
 **Registros:** [resultados](../contribuicoes/victor/resultados.md) e [bugs](../contribuicoes/victor/bugs.md).
@@ -52,21 +52,21 @@ Gravar também sucessos. Não mostrar credenciais, tokens, conexões ou dados re
 | Objetivo | Verificar o critério deste caso com dados próprios e evidência rastreável. |
 | Requisito | RF45 |
 | Pré-condições | Sessão/unidade identificadas; dados e referências do roteiro abaixo preparados; regras indispensáveis confirmadas. Se depender de editor, mapear os controles antes de concluir o roteiro. |
-| Dados | QA_VICTOR_C45_AAAAMMDD_NNN; substituir pela data real e registrar IDs gerados e valores de cada variação antes da execução. |
-| DADO | Que o módulo está acessível e o estado inicial dos registros próprios foi anotado. |
-| QUANDO — roteiro | Abrir inclusão; registrar campos, obrigatoriedade e controles do editor; cancelar sem salvar; complementar roteiros dependentes. |
+| Dados | A listagem inicial apresentava 0 modelos. Abri o formulário vazio e não preenchi dados nem criei registros. |
+| DADO | Que a tela Modelos de Ficha estava acessível e exibia 0 modelos; a unidade não foi confirmada. |
+| QUANDO — roteiro | Abri Novo Modelo de Ficha, observei os campos e ações exibidos e cliquei Cancelar sem salvar. |
 | ENTÃO — critério original | Identificar campos e controles efetivos antes do roteiro. |
 | Aceitação | Comparar o obtido com o critério acima e com a regra confirmada registrada; verificar todas as variações aplicáveis. Não presumir texto exato de mensagem. |
 | Verificações comuns propostas | G01, G10, G11, G12 e G13 conforme ações disponíveis; G21 para erro e G23 para teclado/foco/mensagens quando aplicáveis. Identificar aplicação como C45-Gyy-CAMPO e justificar não aplicabilidade. |
-| Resultado obtido | Ainda não observei; vou preencher após executar. |
-| Status | Não executado |
-| Data/hora e fuso | Não registrado; preencher na execução. |
-| Executor real | Ainda não registrado; vou informar quem operou a interface e eventual assistência utilizada. |
-| Ambiente | Registrar URL, unidade, versão do sistema se exposta, navegador/versão e SO reais. |
-| Vídeo e tempos | Não produzido. |
+| Resultado obtido | O formulário Novo Modelo de Ficha mostrou Nome do Modelo, seleção de Personal, Cancelar e Criar Modelo. Cancelei sem preencher; a listagem voltou a 0 modelos. O editor completo e campos/limites seguintes não foram alcançados. |
+| Status | Execução parcial; julgamento pendente até mapear o editor após um modelo QA_VICTOR. |
+| Data/hora e fuso | 19/11/2026, aproximadamente 03:39 (America/Sao_Paulo). |
+| Executor real | Operei a interface com automação assistida nesta sessão autenticada como Jair. |
+| Ambiente | https://sifit.centrion.com.br/fichas-treino-modelo; unidade não confirmada; versão do SIFIT não exposta; Chrome 157.0.8103.78, Windows 11 (x86). |
+| Vídeo e tempos | [Jam exclusivo C45-CT02, 35 s](https://jam.dev/c/3afaed3e-9de5-4403-a212-b15a2751ed2c?s=mcp); captura de tela, sem logs de console/rede. |
 | Prints | Não produzidos. |
 | Bug associado | Ainda não confirmei nenhum nesta etapa. |
-| Fonte da regra / pendências | Confirmar antes do julgamento; registrar fonte e decisão concreta aqui. |
+| Fonte da regra / pendências | Critério do inventário: identificar os campos e controles efetivos. Mapeei apenas a primeira tela; para abrir o editor posterior é necessário existir um modelo próprio. Não confirmei obrigatoriedade de Nome ou Personal e não classifiquei ausência de dados como bug. |
 
 ## C45-CT03 — Título vazio e modelo sem exercícios
 
