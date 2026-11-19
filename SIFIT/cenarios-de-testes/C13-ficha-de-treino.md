@@ -1,7 +1,7 @@
 # C13 — Ficha de Treino — Meus testes
 
 **Responsável:** Victor  
-**Estado:** roteiros iniciais; todos Não executados.  
+**Estado:** C13-CT10 executado parcialmente, com julgamento pendente; demais testes não executados.  
 **Fonte:** [Inventário](../../Invent%C3%A1rio.md), blob `d3885feed1a1909bc57ee56f4041b18facb5b813`.  
 **Requisito:** [RF13](../contribuicoes/victor/requisitos.md).  
 **Registros:** [resultados](../contribuicoes/victor/resultados.md) e [bugs](../contribuicoes/victor/bugs.md).
