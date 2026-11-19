@@ -4,7 +4,7 @@
 **Sistema:** SIFIT — https://sifit.centrion.com.br  
 **Requisito:** [RF40 — Categorias de Anamnese](../contribuicoes/renan/requisitos.md#rf40--categorias-de-anamnese)
 
-Aqui eu testo o cadastro de categorias de anamnese, que tem nome, status, ícone e cor. Em todos os casos começo a gravação já logado no sistema e uso dados fictícios com o prefixo `QA_RENAN` (lista completa na [massa de dados](../contribuicoes/renan/planejamento.md#4-massa-de-dados)). Sempre anoto o código da categoria criada, para conseguir achar depois.
+Aqui eu testo o cadastro de categorias de anamnese, que tem nome, status, ícone e cor. Em todos os casos começo já logado no sistema e uso dados fictícios com o prefixo `QA_RENAN` (lista completa na [massa de dados](../contribuicoes/renan/planejamento.md#4-massa-de-dados)). Sempre anoto o código da categoria criada, para conseguir achar depois.
 
 Os nomes exatos dos botões e o caminho no menu eu ajusto depois de olhar a tela com calma no reconhecimento.
 
@@ -23,7 +23,7 @@ Ver se consigo cadastrar uma categoria com todos os campos preenchidos e se ela 
 
 ### Pré-condições
 
-Antes de gravar, pesquisar `QA_RENAN_CAT_01` para ter certeza de que ela ainda não existe.
+Antes de começar, pesquisar `QA_RENAN_CAT_01` para ter certeza de que ela ainda não existe.
 
 ### Dados utilizados
 
@@ -62,7 +62,8 @@ Ainda não executado.
 
 ### Evidência
 
-Vídeo: `C40-CT01-cadastrar-categoria.mp4` (link quando gravar)
+Prints: em `SIFIT/evidencias/renan/`, com o nome começando por `C40-CT01`  
+Vídeo (opcional, no fim): `C40-CT01-cadastrar-categoria.mp4`
 
 ### Bug associado
 
@@ -126,7 +127,8 @@ Ainda não executado.
 
 ### Evidência
 
-Vídeo: `C40-CT02-nome-vazio-repetido.mp4` (link quando gravar)
+Prints: em `SIFIT/evidencias/renan/`, com o nome começando por `C40-CT02`  
+Vídeo (opcional, no fim): `C40-CT02-nome-vazio-repetido.mp4`
 
 ### Bug associado
 
@@ -184,7 +186,8 @@ Ainda não executado.
 
 ### Evidência
 
-Vídeo: `C40-CT03-cor-seletor-codigo.mp4` (link quando gravar)
+Prints: em `SIFIT/evidencias/renan/`, com o nome começando por `C40-CT03`  
+Vídeo (opcional, no fim): `C40-CT03-cor-seletor-codigo.mp4`
 
 ### Bug associado
 
@@ -243,7 +246,8 @@ Ainda não executado.
 
 ### Evidência
 
-Vídeo: `C40-CT04-icone-valido-invalido.mp4` (link quando gravar)
+Prints: em `SIFIT/evidencias/renan/`, com o nome começando por `C40-CT04`  
+Vídeo (opcional, no fim): `C40-CT04-icone-valido-invalido.mp4`
 
 ### Bug associado
 
@@ -303,7 +307,8 @@ Ainda não executado.
 
 ### Evidência
 
-Vídeo: `C40-CT05-filtro-edicao-inativacao.mp4` (link quando gravar)
+Prints: em `SIFIT/evidencias/renan/`, com o nome começando por `C40-CT05`  
+Vídeo (opcional, no fim): `C40-CT05-filtro-edicao-inativacao.mp4`
 
 ### Bug associado
 
@@ -362,7 +367,8 @@ Ainda não executado.
 
 ### Evidência
 
-Vídeo: `C40-CT06-excluir-categoria-vinculada.mp4` (link quando gravar)
+Prints: em `SIFIT/evidencias/renan/`, com o nome começando por `C40-CT06`  
+Vídeo (opcional, no fim): `C40-CT06-excluir-categoria-vinculada.mp4`
 
 ### Bug associado
 

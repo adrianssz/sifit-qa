@@ -4,7 +4,7 @@
 **Sistema:** SIFIT — https://sifit.centrion.com.br  
 **Requisito:** [RF38 — Fichas de Anamnese](../contribuicoes/renan/requisitos.md#rf38--fichas-de-anamnese)
 
-Aqui eu aplico a anamnese no aluno de teste `QA_RENAN_CLIENTE_01`, que eu mesmo cadastro antes como preparação de dados, usando o modelo `QA_RENAN_MOD_01` do C39. Começo as gravações já logado. Todas as respostas são inventadas e nenhum dado de saúde real aparece nos vídeos. Do CT02 ao CT08 eu sigo uma mesma ficha, na ordem do planejamento, e no fim faço a busca da lista (CT01).
+Aqui eu aplico a anamnese no aluno de teste `QA_RENAN_CLIENTE_01`, que eu mesmo cadastro antes como preparação de dados, usando o modelo `QA_RENAN_MOD_01` do C39. Começo já logado. Todas as respostas são inventadas e nenhum dado de saúde real aparece nos prints. Do CT02 ao CT08 eu sigo uma mesma ficha, na ordem do planejamento, e no fim faço a busca da lista (CT01).
 
 ---
 
@@ -59,7 +59,8 @@ Ainda não executado.
 
 ### Evidência
 
-Vídeo: `C38-CT01-buscar-filtrar-status.mp4` (link quando gravar)
+Prints: em `SIFIT/evidencias/renan/`, com o nome começando por `C38-CT01`  
+Vídeo (opcional, no fim): `C38-CT01-buscar-filtrar-status.mp4`
 
 ### Bug associado
 
@@ -111,7 +112,8 @@ Ainda não executado.
 
 ### Evidência
 
-Vídeo: `C38-CT02-selecionar-aluno.mp4` (link quando gravar)
+Prints: em `SIFIT/evidencias/renan/`, com o nome começando por `C38-CT02`  
+Vídeo (opcional, no fim): `C38-CT02-selecionar-aluno.mp4`
 
 ### Bug associado
 
@@ -167,7 +169,8 @@ Ainda não executado.
 
 ### Evidência
 
-Vídeo: `C38-CT03-aluno-modelo-ausente.mp4` (link quando gravar)
+Prints: em `SIFIT/evidencias/renan/`, com o nome começando por `C38-CT03`  
+Vídeo (opcional, no fim): `C38-CT03-aluno-modelo-ausente.mp4`
 
 ### Bug associado
 
@@ -219,7 +222,8 @@ Ainda não executado.
 
 ### Evidência
 
-Vídeo: `C38-CT04-aplicar-anamnese.mp4` (link quando gravar)
+Prints: em `SIFIT/evidencias/renan/`, com o nome começando por `C38-CT04`  
+Vídeo (opcional, no fim): `C38-CT04-aplicar-anamnese.mp4`
 
 ### Bug associado
 
@@ -275,7 +279,8 @@ Ainda não executado.
 
 ### Evidência
 
-Vídeo: `C38-CT05-responder-perguntas.mp4` (link quando gravar)
+Prints: em `SIFIT/evidencias/renan/`, com o nome começando por `C38-CT05`  
+Vídeo (opcional, no fim): `C38-CT05-responder-perguntas.mp4`
 
 ### Bug associado
 
@@ -332,7 +337,8 @@ Ainda não executado.
 
 ### Evidência
 
-Vídeo: `C38-CT06-obrigatoria-ausente.mp4` (link quando gravar)
+Prints: em `SIFIT/evidencias/renan/`, com o nome começando por `C38-CT06`  
+Vídeo (opcional, no fim): `C38-CT06-obrigatoria-ausente.mp4`
 
 ### Bug associado
 
@@ -386,7 +392,8 @@ Ainda não executado.
 
 ### Evidência
 
-Vídeo: `C38-CT07-rascunho-concluir.mp4` (link quando gravar)
+Prints: em `SIFIT/evidencias/renan/`, com o nome começando por `C38-CT07`  
+Vídeo (opcional, no fim): `C38-CT07-rascunho-concluir.mp4`
 
 ### Bug associado
 
@@ -438,7 +445,8 @@ Ainda não executado.
 
 ### Evidência
 
-Vídeo: `C38-CT08-consultar-ficha-concluida.mp4` (link quando gravar)
+Prints: em `SIFIT/evidencias/renan/`, com o nome começando por `C38-CT08`  
+Vídeo (opcional, no fim): `C38-CT08-consultar-ficha-concluida.mp4`
 
 ### Bug associado
 

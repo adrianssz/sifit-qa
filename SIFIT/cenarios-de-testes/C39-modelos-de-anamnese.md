@@ -4,9 +4,9 @@
 **Sistema:** SIFIT — https://sifit.centrion.com.br  
 **Requisito:** [RF39 — Modelos de Anamnese](../contribuicoes/renan/requisitos.md#rf39--modelos-de-anamnese)
 
-Aqui eu testo a criação de modelos de anamnese no montador visual, onde escolho as perguntas cadastradas no C41. Começo as gravações já logado e uso dados fictícios com o prefixo `QA_RENAN`. O modelo `QA_RENAN_MOD_01` é o que vou aplicar no aluno de teste no C38, então não posso apagá-lo.
+Aqui eu testo a criação de modelos de anamnese no montador visual, onde escolho as perguntas cadastradas no C41. Começo já logado e uso dados fictícios com o prefixo `QA_RENAN`. O modelo `QA_RENAN_MOD_01` é o que vou aplicar no aluno de teste no C38, então não posso apagá-lo.
 
-O inventário registrou um erro de servidor nesta tela. Por isso o primeiro caso que gravo é o CT08, que confere se o montador carrega.
+O inventário registrou um erro de servidor nesta tela. Por isso o primeiro caso que faço é o CT08, que confere se o montador carrega.
 
 ---
 
@@ -62,7 +62,8 @@ Ainda não executado.
 
 ### Evidência
 
-Vídeo: `C39-CT01-criar-modelo.mp4` (link quando gravar)
+Prints: em `SIFIT/evidencias/renan/`, com o nome começando por `C39-CT01`  
+Vídeo (opcional, no fim): `C39-CT01-criar-modelo.mp4`
 
 ### Bug associado
 
@@ -121,7 +122,8 @@ Ainda não executado.
 
 ### Evidência
 
-Vídeo: `C39-CT02-nome-vazio-sem-perguntas.mp4` (link quando gravar)
+Prints: em `SIFIT/evidencias/renan/`, com o nome começando por `C39-CT02`  
+Vídeo (opcional, no fim): `C39-CT02-nome-vazio-sem-perguntas.mp4`
 
 ### Bug associado
 
@@ -180,7 +182,8 @@ Ainda não executado.
 
 ### Evidência
 
-Vídeo: `C39-CT03-buscar-pergunta-filtrar-categoria.mp4` (link quando gravar)
+Prints: em `SIFIT/evidencias/renan/`, com o nome começando por `C39-CT03`  
+Vídeo (opcional, no fim): `C39-CT03-buscar-pergunta-filtrar-categoria.mp4`
 
 ### Bug associado
 
@@ -234,7 +237,8 @@ Ainda não executado.
 
 ### Evidência
 
-Vídeo: `C39-CT04-adicionar-remover-pergunta.mp4` (link quando gravar)
+Prints: em `SIFIT/evidencias/renan/`, com o nome começando por `C39-CT04`  
+Vídeo (opcional, no fim): `C39-CT04-adicionar-remover-pergunta.mp4`
 
 ### Bug associado
 
@@ -287,7 +291,8 @@ Ainda não executado.
 
 ### Evidência
 
-Vídeo: `C39-CT05-reordenar-perguntas.mp4` (link quando gravar)
+Prints: em `SIFIT/evidencias/renan/`, com o nome começando por `C39-CT05`  
+Vídeo (opcional, no fim): `C39-CT05-reordenar-perguntas.mp4`
 
 ### Bug associado
 
@@ -308,7 +313,7 @@ Ver se o montador deixa colocar a mesma pergunta duas vezes e se uma pergunta in
 
 ### Pré-condições
 
-Antes de gravar, cadastrar no C41 a pergunta `QA_RENAN_PERG_INAT_01` já com status Inativo (isso é só preparação, não conta como caso).
+Antes de começar, cadastrar no C41 a pergunta `QA_RENAN_PERG_INAT_01` já com status Inativo (isso é só preparação, não conta como caso).
 
 ### Dados utilizados
 
@@ -343,7 +348,8 @@ Ainda não executado.
 
 ### Evidência
 
-Vídeo: `C39-CT06-pergunta-duplicada-inativa.mp4` (link quando gravar)
+Prints: em `SIFIT/evidencias/renan/`, com o nome começando por `C39-CT06`  
+Vídeo (opcional, no fim): `C39-CT06-pergunta-duplicada-inativa.mp4`
 
 ### Bug associado
 
@@ -399,7 +405,8 @@ Ainda não executado.
 
 ### Evidência
 
-Vídeo: `C39-CT07-editar-modelo-aplicado.mp4` (link quando gravar)
+Prints: em `SIFIT/evidencias/renan/`, com o nome começando por `C39-CT07`  
+Vídeo (opcional, no fim): `C39-CT07-editar-modelo-aplicado.mp4`
 
 ### Bug associado
 
@@ -436,7 +443,7 @@ Nenhum dado novo; só abro o montador.
 
 ### Resultado esperado
 
-Reproduzir erro observado e distinguir falha de ausência de perguntas. Com perguntas ativas cadastradas, o montador precisa listar as perguntas. Se aparecer erro ou lista vazia nas duas tentativas, registro bug, porque o sistema não pode tratar uma falha como se não existissem perguntas. O Jam grava as requisições da página, o que ajuda a mostrar a falha.
+Reproduzir erro observado e distinguir falha de ausência de perguntas. Com perguntas ativas cadastradas, o montador precisa listar as perguntas. Se aparecer erro ou lista vazia nas duas tentativas, registro bug, porque o sistema não pode tratar uma falha como se não existissem perguntas. Se der, tiro também um print da aba Rede do DevTools (F12) mostrando a requisição com erro, sem abrir os cabeçalhos.
 
 ### Verificações comuns aplicadas
 
@@ -452,7 +459,8 @@ Ainda não executado.
 
 ### Evidência
 
-Vídeo: `C39-CT08-erro-carregamento-montador.mp4` (link quando gravar)
+Prints: em `SIFIT/evidencias/renan/`, com o nome começando por `C39-CT08`  
+Vídeo (opcional, no fim): `C39-CT08-erro-carregamento-montador.mp4`
 
 ### Bug associado
 

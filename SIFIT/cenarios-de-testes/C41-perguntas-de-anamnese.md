@@ -4,9 +4,9 @@
 **Sistema:** SIFIT — https://sifit.centrion.com.br  
 **Requisito:** [RF41 — Perguntas de Anamnese](../contribuicoes/renan/requisitos.md#rf41--perguntas-de-anamnese)
 
-Aqui eu testo o cadastro de perguntas de anamnese, que tem nome, enunciado, número, status e tipo de resposta. Começo as gravações já logado e uso dados fictícios com o prefixo `QA_RENAN`. As três primeiras perguntas que cadastro aqui vão para o modelo (C39) e para a ficha do aluno (C38), então não posso apagá-las. Se o formulário tiver campo de categoria, uso a `QA_RENAN_CAT_01 Saúde`, criada no C40.
+Aqui eu testo o cadastro de perguntas de anamnese, que tem nome, enunciado, número, status e tipo de resposta. Começo já logado e uso dados fictícios com o prefixo `QA_RENAN`. As três primeiras perguntas que cadastro aqui vão para o modelo (C39) e para a ficha do aluno (C38), então não posso apagá-las. Se o formulário tiver campo de categoria, uso a `QA_RENAN_CAT_01 Saúde`, criada no C40.
 
-O inventário registrou um “Erro no servidor” nesta tela. Se ele aparecer em qualquer caso, gravo a mensagem e trato no CT07.
+O inventário registrou um “Erro no servidor” nesta tela. Se ele aparecer em qualquer caso, tiro print da mensagem e trato no CT07.
 
 ---
 
@@ -62,7 +62,8 @@ Ainda não executado.
 
 ### Evidência
 
-Vídeo: `C41-CT01-pergunta-sim-nao.mp4` (link quando gravar)
+Prints: em `SIFIT/evidencias/renan/`, com o nome começando por `C41-CT01`  
+Vídeo (opcional, no fim): `C41-CT01-pergunta-sim-nao.mp4`
 
 ### Bug associado
 
@@ -119,7 +120,8 @@ Ainda não executado.
 
 ### Evidência
 
-Vídeo: `C41-CT02-pergunta-sim-nao-nao-sei.mp4` (link quando gravar)
+Prints: em `SIFIT/evidencias/renan/`, com o nome começando por `C41-CT02`  
+Vídeo (opcional, no fim): `C41-CT02-pergunta-sim-nao-nao-sei.mp4`
 
 ### Bug associado
 
@@ -178,7 +180,8 @@ Ainda não executado.
 
 ### Evidência
 
-Vídeo: `C41-CT03-pergunta-se-sim-qual.mp4` (link quando gravar)
+Prints: em `SIFIT/evidencias/renan/`, com o nome começando por `C41-CT03`  
+Vídeo (opcional, no fim): `C41-CT03-pergunta-se-sim-qual.mp4`
 
 ### Bug associado
 
@@ -241,7 +244,8 @@ Ainda não executado.
 
 ### Evidência
 
-Vídeo: `C41-CT04-nome-enunciado-vazio.mp4` (link quando gravar)
+Prints: em `SIFIT/evidencias/renan/`, com o nome começando por `C41-CT04`  
+Vídeo (opcional, no fim): `C41-CT04-nome-enunciado-vazio.mp4`
 
 ### Bug associado
 
@@ -297,7 +301,8 @@ Ainda não executado.
 
 ### Evidência
 
-Vídeo: `C41-CT05-numero-invalido-repetido.mp4` (link quando gravar)
+Prints: em `SIFIT/evidencias/renan/`, com o nome começando por `C41-CT05`  
+Vídeo (opcional, no fim): `C41-CT05-numero-invalido-repetido.mp4`
 
 ### Bug associado
 
@@ -352,7 +357,8 @@ Ainda não executado.
 
 ### Evidência
 
-Vídeo: `C41-CT06-pergunta-inativa.mp4` (link quando gravar)
+Prints: em `SIFIT/evidencias/renan/`, com o nome começando por `C41-CT06`  
+Vídeo (opcional, no fim): `C41-CT06-pergunta-inativa.mp4`
 
 ### Bug associado
 
@@ -414,7 +420,8 @@ Ainda não executado.
 
 ### Evidência
 
-Vídeo: `C41-CT07-pesquisa-edicao-erro-servidor.mp4` (link quando gravar)
+Prints: em `SIFIT/evidencias/renan/`, com o nome começando por `C41-CT07`  
+Vídeo (opcional, no fim): `C41-CT07-pesquisa-edicao-erro-servidor.mp4`
 
 ### Bug associado
 

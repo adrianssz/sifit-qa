@@ -3,7 +3,7 @@
 **Responsável e executor:** Renan Oliveira  
 **Data do planejamento:** 16/11/2026  
 **Base:** [Inventário](../../../Invent%C3%A1rio.md), com IDs e descrições preservados  
-**Ambiente:** SIFIT — `https://sifit.centrion.com.br`, o site indicado nos slides do professor e o único com acesso ao banco. Troquei do SIFIT Alfa em 17/11/2026, antes de começar as gravações, porque o banco que recebemos não corresponde ao sifitalfa, onde Adrian e Fernando testaram.  
+**Ambiente:** SIFIT — `https://sifit.centrion.com.br`, o site indicado nos slides do professor e o único com acesso ao banco. Troquei do SIFIT Alfa em 17/11/2026, antes de começar os testes, porque o banco que recebemos não corresponde ao sifitalfa, onde Adrian e Fernando testaram.  
 **Navegador e sistema operacional:** Google Chrome, com a versão anotada em cada execução; Windows 11  
 **Situação:** os 64 casos estão **Não executados**.
 
@@ -36,7 +36,7 @@ Os requisitos estão em [requisitos.md](requisitos.md), como RF10, RF37 a RF43 e
 
 | Status | Quando usar |
 |---|---|
-| Não executado | Ainda não houve execução gravada. |
+| Não executado | Ainda não foi executado. |
 | Aprovado | Todos os critérios do caso, incluindo as verificações Gxx aplicadas nele, foram atendidos. |
 | Reprovado | Um critério do caso ou uma premissa da seção 8 não foi atendido e a falha foi reproduzida; o caso aponta o bug. |
 | Bloqueado | Falta uma pré-condição externa: acesso, conta controlada, autorização ou tela com erro. Justificar e registrar o que já foi observado. |
@@ -61,7 +61,7 @@ Nada desta etapa conta como execução.
 | P5 | Ver se o cliente de teste consegue entrar no aplicativo e se uma enquete ativa apareceria para alunos reais | Grupo | C37-CT05 a CT07 |
 | P6 | Ver na configuração das automações (C42-CT02, sem ativar) o canal e quem recebe; só seguir se os destinatários forem contas de teste | Renan | C42-CT03, CT04 e CT07; C43-CT05 |
 | P7 | O professor não definiu regras; premissas registradas na seção 8 — concluído | Renan | Casos que dependiam de regra |
-| P8 | Jam na conta de Renan; pasta `SIFIT-QA-Renan` no Drive com acesso do professor conferido; Ferramenta de Captura do Windows para as demais gravações | Renan | Evidências |
+| P8 | Prints com a Ferramenta de Captura (Win + Shift + S). Vídeo só no fim, se der tempo, na pasta `SIFIT-QA-Renan` do Drive, com acesso do professor conferido | Renan | Evidências |
 | P9 | Reconhecimento das oito telas, sem salvar nada (detalhes abaixo) | Renan | Roteiros |
 
 No reconhecimento (P9), anotar campos, indicação de obrigatório, botões e mensagens de erro, e responder:
@@ -93,9 +93,9 @@ Prefixo `QA_RENAN`. Anotar no caso o código gerado de cada registro; as confer�
 
 ## 5. Ordem de execução
 
-“Conclui após” indica que o status só é fechado depois do caso citado. A coluna Gxx lista as verificações comuns aplicadas dentro do caso, como em `C26-planos.md`.
+“Conclui após” indica que o status só é fechado depois do caso citado. A coluna Gxx lista as verificações comuns aplicadas dentro do caso, como em `C26-planos.md`. A coluna Vídeo dá o nome do arquivo caso a gente grave no fim; os prints usam o mesmo ID.
 
-### Fase 1 — Cadeia da anamnese (gravações 1 a 30, no Jam)
+### Fase 1 — Cadeia da anamnese (casos 1 a 30)
 
 | # | ID | Caso | Pré-requisito ou observação | Gxx | Vídeo (.mp4) |
 |---:|---|---|---|---|---|
@@ -132,7 +132,7 @@ Prefixo `QA_RENAN`. Anotar no caso o código gerado de cada registro; as confer�
 
 ¹ G22 só se o ícone for enviado por upload; se for escolhido em lista, registrar G22 como Não se aplica, com print.
 
-### Fase 2 — Avaliações (gravações 31 a 41)
+### Fase 2 — Avaliações (casos 31 a 41)
 
 | # | ID | Caso | Pré-requisito ou observação | Gxx | Vídeo (.mp4) |
 |---:|---|---|---|---|---|
@@ -148,7 +148,7 @@ Prefixo `QA_RENAN`. Anotar no caso o código gerado de cada registro; as confer�
 | 40 | C10-CT10 | Link de avaliação e demais ações por ícone | Ler a dica antes; nada enviado a terceiros | G23 | C10-CT10-link-acoes-icone |
 | 41 | C10-CT11 | Cancelar e excluir registro de teste | Avaliação descartável | G19 G20 | C10-CT11-cancelar-excluir |
 
-### Fase 3 — Enquetes (gravações 42 a 48)
+### Fase 3 — Enquetes (casos 42 a 48)
 
 | # | ID | Caso | Pré-requisito ou observação | Gxx | Vídeo (.mp4) |
 |---:|---|---|---|---|---|
@@ -160,7 +160,7 @@ Prefixo `QA_RENAN`. Anotar no caso o código gerado de cada registro; as confer�
 | 47 | C37-CT06 | Resultados e contagem de respostas | Requer P5 e votos de teste | G24 | C37-CT06-resultados-contagem |
 | 48 | C37-CT07 | Pesquisar e editar enquete respondida | Depende do #47 | G12 G15 G20 | C37-CT07-editar-enquete-respondida |
 
-### Fase 4 — Inteligência & Automação e Resultados IA (gravações 49 a 61)
+### Fase 4 — Inteligência & Automação e Resultados IA (casos 49 a 61)
 
 Primeiro o que só lê. Ativar e executar somente depois do P6, e só se os destinatários forem contas de teste.
 
@@ -180,7 +180,7 @@ Primeiro o que só lê. Ativar e executar somente depois do P6, e só se os dest
 | 60 | C42-CT04 | Executar agora | Requer P6 e destinatários controlados | G14 | C42-CT04-executar-agora |
 | 61 | C43-CT05 | Atualização após execução de teste | Depende do #60 | G24 | C43-CT05-atualizacao-pos-execucao |
 
-### Fase 5 — Conferência no banco (gravações 62 a 64)
+### Fase 5 — Conferência no banco (casos 62 a 64)
 
 Somente `SELECT`, com acesso autorizado, schema real e os códigos QA_RENAN anotados. Sem acesso, os três ficam Bloqueados, citando a resposta recebida.
 
@@ -199,13 +199,13 @@ Pertinentes, mas sem caso próprio. Executar se houver tempo e registrar à part
 - Outras Gxx que o reconhecimento revelar, como upload em telas ainda não mapeadas.
 
 ## 7. Evidências
+O professor informou que prints bastam. Cada caso é registrado com prints, e o vídeo fica opcional, para o fim.
 
-- Um vídeo por caso, com condição inicial, ações e resultado visível. Começar já autenticado, sem mostrar login ou senha.
-- Gravações 1 a 30 no Jam da conta de Renan, conforme a cota. Depois, Ferramenta de Captura do Windows em .mp4. Caso bloqueado antes de executar não consome gravação.
-- Nome do arquivo: coluna Vídeo + `.mp4`. Enviar para `SIFIT-QA-Renan` no Drive; no fim, copiar para o Drive único do grupo e atualizar os links.
-- Prints em `SIFIT/evidencias/renan/`, com o ID no nome (ex.: `C40-CT02-nome-repetido.png`).
-- Antes de colar um link: revisar o vídeo (o Jam anexa console e rede), conferir que não há dados reais, senhas, tokens ou dados de saúde reais e confirmar que o professor tem acesso.
-- Anotar em cada execução: data e hora, versão do Chrome, códigos gerados, mensagens exatas e link do vídeo.
+- Prints da condição inicial, das ações principais e do resultado, normalmente de 2 a 4 por caso, tirados com a Ferramenta de Captura (Win + Shift + S).
+- Nome do print: ID do caso, número e o que ele mostra (ex.: `C40-CT02-01-nome-vazio.png`), em `SIFIT/evidencias/renan/`.
+- Antes do print, filtrar a lista pelos registros `QA_RENAN` ou recortar só a parte do teste, porque o sistema tem dados de pessoas reais. Nunca mostrar senha, tela de login preenchida nem os acessos do banco.
+- Anotar em cada execução: data e hora, versão do Chrome, códigos gerados e mensagens exatas.
+- Vídeo opcional no fim: nome da coluna Vídeo + `.mp4`, na pasta `SIFIT-QA-Renan` do Drive, conferindo o acesso do professor antes de colar o link.
 
 ## 8. Premissas adotadas
 
@@ -224,16 +224,16 @@ O professor não definiu regras de negócio para estes módulos e não há docum
 
 | Risco | Efeito | Tratamento |
 |---|---|---|
-| Erro no servidor em Perguntas ou Modelos, já visto no inventário | Trava C39, C38 e C47-CT05 | Gravar no Jam, abrir bug e marcar dependentes como Bloqueados |
+| Erro no servidor em Perguntas ou Modelos, já visto no inventário | Trava C39, C38 e C47-CT05 | Registrar com print, abrir bug e marcar dependentes como Bloqueados |
 | As tabelas novas da anamnese não têm chave estrangeira no banco | Só o sistema impede vínculo quebrado | Foco do C47-CT09, com registros descartáveis |
 | Automação ou link enviar mensagem a pessoa real | Dano a terceiros | Executar só com P6; cliente sem contatos de terceiros |
 | Enquete ativa visível para alunos reais | Exposição indevida | Salvar inativa; ativar só com P5 |
 | Ambiente compartilhado com colegas e alunos de outras turmas | Alteração de terceiros confundida com resultado | Prefixo, códigos, data e hora em cada caso |
-| Cota do Jam acabar antes do 30º vídeo | Troca de ferramenta | Seguir na Ferramenta de Captura com o mesmo padrão de nome |
+| Print mostrar dado de pessoa real | Exposição indevida | Filtrar por `QA_RENAN` ou recortar antes de salvar; cada print é revisado antes do commit |
 
 ## 10. Critérios de saída
 
 - Os 64 casos com status final; Bloqueado e Não se aplica justificados.
-- Cada caso executado com vídeo, resultado obtido, data, navegador e executor.
+- Cada caso executado com prints, resultado obtido, data, navegador e executor.
 - Falhas reproduzidas registradas em `bugs.md` como `BUG-RENAN-NNN` e ligadas aos casos.
 - `resultados.md` com os totais e `SIFIT/4-relatorio-dos-testes.md` atualizado.
