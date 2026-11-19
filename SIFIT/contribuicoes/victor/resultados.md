@@ -1,14 +1,14 @@
 # Resultados dos testes — Meus testes
 
-**Estado:** 2 casos aprovados; 5 aguardam julgamento (3 de C34 e 2 de C06); 59 casos não iniciados. Concluí cinco execuções de C34, executei C06-CT02 com julgamento pendente e iniciei parcialmente C06-CT05.
+**Estado:** 2 casos aprovados; 6 aguardam julgamento (3 de C34 e 3 de C06); 58 casos não iniciados. Concluí cinco execuções de C34, executei C06-CT02, iniciei parcialmente C06-CT04 e C06-CT05.
 
 Base: 66 casos — 64 dos módulos e 2 de C47 (CT03 e CT04). [Planejamento](planejamento.md).
 
 | Planejados | Não executados | Aprovados | Julgamento pendente | Reprovados | Bloqueados constatados | Não se aplica |
 |---:|---:|---:|---:|---:|---:|---:|
-| 66 | 59 | 2 | 5 | 0 | 0 | 0 |
+| 66 | 58 | 2 | 6 | 0 | 0 | 0 |
 
-Cobertura com julgamento concluído: 2/66 = 3,03%. Aprovação entre julgados: 2/2 = 100%. Concluí C34-CT01 e C34-CT02; C34-CT03, C34-CT04 e C34-CT05 aguardam confirmação de regra. Executei C06-CT02: Hoje retornou 19/11/2026, Esta semana 13/11–19/11 e Este mês 21/10–19/11 (30 dias), sem presenças nos intervalos. O julgamento aguarda definição de períodos civis ou móveis e dados para comparar. C06-CT05 segue parcial, aguardando comparação com período com presenças. Outros 59 casos não foram iniciados. Nenhuma pendência foi contada como bug confirmado ou bloqueio constatado.
+Cobertura com julgamento concluído: 2/66 = 3,03%. Aprovação entre julgados: 2/2 = 100%. Concluí C34-CT01 e C34-CT02; C34-CT03, C34-CT04 e C34-CT05 aguardam confirmação de regra. Executei C06-CT02: Hoje retornou 19/11/2026, Esta semana 13/11–19/11 e Este mês 21/10–19/11 (30 dias), sem presenças nos intervalos. O julgamento aguarda definição de períodos civis ou móveis e dados para comparar. C06-CT04 segue parcial: o intervalo invertido foi consultado sem aviso visível; faltam as variações vazia/inválida e confirmar a regra. C06-CT05 segue parcial, aguardando comparação com período com presenças. Outros 58 casos não foram iniciados. Nenhuma pendência foi contada como bug confirmado ou bloqueio constatado.
 
 ## Registro por caso
 
@@ -26,7 +26,7 @@ Cobertura com julgamento concluído: 2/66 = 3,03%. Aprovação entre julgados: 2
 | [C06-CT01](../../cenarios-de-testes/C06-presencas.md) | Busca por cliente existente e inexistente | Não executado | Não produzido / não observado. |
 | [C06-CT02](../../cenarios-de-testes/C06-presencas.md) | Atalhos de período | Julgamento pendente | [Jam C06-CT02](https://jam.dev/c/0ce05096-3bf9-4a13-a149-a57277c6b30c?s=mcp): hoje 19/11; semana 13/11–19/11; mês 21/10–19/11 (30 dias). Os três intervalos exibiram zero presenças. |
 | [C06-CT03](../../cenarios-de-testes/C06-presencas.md) | Período personalizado | Não executado | Não produzido / não observado. |
-| [C06-CT04](../../cenarios-de-testes/C06-presencas.md) | Datas vazias, inválidas ou invertidas | Não executado | Não produzido / não observado. |
+| [C06-CT04](../../cenarios-de-testes/C06-presencas.md) | Datas vazias, inválidas ou invertidas | Execução parcial; julgamento pendente | Consultei De 21/10/2026 e Até 20/10/2026; a tela concluiu a consulta sem mensagem de validação aparente e manteve estado vazio. As variações vazia e inválida não foram executadas; não confirmei bug. [Jam C06-CT04](https://jam.dev/c/45aa9710-d82d-4882-b33c-0be67a4c2c79?s=mcp). |
 | [C06-CT05](../../cenarios-de-testes/C06-presencas.md) | Total, alunos distintos, média e dias | Execução parcial; julgamento pendente | Consulta de 13/11 a 19/11/2026: total 0, alunos distintos 0, média 0, dias no período 7; faltou comparar período com presenças. [Jam C06-CT05](https://jam.dev/c/ba6d7c6f-417b-478e-bdb6-42a2243a0f28?s=mcp). |
 | [C06-CT06](../../cenarios-de-testes/C06-presencas.md) | Check-in refletido na consulta | Não executado | Não produzido / não observado. |
 | [C07-CT01](../../cenarios-de-testes/C07-sifitbox-aulas.md) | Consultar aulas por período | Não executado | Não produzido / não observado. |
@@ -87,4 +87,4 @@ Atualizar caso e esta tabela com resultado real, data/hora/fuso, executor, ambie
 
 ## Conclusão atual
 
-Tenho evidência de que C34-CT01 e C34-CT02 atenderam aos critérios registrados. C34-CT03, C34-CT04 e C34-CT05 aguardam confirmação das regras. Executei C06-CT02 e registrei as datas preenchidas pelos três atalhos; o mês resultou em uma janela de 30 dias, cuja definição precisa ser confirmada. Os intervalos consultados estavam vazios, então a conferência de registros permanece pendente. C06-CT05 também está parcial: falta comparar indicadores com um período que contenha presenças. Os outros 59 casos ainda não foram iniciados.
+Tenho evidência de que C34-CT01 e C34-CT02 atenderam aos critérios registrados. C34-CT03, C34-CT04 e C34-CT05 aguardam confirmação das regras. Executei C06-CT02 e registrei as datas preenchidas pelos três atalhos; o mês resultou em uma janela de 30 dias, cuja definição precisa ser confirmada. Os intervalos consultados estavam vazios, então a conferência de registros permanece pendente. C06-CT05 também está parcial: falta comparar indicadores com um período que contenha presenças. Os outros 58 casos ainda não foram iniciados.
