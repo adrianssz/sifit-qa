@@ -1,7 +1,7 @@
 # C34 — Atividades — Meus testes
 
 **Responsável:** Victor  
-**Estado:** C34-CT01 aprovado; demais casos ainda Não executados.
+**Estado:** C34-CT01 e C34-CT02 aprovados; demais casos ainda Não executados.
 **Fonte:** [Inventário](../../Invent%C3%A1rio.md), blob `d3885feed1a1909bc57ee56f4041b18facb5b813`.  
 **Requisito:** [RF34](../contribuicoes/victor/requisitos.md).  
 **Registros:** [resultados](../contribuicoes/victor/resultados.md) e [bugs](../contribuicoes/victor/bugs.md).
@@ -50,21 +50,21 @@ Gravar também sucessos. Não mostrar credenciais, tokens, conexões ou dados re
 | Objetivo | Verificar o critério deste caso com dados próprios e evidência rastreável. |
 | Requisito | RF34 |
 | Pré-condições | Sessão/unidade identificadas; dados e referências do roteiro abaixo preparados; regras indispensáveis confirmadas. Se depender de editor, mapear os controles antes de concluir o roteiro. |
-| Dados | QA_VICTOR_C34_AAAAMMDD_NNN; substituir pela data real e registrar IDs gerados e valores de cada variação antes da execução. |
-| DADO | Que o módulo está acessível e o estado inicial dos registros próprios foi anotado. |
-| QUANDO — roteiro | Confirmar regra para ausência e zero; cadastrar duas atividades próprias distintas nessas condições e comparar indicadores. |
+| Dados | QA_VICTOR_ATIVIDADE_20261119_002 (código 11, pontuação vazia, descrição "QA_VICTOR teste sem pontuacao") e QA_VICTOR_ATIVIDADE_20261119_003 (código 12, pontuação 0, descrição "QA_VICTOR teste pontuacao zero"). |
+| DADO | Que o módulo Atividades estava acessível e havia 7 atividades, 6 com pontuação, 1 sem pontuação e 4 com descrição antes dos cadastros. |
+| QUANDO — roteiro | Cadastrei duas atividades próprias, uma com pontuação vazia e outra com pontuação 0, salvei, conferi a lista e os indicadores e reabri a atividade com pontuação 0. |
 | ENTÃO — critério original | Confirmar se ausência e zero são aceitos e como são contados. |
 | Aceitação | Comparar o obtido com o critério acima e com a regra confirmada registrada; verificar todas as variações aplicáveis. Não presumir texto exato de mensagem. |
 | Verificações comuns propostas | G02, G03, G05, G06 e G08 conforme campo/regra confirmados; G21 para erro e G23 para teclado/foco/mensagens quando aplicáveis. Identificar aplicação como C34-Gyy-CAMPO e justificar não aplicabilidade. |
-| Resultado obtido | Ainda não observei; vou preencher após executar. |
-| Status | Não executado |
-| Data/hora e fuso | Não registrado; preencher na execução. |
-| Executor real | Ainda não registrado; vou informar quem operou a interface e eventual assistência utilizada. |
-| Ambiente | Registrar URL, unidade, versão do sistema se exposta, navegador/versão e SO reais. |
-| Vídeo e tempos | Não produzido. |
+| Resultado obtido | O sistema salvou as duas atividades sem exibir aviso. Na lista, as duas aparecem com "-" na coluna de pontuação. Os indicadores finais foram 9 total, 6 com pontuação, 3 sem pontuação e 6 com descrição, então as duas foram contadas como sem pontuação. Ao reabrir a atividade 003, o campo Pontuação mostrou 0. |
+| Status | Aprovado |
+| Data/hora e fuso | 19/11/2026, aproximadamente 00:15–00:21 (America/Sao_Paulo); gravações Jam criadas às 00:15 e às 00:19. |
+| Executor real | Victor operou a interface e iniciou a gravação Jam. O assistente Claude apoiou com o roteiro e a leitura do resultado, sem operar a interface do SIFIT. |
+| Ambiente | https://sifit.centrion.com.br/; Chrome (a extensão Jam é do Chrome); versão do navegador, perfil exibido e unidade ativa não conferidos nesta execução. |
+| Vídeo e tempos | Duas gravações Jam: [primeira, criada às 00:15](https://jam.dev/c/186f9430-ca1d-49e6-b5c8-87ccf1562132) e [segunda, criada às 00:19](https://jam.dev/c/8d53721f-db47-4ebd-9718-adf69c1e5f05). A segunda é a referência deste resultado. Tempos de cada ação não anotados. Acesso do professor ainda não conferido. |
 | Prints | Não produzidos. |
-| Bug associado | Ainda não confirmei nenhum nesta etapa. |
-| Fonte da regra / pendências | Confirmar antes do julgamento; registrar fonte e decisão concreta aqui. |
+| Bug associado | Nenhum confirmado. A lista e os indicadores tratam a pontuação 0 como "sem pontuação", embora o campo guarde 0; não há regra escrita dizendo como o zero deve ser contado. |
+| Fonte da regra / pendências | Critério original do Inventário (confirmar se ausência e zero são aceitos e como são contados), atendido por observação. Pendente confirmar com Adrian ou com o professor se o zero deve contar como "com pontuação". As verificações Gxx de formato e limite ficam para C34-CT03 e C34-CT04. |
 
 ## C34-CT03 — Pontuação negativa, decimal ou texto
 
