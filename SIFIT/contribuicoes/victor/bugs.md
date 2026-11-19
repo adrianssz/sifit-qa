@@ -1,10 +1,10 @@
 # Registro de bugs — Meus testes
 
-**Estado:** preparação documental; ainda não executei os testes nesta etapa.
+**Estado:** executei C34-CT01 a C34-CT05; não confirmei defeitos. C34-CT03, C34-CT04 e C34-CT05 aguardam julgamento de regras.
 
 ## Defeitos confirmados
 
-Ainda não confirmei nenhum defeito nesta etapa. Isso não afirma ausência de defeitos no sistema ou no trabalho dos colegas.
+Ainda não confirmei nenhum defeito. Isso não afirma ausência de defeitos no sistema ou no trabalho dos colegas.
 
 ## Investigações
 
@@ -12,7 +12,7 @@ O inventário relata erro histórico no carregamento de Exercícios (C14-CT01). 
 
 ## Bloqueios e regras pendentes
 
-As dependências de acesso, QR Code, dados e regras constam em [requisitos](requisitos.md) e [planejamento](planejamento.md). Ainda não tentei executar os casos para constatar bloqueios. Registrar futuramente caso, motivo concreto, data, evidência, condição de liberação e impacto, sem contabilizar como defeito automaticamente.
+Não constatei bloqueios formais nas cinco execuções de C34. As dependências de acesso, QR Code, dados e regras dos demais casos constam em [requisitos](requisitos.md) e [planejamento](planejamento.md). Se uma dependência impedir uma execução, vou registrar o caso, motivo concreto, data, evidência, condição de liberação e impacto, sem contabilizar como defeito automaticamente.
 
 ## Formato para novos registros
 
