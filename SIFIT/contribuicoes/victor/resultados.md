@@ -93,3 +93,8 @@ Tenho evidência de que C34-CT01 e C34-CT02 atenderam aos critérios registrados
 ## Registro da falha do Jam
 
 Ao tentar usar o Jam nesta etapa, a extensão não carregou e mostrou “This is taking longer than expected”, solicitando recarga. [Anexei a captura](jam-nao-carrega-20261119.png) no repositório. Usei a captura de tela para documentar a limitação de gravação; isso não é um defeito do SIFIT.
+
+
+## Print do SIFIT — C14-CT04
+
+A captura da tela de Exercícios mostra QA_VICTOR_EXERCICIO_20261119_001 em Bicpes e a contagem exibida no momento da consulta. As variações do caso continuam pendentes. [Ver print e registro no cenário C14](../cenarios-de-testes/C14-exercicios.md#print-do-sifit--c14-ct04).
