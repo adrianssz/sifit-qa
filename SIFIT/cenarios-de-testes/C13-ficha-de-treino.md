@@ -259,18 +259,17 @@ Gravar também sucessos. Não mostrar credenciais, tokens, conexões ou dados re
 | Requisito | RF13 |
 | Pré-condições | Sessão/unidade identificadas; dados e referências do roteiro abaixo preparados; regras indispensáveis confirmadas. Se depender de editor, mapear os controles antes de concluir o roteiro. |
 | Dados | QA_VICTOR_C13_AAAAMMDD_NNN; substituir pela data real e registrar IDs gerados e valores de cada variação antes da execução. |
-| DADO | Que o módulo está acessível e o estado inicial dos registros próprios foi anotado. |
-| QUANDO — roteiro | Anotar lista inicial; preencher nova ficha sem salvar; fechar e depois cancelar em tentativas distintas; atualizar e conferir ausência. |
+| DADO | Que a lista de Fichas de Treino mostrava 0 fichas antes da tentativa. |
+| QUANDO — roteiro | Abri Cadastrar Ficha de Treino e cliquei Cancelar sem preencher; não executei a variação de fechar o modal. |
 | ENTÃO — critério original | Não criar ficha ao fechar ou cancelar o modal. |
 | Aceitação | Comparar o obtido com o critério acima e com a regra confirmada registrada; verificar todas as variações aplicáveis. Não presumir texto exato de mensagem. |
 | Verificações comuns propostas | G02, G03, G05, G06 e G08 conforme campo/regra confirmados; G21 para erro e G23 para teclado/foco/mensagens quando aplicáveis. Identificar aplicação como C13-Gyy-CAMPO e justificar não aplicabilidade. |
-| Resultado obtido | Ainda não observei; vou preencher após executar. |
-| Status | Não executado |
-| Data/hora e fuso | Não registrado; preencher na execução. |
-| Executor real | Ainda não registrado; vou informar quem operou a interface e eventual assistência utilizada. |
-| Ambiente | Registrar URL, unidade, versão do sistema se exposta, navegador/versão e SO reais. |
-| Vídeo e tempos | Não produzido. |
+| Resultado obtido | O modal fechou; a lista continuou com 0 fichas e “Nenhuma ficha encontrada”. Não criei ficha. |
+| Status | Execução parcial; julgamento pendente até testar fechar o modal em tentativa separada. |
+| Data/hora e fuso | 19/11/2026, aproximadamente 04:00 (America/Sao_Paulo). |
+| Executor real | Operei a interface com automação assistida nesta sessão autenticada como Jair. |
+| Ambiente | https://sifit.centrion.com.br/fichas-treino; unidade não confirmada; versão SIFIT não exposta; Chrome 157.0.8103.78, Windows 11 (x86). |
+| Vídeo e tempos | Jam exclusivo, 19 s: https://jam.dev/c/890e412b-387f-444c-a0b5-0adb6d4847d9?s=mcp; captura de tela, sem logs. |
 | Prints | Não produzidos. |
 | Bug associado | Ainda não confirmei nenhum nesta etapa. |
-| Fonte da regra / pendências | Confirmar antes do julgamento; registrar fonte e decisão concreta aqui. |
-
+| Fonte da regra / pendências | Critério original do inventário. A lista estava vazia antes e depois; cancelar fechou o modal sem gerar ficha. Falta testar fechar o modal separadamente; não abri bug. |
