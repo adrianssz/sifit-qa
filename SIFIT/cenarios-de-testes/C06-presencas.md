@@ -1,6 +1,6 @@
 # C06 — Presenças — Meus testes
 
-**Responsável:** Victor; **Estado:** roteiros iniciais; C06-CT05 parcialmente executado, demais casos não executados.  
+**Responsável:** Victor; **Estado:** C06-CT02 executado com julgamento pendente e C06-CT05 parcialmente executado; demais casos não executados.  
 **Fonte:** [Inventário](../../Invent%C3%A1rio.md), blob `d3885feed1a1909bc57ee56f4041b18facb5b813`.  
 **Requisito:** [RF06](../contribuicoes/victor/requisitos.md).  
 **Registros:** [resultados](../contribuicoes/victor/resultados.md) e [bugs](../contribuicoes/victor/bugs.md).
@@ -49,21 +49,21 @@ Gravar também sucessos. Não mostrar credenciais, tokens, conexões ou dados re
 | Objetivo | Verificar o critério deste caso com dados próprios e evidência rastreável. |
 | Requisito | RF06 |
 | Pré-condições | Sessão/unidade identificadas; dados e referências do roteiro abaixo preparados; regras indispensáveis confirmadas. Se depender de editor, mapear os controles antes de concluir o roteiro. |
-| Dados | QA_VICTOR_C06_AAAAMMDD_NNN; substituir pela data real e registrar IDs gerados e valores de cada variação antes da execução. |
+| Dados | Consultei os atalhos na unidade disponível; não criei nem alterei registros. Nenhum registro de presença foi retornado. |
 | DADO | Que o módulo está acessível e o estado inicial dos registros próprios foi anotado. |
 | QUANDO — roteiro | Acionar Hoje, Esta semana e Este mês separadamente; registrar limites preenchidos e comparar registros pelo mesmo fuso. |
 | ENTÃO — critério original | Hoje, semana e mês devem preencher o intervalo e buscar corretamente. |
 | Aceitação | Comparar o obtido com o critério acima e com a regra confirmada registrada; verificar todas as variações aplicáveis. Não presumir texto exato de mensagem. |
 | Verificações comuns propostas | G15, G16, G17 e G18 se o controle existir; G21 para erro e G23 para teclado/foco/mensagens quando aplicáveis. Identificar aplicação como C06-Gyy-CAMPO e justificar não aplicabilidade. |
-| Resultado obtido | Ainda não observei; vou preencher após executar. |
-| Status | Não executado |
-| Data/hora e fuso | Não registrado; preencher na execução. |
-| Executor real | Ainda não registrado; vou informar quem operou a interface e eventual assistência utilizada. |
-| Ambiente | Registrar URL, unidade, versão do sistema se exposta, navegador/versão e SO reais. |
-| Vídeo e tempos | Não produzido. |
+| Resultado obtido | Em 19/11/2026, acionei os três atalhos. Hoje preencheu 19/11/2026–19/11/2026 (1 dia); Esta semana, 13/11/2026–19/11/2026 (7 dias); Este mês, 21/10/2026–19/11/2026 (30 dias). Cada atalho atualizou a consulta sem erro visível; os três intervalos mostraram total 0, alunos distintos 0, média 0 e “Nenhuma presença encontrada”. A tela registrou as datas e buscou automaticamente. A janela de 30 dias não coincide com mês civil; não havia presenças para validar quais registros cada consulta retorna. |
+| Status | Executado; julgamento pendente de confirmação da definição de semana/mês |
+| Data/hora e fuso | 19/11/2026, aproximadamente 02:55–02:56 (America/Sao_Paulo), conforme envio do Jam. |
+| Executor real | Automação de interface operada pelo assistente Codex, na sessão autenticada exibida como Jair. |
+| Ambiente | https://sifit.centrion.com.br/presencas; unidade e versão do sistema não identificadas; Chrome 157.0.8103.78, Windows 11 (x86), conforme metadados do Jam. |
+| Vídeo e tempos | [Jam C06-CT02](https://jam.dev/c/0ce05096-3bf9-4a13-a149-a57277c6b30c?s=mcp), 59 s; mostra os três atalhos e intervalos. Captura simples de tela, sem logs de console/rede. |
 | Prints | Não produzidos. |
 | Bug associado | Ainda não confirmei nenhum nesta etapa. |
-| Fonte da regra / pendências | Confirmar antes do julgamento; registrar fonte e decisão concreta aqui. |
+| Fonte da regra / pendências | O inventário define preencher o intervalo e buscar, mas não esclarece se semana/mês são períodos civis ou janelas móveis. O mês observado abrange 30 dias. Sem dados de presença, não pude validar os registros retornados. Mantenho o julgamento pendente; sem bug confirmado. |
 
 ## C06-CT03 — Período personalizado
 
@@ -168,4 +168,3 @@ Gravar também sucessos. Não mostrar credenciais, tokens, conexões ou dados re
 | Prints | Não produzidos. |
 | Bug associado | Ainda não confirmei nenhum nesta etapa. |
 | Fonte da regra / pendências | Confirmar antes do julgamento; registrar fonte e decisão concreta aqui. |
-
