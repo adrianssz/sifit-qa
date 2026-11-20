@@ -13,7 +13,7 @@ Ainda não confirmei nenhum defeito. Isso não afirma ausência de defeitos no s
 ## Investigações
 
 
-O inventário relata erro histórico no carregamento de Exercícios (C14-CT01). Ainda não reproduzi essa ocorrência; permanece como referência para investigação, sem ID de bug confirmado e sem causa atribuída.
+O inventário relata erro histórico no carregamento de Exercícios (C14-CT01). Ainda não reproduzi essa ocorrência; permanece como referência para investigação, sem ID de bug confirmado e sem causa atribuída. Em 20/11/2026, ao abrir Atividades e Grupos, observei a mensagem “Erro no servidor — Erro interno inesperado”; a mensagem reapareceu após recarregar. Registro como investigação pendente, sem criar BUG-VICTOR-NNN até confirmar regra, causa e escopo.
 
 
 ## Bloqueios e regras pendentes
