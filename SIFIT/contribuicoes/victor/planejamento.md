@@ -6,7 +6,7 @@
 **Sistema de referência:** https://sifit.centrion.com.br/  
 **Versão do sistema, navegador/versão e sistema operacional:** a registrar na execução; não verificados nesta etapa.
 **Fontes:** [Inventário](../../../Invent%C3%A1rio.md), [requisitos dos meus testes](requisitos.md) e [plano do modelo do professor](https://github.com/Adnyslougansilva/extensao-qa/blob/main/OrangeHRM/2-plano%20de%20testes.md).
-**Estado atual:** 66 casos planejados; 2 aprovados, 17 pendentes e 47 não iniciados. Evidências e resultados válidos estão consolidados em [resultados.md](resultados.md); pendências dependentes de dados próprios ou de configuração permanecem sem julgamento.
+**Estado atual:** 66 casos planejados; 3 aprovados, 17 pendentes e 46 não iniciados. Evidências e resultados válidos estão consolidados em [resultados.md](resultados.md); pendências dependentes de dados próprios ou de configuração permanecem sem julgamento.
 
 ## 1. Objetivo e escopo
 
@@ -44,7 +44,7 @@ Não incluir carga, exploração de vulnerabilidades, transações reais ou alte
 | 4 — Execução por cenário | Executar um conjunto pequeno, revisar evidências, atualizar cenário/bugs/resultados e publicar. | Parar entre cenários ou fluxos importantes. |
 | 5 — Integrações e fechamento | Conferir C47, retestes, links, contagens e limitações reais. | Apresentar conclusão apoiada nas evidências. |
 
-Concluí a preparação documental e os roteiros. Até 19/11/2026, registrei cinco execuções de C34 (duas aprovadas e três aguardando regra), execuções parciais de C06-CT01 a CT05, C13-CT10, C14-CT01/CT04/CT05, C18-CT01/CT02/CT07 e C45-CT01/CT02, além de C06-CT02 com julgamento pendente. O balanço consolidado em resultados.md é 2 aprovados, 16 casos pendentes (incluindo os parciais) e 48 não iniciados, de uma base de 66. Ainda faltam os demais cenários, a verificação MySQL planejada e os fluxos integrados C47.
+Concluí a preparação documental e os roteiros. Até 19/11/2026, registrei cinco execuções de C34 (duas aprovadas e três aguardando regra), execuções parciais de C06-CT01 a CT05, C13-CT10, C14-CT01/CT04/CT05, C18-CT01/CT02/CT07 e C45-CT01/CT02, além de C06-CT02 com julgamento pendente. O balanço consolidado em resultados.md é 3 aprovados, 17 casos pendentes (incluindo os parciais) e 46 não iniciados, de uma base de 66. Ainda faltam os demais cenários, a verificação MySQL planejada e os fluxos integrados C47.
 
 Antes de cada edição, reler a versão atual do arquivo e conferir a main. Criar arquivos apenas se continuarem ausentes. Em caso de alteração concorrente, reler e reconciliar sem sobrescrever trabalho novo. Após cada commit, conferir os caminhos e o conteúdo publicado.
 
