@@ -1,14 +1,14 @@
 # C18 — Turmas — Meus testes
 
 **Responsável:** Victor  
-**Estado:** C18-CT01, C18-CT02 e C18-CT07 executados parcialmente, com julgamento pendente; demais casos não executados.  
+**Estado:** C18-CT01 aprovado; C18-CT02 e C18-CT07 executados parcialmente, com julgamento pendente; demais casos não executados.  
 **Fonte:** [Inventário](../../Invent%C3%A1rio.md), blob `d3885feed1a1909bc57ee56f4041b18facb5b813`.  
 **Requisito:** [RF18](../contribuicoes/victor/requisitos.md).  
 **Registros:** [resultados](../contribuicoes/victor/resultados.md) e [bugs](../contribuicoes/victor/bugs.md).
 
 ## Preparação e julgamento
 
-Operei a interface com automação assistida nesta sessão autenticada como Jair, em https://sifit.centrion.com.br/turmas. Não confirmei a unidade. Pesquisei QA_VICTOR; a consulta retornou nenhuma turma. Abri o formulário para reconhecer os campos e cancelei sem salvar. Ainda preciso de um plano de teste próprio e da unidade identificada para concluir um cadastro válido.
+Eu operei a interface com automação assistida nesta sessão autenticada como Jair, em https://sifit.centrion.com.br/turmas. Preparei o plano próprio QA_VICTOR_PLANO_20261119 e cadastrei a turma QA_VICTOR_TURMA_20261119_001, código #16. A tela confirmou plano, horário, dias e status. A unidade não ficou identificada na interface.
 
 Antes da gravação, vou reconhecer a tela e completar os campos/limites/ações ainda desconhecidos. Preservar os IDs e descrições abaixo. Cada variação recebe sufixo A/B/C e evidência própria ou intervalo no vídeo. Não aprovar o caso principal com variações pendentes. Critérios do inventário são propostos; confirmar regras necessárias antes de reprovar. Falta de regra ou acesso exige registro de pendência/bloqueio concreto, sem bug confirmado automático.
 
@@ -24,21 +24,21 @@ Gravar também sucessos. Não mostrar credenciais, tokens, conexões ou dados re
 | Objetivo | Verificar o critério deste caso com dados próprios e evidência rastreável. |
 | Requisito | RF18 |
 | Pré-condições | Sessão/unidade identificadas; dados e referências do roteiro abaixo preparados; regras indispensáveis confirmadas. Se depender de editor, mapear os controles antes de concluir o roteiro. |
-| Dados | Pesquisa QA_VICTOR na listagem, sem resultados; nenhum dado de turma foi criado. Não havia plano próprio confirmado. |
-| DADO | Que a listagem de Turmas está acessível e a busca QA_VICTOR não encontrou registros. A unidade não foi confirmada. |
-| QUANDO — roteiro | Abri Cadastrar Turma, observei os campos e cancelei sem salvar, pois não havia plano QA_VICTOR confirmado. |
+| Dados | Plano QA_VICTOR_PLANO_20261119; turma QA_VICTOR_TURMA_20261119_001; tempo de 1 mês; horário das 09:00 às 10:00; dias segunda, quarta e sexta; status ativo. |
+| DADO | Que a listagem de Turmas está acessível e o plano QA_VICTOR está disponível. |
+| QUANDO — roteiro | Eu abri Cadastrar Turma, informei o nome, selecionei o plano, defini tempo, horário e três dias da semana e salvei. |
 | ENTÃO — critério original | Gravar nome, plano, dias, horários e demais opções. |
 | Aceitação | Comparar o obtido com o critério acima e com a regra confirmada registrada; verificar todas as variações aplicáveis. Não presumir texto exato de mensagem. |
 | Verificações comuns propostas | G01, G10, G11, G12 e G13 conforme ações disponíveis; G21 para erro e G23 para teclado/foco/mensagens quando aplicáveis. Identificar aplicação como C18-Gyy-CAMPO e justificar não aplicabilidade. |
-| Resultado obtido | O formulário exibiu Nome, Status, Plano, Aula Experimental, Tempo (meses), Hora Inicial, Hora Final, Tem Personal e Dias da Semana. Cancelei sem salvar; não encontrei dados QA_VICTOR e não confirmei um plano próprio. |
-| Status | Execução parcial; julgamento pendente até obter plano próprio e confirmar a unidade. |
-| Data/hora e fuso | 19/11/2026, aproximadamente 03:46 (America/Sao_Paulo). |
+| Resultado obtido | O SIFIT gravou a turma com o código #16 e exibiu na listagem o nome QA_VICTOR_TURMA_20261119_001, o plano QA_VICTOR_PLANO_20261119, o horário 09:00:00–10:00:00, os dias Seg, Qua e Sex e o status ATIVO. |
+| Status | Aprovado |
+| Data/hora e fuso | 19/11/2026, nesta sessão (America/Sao_Paulo). |
 | Executor real | Operei a interface com automação assistida nesta sessão autenticada como Jair. |
 | Ambiente | https://sifit.centrion.com.br/turmas; unidade não confirmada; versão do SIFIT não exposta; Chrome 157.0.8103.78, Windows 11 (x86). |
-| Vídeo e tempos | [Jam exclusivo C18-CT01, 24 s](https://jam.dev/c/490a7c3d-2968-4d35-923a-657cc36b3cb1?s=mcp); gravação de tela sem logs. |
+| Vídeo e tempos | [Gravação local de confirmação do resultado — C18-CT01.mp4](https://drive.google.com/file/d/1Cn3q5ZExO1P0l-4k9HIMpBGJXsjNhm0-/view?usp=drivesdk). |
 | Prints | Não produzidos. |
 | Bug associado | Ainda não confirmei nenhum nesta etapa. |
-| Fonte da regra / pendências | Critério original do inventário. A unidade não foi identificada e não encontrei turma nem plano QA_VICTOR; preciso confirmar referência própria para testar o cadastro válido. Não abri bug. |
+| Fonte da regra / pendências | Critério original do inventário. Tentativas adicionais usando o mesmo plano retornaram erro genérico; como a regra de reutilização do plano não está confirmada, não tratei isso como bug nem alterei o julgamento deste cadastro concluído. |
 
 ## C18-CT02 — Nome, plano e dias ausentes
 
